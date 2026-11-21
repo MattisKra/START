@@ -1,0 +1,30 @@
+Invoice
+INVOICE NO.
+2026-0064
+DATE
+1 Feb 2026
+DUE
+15 Feb 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Copper pipe repair – fittings, pipe section and
+consumables
+1 flat rate
+2 Labour – service technician and helper 1 flat rate
+3 Pipe re-insulation (rock wool) 6 pcs
+4 Vehicle costs 1 pcs
+5 Construction waste disposal 1 pcs
+6 Processing flat fee 1 pcs
+7 Tile cleaning, disinfection and coating 5 hrs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
