@@ -10,7 +10,7 @@ class ExclusionAuditTest(unittest.TestCase):
     def setUp(self):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)
-        work = Path(tmp.name)
+        work = Path(tmp.name).resolve()
         quote = "Loss caused by ordinary wear is excluded"
         policy = "1.2 Exclusions\n\n" + quote + ".\n"
         self.gate = PolicyGate(work, policy)
@@ -21,7 +21,9 @@ class ExclusionAuditTest(unittest.TestCase):
             "endorsement": dict(status="not_evidenced", clause=None, quote=None, basis="Schedule unavailable.")})
 
     def test_prior_read_and_case_only_status(self):
-        finding = audit([self.row], self.gate, ["r"])[0]
+        prior = self.gate.prior_reads("write")
+        self.assertEqual(prior, ["r"])
+        finding = audit([self.row], self.gate, prior)[0]
         self.assertEqual(finding["exclusion"]["audit"], "verified_policy_quote")
         self.assertEqual(finding["endorsement"]["audit"], "case_claim_without_policy_quote")
         self.assertEqual(audit([self.row], self.gate, [])[0]["exclusion"]["audit"], "unverified_policy_quote")
