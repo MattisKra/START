@@ -1,0 +1,60 @@
+Invoice
+INVOICE NO.
+2026-0186
+DATE
+15 Mar 2026
+DUE
+29 Mar 2026
+TRADE
+Electronics Retail
+FROM
+Gadget Grotto Megastore Ltd
+128 Circuit Crescent
+10178 Techtonic
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Speaker system (surge damaged) 1 pcs
+2 Premium replacement TV set (larger, higher-end than
+the damaged one)
+1 pcs
+3 HDMI cables and connectors 2 pcs
+4 Wall-mount bracket 1 pcs
+5 Remote control 1 pcs
+6 Games console (switched off and unplugged at the
+time)
+1 pcs
+7 Shipping 1 pcs
+8 Installation 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0187
+DATE
+15 Mar 2026
+DUE
+29 Mar 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+9 Diagnostic inspection and surge-failure report for
+damaged electronics
+2 pcs
+10 Wiring safety check of property distribution board 1 pcs
+11 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

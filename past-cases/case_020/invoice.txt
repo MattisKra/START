@@ -1,0 +1,99 @@
+Invoice
+INVOICE NO.
+2026-0074
+DATE
+5 Feb 2026
+DUE
+19 Feb 2026
+TRADE
+Damage Assessment
+FROM
+Sherlock Damages Inspection Ltd
+221 Magnifier Mews
+80333 Cluesbury
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Damage assessment and inspection 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0075
+DATE
+5 Feb 2026
+DUE
+19 Feb 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+2 Indoor leak detection incl. measurement technician
+and vehicle
+1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0076
+DATE
+5 Feb 2026
+DUE
+19 Feb 2026
+TRADE
+Dismantling
+FROM
+Smash & Grab Demolition Ltd
+9 Rubble Rise
+40210 Crushington
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+3 Floor covering removal incl. linoleum and skirting,
+surface preparation and construction-waste disposal
+1 flat rate
+4 Catering for work crew 3 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0077
+DATE
+5 Feb 2026
+DUE
+19 Feb 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+5 Technical drying (large-area, cavity and borehole) incl.
+labour, dust protection and kitchen disinfection
+1 flat rate
+6 Electricity for drying equipment (separately metered) 2,412.1 kWh
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
