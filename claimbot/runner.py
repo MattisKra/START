@@ -69,7 +69,7 @@ def play_round(game_id: str, zip_path: Path, dry_run: bool = False, key: str | N
         key = api.get_key(game_id)
     case_dir = extract_zip(Path(zip_path), key, config.WORK_DIR / f"game_{game_id}")
     case = load_case(case_dir)
-    print(f"[{time.monotonic() - t0:5.1f}s] case loaded: {case_dir} ({len(case.images)} images)")
+    print(f"[{time.monotonic() - t0:5.1f}s] case loaded: {case_dir} ({len(case.image_blobs)} images)")
 
     efforts = [config.EFFORT]
     if config.FAST_EFFORT and config.FAST_EFFORT != config.EFFORT:
@@ -194,7 +194,7 @@ def play_round_ensemble(game_id: str, zip_path: Path, dry_run: bool = False, key
     case_dir = extract_zip(Path(zip_path), key, config.WORK_DIR / f"game_{game_id}")
     case = load_case(case_dir)
     ms = ensemble.members()
-    print(f"[{time.monotonic() - t0:5.1f}s] case loaded: {case_dir} ({len(case.images)} images), {len(ms)} members")
+    print(f"[{time.monotonic() - t0:5.1f}s] case loaded: {case_dir} ({len(case.image_blobs)} images), {len(ms)} members")
 
     def on_update(prices, done, total, m, est, meta):
         tag = f"[{time.monotonic() - t0:5.1f}s] {done}/{total} {m.name}"

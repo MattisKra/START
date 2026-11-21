@@ -4,11 +4,14 @@ Decrypted case files are untrusted data: we only read them as text/images,
 never execute anything from the extracted directory.
 """
 
+import io
+import mimetypes
 import shutil
 import subprocess
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from PIL import Image
 from pypdf import PdfReader
 
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp"}
@@ -21,6 +24,32 @@ class Case:
     description: str
     invoice_text: str
     images: list[Path] = field(default_factory=list)
+    # (mime, bytes) per image, downscaled and re-encoded for the model APIs
+    image_blobs: list[tuple[str, bytes]] = field(default_factory=list)
+
+
+MAX_IMAGE_EDGE = 2000  # px, long edge
+MAX_IMAGE_BYTES = 3_500_000  # raw bytes; base64 adds a third, API limits start at 5 MB
+
+
+def prepare_image(path: Path) -> tuple[str, bytes] | None:
+    """Downscale to MAX_IMAGE_EDGE and re-encode as JPEG. None if the image cannot be made small enough."""
+    try:
+        with Image.open(path) as im:
+            im = im.convert("RGB")
+            im.thumbnail((MAX_IMAGE_EDGE, MAX_IMAGE_EDGE))
+            for quality in (85, 70, 50):
+                buf = io.BytesIO()
+                im.save(buf, format="JPEG", quality=quality)
+                if buf.tell() <= MAX_IMAGE_BYTES:
+                    return "image/jpeg", buf.getvalue()
+    except Exception as e:  # noqa: BLE001 - a bad photo must not cost the round
+        print(f"image {path.name}: could not re-encode ({e!r})")
+    raw = path.read_bytes()
+    if len(raw) <= MAX_IMAGE_BYTES:
+        return mimetypes.guess_type(path.name)[0] or "image/png", raw
+    print(f"image {path.name}: too large ({len(raw)} bytes), sending the case without it")
+    return None
 
 
 def _sevenzip() -> str:
@@ -89,4 +118,5 @@ def load_case(case_dir: Path) -> Case:
         description=description.read_text(errors="replace"),
         invoice_text=pdf_text(invoice),
         images=images,
+        image_blobs=[b for b in (prepare_image(p) for p in images) if b is not None],
     )

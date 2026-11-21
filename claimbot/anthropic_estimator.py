@@ -26,9 +26,9 @@ def _get_client() -> anthropic.Anthropic:
     return _client
 
 
-def _image_block(path: Path) -> dict:
-    mime = mimetypes.guess_type(path.name)[0] or "image/png"
-    data = base64.standard_b64encode(path.read_bytes()).decode("utf-8")
+def _image_block(blob: tuple[str, bytes]) -> dict:
+    mime, raw = blob
+    data = base64.standard_b64encode(raw).decode("utf-8")
     return {"type": "image", "source": {"type": "base64", "media_type": mime, "data": data}}
 
 
@@ -37,7 +37,7 @@ WEB_TOOL = {"type": "web_search_20260209", "name": "web_search", "max_uses": 3}
 
 def estimate(case: Case, effort: str, model: str, web: bool = False) -> tuple[CaseEstimate, dict]:
     t0 = time.monotonic()
-    content = [_image_block(p) for p in case.images] + [{"type": "text", "text": (WEB_HINT if web else "") + case_text(case)}]
+    content = [_image_block(b) for b in case.image_blobs] + [{"type": "text", "text": (WEB_HINT if web else "") + case_text(case)}]
     messages = [{"role": "user", "content": content}]
     extra = {"tools": [WEB_TOOL]} if web else {}
     for _ in range(3):  # resume server-side tool loops that pause (pause_turn)
