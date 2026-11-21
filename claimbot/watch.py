@@ -11,7 +11,7 @@ import requests
 
 from . import config
 from .api import GameAPI
-from .runner import play_round
+from .runner import play_round, play_round_ensemble
 
 
 def _ts() -> str:
@@ -44,7 +44,11 @@ def _wait_for_key(api: GameAPI, game_id: int, start: datetime) -> str | None:
 def watch() -> None:
     api = GameAPI()
     done: set[int] = set()
-    print(f"{_ts()} watching for games (model {config.MODEL}, efforts {config.FAST_EFFORT}/{config.EFFORT})")
+    if config.USE_ENSEMBLE:
+        from .ensemble import members
+        print(f"{_ts()} watching for games (ensemble: {', '.join(m.name for m in members())})")
+    else:
+        print(f"{_ts()} watching for games (model {config.MODEL}, efforts {config.FAST_EFFORT}/{config.EFFORT})")
     while True:
         try:
             games = api.list_games()
@@ -80,6 +84,9 @@ def watch() -> None:
             print(f"{_ts()} game {gid}: NO KEY after 30 s, skipping")
             continue
         try:
-            play_round(str(gid), zip_path, key=key)
+            if config.USE_ENSEMBLE:
+                play_round_ensemble(str(gid), zip_path, key=key)
+            else:
+                play_round(str(gid), zip_path, key=key)
         except Exception:  # noqa: BLE001 - never let one round kill the loop
             print(f"{_ts()} game {gid}: ROUND FAILED\n{traceback.format_exc()}")

@@ -15,6 +15,8 @@ EFFORT = os.getenv("CLAIMS_EFFORT", "medium")
 # early if the medium-effort call is slow.
 FAST_EFFORT = os.getenv("CLAIMS_FAST_EFFORT", "low")
 OPENAI_KEY = os.getenv("OPENAI_KEY") or os.getenv("OPENAI_API_KEY")
+# Run the weighted multi-model ensemble (claimbot/ensemble.py) instead of one model.
+USE_ENSEMBLE = os.getenv("CLAIMS_USE_ENSEMBLE", "1") == "1"
 LLM_TIMEOUT_S = float(os.getenv("CLAIMS_LLM_TIMEOUT", "50"))
 
 # --- Game API --------------------------------------------------------------

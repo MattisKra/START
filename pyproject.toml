@@ -9,4 +9,5 @@ dependencies = [
     "requests>=2.32",
     "pypdf>=5.0",
     "python-dotenv>=1.0",
+    "anthropic>=2.12.0",
 ]

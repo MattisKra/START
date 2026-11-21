@@ -64,24 +64,29 @@ def _image_part(path: Path) -> dict:
     return {"type": "input_image", "image_url": f"data:{mime};base64,{data}", "detail": "high"}
 
 
-def build_input(case: Case) -> list[dict]:
+def case_text(case: Case) -> str:
     text = (
         f"=== policy.txt ===\n{case.policy}\n\n"
         f"=== description.txt ===\n{case.description}\n\n"
         f"=== invoice (extracted from PDF) ===\n{case.invoice_text}\n"
     )
     if case.images:
-        text += f"\n{len(case.images)} photo(s) attached below.\n"
-    content = [{"type": "input_text", "text": text}]
+        text += f"\n{len(case.images)} photo(s) of the damage are attached.\n"
+    return text
+
+
+def build_input(case: Case) -> list[dict]:
+    content = [{"type": "input_text", "text": case_text(case)}]
     content += [_image_part(p) for p in case.images]
     return [{"role": "user", "content": content}]
 
 
-def estimate(case: Case, effort: str = config.EFFORT) -> tuple[CaseEstimate, dict]:
+def estimate(case: Case, effort: str = config.EFFORT, model: str | None = None) -> tuple[CaseEstimate, dict]:
     """Returns the parsed estimate and some metadata (latency, token usage)."""
+    model = model or config.MODEL
     t0 = time.monotonic()
     resp = _client().responses.parse(
-        model=config.MODEL,
+        model=model,
         instructions=INSTRUCTIONS,
         input=build_input(case),
         reasoning={"effort": effort},
@@ -91,7 +96,7 @@ def estimate(case: Case, effort: str = config.EFFORT) -> tuple[CaseEstimate, dic
     if parsed is None:
         raise RuntimeError(f"model returned no parsed output (status={resp.status})")
     meta = {
-        "model": config.MODEL,
+        "model": model,
         "effort": effort,
         "latency_s": round(time.monotonic() - t0, 2),
         "usage": resp.usage.model_dump() if resp.usage else None,
