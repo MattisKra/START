@@ -13,14 +13,17 @@ from .pricing import LinePrice, price_case
 from .schema import CaseEstimate
 
 
-def start_memory(case: Case, case_path=None):
-    """Kick off the memory query in its worker right after load_case (None when CLAIMS_MEMORY is off). For an old case
-    from past-cases/case_NNN only games < N are used, so a re-estimate never sees its own outcome."""
+def start_memory(case: Case, case_path=None, game_id=None):
+    """Kick off the memory query in its worker right after load_case (None when CLAIMS_MEMORY is off). Only games
+    before this one are used: live via game_id (the archive stores the running game seconds after its start), for an
+    old case from past-cases/case_NNN via its number, so a re-estimate never sees its own outcome."""
     if not config.MEMORY:
         return None
     try:
         from . import memory
         g = memory.game_of(case_path) if case_path is not None else None
+        if game_id is not None and str(game_id).isdigit():
+            g = int(game_id)
         return memory.get().submit(case, until=None if g is None else g - 1)
     except Exception as e:  # noqa: BLE001 - the memory must never cost the round
         print(f"memory: query not started ({e!r})")
@@ -97,7 +100,7 @@ def play_round(game_id: str, zip_path: Path, dry_run: bool = False, key: str | N
     if config.FAST_EFFORT and config.FAST_EFFORT != config.EFFORT:
         efforts.append(config.FAST_EFFORT)
 
-    mem = start_memory(case)
+    mem = start_memory(case, game_id=game_id)
     until = time.monotonic() + config.MEMORY_BUDGET_S
 
     def run_effort(e):
@@ -254,7 +257,7 @@ def play_round_ensemble(game_id: str, zip_path: Path, dry_run: bool = False, key
         key = api.get_key(game_id)
     case_dir = extract_zip(Path(zip_path), key, config.WORK_DIR / f"game_{game_id}")
     case = load_case(case_dir)
-    mem = start_memory(case)
+    mem = start_memory(case, game_id=game_id)
     ms = ensemble.members()
     print(f"[{time.monotonic() - t0:5.1f}s] case loaded: {case_dir} ({len(case.image_blobs)} images), {len(ms)} members"
           + (", memory on" if mem is not None else ""))

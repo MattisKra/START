@@ -7,6 +7,7 @@
     uv run python -m claimbot archive [--once]
     uv run python -m claimbot ensemble CASE_DIR_OR_ZIP [--password PW]
     uv run python -m claimbot memory build [--until N] [--out DIR] [--labels own|leaderboard] [--no-llm]
+    uv run python -m claimbot memory refresh [--pull] [--loop 120]       (live machine: keep the memory current)
     uv run python -m claimbot memory prompts [--until N] / memory import   (enrichment by hand in a chat UI)
     uv run python -m claimbot memory query CASE_DIR [--exclude 2,3] [--until N] [--build DIR] [--parts warnings,neighbours]
 """
@@ -54,6 +55,9 @@ def main() -> None:
     mx.add_argument("--all", action="store_true", help="also cases that already have a cached answer")
     mi = msub.add_parser("import", help="read the chat answers (case_NNN.answer.json) into the enrichment cache")
     mi.add_argument("--source", default="chatgpt-manual", help="recorded as the model of these answers")
+    mr = msub.add_parser("refresh", help="labels + rebuild only if inputs changed (run next to the live watch bot)")
+    mr.add_argument("--pull", action="store_true", help="git pull --ff-only first (past-cases/ from the archive machine)")
+    mr.add_argument("--loop", type=float, default=0, help="repeat every N seconds (0 = once)")
     mq = msub.add_parser("query", help="print the hint block the memory gives for a case")
     mq.add_argument("path")
     mq.add_argument("--password")
@@ -98,6 +102,18 @@ def _memory_cmd(args) -> None:
         print(f"\nPaste each file into the chat, save its reply as {MANUAL_DIR.relative_to(config.ROOT)}/case_NNN.answer.json, "
               "then: claimbot memory import && claimbot memory build")
         return
+    if args.mcmd == "refresh":
+        import time
+        from datetime import datetime
+        from .memory_build import refresh
+        while True:
+            try:
+                print(f"{datetime.now():%H:%M:%S} {refresh(pull=args.pull)}", flush=True)
+            except Exception as e:  # noqa: BLE001 - keep looping; the live bot keeps the last good build
+                print(f"{datetime.now():%H:%M:%S} refresh FAILED {e!r}", flush=True)
+            if not args.loop:
+                return
+            time.sleep(args.loop)
     if args.mcmd == "import":
         from .memory_build import manual_import
         print("\n".join(manual_import(source=args.source)) or "(no case_NNN.answer.json found)")

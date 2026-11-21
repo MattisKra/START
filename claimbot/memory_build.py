@@ -390,7 +390,7 @@ def build(until: int | None = None, out: Path | None = None, labels: str | None 
                n_usable=sum(memory.usable(e) for e in entries), n_checked=sum(e["hypothesis"]["checked"] for e in entries),
                embed_model=memory.EMBED_MODEL if vecs is not None else None, prompt_version=PROMPT_VERSION,
                llm=dict(model=config.MEMORY_MODEL, effort=config.MEMORY_EFFORT, calls=usage) if use_llm else None,
-               problems=problems, files={f: _sha(tmp / f) for f in files})
+               problems=problems, inputs=inputs_signature(labels), files={f: _sha(tmp / f) for f in files})
     (tmp / "manifest.json").write_text(json.dumps(man, indent=1, ensure_ascii=False))
     if final.exists():
         shutil.rmtree(final)
@@ -491,3 +491,49 @@ def manual_import(src: Path = MANUAL_DIR, source: str = "chatgpt-manual") -> lis
                                     indent=1, ensure_ascii=False))
         report.append(f"game {g}: imported {len(lessons.lines)} lines" + (f" (missing POS {missing})" if missing else ""))
     return report
+
+
+# --- refresh (live machine: keep the memory current next to the watch bot) -------------------------------------------
+
+def inputs_signature(labels: str | None = None) -> str:
+    """Changes whenever a rebuild could change the memory: settled games, the labels file, the README catches, prompt."""
+    labels = labels or config.MEMORY_LABELS
+    h = hashlib.sha256(f"{PROMPT_VERSION}|{labels}|{config.MEMORY_MODEL}|{config.MEMORY_EFFORT}".encode())
+    for d in sorted(config.PAST_DIR.glob("case_[0-9][0-9][0-9]")):
+        r = d / "results.json"
+        h.update(f"{d.name}:{(d / 'policy.txt').exists()}:{_sha(r) if r.exists() else '-'}".encode())
+    if labels == "leaderboard" and config.LABELS_FILE.exists():
+        h.update(_sha(config.LABELS_FILE).encode())
+    readme = config.PAST_DIR / "README.md"
+    h.update(json.dumps(readme_catches() if readme.exists() else {}, sort_keys=True).encode())
+    return h.hexdigest()[:16]
+
+
+def _current_inputs() -> str | None:
+    try:
+        name = (config.MEMORY_DIR / "CURRENT").read_text().strip()
+        return json.loads((BUILDS / name / "manifest.json").read_text()).get("inputs")
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def refresh(pull: bool = False, labels_update: bool = True) -> str:
+    """One refresh step: optionally `git pull --ff-only` (new past-cases/ from the archive machine), update the
+    leaderboard labels, and rebuild + activate the memory only when its inputs changed. Returns what happened."""
+    import subprocess
+    msgs = []
+    if pull:
+        r = subprocess.run(["git", "-C", str(config.ROOT), "pull", "-q", "--ff-only"], capture_output=True, text=True)
+        msgs.append("git pull ok" if r.returncode == 0 else f"git pull FAILED: {(r.stderr or r.stdout).strip()[-200:]}")
+    if labels_update and config.MEMORY_LABELS == "leaderboard":
+        from .archive import _update_labels
+        _update_labels()
+    sig = inputs_signature()
+    if sig == _current_inputs():
+        msgs.append("memory up to date")
+    else:
+        final = build(verbose=False)
+        man = json.loads((final / "manifest.json").read_text())
+        msgs.append(f"memory rebuilt: {final.name}, games {man['games'][0]}..{man['games'][-1]}, "
+                    f"{man['n_usable']} usable hypotheses, problems {len(man['problems'])}")
+    return "; ".join(msgs)

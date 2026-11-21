@@ -22,6 +22,7 @@ uv run python -m claimbot games                                       # GET /api
 uv run python -m claimbot archive [--once]                            # decrypt each released case into past-cases/ (never submits)
 uv run python -m claimbot memory build [--until N] [--out DIR]       # case memory from past-cases/ + our own settlements
 uv run python -m claimbot memory query past-cases/case_006            # print the hint block a case would get
+uv run python -m claimbot memory refresh --pull --loop 120            # live machine: pull past-cases/, labels, rebuild if changed
 uv run python -m claimbot memory prompts | memory import              # enrichment by hand in a chat UI instead of the API
 uv run python -I research/bench/test_clause_parser.py                 # clause / invoice parser checks
 uv run python research/bench/memory_eval.py [--dry]                   # forward eval of the memory vs our OWN settlements
