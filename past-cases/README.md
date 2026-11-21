@@ -36,3 +36,4 @@ Filled in automatically by `claimbot archive` from our own rows on the public le
 | [5](case_005/results.json) | +7562.32 | 12975.90 | 5413.58 | L1: 926.85 (5/11, fair) | L1: 0 / 5413.58 |
 | [6](case_006/) | Accidental damage claim on the portable electronics cover | todo | todo | todo | still open |
 | [6](case_006/results.json) | +4.76 | 4881.50 | 4876.74 | L1: 375.5 (7/11, fair) | L1: 1 / 3760.76 |
+| [7](case_007/) | Buildings frost claim after a cold snap | todo | todo | todo | still open |

@@ -1,0 +1,49 @@
+Invoice
+INVOICE NO.
+2026-0197
+DATE
+21 Mar 2026
+DUE
+4 Apr 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Internal frost-burst fitting repair including thermal-
+imaging leak detection
+1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0198
+DATE
+21 Mar 2026
+DUE
+4 Apr 2026
+TRADE
+Painting
+FROM
+Two Coats Minimum Painters Ltd
+27 Roller Road
+10999 Hueton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+2 Exterior facade frost damage repair (re-plaster and
+repaint)
+1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
