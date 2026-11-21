@@ -2,7 +2,7 @@
 
 Status: **preliminary**, written 2026-11-21 ~13:45 CET, **updated ~13:55 with the QuantCo materials** (`../materials/`: authoritative
 `GAME_DESCRIPTION.md`, `EVALUATION_CRITERIA.md`, `API_HANDBOOK.md`). The 101 case zips are in hand but encrypted (keys come per round),
-so **no real case has been read yet**. Sources: the slides ([markdown](../claim-to-fame-challenge-deep-dive.md)) and `../materials/`.
+so only **case 0** (the Game 0 test case) has been read; see `02-synthesis-wave1.md`. Sources: the slides ([markdown](../materials/claim-to-fame-challenge-deep-dive.md)) and `../materials/`.
 Where they differ, `GAME_DESCRIPTION.md` wins. Items marked *derived* or *assumption* are mine.
 
 **What the materials changed:** (a) cap is `c ≥ 4t` plus an unknown absolute floor; (b) ranking is **rank-scaled** (1st = 70 … last = 0), not

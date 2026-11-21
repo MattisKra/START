@@ -7,7 +7,7 @@ Source: QuantCo's `[PUBLIC] Road to Start HACK` Drive folder, unpacked 2026-11-2
 | [`GAME_DESCRIPTION.md`](GAME_DESCRIPTION.md) | **Authoritative rules**: payoffs, cap `c ≥ 4t`, example, fair play, how to win | ~2.5k tokens |
 | [`EVALUATION_CRITERIA.md`](EVALUATION_CRITERIA.md) | 70 % rank-scaled score + 30 % jury (method, evidence, resourcefulness, reliability, honesty) | ~0.5k |
 | [`API_HANDBOOK.md`](API_HANDBOOK.md) | Endpoints, key field `decryption_key`, error codes, omitted lines still trade | ~0.5k |
-| [`../claim-to-fame-challenge-deep-dive.md`](../claim-to-fame-challenge-deep-dive.md) | Slide deck as markdown (older numbers; see differences table in `GAME_DESCRIPTION.md`) | ~2k |
+| [`claim-to-fame-challenge-deep-dive.md`](claim-to-fame-challenge-deep-dive.md) | Slide deck as markdown (older numbers; see differences table in `GAME_DESCRIPTION.md`) | ~2k |
 | [`QUANTCO_PRESENTATION.md`](QUANTCO_PRESENTATION.md) | Company intro, prizes. No rule changes | ~0.5k |
 | `starter_script.py`, `pixi.toml`, `pixi.lock` | QuantCo's starter flow (list → key → submit). Not run by us; `claimbot/` supersedes it | |
 | `pdf/` | Original PDFs, only if a layout detail is in doubt | |
