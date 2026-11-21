@@ -26,12 +26,11 @@ SIZE_WEIGHT = {
     "gpt-6.2-sol": 2.0,
     "claude-sonnet-5-5": 1.5,
     "gpt-6.1-terra": 1.5,
-    "gpt-6-luna": 1.0,
 }
 EFFORT_WEIGHT = {"low": 1.0, "medium": 1.5}
 # Extra members with web search; they get this multiplier on top.
 WEB_MODELS = ["claude-fable-5-2", "claude-opus-5-5", "gpt-6.2-sol", "gpt-6.1-terra"]
-WEB_WEIGHT = 1.5
+WEB_WEIGHT = 1.0
 PROVIDER = {m: ("anthropic" if m.startswith("claude-") else "openai") for m in SIZE_WEIGHT}
 
 

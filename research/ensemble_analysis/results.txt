@@ -1,0 +1,109 @@
+== 1. Members (valid lines: 8, invalid: 7; err = log distance of median to the t interval) ==
+member                             w   n    bias  |err|  under  q|valid  q|inval   net g1    g2    g3    g4   sum
+claude-fable-5-2/medium         4.50  14   -0.07   0.08    43%     0.91     0.27    6602  10122   2413   3574  22711
+claude-fable-5-2/low            3.00  14   -0.07   0.10    29%     0.91     0.27    7551   9970   2569   2353  22443
+gpt-6.1-terra/medium            2.25  14   -0.01   0.10    14%     0.90     0.26    7264   9730   4064   -720  20339
+claude-fable-5-2/medium+web     6.75   8   -0.13   0.13    62%     0.91     0.32    6711   9586   2484   1443  20225
+claude-opus-5-5/low             2.50  14   -0.21   0.21    64%     0.87     0.25    6616  10311    760   2213  19900
+gpt-6-luna/medium               1.50  14   -0.08   0.17    43%     0.88     0.27    6081   8522   5232   -748  19086
+claude-opus-5-5/medium          3.75  14   -0.22   0.22    64%     0.86     0.27    5936   9794   1040   2137  18908
+gpt-6.1-terra/medium+web        3.38   8   -0.03   0.12    38%     0.85     0.32    7146   8302   3488   -461  18476
+claude-opus-5-5/low+web         3.75   8   -0.26   0.26    75%     0.85     0.29    5093   9654   1311   1717  17775
+gpt-6.1-terra/low+web           2.25   8   -0.11   0.17    50%     0.76     0.32    6867   6995   4115   -269  17709
+gpt-6.1-terra/low               1.50  14   -0.13   0.18    21%     0.87     0.24    3417   9377   2178   2639  17611
+gpt-6.2-sol/low                 2.00  14   -0.20   0.21    50%     0.92     0.24    2075   9005   3420   2270  16771
+claude-opus-5-5/medium+web      5.62   8   -0.23   0.23    62%     0.88     0.29    4058   9106   2479   1106  16749
+claude-fable-5-2/low+web        4.50   8   -0.17   0.17    75%     0.90     0.31    4097   7674   2506   1383  15660
+gpt-6-luna/low                  1.00  14   +0.11   0.15    29%     0.85     0.22    1762   9153   4087    356  15358
+claude-sonnet-5-5/low           1.50  14   -0.29   0.29    79%     0.91     0.23    3529   8286   1478   1672  14966
+gpt-6.2-sol/medium              3.00  14   -0.21   0.24    57%     0.92     0.23    2379   9052   2946    588  14965
+gpt-6.2-sol/medium+web          4.50   8   -0.36   0.39    75%     0.89     0.27      50   9640   2117   1832  13640
+gpt-6.2-sol/low+web             3.00   8   -0.36   0.37    62%     0.91     0.29     615   6911   1754   3014  12295
+claude-sonnet-5-5/medium        2.25  14   -0.34   0.34    86%     0.90     0.23    2959   5006   1363   1659  10988
+
+== 2. Run-to-run noise: |log ratio| of the median between two runs of the same member on the same line ==
+  claude-opus-5-5/medium       mean 0.05 (x1.05)  max x1.12  n=12
+  gpt-6.2-sol/low              mean 0.06 (x1.06)  max x1.33  n=12
+  gpt-6.1-terra/low            mean 0.07 (x1.07)  max x1.18  n=12
+  gpt-6.1-terra/medium         mean 0.09 (x1.09)  max x1.18  n=12
+  claude-sonnet-5-5/low        mean 0.09 (x1.09)  max x1.45  n=12
+  claude-fable-5-2/low         mean 0.10 (x1.10)  max x1.90  n=12
+  gpt-6.2-sol/medium           mean 0.10 (x1.11)  max x1.33  n=12
+  claude-opus-5-5/low          mean 0.11 (x1.11)  max x1.82  n=12
+  claude-fable-5-2/medium      mean 0.14 (x1.15)  max x1.90  n=12
+  claude-sonnet-5-5/medium     mean 0.17 (x1.18)  max x2.25  n=12
+  gpt-6-luna/medium            mean 0.23 (x1.26)  max x1.86  n=12
+  gpt-6-luna/low               mean 0.32 (x1.38)  max x3.00  n=12
+  spread between members on one line: mean sd of log median 0.29 (x1.33)
+
+== 3. Combining rules: replayed net per game (mean over samples) ==
+  rule                                                     g1      g2      g3      g4      sum
+  current: size-weighted median, b>=1.25x                7254    9311    2614    2594    21774
+  unweighted median                                      5646    9047    2820    2256    19769
+  size-weighted mean of logs                             5836    8962    2784    2721    20304
+  no web members                                         8231    9562    2680    2848    23320
+  web members only                                       2842    4388    1293    2455    10978
+  Claude only (Fable, Opus, Sonnet)                      6018    9614    1871    1608    19111
+  OpenAI only (Sol, Terra, Luna)                         4383    8952    3962    -501    16796
+  Fable + Opus only                                      6097    9905    2457    2240    20700
+  without Luna and Terra                                 6545    9189    2398    2304    20435
+  medium effort only                                     6879    9195    2553    2545    21172
+  low effort only                                        7545    9031    2723    2704    22003
+  -- acceptance limit b (weighted median kept) --
+  b = 1/3-quantile only (rule before 14:40)              6834    8482    2214    3082    20612
+  b >= 1.0x median                                       7059    9148    2419    3020    21646
+  b >= 1.25x median                                      7254    9311    2614    2594    21774
+  b >= 1.5x median                                       6999    9311    2779    2426    21515
+  b >= 2.0x median                                       6549    9311    2779    2013    20652
+  -- bias correction: shift the log-median up before pricing a and b --
+  median x1.11, b>=1.25x                                 8100   10687    3195     812    22795
+  median x1.22, b>=1.25x                                 8691   11952    3658    -719    23583
+  median x1.35, b>=1.25x                                 6943   11106    3697   -1035    20711
+  70th weighted percentile instead of median             8997   10097    3096     968    23158
+== 3. Combining rules: replayed net per game (the 20-member run of each game) ==
+  rule                                                     g1      g2      g3      g4      sum
+  current: size-weighted median, b>=1.25x                6434    9293    2659    2594    20981
+  unweighted median                                      6723    8835    2804    2256    20619
+  size-weighted mean of logs                             5400    8918    2799    2721    19837
+  no web members                                         8387    9795    2790    2848    23820
+  web members only                                       5685    8776    2586    2455    19501
+  Claude only (Fable, Opus, Sonnet)                      5252    9758    2407    1608    19025
+  OpenAI only (Sol, Terra, Luna)                         4592    8488    3949    -501    16529
+  Fable + Opus only                                      5104    9757    2519    2240    19619
+  without Luna and Terra                                 5522    9209    2527    2304    19562
+  medium effort only                                     6242    9185    2616    2545    20588
+  low effort only                                        5831    8889    2745    2704    20169
+  -- acceptance limit b (weighted median kept) --
+  b = 1/3-quantile only (rule before 14:40)              6209    8464    2301    3082    20057
+  b >= 1.0x median                                       6434    9130    2519    3020    21104
+  b >= 1.25x median                                      6434    9293    2659    2594    20981
+  b >= 1.5x median                                       6825    9293    2824    2426    21367
+  b >= 2.0x median                                       5925    9293    2824    2013    20054
+  -- bias correction: shift the log-median up before pricing a and b --
+  median x1.11, b>=1.25x                                 7684   10667    3327     812    22491
+  median x1.22, b>=1.25x                                 7734   11930    3774    -719    22720
+  median x1.35, b>=1.25x                                 9155   11093    3796   -1035    23010
+  70th weighted percentile instead of median             8574    9868    2813     968    22223
+  -- re-weighting --
+  web weight x1.0 instead of x1.5                        6379    9270    2689    2684    21021
+  web weight x0.5                                        6328    9252    2724    2856    21160
+  Fable + Terra (no web)                                 7179    9607    2817    2373    21977
+  Fable + Terra + Opus (no web)                          7091   10089    2810    2688    22678
+  Fable only (no web)                                    6427    9912    2481    3589    22410
+
+== 4. Per line: t bounds vs members' medians (20-member runs) ==
+  g1 l1 valid t in [ 780.69,  900.00)  members min  172.55 / med  595.00 / max  833.00  ensemble  595.00  q mean 0.93 (min 0.85, max 0.98)
+  g1 l2 t~0   t in [   0.00,    5.58)  members min   47.60 / med  124.95 / max  535.50  ensemble  119.00  q mean 0.08 (min 0.00, max 0.15)
+  g2 l1 valid t in [ 808.45,     inf)  members min  654.50 / med  856.80 / max  952.00  ensemble  856.80  q mean 0.92 (min 0.70, max 0.97)
+  g2 l2 valid t in [ 342.00,     inf)  members min  160.65 / med  321.30 / max  380.80  ensemble  321.30  q mean 0.92 (min 0.70, max 0.97)
+  g2 l3 t~0   t in [   0.00,     inf)  members min   35.70 / med   47.60 / max   65.45  ensemble   47.60  q mean 0.01 (min 0.00, max 0.03)
+  g2 l4 valid t in [  59.80,   83.60)  members min   49.98 / med   83.30 / max  107.10  ensemble   83.30  q mean 0.90 (min 0.70, max 0.96)
+  g3 l1 t~0   t in [   0.00,     inf)  members min   20.23 / med   35.70 / max   77.35  ensemble   23.80  q mean 0.09 (min 0.03, max 0.15)
+  g3 l2 t~0   t in [   0.00,     inf)  members min   71.40 / med  107.10 / max  238.00  ensemble   95.20  q mean 0.07 (min 0.01, max 0.15)
+  g3 l3 t~0   t in [   0.00,     inf)  members min   71.40 / med  142.80 / max  297.50  ensemble  130.90  q mean 0.07 (min 0.01, max 0.15)
+  g3 l4 valid t in [ 328.51,     inf)  members min  166.60 / med  238.00 / max  476.00  ensemble  238.00  q mean 0.90 (min 0.80, max 0.96)
+  g3 l5 valid t in [ 157.25,     inf)  members min  107.10 / med  172.55 / max  309.40  ensemble  166.60  q mean 0.85 (min 0.70, max 0.94)
+  g3 l6 t~0   t in [   0.00,   28.32)  members min   47.60 / med   53.55 / max   65.45  ensemble   53.55  q mean 0.85 (min 0.75, max 0.92)
+  g4 l1 t~0   t in [   0.00,  119.55)  members min   85.68 / med  149.94 / max  285.60  ensemble  155.12  q mean 0.91 (min 0.85, max 0.97)
+  g4 l2 valid t in [ 227.62,  253.47)  members min  185.64 / med  267.75 / max  595.00  ensemble  261.36  q mean 0.86 (min 0.80, max 0.90)
+  g4 l3 valid t in [ 129.41,     inf)  members min   52.36 / med   71.40 / max  119.00  ensemble   71.40  q mean 0.72 (min 0.58, max 0.85)
