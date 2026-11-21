@@ -36,6 +36,7 @@ LINE = {
         "quantity_invoiced": NUM, "rationale": {"type": "string"}, "covered": {"type": "boolean"},
         "related": {"type": "boolean"}, "p_valid": NUM, "quantity_justified": NUM,
         "net_unit_price_p10": NUM, "net_unit_price_p50": NUM, "net_unit_price_p90": NUM, "vat_rate": NUM,
+        "payout_fraction": NUM,
     },
 }
 LINE["required"] = list(LINE["properties"])
@@ -65,7 +66,7 @@ def load_case(d: Path, use_image: bool):
     return content
 
 
-def call(model: str, system: str, content, reasoning, max_tokens: int, key: str, timeout: float):
+def call(model: str, system: str, content, reasoning, max_tokens: int, key: str, timeout: float, extra=None):
     body = {
         "model": model, "max_tokens": max_tokens, "usage": {"include": True},
         "messages": [{"role": "system", "content": system}, {"role": "user", "content": content}],
@@ -74,6 +75,8 @@ def call(model: str, system: str, content, reasoning, max_tokens: int, key: str,
     }
     if reasoning:
         body["reasoning"] = reasoning
+    if extra:
+        body.update(extra)
     out = {"model": model, "reasoning_param": reasoning}
     for attempt in (1, 2):
         t0 = time.monotonic()

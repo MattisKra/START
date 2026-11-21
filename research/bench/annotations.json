@@ -1,0 +1,31 @@
+{
+ "_note": "Qualitative hints for benchmark feedback. No numbers derived from other teams' data. 'zero' means the expert value t is 0 (excluded).",
+ "case_001": {
+  "1": {
+   "zero": false,
+   "hint": "Policy clause 2.3.3 halves the indemnity for appliances not connected through an overvoltage protective device, and the description says none was used, so payout_fraction should be 0.5. An appliance sub-limit applies per event across all invoices."
+  },
+  "2": {
+   "zero": true,
+   "hint": "A technician call-out / diagnostic report is an ancillary charge, defined by the policy as not a repair cost: excluded, t = 0."
+  }
+ },
+ "case_002": {
+  "1": {
+   "zero": false,
+   "hint": "The description anchors the price: the machine cost about EUR 1,400, the repairs together came to nearly that, most of it for the display. Use the anchor to bound the display assembly."
+  },
+  "2": {
+   "zero": false,
+   "hint": "Housing shell replacement is a covered repair; use the description's total anchor (display plus housing came to nearly the machine price)."
+  },
+  "3": {
+   "zero": true,
+   "hint": "The description says the scuff was pre-existing and does not affect operation: excluded, t = 0."
+  },
+  "4": {
+   "zero": false,
+   "hint": "A diagnostic inspection is paid in this case as a small positive amount; check how the policy treats diagnostics before setting it to zero."
+  }
+ }
+}
