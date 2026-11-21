@@ -27,6 +27,15 @@ def compare_limits(field, rows):
                        for r in rows])
 
 
+def early_receipt(path, cutoff):
+    last = None
+    for raw in path.read_text().splitlines():
+        event = json.loads(raw)
+        if event["event"] == "decision" and event["on_time"] and event["elapsed_s"] <= cutoff:
+            last = event
+    return last
+
+
 def save(folder):
     game = json.loads((folder / "result.json").read_text())
     receipt = game["final"]
@@ -44,6 +53,10 @@ def save(folder):
         field = settled_field(src, matrix, gid, [r["index"] for r in receipt["lines"]])
         report = dict(status="settled", game=gid, elapsed_s=receipt["elapsed_s"], units="EUR",
                       **compare_limits(field, receipt["lines"]))
+        early = early_receipt(folder / "hybrid.jsonl", 54.)
+        report["at_54s"] = (dict(status="scored", elapsed_s=early["elapsed_s"],
+                                 **compare_limits(field, early["lines"])) if early else
+                            dict(status="no_complete_receipt_by_54s"))
     write_json(folder / "score.json", report)
     print(folder.name, report["status"], report.get("vs_always_factor"), report.get("vs_always_fable"), flush=True)
 
