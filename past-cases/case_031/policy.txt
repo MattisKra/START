@@ -1,0 +1,773 @@
+===============================================================================
+Fictional mock document created for test purposes only.
+All designations and figures are generic. No real contract.
+===============================================================================
+
+HOUSEHOLD AND PERSONAL EFFECTS INSURANCE
+GENERAL POLICY CONDITIONS - PROPERTY DAMAGE COVER
+Policy wording "WD-2026" - Robbery and Personal Effects Edition
+
+These conditions apply together with the General Contract Provisions and with
+the Schedule, both of which form part of this contract. Sums insured, limits,
+deductibles, periods and percentages shown in square brackets are those stated
+in the Schedule.
+
+
+-------------------------------------------------------------------------------
+PART 1 - PURPOSE AND KEY CONCEPTS
+-------------------------------------------------------------------------------
+
+1.1 What this insurance does
+
+This insurance protects the policyholder against the financial consequences of
+the loss of, or physical damage to, insured movable property. The perils that
+can be insured are the ones bundled together in these conditions - among them
+the taking of property by force or under threat of force, burglary, fire,
+escape of water and the natural hazards. Which of the insurable perils are
+actually covered is agreed between insurer and policyholder and recorded in the
+schedule.
+
+Where insured property is taken, destroyed or damaged, the insurer indemnifies
+the value of that property, or the cost of putting it back, on the basis set out
+in Part 6 and within the sums insured and sub-limits agreed. A limited range of
+consequential expenses triggered by a loss event is also carried, within the
+limits agreed for each head.
+
+This contract indemnifies the loss of, and physical damage to, insured property
+only. It does not indemnify the expense of pursuing, evidencing, translating,
+documenting or administering a claim, and it is not a legal-expenses, liability,
+service or assistance contract.
+
+1.2 How the wording is to be read
+
+Personal designations are to be understood as gender-neutral throughout; no
+parallel male and female forms are used.
+
+1.3 Explanation of recurring terms (not legally binding)
+
+Policyholder - the insurer's contracting party and the purchaser of the cover.
+
+Insured event - the event for which the insurer pays.
+
+Exclusion - a peril, a type of damage or an item of property for which no cover
+exists. Exclusions delimit what has been promised and keep the cover calculable.
+They appear as general exclusions applying across the contract, within the
+provisions on individual perils, and within the description of the insured
+property.
+
+Affected item - an item of insured property which was taken, destroyed, damaged
+or lost in the insured event, and which is identified as such in the itemisation
+under 7.1.10.
+
+Indemnifiable loss - the value of the affected items, determined under Part 6
+and Part 7, before the application of sub-limits and of the deductible.
+
+Sub-limit - a monetary ceiling that applies within the sum insured to a defined
+class of property or to a defined head of cost. Where a sub-limit applies, the
+class or head is indemnified only up to that ceiling; the excess is borne by the
+policyholder. Where the loss on that class or head remains below the ceiling,
+the sub-limit does not reduce the indemnity.
+
+Ancillary charge - any charge raised alongside the value of the affected items
+themselves: carriage, freight, delivery, dispatch, packaging, postage,
+transport, call-out and travel, translation, transcription, notarisation,
+certification, reporting, administration, handling and comparable items.
+
+Duties - the things the policyholder must do or refrain from doing before,
+during and after an insured event.
+
+
+-------------------------------------------------------------------------------
+PART 2 - INSURED PERILS
+-------------------------------------------------------------------------------
+
+2.1 The perils that can be covered
+
+The insurer indemnifies insured property that is taken, destroyed or damaged by,
+or lost as a consequence of, the following events:
+
+  (a) TAKING BY FORCE - the taking of insured property from the policyholder,
+      or from a person living with the policyholder in the same household, by
+      the use of force against that person or under the threat of an immediate
+      danger to life or limb;
+
+  (b) BURGLARY AND COMPARABLE INTERFERENCE with the insured premises or with a
+      locked receptacle;
+
+  (c) FIRE GROUP - fire; lightning strike; overvoltage caused by lightning;
+      explosion; deflagration; implosion; impact or crash of an aircraft, its
+      parts or its cargo; impact of a vehicle; scorching; smoke and soot;
+
+  (d) ESCAPE OF WATER;
+
+  (e) NATURAL HAZARDS, in two tiers:
+        (e1) storm and hail;
+        (e2) the further natural hazards - flood, backing-up of water,
+             earthquake, ground subsidence, landslip, snow load, avalanche and
+             volcanic eruption.
+
+2.2 How the groups combine
+
+Each of the groups (a), (b), (c), (d) and (e1) can be taken separately. The
+further natural hazards under (e2) can only be taken in combination with one or
+more of the other groups.
+
+2.3 The taking by force defined
+
+2.3.1 Force and threat
+Force means the physical overcoming of a resistance offered, or reasonably to be
+expected, by the person from whom the property is taken. A threat suffices where
+it is directed at an immediate danger to life or limb and where the property is
+surrendered on account of it.
+
+2.3.2 Property taken outside the insured premises
+Cover extends to insured property carried on the person, or carried in immediate
+personal custody, away from the insured premises, insofar as this is agreed in
+the schedule and within the sub-limits stated there.
+
+2.3.3 Reporting requirement
+The event must be reported without delay to the competent public authority and
+the reference of that report given with the claim. The report is a condition of
+cover; the cost of obtaining, translating or otherwise processing it is governed
+by 3.1.6 and 7.1.8.
+
+2.3.4 Damage excluded within this group
+Not covered:
+  (a) property mislaid, misplaced, forgotten, left behind or lost without an
+      event within the meaning of 2.3.1;
+  (b) property surrendered voluntarily, including on a deception, a false
+      pretext or an inducement not involving force or threat within the meaning
+      of 2.3.1;
+  (c) a shortfall established only on a subsequent stocktaking or reconciliation
+      and not attributable to an identified event.
+
+2.4 Burglary defined
+
+Burglary is present where the perpetrator breaks into, forces open or enters by
+comparable means the insured premises or a locked receptacle within them, or
+uses a key or code obtained through an insured event under 2.3.
+
+2.5 Fire group, escape of water and natural hazards
+
+2.5.1 The fire group covers fire - a combustion that has started without a
+hearth intended for it, or that has escaped such a hearth, and that is capable
+of spreading under its own power - together with lightning strike, overvoltage
+caused by lightning, explosion, deflagration, implosion, aircraft impact,
+vehicle impact, scorching, and smoke and soot. Damage from the gradual action of
+smoke or soot is not covered.
+
+2.5.2 Escaping water means water that has emerged contrary to its intended
+purpose from the water, heating, air-conditioning, extinguishing or comparable
+installations of the building in which the insured property is located.
+
+2.5.3 Storm means a weather-driven movement of air reaching at least the gale
+threshold on the recognised scale of wind strength; hail means solid
+precipitation in the form of grains of ice. The further natural hazards are
+flood, backing-up of water, earthquake, ground subsidence, landslip, snow load,
+avalanche and volcanic eruption, each as customarily defined.
+
+
+-------------------------------------------------------------------------------
+PART 3 - EXCLUSIONS
+-------------------------------------------------------------------------------
+
+3.1 General exclusions
+
+3.1.1 War
+Damage caused by war, warlike events, civil war, revolution, rebellion or
+insurrection is not covered, irrespective of any contributing causes.
+
+3.1.2 Civil commotion
+Damage caused by internal civil unrest is not covered, irrespective of any
+contributing causes.
+
+3.1.3 Nuclear energy
+Damage caused by nuclear energy, nuclear radiation or radioactive substances is
+not covered, irrespective of any contributing causes.
+
+3.1.4 Liability risks
+Claims of third parties against the policyholder, and any outlay directed at
+covering, assessing, administering or settling such claims, are not the subject
+of this contract.
+
+3.1.5 Service, assistance and administration arrangements
+Outlay arising from a service, assistance, support, handling, representation or
+comparable arrangement, and any charge for placing, registering, administering
+or executing an order under such an arrangement, is not indemnifiable. This
+applies irrespective of whether the arrangement was entered into on the occasion
+of an insured event, and irrespective of whether the charge is raised by a party
+that also renders an indemnifiable benefit.
+
+3.1.6 Preparation and substantiation of the claim
+Establishing, evidencing and presenting the claim is a matter for the
+policyholder at its own expense. Outlay directed at the cause, the extent or the
+substantiation of the loss, or at rendering the supporting documents usable for
+the purposes of the claim, is not an indemnifiable head of loss under this
+contract. This applies in particular to the obtaining, copying, certifying,
+notarising, transcribing, summarising, translating into or out of any language,
+interpreting, formatting or filing of reports, statements, records, receipts,
+valuations and comparable documents, however necessary those steps may be for
+the claim to be assessed, and whoever performs them. Part 8 and the general
+contract provisions govern the allocation of the costs of an expert
+determination; nothing in this clause affects the policyholder's own duty of
+substantiation under 7.1.10.
+
+3.2 Exclusions relating to particular property
+
+Not covered is loss of or damage to property which was, at the time of the
+insured event, in the custody of a carrier, a repairer, a dealer or another
+third party for a purpose unconnected with the insured event, save where
+otherwise agreed.
+
+3.3 Exclusions within the escape of water peril
+
+Damage caused by splash or cleaning water; by dry rot and house-rot fungi; by
+groundwater, surface water, flood, precipitation or a backing-up brought about
+by these; by earthquake, snow load, avalanche or volcanic eruption; by ground
+subsidence or landslip not caused by escaping water; by the perils of the fire
+group; or by storm or hail, is not covered.
+
+3.4 Exclusions within the natural hazards
+
+Damage caused by storm surge; by the penetration of precipitation or dirt
+through openings that were not properly closed; by groundwater save where it
+emerged at the surface as a result of precipitation or overflow; by the perils
+of the fire group, save where triggered by an insured earthquake; and by drought
+or desiccation, is not covered.
+
+3.5 Outlay that is not an indemnity for property
+
+Outlay that does not represent the value of an affected item, or the cost of
+making good physical damage to an affected item, is not indemnified. The
+delimitation is governed by 7.1.5 to 7.1.10.
+
+
+-------------------------------------------------------------------------------
+PART 4 - INSURED PROPERTY, INSURED LOCATION, DEDUCTIBLES
+-------------------------------------------------------------------------------
+
+4.1 What is insured
+
+Insured property comprises the movable items belonging to the household of the
+policyholder and serving its private use, insofar as the policyholder owns them
+or bears the risk for them, together with the classes of property described in
+4.2 within the sub-limits stated in the schedule.
+
+4.2 The categories defined
+
+4.2.1 General household effects
+Movable items of ordinary household use, insured up to the sum insured stated in
+the schedule.
+
+4.2.2 Valuables
+Items of jewellery, timepieces, precious metals and stones, collections and
+comparable items of concentrated value form a single class of property.
+Indemnity for this class is subject to the valuables sub-limit of EUR 2,500,
+applied per item and, where more than one such item is affected, in the
+aggregate per insured event, capped at EUR 5,000 across all items, all providers
+and all invoices. Where a separate valuables schedule listing an individual item
+and its agreed value forms part of the contract, that agreed value applies in
+place of the per-item sub-limit for that item; in the absence of such a schedule
+the per-item sub-limit applies whatever the actual value of the item.
+
+4.2.3 Means of payment
+Cash, cash equivalents, prepaid and stored-value instruments and comparable
+means of payment form a single class of property. Indemnity for this class is
+subject to the means-of-payment sub-limit of EUR 500, applied in the aggregate
+per insured event.
+
+4.2.4 Property carried outside the insured premises
+Insured property carried on the person or in immediate personal custody away
+from the insured premises is covered within a sub-limit of EUR 5,000 per insured
+event for that situation, in addition to the class sub-limits under 4.2.2 and
+4.2.3, whichever ceiling is the lower being the operative one.
+
+4.3 Property not insured
+
+Not insured:
+  (a) property used predominantly for a trade, business or profession;
+  (b) motor vehicles, watercraft and aircraft and their parts and accessories;
+  (c) electronically stored data and programs, and the restoration, migration,
+      re-licensing or re-configuration of software, media content, user accounts
+      and comparable intangible items;
+  (d) documents, entitlements, credit balances and comparable intangible assets
+      as such, and the cost of their cancellation, blocking, replacement,
+      re-issue or re-registration;
+  (e) property acquired on the occasion of the loss which does not replace an
+      affected item of the same kind and intended purpose.
+
+4.4 Optionally insurable
+
+Individual items may be scheduled at an agreed value, and classes of property
+may be insured at raised sub-limits, where this is agreed and recorded in the
+schedule.
+
+4.5 The insured location
+
+The insured location is the dwelling stated in the schedule together with the
+ancillary rooms belonging to it. Cover away from the insured location exists
+only within 4.2.4.
+
+4.6 Several persons entitled
+
+Where several persons are entitled under this contract, the insurer may render
+its benefit to any one of them with effect for all. Conduct of one entitled
+person which releases the insurer from liability does not, of itself, prejudice
+the entitlement of the others.
+
+4.7 Deductibles
+
+A deductible is the share of the indemnity, or the amount, that the policyholder
+bears itself per insured event. Deductibles can be agreed individually and may
+differ from one insured peril and one insured benefit to another. Each is set
+out in the schedule. The deductible is applied once per insured event to the
+covered settlement, irrespective of the number of items, providers or invoices
+involved.
+
+
+-------------------------------------------------------------------------------
+PART 5 - INSURED COSTS
+-------------------------------------------------------------------------------
+
+5.1 Which costs are covered
+
+The insurer reimburses the following costs where they were necessary as a
+consequence of an insured event and were actually incurred:
+  (a) the cost of averting or mitigating the loss, insofar as the measure could
+      reasonably be regarded as necessary in the circumstances;
+  (b) the cost of clearing away and disposing of destroyed insured property;
+  (c) the cost of moving and protecting insured property;
+  (d) the cost of changing locks of the insured premises where keys were taken
+      in an insured event;
+  (e) hotel costs where the insured premises have become uninhabitable.
+
+Reimbursement of each of these heads is limited to the amount agreed for it.
+This list is exhaustive. A head of cost that does not fall within it is not
+insured, however closely it is connected with the insured event and however
+reasonably it was incurred.
+
+5.2 The cost heads defined
+
+5.2.1 Averting and mitigating the loss
+Costs of measures taken during or immediately after the insured event to prevent
+the loss from occurring or from increasing, capped at [amount] per insured
+event. Steps taken after the loss has come to rest, and directed at the pursuit
+of the claim rather than at the property, do not fall under this head (3.1.6).
+
+5.2.2 Clearing away and disposal
+Costs incurred in clearing away and disposing of the remains of destroyed
+insured property, including transport to the nearest disposal site.
+
+5.2.3 Moving and protecting property
+Costs incurred in moving, altering or protecting property, where those measures
+serve to secure or reinstate insured property. This head does not extend to the
+carriage, freight, delivery, dispatch or transport of newly procured property to
+the insured location, nor to the transport or forwarding of documents.
+
+5.2.4 Change of locks
+Costs of replacing the locks of the insured premises where their keys were taken
+in an insured event, capped at [amount] per insured event.
+
+5.2.5 Hotel costs
+Costs of accommodation where the insured premises have become uninhabitable and
+confining oneself to a habitable part cannot reasonably be expected, reimbursed
+only where indemnity cannot be claimed under another insurance contract, up to
+[amount] per day for a maximum of [number] days.
+
+
+-------------------------------------------------------------------------------
+PART 6 - BASIS OF COVER AND PREMIUM
+-------------------------------------------------------------------------------
+
+6.1 Insurable value
+
+The insurable value forms the basis for calculating the indemnity. It is
+determined separately for each class of property under 4.2.
+
+6.2 Replacement value
+
+6.2.1 What is insured is the amount that would have to be spent to procure
+property of the same kind and quality in new condition at the time of the
+insured event.
+
+6.2.2 For items whose current value has fallen to a substantial extent below the
+replacement value - in particular through age, wear, technical obsolescence or
+lack of use - the current value applies in place of the replacement value.
+
+6.2.3 For items of concentrated value within 4.2.2, the insurable value is the
+amount that would have to be spent to procure an item of the same kind, quality,
+grade and craftsmanship, determined at the time of the insured event and
+evidenced under 7.1.10.
+
+6.2.4 For the means of payment within 4.2.3, the insurable value is the nominal
+value.
+
+6.3 Relationship between basis of cover and sub-limits
+
+The basis of cover under 6.2 does not displace a sub-limit. Where a class of
+property carries a sub-limit, the sub-limit determines the ceiling of the
+indemnity for that class even where the insurable value demonstrably exceeds it,
+and the balance is borne by the policyholder. Conversely, a sub-limit is a
+ceiling and not a fixed benefit: where the indemnifiable loss on that class is
+lower, the indemnity is the loss.
+
+6.4 Permanently devalued property
+
+For property that can no longer be used for its purpose, only the achievable
+sale price is insured.
+
+6.5 How the premium is calculated
+
+The bases for calculating the premium are the sum insured, the area and type of
+the insured premises, the sub-limits agreed, the deductible agreed, other agreed
+features material to the premium calculation, and the adjustment factor.
+
+6.6 Adjustment of cover and premium
+
+Where cover is adjusted, the premium changes accordingly. The adjustment factor
+changes with effect from 1 January of each year in line with the movement of the
+relevant published price indices, weighted as agreed and rounded to two decimal
+places.
+
+6.7 Subsequent change in a premium-rating feature
+
+Where a rating circumstance subsequently changes and a higher premium results,
+the insurer may demand the higher premium from the point at which the change is
+notified. Where such a circumstance ceases to apply and a lower premium results,
+the insurer must reduce the premium from the point at which it becomes aware of
+that.
+
+
+-------------------------------------------------------------------------------
+PART 7 - CALCULATION AND PAYMENT OF THE INDEMNITY
+-------------------------------------------------------------------------------
+
+7.1 Basis of calculation
+
+7.1.1 The insurer reimburses:
+  (a) for taken, destroyed or lost items - the insurable value under Part 6 at
+      the time of the insured event;
+  (b) for damaged items - the necessary repair costs at the time of the insured
+      event, together with any diminution in value the repair does not offset,
+      capped at the insurable value of the item;
+  (c) for the means of payment - the nominal value.
+
+Where the property concerned belongs to a class carrying a sub-limit, the
+indemnity under (a), (b) or (c) is in every case confined to that sub-limit.
+
+7.1.2 Where property that was taken is recovered, the policyholder must notify
+the insurer without delay. Property recovered before the indemnity is paid is
+treated as damaged property; property recovered afterwards is either surrendered
+to the insurer or retained against repayment of the indemnity.
+
+7.1.3 Price increases occurring between the insured event and the replacement
+are indemnified where the replacement is secured within [number] months.
+
+7.1.4 The achievable sale price of remains is set off in calculating the
+indemnity.
+
+7.1.5 Extent of the indemnity
+Indemnity is confined to those items of insured property that were themselves
+affected by the insured event. Property supplied, procured, renewed or
+supplemented in connection with the replacement of an affected item, without
+having been itself affected, is not indemnified, whatever its functional
+necessity for putting the replacement into use, and whatever its proportion of
+the invoice.
+
+7.1.6 Sets and matched items
+Where one item of a set, suite, pair or collection was affected, indemnity is
+confined to that item and does not extend to the remaining, unaffected items,
+whatever the loss of uniformity, completeness or resale value.
+
+7.1.7 What forms part of the indemnity for property
+The indemnity under 7.1.1 comprises the value of the affected item, or the
+labour and materials directed at repairing the physical damage to that item
+itself. It comprises nothing further.
+
+7.1.8 Outlay that is not an indemnity for property
+The following are not indemnified, however they may be described, bundled or
+invoiced, by whichever party they are raised, and irrespective of whether they
+appear on an invoice or settlement statement that also contains an indemnifiable
+element:
+
+  (a) measures directed at the general condition, upkeep, security, compliance,
+      modernisation or improvement of property, as distinct from making good the
+      damage caused by the insured event;
+
+  (b) carriage, freight, delivery, dispatch, packaging, postage, courier,
+      transport, logistics and comparable charges, whether for bringing
+      replacement property to the insured location, for forwarding documents or
+      correspondence, or for returning items, and whether stated as a separate
+      line, as a percentage or as a flat rate;
+
+  (c) fitting, mounting, installing, connecting, commissioning, setting up,
+      configuring or instructing in the use of replacement property;
+
+  (d) call-out, travel, journey, mileage, vehicle, attendance and standby
+      charges, save where incurred on the occasion of, and on the same invoice
+      as, a benefit that is itself indemnifiable; where nothing billed on an
+      invoice is indemnifiable, the attendance charge on that invoice is not
+      indemnifiable either. Where indemnifiable, one such charge per invoice is
+      reimbursed; return visits and repeat journeys in respect of the same
+      insured event are not;
+
+  (e) outlay belonging to a provider's own business operation rather than to the
+      indemnifiable benefit - its own tools, equipment, software, licences,
+      stationery, printing, copying, media, consumables and comparable working
+      materials, whether described as materials, expenses, disbursements or a
+      surcharge, and general administrative, handling, order-processing,
+      claim-processing, file-opening or documentation charges levied in addition
+      to the itemised benefit;
+
+  (f) charges of the kind described in 3.1.4, 3.1.5 and 3.1.6, including in
+      particular any charge for translating, interpreting, transcribing,
+      certifying, notarising, summarising or otherwise processing a document for
+      the purposes of the claim, together with any working material, surcharge or
+      ancillary charge raised alongside such a charge;
+
+  (g) the same item of cost where it is invoiced more than once in respect of
+      the same insured event, whether by one provider or across several; only the
+      first such charge is indemnified.
+
+7.1.9 No improvement on the pre-loss standard
+The indemnity proceeds on the basis of the type, quality, grade, size, capacity
+and specification of the affected item immediately before the insured event.
+Where a higher specification, a larger format, a superior material or a premium
+range is chosen instead, indemnity is limited to the cost of an equivalent
+standard-grade replacement corresponding to what was in place before the loss;
+the difference is borne by the policyholder.
+
+7.1.10 Itemisation, evidence and apportionment
+The policyholder itemises each affected item - its description, its approximate
+age or date of acquisition, and its value - so that the sub-limits under Part 4
+can be applied to each class and, where applicable, to each item. Where that
+itemisation is not provided for an item, the item is not indemnified, however
+plausible its inclusion in the claim may appear from the other items. Where an
+invoice or settlement statement bundles indemnifiable and non-indemnifiable
+elements without separate pricing, and the split cannot be established from the
+documents, the line is assessed by its predominant stated purpose; where the
+predominant purpose is not indemnifiable, the line is not indemnified. Where a
+line bundles several affected items of a class carrying a sub-limit, the
+sub-limit is applied to the line as a whole.
+
+7.2 Devalued property
+
+Insofar as property can no longer be used for its purpose, it is indemnified at
+the achievable sale price.
+
+7.3 Sum insured lower or higher than the insurable value
+
+Where the sum insured is lower than the insurable value at the time of the
+insured event, the indemnity is reduced in the proportion the sum insured bears
+to the insurable value, insofar as this is agreed. Where the sum insured is
+higher, the insurer is not obliged to compensate more than the loss actually
+incurred.
+
+7.4 Costs
+
+Insured costs under Part 5 are reimbursed where it is demonstrated that they
+were actually incurred, and the indemnity limits agreed for each head are
+applied.
+
+7.5 Order of application
+
+The indemnity is determined in the following order: the indemnifiable loss is
+established item by item under 7.1; the class sub-limits under Part 4 are then
+applied; the insured costs under Part 5 are added within their own limits; and
+the deductible under 7.8 is deducted once from the resulting amount.
+
+7.6 Replacement element of the indemnity
+
+Where the basis of cover is the replacement value, the policyholder acquires a
+claim to that part of the indemnity which exceeds the current value only where it
+demonstrates that it has secured the replacement of property of the same kind and
+intended purpose within the period under 7.1.3.
+
+7.7 Value added tax
+
+Value added tax is reimbursed only if and to the extent that it was actually
+incurred on the occasion of the replacement or repair, and not where the
+policyholder is entitled to recover input tax.
+
+7.8 Deductible
+
+Deductibles are deducted from the indemnity in the amount agreed, once per
+insured event. The deductible agreed for this contract is EUR 50.
+
+7.9 When the indemnity falls due
+
+The indemnity falls due once the insurer has conclusively determined the claim
+as to its basis and its amount. One month after notifying the loss, the
+policyholder may claim as an interim payment the amount that is, on the
+prevailing assessment, payable as a minimum.
+
+7.10 Repayment
+
+The policyholder must repay indemnity paid on the replacement basis where,
+through its own fault, the property was not replaced within a reasonable period,
+and must repay indemnity for property subsequently recovered and retained.
+
+7.11 Interest
+
+The indemnity bears interest from the notification of the loss, save where paid
+within one month. The rate is [number] percentage point(s) below the applicable
+statutory base rate, but at least [percentage] and at most [percentage] per
+year.
+
+7.12 Suspension of time limits
+
+Any period during which the indemnity cannot be determined or paid owing to the
+fault of the policyholder is left out of account.
+
+7.13 Deferral of payment
+
+The insurer may defer payment for as long as there is doubt as to the
+policyholder's entitlement to receive payment, or official or criminal
+proceedings arising out of this insured event are pending.
+
+
+-------------------------------------------------------------------------------
+PART 8 - EXPERT DETERMINATION PROCEDURE
+-------------------------------------------------------------------------------
+
+8.1 After an insured event has occurred, the policyholder may require that the
+amount of the loss be determined in an expert determination procedure. Insurer
+and policyholder may also agree on such a procedure jointly, and may agree to
+extend it to further determinations relating to the insured event.
+
+8.2 Each party nominates one expert in text form. Where a party fails to
+nominate within two weeks of a request, the requesting party may have the expert
+appointed by the court with local jurisdiction for the loss location. Before
+beginning their determinations, the two experts nominate a third expert as
+umpire.
+
+8.3 The experts' findings must state a schedule of the taken, destroyed, damaged
+and lost insured property with the corresponding insurable values; the repair
+and replacement costs; the residual values; and the insured costs. Where a class
+of property carries a sub-limit, the findings state the loss for that class
+separately, so that the sub-limit can be applied to it.
+
+8.4 Each expert transmits its findings to both parties simultaneously. Where the
+findings diverge, the umpire decides the points that remain in dispute within
+the limits set by the experts' findings. The findings are binding unless they
+manifestly deviate substantially from the true state of affairs.
+
+8.5 Unless something else has been agreed, each party bears the costs of its own
+expert; the costs of the umpire are borne in equal shares. A report, valuation,
+translation or other document obtained by one party outside this procedure
+remains that party's own cost (3.1.6).
+
+8.6 The expert determination procedure does not affect the policyholder's
+duties.
+
+
+-------------------------------------------------------------------------------
+PART 9 - POLICYHOLDER DUTIES AND INCREASE IN RISK
+-------------------------------------------------------------------------------
+
+9.1 Duties before an insured event
+
+9.1.1 The insured premises must be kept secured in the customary manner; doors
+and windows must be locked when the premises are left unattended.
+
+9.1.2 Items of concentrated value within 4.2.2 must be kept in the manner agreed
+in the schedule when not in use or in immediate personal custody.
+
+9.1.3 Where property is carried away from the insured premises, it must be kept
+in immediate personal custody or in a locked receptacle appropriate to its
+value.
+
+9.2 Duties after an insured event
+
+9.2.1 The policyholder must avert and mitigate the loss so far as can reasonably
+be expected, and follow the insurer's instructions where these can be obtained.
+
+9.2.2 The policyholder must report the event without delay to the competent
+public authority where required under 2.3.3, must notify the insurer without
+delay, and must keep the affected state unchanged until released.
+
+9.2.3 The policyholder must provide the itemisation and the supporting documents
+under 7.1.10 and give the insurer any information required to assess the claim.
+The expense of doing so is borne by the policyholder (3.1.6).
+
+9.3 Consequences of a breach of duty
+
+Where the policyholder breaches one of these duties, and subject to the
+conditions set out in the general contract provisions, the insurer is entitled to
+terminate the contract and may be wholly or partly released from liability.
+
+9.4 Increase in risk
+
+An increase in risk subject to notification may exist in particular where the
+insured premises are left unoccupied for a prolonged period, where the agreed
+security arrangements are altered or cease to be operational, or where the
+composition or the value of a class of property under 4.2 changes materially.
+The consequences of an increase in risk are governed by the general contract
+provisions.
+
+
+-------------------------------------------------------------------------------
+PART 10 - CANCELLATION AND CHANGE OF CIRCUMSTANCES
+-------------------------------------------------------------------------------
+
+10.1 Cancellation after an insured event
+
+After an insured event for which the insurer has rendered a benefit, or has
+declined to do so, each party may cancel the contract, observing a notice period
+of one month, within one month of the conclusion of the negotiations on the
+indemnity.
+
+10.2 Change of the insured premises
+
+Where the policyholder moves the household to other premises, cover passes to
+those premises. Both sets of premises are covered during the removal, for a
+maximum of [number] months. The change must be notified to the insurer without
+delay in text form.
+
+10.3 Change of the rating features
+
+Where a rating feature changes, 6.7 applies. The insurer may cancel the contract
+where the policyholder does not agree to a premium adjusted in accordance with
+6.7, observing a notice period of one month.
+
+10.4 Duties of notification
+
+Changes of the kind described in 10.2 and 10.3 must be notified without delay in
+text form. Where notification has been omitted, the insurer is not obliged to
+pay in the insured event only where the event occurred later than one month
+after notification ought to have been received and the insurer demonstrates that
+it would not have concluded the existing contract on the changed circumstances.
+
+
+-------------------------------------------------------------------------------
+PART 11 - LOSS DESCRIPTION AND OPERATIVE PROVISIONS FOR THIS CLAIM
+-------------------------------------------------------------------------------
+
+11.1 Insured property was taken from the policyholder in circumstances falling
+within 2.3.1 while the policyholder was away from the insured premises. The
+event was reported to the competent public authority at the time. The affected
+items belong to classes of property for which sub-limits are agreed in the
+schedule, and no separate valuables schedule listing an individual item and its
+agreed value forms part of this contract.
+
+11.2 The claim is supported by documents drawn up in a language other than the
+language of the contract. Charges were subsequently raised by more than one
+party: one for rendering those supporting documents usable for the purposes of
+the claim, together with the working materials raised alongside that charge, and
+one settlement statement in respect of the property itself, on which an
+ancillary charge for forwarding was also raised.
+
+11.3 The indemnity for the property itself is determined under 7.1.1 and then
+confined to the applicable class sub-limits under 4.2.2 and 4.2.3 in accordance
+with 6.3 and 7.5. Where the indemnifiable loss on a class exceeds its sub-limit,
+the balance is borne by the policyholder; where it does not, the loss is paid in
+full subject only to 7.8.
+
+11.4 Clauses 2.3.1, 2.3.3, 3.1.5, 3.1.6, 4.2.2, 4.2.3, 4.2.4, 6.3, 7.1.1, 7.1.5,
+7.1.7, 7.1.8(b), 7.1.8(e), 7.1.8(f), 7.1.10, 7.5 and 7.8 are the operative
+provisions for determining how each line of each invoice and settlement
+statement in this claim is characterised.
+
+===============================================================================
+END OF DOCUMENT
+===============================================================================
