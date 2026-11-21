@@ -227,6 +227,27 @@ Honest reading:
 - Not yet run: the with/without price-references comparison (references change the medians that `k` multiplies). Until then the medians of games 10-15 and the earlier ones are not like-for-like.
 - Decision knob stays `CLAIMS_B_MEDIAN_MULT`; the live machine's `.env` may override the default.
 
+## Update 18:30: price references on vs off (games 10-15, forward only), and why the factor depends on them
+
+`research/bench/refs_ab.py`: one cheap reader (`gpt-6-luna`, effort low), 3 draws per arm and game, games 10-15. Arm `refs` gets the reference block built only from games before the one read (like live); arm `noref` gets none. Each arm's geometric-mean medians and mean `q` are scored with the same cost-side replay. (A first run shared one `Case` object across threads and leaked the arms into each other; it was discarded and the script now copies the case per job.)
+
+| arm | valid lines with informative bracket | median below L | inside | above U | median abs log error to bracket |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| no references | 12 | 1 | 1 | 10 | 0.53 |
+| references | 10 | 5 | 1 | 4 | 0.41 |
+
+Reviewer cost over games 10-15 (EUR, `b = k x median`, midpoint of the evaluator range; we actually paid 24.1k):
+| arm | 0.45 | 0.55 | 0.70 | 0.90 | 1.25 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| no references | 22.0k | 21.4k | **18.9k** | 23.3k | 25.9k |
+| references | 23.2k | 23.2k | 23.3k | **22.0k** | 22.3k |
+
+Reading:
+- Without references the reader's medians are mostly **above** the public bracket (10 of 12), so a strict factor corrects for that and 0.7 is best. With references the medians move toward the bracket (error 0.53 to 0.41) and more of them fall **below** it, so the same strict factor over-rejects and the cost curve becomes flat (22.0-23.3k for every k from 0.45 to 1.25).
+- So the factor and the median level are **coupled**: 0.55 was fitted on reader medians from games 1-9 without references; with references on (the current live default) it is probably too strict, and 0.7-0.9 is about as good or better in games 10-15. The spread between factors with references is about 1.3k over six games, which is inside this test's noise (one model, 3 draws, six games, 10-12 informative lines).
+- What this does not show: that references improve the final payoff (charge side not measured), that the no-reference arm at 0.7 (18.9k) is a real optimum (picked in hindsight on six games), or anything about the full 8-member ensemble.
+- Practical consequence: if references stay on, the lower-risk setting is a middle factor (about 0.7), not 0.55 or 0.9 on this evidence; the choice remains a risk call that the next forward games should confirm. `CLAIMS_B_MEDIAN_MULT` is the knob; nothing else changes.
+
 ## What this does and does not support
 
 - Supports: a benchmark loop exists; the live bot's actual `b` replay (regret ≈ 1142 on games 1-2, 281 on game 3) can be compared with any candidate on the same lines; model price-level bias is large and varies by case; ensembles and web search are not a fix by themselves.
