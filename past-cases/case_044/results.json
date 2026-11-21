@@ -1,0 +1,537 @@
+{
+  "game": 44,
+  "team": "Kiebler Software Solutions",
+  "net": 2219.06,
+  "income": 20839.0,
+  "costs": 18619.94,
+  "lines": {
+    "1": {
+      "charge": {
+        "a": 38.0,
+        "n": 11,
+        "accepted": 3,
+        "penalty_paid_to_us": 8,
+        "rejected_as_fraud": 0,
+        "income": 570.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 8
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 1,
+        "accepted_positive": 9,
+        "accepted_paid": 251.2,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 1,
+        "b_lower": 40.92,
+        "b_upper": null
+      }
+    },
+    "2": {
+      "charge": {
+        "a": 38.0,
+        "n": 11,
+        "accepted": 2,
+        "penalty_paid_to_us": 9,
+        "rejected_as_fraud": 0,
+        "income": 589.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 9
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 2,
+        "accepted_positive": 8,
+        "accepted_paid": 237.98,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 1,
+        "b_lower": 39.06,
+        "b_upper": null
+      }
+    },
+    "3": {
+      "charge": {
+        "a": 100.0,
+        "n": 11,
+        "accepted": 1,
+        "penalty_paid_to_us": 0,
+        "rejected_as_fraud": 10,
+        "income": 100.0,
+        "verdict": "INFLATED: t < a (rejected for 0)",
+        "silent_reviewers": 0
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 2,
+        "accepted_positive": 9,
+        "accepted_paid": 637.93,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 0,
+        "b_lower": 102.3,
+        "b_upper": null
+      }
+    },
+    "4": {
+      "charge": {
+        "a": null,
+        "n": 11,
+        "accepted": 0,
+        "penalty_paid_to_us": 0,
+        "rejected_as_fraud": 11,
+        "income": 0.0,
+        "verdict": "INFLATED: t < a (rejected for 0)",
+        "silent_reviewers": 0
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 2,
+        "accepted_positive": 9,
+        "accepted_paid": 637.18,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 0,
+        "b_lower": 99.98,
+        "b_upper": null
+      }
+    },
+    "5": {
+      "charge": {
+        "a": 20.0,
+        "n": 11,
+        "accepted": 1,
+        "penalty_paid_to_us": 0,
+        "rejected_as_fraud": 10,
+        "income": 20.0,
+        "verdict": "INFLATED: t < a (rejected for 0)",
+        "silent_reviewers": 0
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 2,
+        "accepted_positive": 8,
+        "accepted_paid": 123.38,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 1,
+        "b_lower": 20.76,
+        "b_upper": null
+      }
+    },
+    "6": {
+      "charge": {
+        "a": 8.0,
+        "n": 11,
+        "accepted": 3,
+        "penalty_paid_to_us": 8,
+        "rejected_as_fraud": 0,
+        "income": 120.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 8
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 1,
+        "accepted_positive": 9,
+        "accepted_paid": 52.94,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 1,
+        "b_lower": 9.46,
+        "b_upper": null
+      }
+    },
+    "7": {
+      "charge": {
+        "a": 18.0,
+        "n": 11,
+        "accepted": 0,
+        "penalty_paid_to_us": 11,
+        "rejected_as_fraud": 0,
+        "income": 297.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 11
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 2,
+        "accepted_positive": 9,
+        "accepted_paid": 121.73,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 0,
+        "b_lower": 19.2,
+        "b_upper": null
+      }
+    },
+    "8": {
+      "charge": {
+        "a": 20.0,
+        "n": 11,
+        "accepted": 1,
+        "penalty_paid_to_us": 0,
+        "rejected_as_fraud": 10,
+        "income": 20.0,
+        "verdict": "INFLATED: t < a (rejected for 0)",
+        "silent_reviewers": 0
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 1,
+        "accepted_positive": 9,
+        "accepted_paid": 110.26,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 1,
+        "b_lower": 19.07,
+        "b_upper": null
+      }
+    },
+    "9": {
+      "charge": {
+        "a": 600.0,
+        "n": 11,
+        "accepted": 2,
+        "penalty_paid_to_us": 9,
+        "rejected_as_fraud": 0,
+        "income": 9300.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 9
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 1,
+        "accepted_positive": 10,
+        "accepted_paid": 5306.12,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 0,
+        "b_lower": 618.71,
+        "b_upper": null
+      }
+    },
+    "10": {
+      "charge": {
+        "a": 380.0,
+        "n": 11,
+        "accepted": 3,
+        "penalty_paid_to_us": 0,
+        "rejected_as_fraud": 8,
+        "income": 1140.0,
+        "verdict": "INFLATED: t < a (rejected for 0)",
+        "silent_reviewers": 0
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 1,
+        "accepted_positive": 9,
+        "accepted_paid": 2782.73,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 1,
+        "b_lower": 365.03,
+        "b_upper": null
+      }
+    },
+    "11": {
+      "charge": {
+        "a": 155.0,
+        "n": 11,
+        "accepted": 1,
+        "penalty_paid_to_us": 10,
+        "rejected_as_fraud": 0,
+        "income": 2480.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 10
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 1,
+        "accepted_positive": 9,
+        "accepted_paid": 523.75,
+        "wrongly_rejected": 1,
+        "penalty_cost": 315.84,
+        "penalty_excess_vs_accepting": 105.28,
+        "rightly_rejected": 0,
+        "b_lower": 153.45,
+        "b_upper": 210.56
+      }
+    },
+    "12": {
+      "charge": {
+        "a": 75.0,
+        "n": 11,
+        "accepted": 2,
+        "penalty_paid_to_us": 9,
+        "rejected_as_fraud": 0,
+        "income": 1162.5,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 9
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 1,
+        "accepted_positive": 10,
+        "accepted_paid": 543.95,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 0,
+        "b_lower": 80.64,
+        "b_upper": null
+      }
+    },
+    "13": {
+      "charge": {
+        "a": 43.0,
+        "n": 11,
+        "accepted": 3,
+        "penalty_paid_to_us": 8,
+        "rejected_as_fraud": 0,
+        "income": 645.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 8
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 1,
+        "accepted_positive": 10,
+        "accepted_paid": 297.59,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 0,
+        "b_lower": 44.64,
+        "b_upper": null
+      }
+    },
+    "14": {
+      "charge": {
+        "a": 10.0,
+        "n": 11,
+        "accepted": 2,
+        "penalty_paid_to_us": 0,
+        "rejected_as_fraud": 9,
+        "income": 20.0,
+        "verdict": "INFLATED: t < a (rejected for 0)",
+        "silent_reviewers": 0
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 3,
+        "accepted_positive": 0,
+        "accepted_paid": 0,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 8,
+        "b_lower": null,
+        "b_upper": null
+      }
+    },
+    "15": {
+      "charge": {
+        "a": 114.0,
+        "n": 11,
+        "accepted": 1,
+        "penalty_paid_to_us": 10,
+        "rejected_as_fraud": 0,
+        "income": 1824.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 10
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 1,
+        "accepted_positive": 10,
+        "accepted_paid": 598.58,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 0,
+        "b_lower": 112.07,
+        "b_upper": null
+      }
+    },
+    "16": {
+      "charge": {
+        "a": 50.0,
+        "n": 11,
+        "accepted": 1,
+        "penalty_paid_to_us": 10,
+        "rejected_as_fraud": 0,
+        "income": 800.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 10
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 2,
+        "accepted_positive": 6,
+        "accepted_paid": 223.64,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 3,
+        "b_lower": 57.34,
+        "b_upper": null
+      }
+    },
+    "17": {
+      "charge": {
+        "a": 26.0,
+        "n": 11,
+        "accepted": 2,
+        "penalty_paid_to_us": 9,
+        "rejected_as_fraud": 0,
+        "income": 403.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 9
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 1,
+        "accepted_positive": 10,
+        "accepted_paid": 131.3,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 0,
+        "b_lower": 26.97,
+        "b_upper": null
+      }
+    },
+    "18": {
+      "charge": {
+        "a": null,
+        "n": 11,
+        "accepted": 0,
+        "penalty_paid_to_us": 0,
+        "rejected_as_fraud": 11,
+        "income": 0.0,
+        "verdict": "INFLATED: t < a (rejected for 0)",
+        "silent_reviewers": 0
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 1,
+        "accepted_positive": 10,
+        "accepted_paid": 5180.68,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 0,
+        "b_lower": 616.04,
+        "b_upper": null
+      }
+    },
+    "19": {
+      "charge": {
+        "a": 40.0,
+        "n": 11,
+        "accepted": 3,
+        "penalty_paid_to_us": 0,
+        "rejected_as_fraud": 8,
+        "income": 120.0,
+        "verdict": "INFLATED: t < a (rejected for 0)",
+        "silent_reviewers": 0
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 3,
+        "accepted_positive": 0,
+        "accepted_paid": 0,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 8,
+        "b_lower": null,
+        "b_upper": null
+      }
+    },
+    "20": {
+      "charge": {
+        "a": 10.0,
+        "n": 11,
+        "accepted": 0,
+        "penalty_paid_to_us": 11,
+        "rejected_as_fraud": 0,
+        "income": 165.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 11
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 3,
+        "accepted_positive": 0,
+        "accepted_paid": 0,
+        "wrongly_rejected": 7,
+        "penalty_cost": 110.3,
+        "penalty_excess_vs_accepting": 36.77,
+        "rightly_rejected": 1,
+        "b_lower": null,
+        "b_upper": 3.38
+      }
+    },
+    "21": {
+      "charge": {
+        "a": 57.0,
+        "n": 11,
+        "accepted": 2,
+        "penalty_paid_to_us": 9,
+        "rejected_as_fraud": 0,
+        "income": 883.5,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 9
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 1,
+        "accepted_positive": 10,
+        "accepted_paid": 432.86,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 0,
+        "b_lower": 55.57,
+        "b_upper": null
+      }
+    },
+    "22": {
+      "charge": {
+        "a": 60.0,
+        "n": 11,
+        "accepted": 3,
+        "penalty_paid_to_us": 0,
+        "rejected_as_fraud": 8,
+        "income": 180.0,
+        "verdict": "INFLATED: t < a (rejected for 0)",
+        "silent_reviewers": 0
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 2,
+        "accepted_positive": 0,
+        "accepted_paid": 0,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 9,
+        "b_lower": null,
+        "b_upper": null
+      }
+    }
+  }
+}
