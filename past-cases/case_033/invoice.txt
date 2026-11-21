@@ -1,0 +1,55 @@
+Invoice
+INVOICE NO.
+2026-0213
+DATE
+3 Apr 2026
+DUE
+17 Apr 2026
+TRADE
+Electronics Retail
+FROM
+Gadget Grotto Megastore Ltd
+128 Circuit Crescent
+10178 Techtonic
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Laptop replacement - equivalent to the damaged
+model (repair uneconomic per supplier report)
+1 pcs
+2 Higher-spec upgrade difference (better model than the
+one damaged)
+1 flat rate
+3 Tablet screen repair (struck in the same bag) 1 pcs
+4 Diagnostic inspection of both devices 1 pcs
+5 New laptop carry bag (not damaged in the incident) 1 pcs
+6 Extended warranty on the replacement laptop 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0214
+DATE
+3 Apr 2026
+DUE
+17 Apr 2026
+TRADE
+Data Services
+FROM
+Zeros & Ones Data Wranglers Ltd
+404 Notfound Avenue
+01067 Bitburg
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+7 Data recovery from the damaged laptop drive 1 flat rate
+8 Administration fee 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
