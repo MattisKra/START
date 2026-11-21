@@ -1,0 +1,63 @@
+Invoice
+INVOICE NO.
+2026-0011
+DATE
+10 Jan 2026
+DUE
+24 Jan 2026
+TRADE
+Tiling
+FROM
+Grout Expectations Tiling Ltd
+8 Mosaic Mews
+60594 Tilebury
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Wall tile covering 3 m²
+2 Hole drilling 1 pcs
+3 Wall tiles 60x30 3 m²
+4 Wall levelling material 1 m²
+5 Wall tiles 1000x5000 5 pcs
+6 Silicone joints 3.6 linear m
+7 Premium silicone sealant 12 m
+8 Vehicle costs 1 pcs
+9 Skilled worker hours 14 hrs
+10 Clean wall tile covering 1 flat rate
+11 Remove drywall 1 flat rate
+12 Removal and disposal of damaged insulation 1 pcs
+13 Remove damp plaster in basement rooms 3 m²
+14 Remove damp plaster in attic 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0012
+DATE
+10 Jan 2026
+DUE
+24 Jan 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+15 Wall rosette 1 pcs
+16 Disassembly and assembly service 1 pcs
+17 Construction dryer 7 days
+18 Material surcharge 1 pcs
+19 Rock wool pipe insulation 1 m
+20 Construction waste disposal 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
