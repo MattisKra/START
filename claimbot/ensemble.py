@@ -29,6 +29,10 @@ SIZE_WEIGHT = {
     "gpt-6-luna": 1.0,
 }
 EFFORT_WEIGHT = {"low": 1.0, "medium": 1.5}
+# Extra members with web search; they get this multiplier on top.
+# Off by default (set CLAIMS_WEB_MODELS to enable): in tests the models never actually searched.
+WEB_MODELS = ["claude-fable-5-2", "claude-opus-5-5", "gpt-6.2-sol", "gpt-6.1-terra"]
+WEB_WEIGHT = 1.5
 PROVIDER = {m: ("anthropic" if m.startswith("claude-") else "openai") for m in SIZE_WEIGHT}
 
 
@@ -38,10 +42,11 @@ class Member:
     model: str
     effort: str
     weight: float
+    web: bool = False
 
     @property
     def name(self) -> str:
-        return f"{self.model}/{self.effort}"
+        return f"{self.model}/{self.effort}" + ("+web" if self.web else "")
 
 
 def members() -> list[Member]:
@@ -56,15 +61,24 @@ def members() -> list[Member]:
             continue
         for e in efforts:
             out.append(Member(provider, m, e, SIZE_WEIGHT.get(m, 1.0) * EFFORT_WEIGHT.get(e, 1.0)))
+    web_models = [m.strip() for m in os.getenv("CLAIMS_WEB_MODELS", "").split(",") if m.strip()]
+    web_efforts = [e.strip() for e in os.getenv("CLAIMS_WEB_EFFORTS", "low,medium").split(",") if e.strip()]
+    for m in web_models:
+        provider = PROVIDER.get(m, "anthropic" if m.startswith("claude-") else "openai")
+        if provider == "anthropic" and not have_anthropic:
+            continue
+        for e in web_efforts:
+            w = SIZE_WEIGHT.get(m, 1.0) * EFFORT_WEIGHT.get(e, 1.0) * WEB_WEIGHT
+            out.append(Member(provider, m, e, w, web=True))
     return out
 
 
 def run_member(case: Case, m: Member) -> tuple[CaseEstimate, dict]:
     if m.provider == "anthropic":
         from .anthropic_estimator import estimate
-        return estimate(case, m.effort, m.model)
+        return estimate(case, m.effort, m.model, web=m.web)
     from .estimator import estimate
-    return estimate(case, m.effort, m.model)
+    return estimate(case, m.effort, m.model, web=m.web)
 
 
 def _wmedian(values: list[float], weights: list[float]) -> float:

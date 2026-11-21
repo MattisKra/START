@@ -10,7 +10,7 @@ import anthropic
 
 from . import config
 from .case import Case
-from .estimator import INSTRUCTIONS, case_text
+from .estimator import INSTRUCTIONS, WEB_HINT, case_text
 from .schema import CaseEstimate
 
 _client: anthropic.Anthropic | None = None
@@ -32,17 +32,27 @@ def _image_block(path: Path) -> dict:
     return {"type": "image", "source": {"type": "base64", "media_type": mime, "data": data}}
 
 
-def estimate(case: Case, effort: str, model: str) -> tuple[CaseEstimate, dict]:
+WEB_TOOL = {"type": "web_search_20260209", "name": "web_search", "max_uses": 3}
+
+
+def estimate(case: Case, effort: str, model: str, web: bool = False) -> tuple[CaseEstimate, dict]:
     t0 = time.monotonic()
-    content = [_image_block(p) for p in case.images] + [{"type": "text", "text": case_text(case)}]
-    resp = _get_client().messages.parse(
-        model=model,
-        max_tokens=16000,
-        system=INSTRUCTIONS,
-        messages=[{"role": "user", "content": content}],
-        output_config={"effort": effort},
-        output_format=CaseEstimate,
-    )
+    content = [_image_block(p) for p in case.images] + [{"type": "text", "text": case_text(case) + (WEB_HINT if web else "")}]
+    messages = [{"role": "user", "content": content}]
+    extra = {"tools": [WEB_TOOL]} if web else {}
+    for _ in range(3):  # resume server-side tool loops that pause (pause_turn)
+        resp = _get_client().messages.parse(
+            model=model,
+            max_tokens=16000,
+            system=INSTRUCTIONS,
+            messages=messages,
+            output_config={"effort": effort},
+            output_format=CaseEstimate,
+            **extra,
+        )
+        if resp.stop_reason != "pause_turn":
+            break
+        messages = [messages[0], {"role": "assistant", "content": resp.content}]
     if resp.stop_reason == "refusal":
         cat = resp.stop_details.category if resp.stop_details else None
         raise RuntimeError(f"{model} refused (category {cat})")
@@ -52,6 +62,7 @@ def estimate(case: Case, effort: str, model: str) -> tuple[CaseEstimate, dict]:
     meta = {
         "model": model,
         "effort": effort,
+        "web": web,
         "latency_s": round(time.monotonic() - t0, 2),
         "usage": resp.usage.model_dump() if resp.usage else None,
         "response_id": resp.id,

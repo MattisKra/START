@@ -75,20 +75,30 @@ def case_text(case: Case) -> str:
     return text
 
 
-def build_input(case: Case) -> list[dict]:
-    content = [{"type": "input_text", "text": case_text(case)}]
+def build_input(case: Case, web: bool = False) -> list[dict]:
+    content = [{"type": "input_text", "text": case_text(case) + (WEB_HINT if web else "")}]
     content += [_image_part(p) for p in case.images]
     return [{"role": "user", "content": content}]
 
 
-def estimate(case: Case, effort: str = config.EFFORT, model: str | None = None) -> tuple[CaseEstimate, dict]:
+WEB_HINT = (
+    "\n\nYou have a web search tool. Before answering, run one or two web searches "
+    "for current German market prices of the most expensive invoice items (parts, "
+    "materials or hourly labour rates), and use what you find to anchor the price "
+    "percentiles. Do not search for anything else. Keep it quick."
+)
+
+
+def estimate(case: Case, effort: str = config.EFFORT, model: str | None = None, web: bool = False) -> tuple[CaseEstimate, dict]:
     """Returns the parsed estimate and some metadata (latency, token usage)."""
     model = model or config.MODEL
     t0 = time.monotonic()
+    extra = {"tools": [{"type": "web_search"}]} if web else {}
     resp = _client().responses.parse(
         model=model,
         instructions=INSTRUCTIONS,
-        input=build_input(case),
+        **extra,
+        input=build_input(case, web),
         reasoning={"effort": effort},
         text_format=CaseEstimate,
     )
@@ -98,6 +108,7 @@ def estimate(case: Case, effort: str = config.EFFORT, model: str | None = None) 
     meta = {
         "model": model,
         "effort": effort,
+        "web": web,
         "latency_s": round(time.monotonic() - t0, 2),
         "usage": resp.usage.model_dump() if resp.usage else None,
         "response_id": resp.id,
