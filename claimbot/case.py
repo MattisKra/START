@@ -52,11 +52,15 @@ def prepare_image(path: Path) -> tuple[str, bytes] | None:
     return None
 
 
-def _sevenzip() -> str:
+def _extract_cmd(zip_path: Path, password: str, dest: Path) -> list[str]:
+    """7-Zip if installed, else libarchive's bsdtar (ships with macOS and reads AES zips)."""
     exe = shutil.which("7zz") or shutil.which("7z")
-    if not exe:
-        raise RuntimeError("7-Zip not found (brew install sevenzip)")
-    return exe
+    if exe:
+        return [exe, "x", f"-p{password}", f"-o{dest}", "-y", str(zip_path)]
+    tar = "/usr/bin/bsdtar" if Path("/usr/bin/bsdtar").exists() else shutil.which("bsdtar")
+    if tar:
+        return [tar, "-x", "--passphrase", password, "-C", str(dest), "-f", str(zip_path)]
+    raise RuntimeError("neither 7-Zip nor bsdtar found (brew install sevenzip)")
 
 
 def extract_zip(zip_path: Path, password: str, dest: Path) -> Path:
@@ -68,13 +72,10 @@ def extract_zip(zip_path: Path, password: str, dest: Path) -> Path:
         n += 1
         dest = base.with_name(f"{base.name}_{n}")
     dest.mkdir(parents=True)
-    proc = subprocess.run(
-        [_sevenzip(), "x", f"-p{password}", f"-o{dest}", "-y", str(zip_path)],
-        capture_output=True,
-        text=True,
-    )
+    cmd = _extract_cmd(Path(zip_path), password, dest)
+    proc = subprocess.run(cmd, capture_output=True, text=True)
     if proc.returncode != 0:
-        raise RuntimeError(f"7-Zip failed ({proc.returncode}): {proc.stderr.strip() or proc.stdout[-500:]}")
+        raise RuntimeError(f"{Path(cmd[0]).name} failed ({proc.returncode}): {proc.stderr.strip() or proc.stdout[-500:]}")
     return dest
 
 

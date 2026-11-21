@@ -11,7 +11,7 @@ other team) and an acceptance limit `b` (us as insurer, the highest charge we pa
 
 ## Commands
 
-Python 3.13, managed with `uv`. External tools: 7-Zip (`7zz` or `7z`; `brew install sevenzip`) is required to decrypt cases.
+Python 3.13, managed with `uv`. External tools: 7-Zip (`7zz` or `7z`; `brew install sevenzip`) decrypts cases; without it `case.py` falls back to libarchive's `bsdtar` (preinstalled on macOS).
 Poppler's `pdftotext` is optional and gives better invoice text than the pypdf fallback.
 
 ```sh
@@ -19,6 +19,7 @@ uv sync                                                               # install 
 uv run python -m claimbot estimate CASE_DIR_OR_ZIP [--password PW] [--effort medium]   # estimate locally, never submits
 uv run python -m claimbot round GAME_ID --zip cases/case_017.zip --dry-run              # full round without submitting
 uv run python -m claimbot games                                       # GET /api/games/list
+uv run python -m claimbot archive [--once]                            # decrypt each released case into past-cases/ (never submits)
 python3 -I research/sim/payoff_check.py                               # payoff-model sanity checks (numpy)
 python3 -I research/sim/review_pricing_rule.py
 ```
@@ -46,6 +47,15 @@ estimates facts and uncertainty, and Python owns all arithmetic and strategy**, 
   `CLAIMS_FAST_EFFORT`). It submits whichever finishes first, lets the full-effort result overwrite it, and stops waiting
   `SAFETY_MARGIN_S` before the deadline. Every estimate is logged to `runs/<stamp>_<tag>_<effort>.json`.
 - `api.py`: `X-API-Key` auth. `PUT /api/games/{id}/submissions` takes `[{index, charge_price, acceptance_limit}]`.
+- `archive.py` (`claimbot archive`): a separate loop that **never submits**, so it can run next to the live `watch` bot. 5 s after
+  each game's `start_time` it fetches the key (never before), decrypts `cases/case_NNN.zip` into `past-cases/case_NNN/` (data
+  files plus `invoice.txt`) and adds a stub row to `past-cases/README.md`. About 3 min after the start it reads **our own** rows
+  from the public leaderboard (via `research/live/lb_analyze.py`) and writes `results.json` plus a row under "Our results per
+  game". After each change it commits **only `past-cases/`** onto `origin/main` through a throwaway index (local branch, local
+  commits and other working-tree changes are untouched; a teammate's files there are never deleted; README.md is merged
+  three-way) and pushes; `--no-push` turns that off. On start it backfills every released game that is missing. To keep it
+  running overnight: `nohup caffeinate -i .venv/bin/python -u -m claimbot archive >> runs/archive.log 2>&1 &`
+  (stop with `pkill -f "claimbot archive"`). The team name comes from `CLAIMS_TEAM`.
 
 ## Rules that are easy to get wrong
 

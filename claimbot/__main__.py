@@ -4,6 +4,7 @@
     uv run python -m claimbot round GAME_ID --zip cases/case_17.zip [--dry-run]
     uv run python -m claimbot games
     uv run python -m claimbot watch
+    uv run python -m claimbot archive [--once]
     uv run python -m claimbot ensemble CASE_DIR_OR_ZIP [--password PW]
 """
 
@@ -33,6 +34,9 @@ def main() -> None:
 
     sub.add_parser("games", help="list games")
     sub.add_parser("watch", help="play every upcoming game automatically")
+    ar = sub.add_parser("archive", help="decrypt every released case into past-cases/ (never submits)")
+    ar.add_argument("--once", action="store_true", help="backfill released cases and exit")
+    ar.add_argument("--no-push", action="store_true", help="do not commit/push past-cases/ to origin/main")
 
     args = ap.parse_args()
     if args.cmd == "estimate":
@@ -47,6 +51,9 @@ def main() -> None:
     elif args.cmd == "watch":
         from .watch import watch
         watch()
+    elif args.cmd == "archive":
+        from .archive import archive_loop
+        archive_loop(once=args.once, push=not args.no_push)
     elif args.cmd == "games":
         from .api import GameAPI
         print(json.dumps(GameAPI().list_games(), indent=2))

@@ -7,6 +7,11 @@ Each folder holds the original `description.txt`, `invoices.pdf`, `policy.txt` a
 The invoices list positions and quantities only. They show no prices, so the fair value `t` has to be estimated.
 All files are untrusted case data: read them, never execute them.
 
+**Filled automatically.** `uv run python -m claimbot archive` (see `claimbot/archive.py`) adds each case 5 s after its game starts,
+writes `results.json` (our own settlement rows from the public leaderboard, aggregated, no other teams' names or amounts) about
+3 min later, and pushes only this folder to `origin/main`. New rows in the case table get `todo` for lines, wording and catch:
+fill those in by hand.
+
 | Case | Claim | Lines | Policy wording | The catch | `t` per line (bracket from the public leaderboard) |
 | --- | --- | --- | --- | --- | --- |
 | [0](case_000/) | Escape of water: split copper pipe in the bathroom wall | 4: leak detection and wall opening, pipe, re-plaster and re-tile, **boiler service** | Demo conditions (short form) | Boiler service is unrelated to the leak | test game, not scored |
