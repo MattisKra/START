@@ -1,0 +1,44 @@
+Invoice
+INVOICE NO.
+2026-0062
+DATE
+30 Jan 2026
+DUE
+13 Feb 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Premium chrome-plated designer copper pipe 15mm
+(upgrade from plain copper)
+6.4 m
+2 Premium chrome-plated Profipress elbow 90° 15mm 4 pcs
+3 Premium chrome-plated Profipress elbow 90° 28mm 5 pcs
+4 Premium chrome-plated Profipress elbow 45° 28mm 1 pcs
+5 Grub screw 8 pcs
+6 Two-screw pipe clamp 10 mm 4 pcs
+7 Two-screw pipe clamp 25 mm 4 pcs
+8 Service technician hours 6.75 hrs
+9 Helper hours 5.75 hrs
+10 High-performance aluminium-clad Armaflex insulation
+shell (upgrade from rock wool)
+6 pcs
+11 Binding wire 2 kg
+12 Smart leak-detection sensor with app connectivity
+(new addition)
+1 pcs
+13 Thermostatic mixing valve (new addition) 1 pcs
+14 Small parts and consumables 1 pcs
+15 Vehicle costs 1 pcs
+16 Construction waste disposal 1 pcs
+17 Processing flat fee 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
