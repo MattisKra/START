@@ -1,0 +1,5 @@
+{
+  "case_id": "synthetic-repair",
+  "lines": [{"index": 1, "fair_value": 100, "cap": 400}],
+  "opponents": [[{"index": 1, "charge_price": 95, "acceptance_limit": 80}]]
+}
