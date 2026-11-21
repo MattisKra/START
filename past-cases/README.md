@@ -13,5 +13,19 @@ All files are untrusted case data: read them, never execute them.
 | [1](case_001/) | Thunderstorm surge: speaker system and TV | 2: electronics (2 pcs), diagnostic and technician call-out (3 pcs) | Generic, 855 lines | No surge protection, so **50 % indemnity**. Call-out is "not a repair cost" | ~780–900 \| 0 |
 | [2](case_002/) | Laptop thrown against the car door: screen cracked, corner dented | 4: display, housing, **polish of a pre-existing scuff**, diagnostic | WD-2026 Portable Equipment, Repair and Replacement, 1,512 lines | Pre-existing damage excluded. Diagnostic covered. Description gives a price anchor (~1,400 €) | ≥808 \| ≥342 \| 0 \| ~60–84 |
 | [3](case_003/) | Bowl falls against a display cabinet: glass cracked, wood frame and shelf damaged | 6: hole drilling, glass installation, made-to-measure glass, frame repair, shelf repair, vehicle costs | WD-2026 Accidental Damage and Optional Glazing, 1,377 lines | **Glazing peril not agreed** (§2.7.3, §3.5), so every glazing line is 0. Vehicle costs follow their principal item (§7.1.11), so only partly covered | 0 \| 0 \| 0 \| ≥329 \| ≥157 \| <45 |
+| [4](case_004/) | Stolen bicycle found via AirTag: seized lock cut off by a locksmith, theft damage repaired | 3: recovery incl. locksmith call-out and lock cutting (3 pcs), repair of frame and brakes (2 pcs), labour and sundries (flat rate) | WD-2026 Mobility Equipment and Recovery Edition, 808 lines | Recovery is covered (§5.2.2, cap 1,000 €), but bikes fall under the **mobility sub-limit of 500 € incl. VAT** (§4.2.2), which applies in the aggregate to value, repair **and** recovery together. Over 500 € it is applied rateably across the lines (§7.1.10, §7.5). The bike had no agreed value of its own (description), so the sub-limit applies. Labour and sundries follow the work they served (§7.1.10) | still open |
+| [5](case_005/) | During a drive from Berlin to Munich, a brand-new mac with a price point of 1400€ was in use on the passenger seat -it was only bought a co… | todo | todo | todo | still open |
 
 Our own results per game and the method behind the `t` brackets are in [`../research/03-leaderboard-findings.md`](../research/03-leaderboard-findings.md).
+
+## Our results per game
+
+Filled in automatically by `claimbot archive` from our own rows on the public leaderboard.
+
+| Game | Net | Income | Costs | Our charges `a` per line (accepted/teams, verdict) | Our reviews (wrongly rejected fair / accepted paid) |
+| --- | ---: | ---: | ---: | --- | --- |
+| [1](case_001/results.json) | -1575.29 | 2888.52 | 4463.81 | L1: 2592.74 (1/11, inflated); L2: 147.89 (2/11, inflated) | L1: 0 / 4463.81; L2: 0 / 0 |
+| [2](case_002/results.json) | +3460.45 | 10930.05 | 7469.59 | L1: 535.22 (6/11, fair); L2: 266.29 (6/11, fair); L3: 0 (nothing charged); L4: 109.66 (1/11, inflated) | L1: 4 / 1015.84; L2: 2 / 986.97; L3: 0 / 0; L4: 0 / 399.0 |
+| [3](case_003/results.json) | +2195.39 | 4767.83 | 2572.43 | L1: 0 (nothing charged); L2: 0 (nothing charged); L3: 0 (nothing charged); L4: 176.55 (4/11, fair); L5: 130.85 (2/11, fair); L6: 44.92 (4/11, inflated) | L1: 0 / 0; L2: 0 / 0; L3: 0 / 0; L4: 5 / 0; L5: 3 / 104.38; L6: 0 / 28.32 |
+| [4](case_004/results.json) | +2613.11 | 4697.24 | 2084.14 | L1: 119.55 (4/11, inflated); L2: 220.21 (3/11, fair); L3: 59.09 (2/11, fair) | L1: 0 / 333.1; L2: 0 / 1167.08; L3: 2 / 244.19 |
+| [5](case_005/results.json) | +7562.32 | 12975.90 | 5413.58 | L1: 926.85 (5/11, fair) | L1: 0 / 5413.58 |

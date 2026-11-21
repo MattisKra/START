@@ -1,0 +1,81 @@
+{
+  "game": 4,
+  "team": "Kiebler Software Solutions",
+  "net": 2613.11,
+  "income": 4697.24,
+  "costs": 2084.14,
+  "lines": {
+    "1": {
+      "charge": {
+        "a": 119.55,
+        "n": 11,
+        "accepted": 4,
+        "penalty_paid_to_us": 0,
+        "rejected_as_fraud": 7,
+        "income": 478.2,
+        "verdict": "INFLATED: t < a (rejected for 0)",
+        "silent_reviewers": 0
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 5,
+        "accepted_positive": 2,
+        "accepted_paid": 333.1,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 4,
+        "b_lower": 186.91,
+        "b_upper": null
+      }
+    },
+    "2": {
+      "charge": {
+        "a": 220.21,
+        "n": 11,
+        "accepted": 3,
+        "penalty_paid_to_us": 8,
+        "rejected_as_fraud": 0,
+        "income": 3303.15,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 8
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 5,
+        "accepted_positive": 5,
+        "accepted_paid": 1167.08,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 1,
+        "b_lower": 320.04,
+        "b_upper": null
+      }
+    },
+    "3": {
+      "charge": {
+        "a": 59.09,
+        "n": 11,
+        "accepted": 2,
+        "penalty_paid_to_us": 9,
+        "rejected_as_fraud": 0,
+        "income": 915.9,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 9
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 5,
+        "accepted_positive": 4,
+        "accepted_paid": 244.19,
+        "wrongly_rejected": 2,
+        "penalty_cost": 339.76,
+        "penalty_excess_vs_accepting": 113.25,
+        "rightly_rejected": 0,
+        "b_lower": 85.0,
+        "b_upper": 97.1
+      }
+    }
+  }
+}
