@@ -47,7 +47,7 @@ def _meta(spec, t0, usage=None, rid=None):
 
 
 # ---------------------------------------------------------------- OpenAI
-def _openai(case: Case, spec: Spec, fast: bool, instructions: str | None = None):
+def _openai(case: Case, spec: Spec, fast: bool, instructions: str | None = None, *, schema=ReaderCase, max_tokens=None):
     from openai import OpenAI
     if not config.OPENAI_KEY:
         raise RuntimeError("OPENAI_KEY is not set (put it in .env)")
@@ -58,14 +58,14 @@ def _openai(case: Case, spec: Spec, fast: bool, instructions: str | None = None)
             content.append({"type": "input_image", "image_url": f"data:{mime};base64,{base64.b64encode(raw).decode()}", "detail": "high"})
     resp = OpenAI(api_key=config.OPENAI_KEY, timeout=config.LLM_TIMEOUT_S, max_retries=1).responses.parse(
         model=spec.model, instructions=(instructions or INSTRUCTIONS) + (FAST_NOTE if fast else ""), input=[{"role": "user", "content": content}],
-        reasoning={"effort": spec.effort}, text_format=ReaderCase)
+        reasoning={"effort": spec.effort}, text_format=schema, **({"max_output_tokens": max_tokens} if max_tokens else {}))
     if resp.output_parsed is None:
         raise RuntimeError(f"{spec.name} returned no parsed output (status={resp.status})")
     return resp.output_parsed, _meta(spec, t0, resp.usage.model_dump() if resp.usage else None, resp.id)
 
 
 # ---------------------------------------------------------------- Anthropic
-def _anthropic(case: Case, spec: Spec, fast: bool, instructions: str | None = None):
+def _anthropic(case: Case, spec: Spec, fast: bool, instructions: str | None = None, *, schema=ReaderCase, max_tokens=None):
     import anthropic
     if not os.getenv("ANTHROPIC_API_KEY"):
         raise RuntimeError("ANTHROPIC_API_KEY is not set (put it in .env)")
@@ -76,8 +76,8 @@ def _anthropic(case: Case, spec: Spec, fast: bool, instructions: str | None = No
             blocks.append({"type": "image", "source": {"type": "base64", "media_type": mime, "data": base64.standard_b64encode(raw).decode()}})
     blocks.append({"type": "text", "text": case_text(case)})
     resp = anthropic.Anthropic(timeout=config.LLM_TIMEOUT_S, max_retries=1).messages.parse(
-        model=spec.model, max_tokens=16000, system=(instructions or INSTRUCTIONS) + (FAST_NOTE if fast else ""),
-        messages=[{"role": "user", "content": blocks}], output_config={"effort": spec.effort}, output_format=ReaderCase)
+        model=spec.model, max_tokens=max_tokens or 16000, system=(instructions or INSTRUCTIONS) + (FAST_NOTE if fast else ""),
+        messages=[{"role": "user", "content": blocks}], output_config={"effort": spec.effort}, output_format=schema)
     if resp.stop_reason == "refusal":
         raise RuntimeError(f"{spec.name} refused")
     if resp.parsed_output is None:
@@ -107,23 +107,18 @@ def strict_schema(model_cls) -> dict:
     return walk(root)
 
 
-_SCHEMA = None
-
-
-def _openrouter(case: Case, spec: Spec, fast: bool, instructions: str | None = None):
-    global _SCHEMA
+def _openrouter(case: Case, spec: Spec, fast: bool, instructions: str | None = None, *, schema=ReaderCase, max_tokens=None):
     key = os.getenv("OPENROUTER_API_KEY")
     if not key:
         raise RuntimeError("OPENROUTER_API_KEY is not set")
-    _SCHEMA = _SCHEMA or strict_schema(ReaderCase)
     t0 = time.monotonic()
     content = [{"type": "text", "text": case_text(case)}]
     if spec.image:
         for mime, raw in case.image_blobs:
             content.append({"type": "image_url", "image_url": {"url": f"data:{mime};base64,{base64.b64encode(raw).decode()}"}})
-    body = {"model": spec.model, "max_tokens": 12000, "usage": {"include": True},
+    body = {"model": spec.model, "max_tokens": max_tokens or 12000, "usage": {"include": True},
             "messages": [{"role": "system", "content": (instructions or INSTRUCTIONS) + (FAST_NOTE if fast else "")}, {"role": "user", "content": content}],
-            "response_format": {"type": "json_schema", "json_schema": {"name": "reader_case", "strict": True, "schema": _SCHEMA}},
+            "response_format": {"type": "json_schema", "json_schema": {"name": "reader_case", "strict": True, "schema": strict_schema(schema)}},
             "provider": {"require_parameters": True}, "reasoning": {"effort": spec.effort}}
     for attempt in (1, 2):
         r = requests.post("https://openrouter.ai/api/v1/chat/completions", json=body, headers={"Authorization": f"Bearer {key}"},
@@ -136,12 +131,12 @@ def _openrouter(case: Case, spec: Spec, fast: bool, instructions: str | None = N
     raw = (data["choices"][0]["message"].get("content") or "").strip()
     if raw.startswith("```"):
         raw = raw.strip("`").split("\n", 1)[1].rsplit("```", 1)[0]
-    est = ReaderCase.model_validate(json.loads(raw))
+    est = schema.model_validate(json.loads(raw))
     return est, _meta(spec, t0, data.get("usage"), data.get("id"))
 
 
 PROVIDERS = {"openai": _openai, "anthropic": _anthropic, "openrouter": _openrouter}
 
 
-def read(case: Case, spec: Spec, fast: bool = False, instructions: str | None = None):
-    return PROVIDERS[spec.provider](case, spec, fast, instructions)
+def read(case: Case, spec: Spec, fast: bool = False, instructions: str | None = None, *, schema=ReaderCase, max_tokens=None):
+    return PROVIDERS[spec.provider](case, spec, fast, instructions, schema=schema, max_tokens=max_tokens)
