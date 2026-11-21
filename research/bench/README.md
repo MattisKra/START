@@ -92,6 +92,32 @@ single readers luna 586 / terra 513 / fable 566; median of the three in parallel
 - **More price agents do not help** (k = 1, 3, 5: 573, 680, 614): cheap models from different providers share their price-level error, so a bigger panel averages the same mistake. The decomposition is not slower (parallel, about 9-14 s) and costs $0.003-0.03 per case.
 - **How many agents?** The data supports 1 reader, or 2 specialists (coverage + one price call). More agents only make sense if each brings **independent information** (a labour/parts breakdown, a stated anchor, a same-edition memory), not another look at the same inputs.
 
+## Update 16:15: THE EVALUATOR WE CAN TRUST (`euro_replay.py`, `euro_replay_check.py`, `euro_eval.py`)
+
+**Everything above `b_regret` / `a_score` is a proxy with known flaws** (one-sided brackets used as if they were values, charges skipped when unclassified, price ratios instead of euros, the cap ignored, ~20-26 lines, in-sample prompts, one model draw per cell). Use it to find ideas, not to decide. The decision tool is the euro replay below.
+
+**What it is.** The official payoff (accepted: min(a, c); rejected and fair: 1.5 a; rejected and inflated: 0; cap c >= 4t with a floor) applied to our candidate `(a, b)` per line against the real field of that game, reconstructed only from the public settlement rows (charges, fair/inflated bits, a bracket for `t`, an interval for every reviewer's limit, a proven lower bound for the shared cap). Every unknown is carried as an interval, so each game gets a net range `[lo, hi]` and an identified share. It never uses point guesses for hidden quantities.
+**How it was validated (both passed):**
+1. *Reproduces reality:* replaying our logged ACTUAL `(a, b)` returns our actual net **exactly in 7 of 9 games** (range width 0) and to within EUR 360 / 1,000 in games 8 and 9 (99 % of pair outcomes identified); the true value was inside the range in 9 of 9.
+2. *Sound on known truth:* on 12,000 synthetic cases (random fields with silent, rational, accept-everything, strict and over-charging teams, random cap) the true counterfactual net was inside `[lo, hi]` **in 100 %** (largest overshoot 6 cents of rounding); median range width EUR 1.9k, 86 % of pair outcomes identified. The first version failed this test (97.9 %; caught clipped accepted amounts at the cap), the fix is in the code.
+**What it cannot do:** it holds the field fixed (opponents do not react), assumes our readers' saved answers are what we would have submitted (one draw each), and bounds the exposure to charges nobody ever revealed with a heuristic ceiling (not a proof, but it held on every synthetic case). Upper bounds are very loose (an unseen lax reviewer could have accepted anything); **the lower bound is the useful number: the worst case consistent with the data.** A candidate is only "better" if its whole delta range is above zero.
+
+**First results, games 1-8** (readers luna / terra / fable through the engine; our actual net over these games +6,886; `delta` = candidate minus actual):
+| candidate | net range | delta vs actual | surely better / worse games |
+| --- | ---: | ---: | ---: |
+| actual (live bot) | [6.9k, 7.2k] | [0, +0.4k] | |
+| luna, engine defaults (KA .9, KB 1.25) | [-15.8k, 85.9k] | [-22.7k, +79.1k] | 4 / 1 |
+| terra / fable, engine defaults | [-2.4k, 38.3k] / [-14.9k, 43.6k] | [-9.3k, ...] / [-21.7k, ...] | 3 / 0 each |
+| luna, KA 0.8 / KB 1.0 | [5.0k, 86.2k] | [-1.9k, +79.3k] | 4 / 0 |
+| luna, KA 0.8 / KB 0.8 | [9.2k, 85.8k] | [**+2.3k**, +79.0k] | 4 / 0 |
+| luna, **KA 0.7 / KB 0.9** | [18.2k, 71.4k] | [**+11.3k**, +64.6k] | **6 / 0** |
+| luna, KA 0.6 / KB 0.6 | [17.7k, 58.7k] | [**+10.8k**, +51.8k] | 4 / 2 |
+| terra, KA 0.8 / KB 0.8 or 1.0 | [~8k, ~87k] | [+1.2k / +0.8k, ...] | 3 / 2 |
+| luna, excluded lines charged 'as_valid' vs 'zero' | same worst case (5.0k vs 4.9k), best case 86k vs 44k | | the free option does not change the worst case |
+- **Reading:** with the luna reader and a lower charge and a tighter acceptance limit (KA 0.6-0.8, KB 0.6-0.9) the **worst case is better than what we actually earned** (delta lower bound +2k to +11k), while the engine defaults (KA 0.9, KB 1.25) can lose up to 22k in the worst case. This reproduces, now in euros, why the 1.25x acceptance multiplier hurt in games 7-8.
+- **Caveats on these first numbers:** the multipliers were picked from 7 candidates after seeing games 1-8 (multiple comparisons), cases 1-4 shaped the reader prompt, one saved draw per reader, game 9+ not yet included. Treat them as the first shortlist to confirm on the games that come next, not as a final choice.
+- Usage: `python3 -I research/raw4/scripts/fetch_field.py FIELD_DIR` (FIELD_DIR **outside** the repo), then `uv run --with pyzipper python research/bench/euro_eval.py FIELD_DIR --us "Team Name"`. Re-run `euro_replay_check.py FIELD_DIR --us "Team Name" --synthetic 2000` after any change to the replay.
+
 ## What this does and does not support
 
 - Supports: a benchmark loop exists; the live bot's actual `b` replay (regret ≈ 1142 on games 1-2, 281 on game 3) can be compared with any candidate on the same lines; model price-level bias is large and varies by case; ensembles and web search are not a fix by themselves.
