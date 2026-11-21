@@ -1,0 +1,54 @@
+Invoice
+INVOICE NO.
+2026-0179
+DATE
+11 Mar 2026
+DUE
+25 Mar 2026
+TRADE
+Translation Services
+FROM
+Lost in Translation Language Ltd
+13 Babel Boulevard
+10119 Wordsworth
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Translation from Spanish to English 2 hrs
+2 Material costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0180
+DATE
+11 Mar 2026
+DUE
+25 Mar 2026
+TRADE
+Compensation
+Payment
+FROM
+Golden Handshake Payouts Ltd
+88 Cheque Chase Road
+20095 Refundton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+3 Compensation for stolen watch (premium replacement
+model, upgrade on the one taken)
+1 pcs
+4 Compensation for cash taken in robbery 1 pcs
+5 Replacement of designer sunglasses (mislaid
+separately, not taken in robbery)
+1 pcs
+6 Shipping 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
