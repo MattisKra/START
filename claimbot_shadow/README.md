@@ -59,3 +59,13 @@ A development replay exercised both directions. In game 24 the selector chose Fa
 Before game 26, Fable reviewed the selector. Agreement on a median can reflect shared price assumptions; the benefit of changing a limit depends on the fairness of the opponent charges it crosses. The scorer therefore reports paired euro savings on each switch against always using the factor. It also replays the last complete receipt by 54 seconds from release to represent the live runner’s six-second safety margin. The original 60-second shadow result remains the experiment’s primary timing record.
 
 For this exploratory block, fewer than five switched lines by 54 seconds is insufficient to assess repeatability. Positive total lower-bound savings versus the factor, with positive lower bounds in at least two games, would justify a second frozen block. Three games cannot establish a live policy. A next experiment could compare the labour/assembly condition alone with the model votes alone to learn which condition contributes.
+
+## Label-only and vote-only shadows
+
+Start `.venv/bin/python -u -m claimbot_shadow.ablation_watch runs/shadow/<hybrid-run>` before release. It freezes the selectors for remaining games and reads the same timestamped hybrid revisions. Each invoice is independently read after release and its archive digest checked against the hybrid input. All policies keep Fable's issuer charge.
+
+- **Label only** uses Fable’s limit when the printed invoice uses an hourly unit or the word “assembly” and Fable’s payability estimate passes the existing gate. Otherwise it uses the factor limit. It needs no reader votes.
+- **Vote only** uses Fable’s limit when two distinct model names support it. Every available effort of each supporting model must pass the payability gate and put the gross median strictly closer to Fable’s limit. This arm ignores the work label.
+- The frozen hybrid uses each reader’s work classification and validity. The printed-label rule uses Fable’s validity, so comparisons measure the full policies. They do not isolate a text label independently of its coverage gate.
+
+Run `.venv/bin/python research/bench/score_ablations.py --follow runs/shadow/<hybrid-run>/ablations` to collect per-line and total reviewer savings. The scorer compares each arm against the factor, the single-condition arms head-to-head, and the hybrid against each. Each cutoff uses the same latest decision observed by all arms by that time. Zero differences are ties. Missing receipts are unscored. A zero-straddling savings interval leaves the payoff comparison unresolved.
