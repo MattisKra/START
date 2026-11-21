@@ -13,7 +13,7 @@ import math
 import os
 import time
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 
 from . import config, pricing
 from .case import Case
@@ -42,13 +42,15 @@ class Member:
     effort: str
     weight: float
     web: bool = False
+    selective: bool = False
 
     @property
     def name(self) -> str:
-        return f"{self.model}/{self.effort}" + ("+web" if self.web else "")
+        suffix = "+rate-check" if self.selective else "+web" if self.web else ""
+        return f"{self.model}/{self.effort}" + suffix
 
 
-def members() -> list[Member]:
+def members(*, selective_by_default: bool = False) -> list[Member]:
     """CLAIMS_ENSEMBLE="model,model,..." and CLAIMS_ENSEMBLE_EFFORTS="low,medium" override the defaults."""
     models = [m.strip() for m in os.getenv("CLAIMS_ENSEMBLE", ",".join(SIZE_WEIGHT)).split(",") if m.strip()]
     efforts = [e.strip() for e in os.getenv("CLAIMS_ENSEMBLE_EFFORTS", "low,medium").split(",") if e.strip()]
@@ -60,7 +62,19 @@ def members() -> list[Member]:
             continue
         for e in efforts:
             out.append(Member(provider, m, e, SIZE_WEIGHT.get(m, 1.0) * EFFORT_WEIGHT.get(e, 1.0)))
-    web_models = [m.strip() for m in os.getenv("CLAIMS_WEB_MODELS", ",".join(WEB_MODELS)).split(",") if m.strip()]
+    configured_web = os.getenv("CLAIMS_WEB_MODELS")
+    if configured_web is None:
+        configured_web = "selective" if selective_by_default and len(out) > 1 else ",".join(WEB_MODELS)
+    if configured_web == "selective":
+        for i, member in enumerate(out):
+            if member.provider == "openai" and member.effort == "medium":
+                out[i] = replace(member, selective=True)
+                break
+        else:
+            if os.getenv("CLAIMS_WEB_MODELS") == "selective":
+                raise ValueError("Selective rate checks require an OpenAI medium-effort ensemble member")
+        return out
+    web_models = [m.strip() for m in configured_web.split(",") if m.strip()]
     web_efforts = [e.strip() for e in os.getenv("CLAIMS_WEB_EFFORTS", "low,medium").split(",") if e.strip()]
     for m in web_models:
         provider = PROVIDER.get(m, "anthropic" if m.startswith("claude-") else "openai")
@@ -77,7 +91,7 @@ def run_member(case: Case, m: Member, references: str | None = None) -> tuple[Ca
         from .anthropic_estimator import estimate
         return estimate(case, m.effort, m.model, web=m.web, references=references)
     from .estimator import estimate
-    return estimate(case, m.effort, m.model, web=m.web, references=references)
+    return estimate(case, m.effort, m.model, web=m.web, references=references, selective=m.selective)
 
 
 _bypass_cache: dict[tuple, set[str]] = {}

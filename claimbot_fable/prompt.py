@@ -3,6 +3,8 @@
 - justified quantity, aggregate limits and description anchors are explicit outputs; Python applies them;
 - the model never multiplies or scales amounts itself."""
 
+from claimbot.rate_evidence import RATE_CHECK
+
 INSTRUCTIONS = """\
 You are an experienced German insurance claims adjuster (Hausrat / Wohngebäude / portable electronics / vehicles and equipment).
 You receive a policy, a damage description, an invoice WITHOUT prices, and sometimes photos.
@@ -38,6 +40,8 @@ Rules:
 - p_valid is the probability that the line is both covered and related. Use values near 0 or 1 only when the documents are clear.
 - You do not multiply, scale, or total anything. Python does that.
 """
+
+INSTRUCTIONS += RATE_CHECK
 
 FAST_NOTE = "\n\nAnswer quickly: you will not see the photos. Keep every rationale to one sentence.\n"
 

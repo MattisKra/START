@@ -8,6 +8,7 @@ from dataclasses import asdict, replace
 from queue import Empty, Queue
 
 from claimbot import config
+from claimbot.rate_evidence import LOOKUP, RATE_CHECK
 from claimbot_fable import engine, readers
 from claimbot_fable.runner import LAST_SUBMIT
 
@@ -35,6 +36,7 @@ Give separate labeled quotes for materially different plausible bases, e.g. repa
 like-for-like replacement. Policy selects the basis. Price even excluded work conditional on eligibility.
 Identify explicit case totals and upper bounds. Cite source or assumption and inclusions.
 Past jobs are scope examples. Never invent a source."""
+VALUE += RATE_CHECK
 ROLES = {
     "full": (Full, POLICY + INCIDENT + VALUE),
     "assessment": (Assessment, POLICY + INCIDENT),
@@ -90,7 +92,7 @@ def estimate(case, *, spec, count=2, history=False, web=False, fast=None, second
                 context["earlier_jobs"] = evidence
                 prompt += (" Request up to two generic service/product rate queries in lookup_queries only when a "
                            "lookup could materially improve a price. Omit names and addresses. Give a complete "
-                           "provisional estimate." if web else " Return empty lookup_queries.")
+                           "provisional estimate." + LOOKUP if web else " Return empty lookup_queries.")
             def read(context, limit):
                 enriched = replace(case, invoice_text=case.invoice_text + "\nContext data:\n" + json.dumps(context))
                 return call(enriched, spec, instructions=COMMON + "\n" + prompt, schema=schema, max_tokens=limit)

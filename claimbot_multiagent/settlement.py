@@ -3,6 +3,7 @@ import re
 from collections import defaultdict
 from dataclasses import dataclass
 
+from claimbot.invoice_quantity import QUANTITY, parse_quantity
 from claimbot_fable.schema import AggregateLimit, Anchor, ReaderCase, ReaderLine
 
 from .schema import Assessment, Valuation
@@ -22,7 +23,7 @@ def invoice_items(text):
     # Poppler preserves columns, pypdf emits a single space between cells.
     # A wrapped description may precede the quantity in plain PDF extraction.
     pending = []
-    quantity_unit = r"(\d+(?:[.,]\d+)?)\s+([A-Za-z€²³][\w²³/%.-]*(?: rate)?)"
+    quantity_unit = rf"({QUANTITY})\s+([A-Za-z€²³][\w²³/%.-]*(?: rate)?)"
     row = re.compile(r"^(\d+)\s+(.+?)\s+" + quantity_unit + r"$")
     for raw in text.splitlines():
         line = raw.strip()
@@ -42,7 +43,7 @@ def invoice_items(text):
         match = row.fullmatch(line)
         if match:
             pos, description, quantity, unit = match.groups()
-            items.append(Item(int(pos), description, float(quantity.replace(",", ".")), unit))
+            items.append(Item(int(pos), description, parse_quantity(quantity), unit))
         elif re.match(r"^\d+\s", line):
             pending = [line]
         elif items:

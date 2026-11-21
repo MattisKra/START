@@ -13,6 +13,9 @@ import re
 import zlib
 from dataclasses import dataclass
 
+from .invoice_quantity import QUANTITY, parse_quantity
+
+
 # --- policy clauses ---------------------------------------------------------------------------------------------------
 
 HEADING = re.compile(r"^(\d+(?:\.\d+){1,3})\s+([A-Z].*)$")
@@ -182,13 +185,9 @@ def condition_excerpt(clause_text: str, anchor: str = "", max_words: int = 100) 
 # --- invoice lines ----------------------------------------------------------------------------------------------------
 
 _UNIT = r"[A-Za-z][A-Za-z0-9²³/.]*(?:\s[a-z]+)?"
-QTY_ONLY = re.compile(rf"^(\d+(?:[.,]\d+)?)\s+({_UNIT})$")          # "2 hrs", "0.2 m2", "1 flat rate"
-QTY_END = re.compile(rf"^(.*\S)\s+(\d+(?:[.,]\d+)?)\s+({_UNIT})$")    # "Hole drilling 1 pcs"
+QTY_ONLY = re.compile(rf"^({QUANTITY})\s+({_UNIT})$")          # "2 hrs", "0.2 m2", "1 flat rate"
+QTY_END = re.compile(rf"^(.*\S)\s+({QUANTITY})\s+({_UNIT})$")    # "Hole drilling 1 pcs"
 POS_START = re.compile(r"^(\d+)\s+(\S.*)$")
-
-
-def _qty(s: str) -> float:
-    return float(s.replace(",", "."))
 
 
 def _finish(item: dict) -> dict:
@@ -196,11 +195,11 @@ def _finish(item: dict) -> dict:
     qty, unit, text_rows = None, "", rows
     m = QTY_ONLY.match(rows[-1]) if len(rows) > 1 else None
     if m:
-        qty, unit, text_rows = _qty(m.group(1)), m.group(2), rows[:-1]
+        qty, unit, text_rows = parse_quantity(m.group(1)), m.group(2), rows[:-1]
     else:
         m = QTY_END.match(rows[-1])
         if m:
-            qty, unit, text_rows = _qty(m.group(2)), m.group(3), rows[:-1] + [m.group(1)]
+            qty, unit, text_rows = parse_quantity(m.group(2)), m.group(3), rows[:-1] + [m.group(1)]
     text = ""
     for r in text_rows:
         text = (text + r) if text.endswith("-") else (text + " " + r).strip()

@@ -10,6 +10,7 @@ from openai import OpenAI
 from . import config
 from .case import Case
 from .schema import CaseEstimate
+from .rate_evidence import LOOKUP, RATE_CHECK
 
 INSTRUCTIONS = """\
 You are an experienced German insurance claims adjuster for property damage
@@ -38,10 +39,9 @@ Rules:
   price. Make the range wide when you are unsure.
 - t is what the insurer OWES under the policy, not what the work costs on the
   open market. For damaged property (appliances, furniture, electronics) use
-  the policy's valuation basis: usually the pre-loss / time value after
-  depreciation for age and wear ("no improvement"), not the price of new
-  equipment. Old consumer electronics are often worth a small fraction of the
-  new price.
+  the valuation basis of the applicable clause and endorsements. Depreciate
+  only when the policy requires it. Match the pre-loss specification when
+  pricing like-for-like new replacements.
 - Proportional reductions in the policy (e.g. indemnity halved for a missing
   surge protector, deductibles, sub-limits) go into payout_fraction, not into
   the unit price.
@@ -50,6 +50,9 @@ Rules:
 - p_valid is your probability that the line passes both the coverage and the
   relatedness tests. Use values near 0 or 1 only when the documents are clear.
 """
+
+
+INSTRUCTIONS += RATE_CHECK
 
 
 def _client() -> OpenAI:
@@ -79,32 +82,31 @@ def case_text(case: Case, references: str | None = None) -> str:
     return text
 
 
-def build_input(case: Case, web: bool = False, references: str | None = None) -> list[dict]:
-    content = [{"type": "input_text", "text": (WEB_HINT if web else "") + case_text(case, references)}]
+def build_input(case: Case, web: bool = False, references: str | None = None, *, selective: bool = False) -> list[dict]:
+    hint = LOOKUP if selective else WEB_HINT if web else ""
+    content = [{"type": "input_text", "text": hint + case_text(case, references)}]
     content += [_image_part(b) for b in case.image_blobs]
     return [{"role": "user", "content": content}]
 
 
-WEB_HINT = (
-    "MANDATORY FIRST STEP: you have a web_search tool and you MUST use it before "
-    "answering. Run one or two web searches for current German market prices of the "
-    "most expensive invoice items (parts, materials, appliances or hourly labour rates "
-    "of the relevant trade) and anchor your price percentiles on what you find. An "
-    "answer without a web search is invalid. Search only for prices, nothing else.\n\n"
-)
+WEB_HINT = "Use the web search tool to check a price before answering. " + LOOKUP
 
 
 def estimate(case: Case, effort: str = config.EFFORT, model: str | None = None, web: bool = False,
-             references: str | None = None) -> tuple[CaseEstimate, dict]:
+             references: str | None = None, *, selective: bool = False) -> tuple[CaseEstimate, dict]:
     """Returns the parsed estimate and some metadata (latency, token usage)."""
     model = model or config.MODEL
     t0 = time.monotonic()
     extra = {"tools": [{"type": "web_search"}], "tool_choice": "required"} if web else {}
+    if selective:
+        extra = {"tools": [{"type": "web_search"}], "tool_choice": "auto", "max_tool_calls": 2}
+    if web or selective:
+        extra["include"] = ["web_search_call.action.sources"]
     resp = _client().responses.parse(
         model=model,
         instructions=INSTRUCTIONS,
         **extra,
-        input=build_input(case, web, references),
+        input=build_input(case, web, references, selective=selective),
         reasoning={"effort": effort},
         text_format=CaseEstimate,
     )
@@ -114,10 +116,17 @@ def estimate(case: Case, effort: str = config.EFFORT, model: str | None = None, 
     meta = {
         "model": model,
         "effort": effort,
-        "web": web,
-        "web_searches": sum(1 for o in (resp.output or []) if getattr(o, "type", "") == "web_search_call"),
+        "web": web or selective,
+        "web_searches": 0,
         "latency_s": round(time.monotonic() - t0, 2),
         "usage": resp.usage.model_dump() if resp.usage else None,
         "response_id": resp.id,
     }
+    if web or selective:
+        calls = [o for o in (resp.output or []) if getattr(o, "type", None) == "web_search_call"]
+        actions = [call.action for call in calls if getattr(call, "action", None) is not None]
+        meta["web_searches"] = sum(action.type == "search" for action in actions)
+        meta["web_calls_without_action"] = len(calls) - len(actions)
+        meta["search_mode"] = "selective" if selective else "required"
+        meta["web_actions"] = [action.model_dump(exclude_none=True) for action in actions]
     return parsed, meta

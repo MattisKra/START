@@ -222,7 +222,7 @@ def run_local_ensemble(path: Path, password: str | None) -> list[LinePrice]:
         t_first.append(round(time.monotonic() - t0, 2))
         print(f"[{time.monotonic() - t0:5.1f}s] {done}/{total} {m.name} ({meta['latency_s']}s, memory {meta.get('memory', {}).get('status', 'off')})")
 
-    ms = ensemble.members()
+    ms = ensemble.members(selective_by_default=True)
     print(f"{len(ms)} members: {', '.join(m.name for m in ms)}")
     results, failures, timed_out = ensemble.run(case, t0 + config.ROUND_SECONDS - config.SAFETY_MARGIN_S, on_update, ms,
                                                 references=mem)
@@ -263,7 +263,7 @@ def play_round_ensemble(game_id: str, zip_path: Path, dry_run: bool = False, key
         case.refs = refs.block(exclude_game=game_id, case=case)
     except Exception as e:  # noqa: BLE001 - references are optional
         print(f"refs: not used ({e!r})")
-    ms = ensemble.members()
+    ms = ensemble.members(selective_by_default=dry_run)
     print(f"[{time.monotonic() - t0:5.1f}s] case loaded: {case_dir} ({len(case.image_blobs)} images), {len(ms)} members"
           + (", memory on" if mem is not None else ""))
     t_first = []

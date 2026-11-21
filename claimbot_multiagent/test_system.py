@@ -39,6 +39,18 @@ Created on 1 Jan""")
             return self.fallback, {}
         return schema.model_validate(self.full.model_dump()), {"usage": {"cost": .01}}
 
+    def test_grouped_decimal_quantity(self):
+        from claimbot.memtext import parse_invoice_lines
+        from claimbot.refs import invoice_lines
+
+        text = ("POS. DESCRIPTION AMOUNT UNIT TOTAL\n"
+                " 1    Electricity for drying equipment    2,412.1   kWh\nCreated on 1 Jan")
+        item, = invoice_items(text)
+        self.assertEqual((item.position, item.quantity, item.unit), (1, 2412.1, "kWh"))
+        memory_line, = parse_invoice_lines(text)
+        self.assertEqual((memory_line["qty"], memory_line["unit"]), (2412.1, "kWh"))
+        self.assertEqual(invoice_lines(text), ["Electricity for drying equipment"])
+
     def test_all_architectures_use_same_settlement(self):
         for count in [1, 2, 3]:
             record = estimate(self.case, spec=None, count=count, call=self.call)

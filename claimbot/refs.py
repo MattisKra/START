@@ -14,6 +14,7 @@ from collections import defaultdict
 import requests
 
 from . import config
+from .invoice_quantity import QUANTITY
 from .outputs import OUTPUTS_FILE
 
 BASE = "https://c2f.public.quantco.cloud/leaderboard/api/"
@@ -143,7 +144,7 @@ def _rows(exclude_game=None) -> list[dict]:
 EMBED_MODEL = config.os.getenv("CLAIMS_EMBED_MODEL", "text-embedding-3-small")
 TOP_K = int(config.os.getenv("CLAIMS_REFS_TOP_K", "3"))  # most similar past lines per invoice line; 0 = list all
 EMB_CACHE = config.WORK_DIR.parent / "ref_embeddings.json"
-_LINE = re.compile(r"^\s*(\d{1,2})\s{2,}(\S.*?)\s{2,}\d+(?:[.,]\d+)?\s+\S")
+_LINE = re.compile(rf"^\s*(\d{{1,2}})\s{{2,}}(\S.*?)\s{{2,}}{QUANTITY}\s+\S")
 
 
 def _embed(texts: list[str], timeout: float) -> list[list[float]]:
@@ -223,12 +224,10 @@ def block(exclude_game=None, case=None) -> str:
     print(f"refs: {len(rows)} past lines in the prompt ({how})")
     return (
         "=== PRICE REFERENCES (known outcomes of earlier cases from the same assessor) ===\n"
-        "The earlier invoice lines most similar to the lines of this invoice, with the amount finally owed per line "
-        "(gross total for the whole line). The assessor uses one fixed price list, "
-        "and it is often far below ordinary market prices for disposal, flat-rate and service lines. Earlier cases recur "
-        "with lines split or merged. If a line of the present case matches an earlier line, or combines several earlier "
-        "lines, set p50 so that the gross line total lands inside the referenced amount (the sum for combined lines) and "
-        "give a narrow p10-p90. For other lines use the references to calibrate the price level of similar kinds of work "
-        "or goods. Coverage (p_valid) is still decided from the present policy and description only.\n"
+        "Earlier settlements bound the payable gross total for the earlier scope. Check the present "
+        "operation, justified quantity, unit, grade, valuation basis and endorsement before using a price. "
+        "A similar line name alone does not establish those facts. For a bundle, check for shared visits, "
+        "overlapping tasks and caps before combining amounts. Keep one-sided bounds one-sided. State which "
+        "case and line description supported the estimate or explain the material mismatch.\n"
         + "\n".join(r["label"] for r in rows) + "\n\n"
     )
