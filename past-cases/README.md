@@ -52,3 +52,4 @@ Filled in automatically by `claimbot archive` from our own rows on the public le
 | [13](case_013/results.json) | +419.71 | 751.82 | 332.11 | L1: 89.96 (6/11, inflated); L2: 128.52 (1/11, inflated); L3: 40.7 (1/11, inflated); L4: 42.84 (1/11, inflated) | L1: 0 / 332.11; L2: 0 / 0; L3: 0 / 0; L4: 0 / 0 |
 | [14](case_014/) | Accidental damage claim on the home contents cover | todo | todo | todo | still open |
 | [14](case_014/results.json) | -874.28 | 706.85 | 1581.13 | L1: 29.99 (3/11, fair); L2: 0 (nothing charged); L3: 128.52 (1/11, inflated); L4: 16.06 (8/11, inflated) | L1: 2 / 162.1; L2: 0 / 560.52; L3: 0 / 678.06; L4: 0 / 16.26 |
+| [15](case_015/) | During a thunderstorm, a power surge came through the wiring and damaged a speaker system and a TV set that were plugged in at the time | todo | todo | todo | still open |
