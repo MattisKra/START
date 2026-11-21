@@ -258,6 +258,11 @@ def play_round_ensemble(game_id: str, zip_path: Path, dry_run: bool = False, key
     case_dir = extract_zip(Path(zip_path), key, config.WORK_DIR / f"game_{game_id}")
     case = load_case(case_dir)
     mem = start_memory(case, game_id=game_id)
+    try:
+        from . import refs
+        case.refs = refs.block(exclude_game=game_id, case=case)
+    except Exception as e:  # noqa: BLE001 - references are optional
+        print(f"refs: not used ({e!r})")
     ms = ensemble.members()
     print(f"[{time.monotonic() - t0:5.1f}s] case loaded: {case_dir} ({len(case.image_blobs)} images), {len(ms)} members"
           + (", memory on" if mem is not None else ""))

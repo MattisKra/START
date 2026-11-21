@@ -148,6 +148,8 @@ def combine(results: list[tuple[CaseEstimate, float]]) -> list[pricing.LinePrice
         else:
             a = pricing._best_charge(mu, sigma) * config.CHARGE_MULT
         b = pricing._accept_limit(q, mu, sigma)
+        if config.B_MEDIAN_MULT > 0 and b > 0:  # b stays 0 where the line is probably invalid
+            b = config.B_MEDIAN_MULT * math.exp(mu)
         prices.append(pricing.LinePrice(idx, round(a, 2), round(b, 2), round(math.exp(mu), 2), round(q, 3), round(sigma, 3)))
     return prices
 

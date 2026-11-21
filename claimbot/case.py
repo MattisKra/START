@@ -26,6 +26,7 @@ class Case:
     images: list[Path] = field(default_factory=list)
     # (mime, bytes) per image, downscaled and re-encoded for the model APIs
     image_blobs: list[tuple[str, bytes]] = field(default_factory=list)
+    refs: str = ""  # price references from finished games (refs.py), put in front of the case text
 
 
 MAX_IMAGE_EDGE = 2000  # px, long edge

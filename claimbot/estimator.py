@@ -67,7 +67,7 @@ def _image_part(blob: tuple[str, bytes]) -> dict:
 def case_text(case: Case, references: str | None = None) -> str:
     """The case as prompt text. `references` is the optional hint block from the case memory (memory.py); without it
     the text is exactly what it was before the memory existed."""
-    text = (
+    text = case.refs + (
         f"=== policy.txt ===\n{case.policy}\n\n"
         f"=== description.txt ===\n{case.description}\n\n"
         f"=== invoice (extracted from PDF) ===\n{case.invoice_text}\n"

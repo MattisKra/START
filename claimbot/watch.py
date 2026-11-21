@@ -93,6 +93,12 @@ def watch() -> None:
         if wait_s > 90:
             m, sec = divmod(int(round(wait_s)), 60)
             print(f"{_ts()} next: game {gid} at {start.astimezone():%H:%M:%S} (in {m}m {sec:02d}s)")
+            if config.USE_ENSEMBLE and 420 < wait_s < 560:  # results of the last game appear a few minutes after it  # enough time before the round to read finished games
+                try:
+                    from . import refs
+                    refs.refresh(gid, budget_s=wait_s - 240)
+                except Exception as e:  # noqa: BLE001
+                    print(f"{_ts()} refs refresh failed: {e!r}")
             time.sleep(min(wait_s - 60, 60))  # one status line per minute; re-checks the game list
             continue
         zip_path = config.CASES_DIR / f"case_{gid:03d}.zip"

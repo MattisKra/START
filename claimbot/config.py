@@ -42,6 +42,10 @@ CHARGE_MULT = float(os.getenv("CLAIMS_CHARGE_MULT", "1.0"))
 # Ensemble charge as a multiple of the combined median. Replay on games 1-6: 0.9 gave 40,302 against 34,249 for the
 # argmax rule (about 0.75 x median); see research/ensemble_analysis/fable_vs_ensemble.py. 0 switches back to the argmax rule.
 A_MEDIAN_MULT = float(os.getenv("CLAIMS_A_MEDIAN_MULT", "0.9"))
+# Ensemble acceptance limit as a multiple of the combined median (valid lines only). Games 6-9: most incoming charges were
+# inflated and our medians about 2x too high, so 1.25 accepted nearly all of them. Replay on games 1-9: 0.5 gives 37,046
+# against 22,716 for 1.25. 0 switches back to the quantile rule with the B_VALID_MULT floor.
+B_MEDIAN_MULT = float(os.getenv("CLAIMS_B_MEDIAN_MULT", "0.9"))
 # Floor on log-space spread so the model can't claim false certainty.
 MIN_SIGMA = float(os.getenv("CLAIMS_MIN_SIGMA", "0.08"))
 
