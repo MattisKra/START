@@ -200,6 +200,33 @@ Money saved against what we actually paid, by factor `k` (`b = k x median` on va
 | 0.80 | +6.5-6.8k | +2.8..3.5k | +11.0k | -1.5..+1.0k | +12.2..15.6k |
 **Choice: 0.55.** It sits safely below the cliff (savings drop from about 17k to 12k between 0.6 and 0.7 on the live medians), keeps about 95 % of the best overall saving, costs less than 0.45 in calm stretches (-1.1k vs -2.0k per six games) and is the best tested value in the latest five games. Going from 0.55 to 0.45 buys 3k more in an over-charging stretch and loses about 1k per calm stretch. The previous default of 0.9 sits above the cliff (about 5-6k saved), as does the old 1.25 (0-3.5k). `CLAIMS_B_MEDIAN_MULT` overrides it (0 restores the quantile rule with the `B_VALID_MULT` floor); check that no `.env` on the live machine sets it explicitly. Cost side only; the charge multiplier is not evaluated.
 
+## Update 18:05: re-check of the factor on the live medians of games 1-15 (what the 0.55 choice does and does not rest on)
+
+Same cost-side replay, but each game's medians and validity (`q`) taken from the live bot's own log (`outputs/model_outputs.json`), so the medians include the price-reference era (games 10-15). The live bot played `b = 0.5 x median` in games 10-12 and `0.9 x` in games 13-15 (set on the live machine), so "k" below is a re-pricing of the same lines, not a new run.
+
+Reviewer cost per game in EUR (midpoint of the evaluator's range; lowest per game marked):
+| game | 0.45 | 0.55 | 0.7 | 0.9 | 1.25 | actually paid |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1 | **2249** | **2249** | 4464 | 4464 | 4464 | 4464 |
+| 2 | 8302 | 8302 | 8017 | 6912 | **6539** | 7470 |
+| 5 | 7943 | 7943 | 7943 | 5997 | **5414** | 5414 |
+| 6 | 6757 | 6637 | 6318 | 6093 | **4877** | 4877 |
+| 7 | **673** | 1893 | 3046 | 5219 | 6332 | 6332 |
+| 9 | 2418 | **1902** | 3740 | 10957 | 14692 | 15191 |
+| 10 | **2792** | 3133 | 3226 | 3349 | 3566 | 2792 |
+| 12 | 9806 | 9806 | 8535 | **7155** | 9359 | 9806 |
+| 15 | 9052 | 9052 | 8952 | 7428 | 7846 | 7428 |
+(Games 3, 4, 8, 11, 13, 14 omitted for length; their per-game costs differ by at most about 1.3k between factors.)
+
+Extra cost against the best fixed factor of each game (hindsight regret): k=0.45 12.4k, 0.55 13.8k, 0.7 18.1k, 0.9 22.1k, 1.25 29.1k over games 1-15. Split: games 1-9 0.55 = 8.3k vs 0.9 = 20.2k (game 9 alone is 9k for 0.9); games 10-15 0.55 = 5.4k vs 0.9 = 1.9k.
+
+Honest reading:
+- The 0.55 choice is a **risk choice**, not a demonstrated gain in the current regime. Its advantage comes from over-charging games (7, 9: tens of thousands); in the six latest games (10-15, price references on) 0.9 would have saved about 1.7-2.9k more than what was played, while 0.55 would have saved nothing or lost 1-1.6k.
+- Per game the best factor swings from 0.45 to 1.25. The loss from a too-strict limit is bounded (about 0.5-2.7k per game here); the loss from a too-lenient one was 9-13k in game 9. That asymmetry, not a measured average gain, is the argument for the lower factor. If the field stays calm, 0.7-0.9 is cheaper.
+- "The factor change alone is better" is therefore **not established**: the cost-side replay holds the field fixed, the six latest games point the other way, and the charge side is not measured at all.
+- Not yet run: the with/without price-references comparison (references change the medians that `k` multiplies). Until then the medians of games 10-15 and the earlier ones are not like-for-like.
+- Decision knob stays `CLAIMS_B_MEDIAN_MULT`; the live machine's `.env` may override the default.
+
 ## What this does and does not support
 
 - Supports: a benchmark loop exists; the live bot's actual `b` replay (regret ≈ 1142 on games 1-2, 281 on game 3) can be compared with any candidate on the same lines; model price-level bias is large and varies by case; ensembles and web search are not a fix by themselves.
