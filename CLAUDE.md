@@ -46,6 +46,8 @@ estimates facts and uncertainty, and Python owns all arithmetic and strategy**, 
 - `runner.play_round`: fetches the key, decrypts, then races two estimates in parallel (`CLAIMS_EFFORT` and the cheaper
   `CLAIMS_FAST_EFFORT`). It submits whichever finishes first, lets the full-effort result overwrite it, and stops waiting
   `SAFETY_MARGIN_S` before the deadline. Every estimate is logged to `runs/<stamp>_<tag>_<effort>.json`.
+  Live ensemble rounds also add one entry per game to the tracked `outputs/model_outputs.json` (`outputs.py`), which is
+  committed and pushed from time to time.
 - `api.py`: `X-API-Key` auth. `PUT /api/games/{id}/submissions` takes `[{index, charge_price, acceptance_limit}]`.
 - `archive.py` (`claimbot archive`): a separate loop that **never submits**, so it can run next to the live `watch` bot. 5 s after
   each game's `start_time` it fetches the key (never before), decrypts `cases/case_NNN.zip` into `past-cases/case_NNN/` (data
