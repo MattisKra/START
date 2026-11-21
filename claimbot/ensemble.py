@@ -24,12 +24,13 @@ SIZE_WEIGHT = {
     "claude-fable-5-2": 3.0,
     "claude-opus-5-5": 2.5,
     "gpt-6.2-sol": 2.0,
-    "claude-sonnet-5-5": 1.5,
     "gpt-6.1-terra": 1.5,
 }
 EFFORT_WEIGHT = {"low": 1.0, "medium": 1.5}
-# Extra members with web search; they get this multiplier on top.
-WEB_MODELS = ["claude-fable-5-2", "claude-opus-5-5", "gpt-6.2-sol", "gpt-6.1-terra"]
+# Extra members with web search; they get this multiplier on top. Off by default: on games 1-5 they cost
+# 72 % of the spend and did not improve the result (research/ensemble_analysis/redundancy.py). Sonnet was
+# dropped for the same reason. CLAIMS_WEB_MODELS="model,model" turns web members back on.
+WEB_MODELS: list[str] = []
 WEB_WEIGHT = 1.0
 PROVIDER = {m: ("anthropic" if m.startswith("claude-") else "openai") for m in SIZE_WEIGHT}
 
