@@ -39,6 +39,9 @@ REJECT_P = float(os.getenv("CLAIMS_REJECT_P", str(1 / 3)))
 B_VALID_MULT = float(os.getenv("CLAIMS_B_VALID_MULT", "1.25"))
 # Handyman: multiply the computed optimal charge by this (1.0 = no change).
 CHARGE_MULT = float(os.getenv("CLAIMS_CHARGE_MULT", "1.0"))
+# Ensemble charge as a multiple of the combined median. Replay on games 1-6: 0.9 gave 40,302 against 34,249 for the
+# argmax rule (about 0.75 x median); see research/ensemble_analysis/fable_vs_ensemble.py. 0 switches back to the argmax rule.
+A_MEDIAN_MULT = float(os.getenv("CLAIMS_A_MEDIAN_MULT", "0.9"))
 # Floor on log-space spread so the model can't claim false certainty.
 MIN_SIGMA = float(os.getenv("CLAIMS_MIN_SIGMA", "0.08"))
 
