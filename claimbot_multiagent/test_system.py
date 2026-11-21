@@ -39,6 +39,12 @@ Created on 1 Jan""")
             return self.fallback, {}
         return schema.model_validate(self.full.model_dump()), {"usage": {"cost": .01}}
 
+    def test_dash_unit_keeps_following_position(self):
+        text = ("POS. DESCRIPTION AMOUNT UNIT TOTAL\n9 Dispose of old boiler 1 –\n"
+                "10 Vehicle costs 1 pcs\nCreated on 1 Jan")
+        self.assertEqual([(r.position, r.quantity, r.unit) for r in invoice_items(text)],
+                         [(9, 1, "–"), (10, 1, "pcs")])
+
     def test_grouped_decimal_quantity(self):
         from claimbot.memtext import parse_invoice_lines
         from claimbot.refs import invoice_lines

@@ -23,7 +23,7 @@ def invoice_items(text):
     # Poppler preserves columns, pypdf emits a single space between cells.
     # A wrapped description may precede the quantity in plain PDF extraction.
     pending = []
-    quantity_unit = rf"({QUANTITY})\s+([A-Za-z€²³][\w²³/%.-]*(?: rate)?)"
+    quantity_unit = rf"({QUANTITY})\s+([A-Za-z€²³][\w²³/%.-]*(?: rate)?|[–—-])"
     row = re.compile(r"^(\d+)\s+(.+?)\s+" + quantity_unit + r"$")
     for raw in text.splitlines():
         line = raw.strip()
