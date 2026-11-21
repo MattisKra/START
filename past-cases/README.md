@@ -49,3 +49,4 @@ Filled in automatically by `claimbot archive` from our own rows on the public le
 | [12](case_012/) | Utility room water damage | todo | todo | todo | still open |
 | [12](case_012/results.json) | -1200.66 | 8605.48 | 9806.15 | L1: 514.08 (2/11, inflated); L2: 514.08 (4/11, fair); L3: 123.16 (1/11, inflated) | L1: 7 / 67.83; L2: 8 / 67.83; L3: 0 / 0 |
 | [13](case_013/) | Storm claim, same event: a large garden tree blew over onto the declared garden shed and stove in the roof | todo | todo | todo | still open |
+| [13](case_013/results.json) | +419.71 | 751.82 | 332.11 | L1: 89.96 (6/11, inflated); L2: 128.52 (1/11, inflated); L3: 40.7 (1/11, inflated); L4: 42.84 (1/11, inflated) | L1: 0 / 332.11; L2: 0 / 0; L3: 0 / 0; L4: 0 / 0 |
