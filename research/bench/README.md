@@ -31,6 +31,22 @@ Opponents are held fixed, brackets are not point values, and weights are untuned
 **4. Tools: web search.** OpenRouter's web plugin (3 results) on luna / gemini-flash / terra over 3 cases: regret 357 → 368, 232 → 300, 136 → 185, higher cost (terra $0.003 → $0.03 per case), +1-5 s. No benefit seen; the expert values are not market prices.
 **5. DSPy/GEPA.** The program, metric and feedback work end to end (seed prompt scores 0.66-0.80 mean over the cases). A first GEPA run on 3 cases with `--force` (train = validation, 24 rollout budget, stopped early) raised the in-sample score from 0.80 to 0.93 after one reflection step, and **the new prompt had memorised the labels**: it contained "a shop diagnostic for a laptop is about EUR 50-70 net / 60-84 gross" (the leaderboard bracket from the feedback) and "pre-existing scuff polish: ~0.01". So the number means nothing, and the guard (`--min-cases 6`, no `--force`) is right. Before a real run: (a) have at least 6-10 labelled cases and a **held-out** validation set that the optimiser never sees, (b) strip numeric brackets and case facts from the feedback (give direction and clause hints only), (c) read the optimised text for copied values, (d) only promote it if it beats the seed on games released after it was frozen. Never commit an optimised prompt unreviewed.
 
+## Update 14:45: game 4 and the new acceptance rule (`rule_replay.py`, no API calls)
+
+At 14:39 the live bot changed `b` for valid lines to at least 1.25 × the median (`CLAIMS_B_VALID_MULT`), tuned on game 3. Replaying the old and new rule on **all saved model answers** (176 answers, games 1-4; b_regret EUR/line, lower is better):
+
+| rule | game 1 | game 2 | game 3 | game 4 | all |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| old 1/3-quantile | 521 | 443 | 224 | **185** | 339 |
+| 1.0 × median | 509 | 313 | 146 | 230 | 274 |
+| 1.25 × median (live now) | 688 | 154 | 101 | 296 | 236 |
+| 1.5 × median | 784 | 116 | 67 | 325 | 230 |
+
+- It helps in games 2 and 3 (models under-priced) and **hurts in games 1 and 4** (accurate or over-priced medians: more inflated charges get accepted). Game 4 is the only game released after the change: regret went **185 → 296** (b_score 0.69 → 0.50). The pooled gain comes from games 2-3, which the rule was tuned on.
+- Reading: a multiplier is a bet on a systematic under-estimate. The sign of the models' price bias changed from game to game (high, low, low, mixed), so a fixed multiplier is unlikely to hold. The data are too few to tell either way; this argues for estimating the bias from earlier brackets (leave-one-game-out) instead of fixing it by hand.
+- Game 4 prompt results (out-of-sample for v1 and v2): no variant stands out; v2 is better for 4 of 7 models and worse for 3, the model-to-model spread is larger than the prompt effect. The live bot's actual row on game 4: regret 340.
+- Game 4 labels: one excluded-looking line, one line with a tight bracket (about 228-253) and one line where our `a` was about half of the lower bound.
+
 ## What this does and does not support
 
 - Supports: a benchmark loop exists; the live bot's actual `b` replay (regret ≈ 1142 on games 1-2, 281 on game 3) can be compared with any candidate on the same lines; model price-level bias is large and varies by case; ensembles and web search are not a fix by themselves.
