@@ -82,3 +82,4 @@ Filled in automatically by `claimbot archive` from our own rows on the public le
 | [28](case_028/results.json) | +600.00 | 600.00 | 0.00 | L1: 600.0 (1/11, inflated) | L1: 0 / 0 |
 | [29](case_029/) | Burglary at the insured home | todo | todo | todo | still open |
 | [29](case_029/results.json) | +10866.21 | 21000.00 | 10133.79 | L1: 1200.0 (3/11, fair); L2: 250.0 (9/11, fair) | L1: 0 / 8637.1; L2: 0 / 1496.69 |
+| [30](case_030/) | Heavy rainfall over a short spell caused surface flooding that got into the basement, leaving roughly a meter of water standing in the plan… | todo | todo | todo | still open |

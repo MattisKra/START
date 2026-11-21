@@ -1,0 +1,57 @@
+Invoice
+INVOICE NO.
+2026-0221
+DATE
+8 Apr 2026
+DUE
+22 Apr 2026
+TRADE
+Electrical
+FROM
+Sparky McShockface Electrical Ltd
+50 Ohm Street
+70565 Voltaville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Electrician labour checking and rewiring the flooded
+basement circuits
+12 hrs
+2 Vehicle costs 1 pcs
+3 Procurement of a motor pump 1 pcs
+4 Submersible pump 1 pcs
+5 Water extraction from the flooded basement 1 pcs
+6 Small electrical materials for the rewiring 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0222
+DATE
+8 Apr 2026
+DUE
+22 Apr 2026
+TRADE
+Heating
+FROM
+Toasty Toes Heating Ltd
+19 Radiator Row
+90402 Warmingham
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+7 Renew boiler system including flue gas system and
+storage tank
+1 flat rate
+8 Adjust supply pipework to fit the replacement boiler 1 flat rate
+9 Dispose of the old boiler system 1 –
+10 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
