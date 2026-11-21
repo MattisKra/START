@@ -9,6 +9,30 @@ from rate_check_replay import Source, TEAM, compare, settled_field
 from claimbot_shadow.trace import write_json
 
 
+def prices(receipt):
+    return {r["index"]: (r["charge_price"], r["acceptance_limit"]) for r in receipt["lines"]}
+
+
+def revision_scores(path, field):
+    previous = None
+    revisions = []
+    for raw in path.read_text().splitlines():
+        event = json.loads(raw)
+        if event["event"] != "decision" or not event["on_time"]:
+            continue
+        current = prices(event)
+        if previous is not None:
+            lo, hi, il, ih = compare(field, previous, current)
+            revisions.append(dict(elapsed_s=event["elapsed_s"],
+                                  trigger=event["trigger"].get("member") or event["trigger"].get("tool_call"),
+                                  positions=[r["index"] for r in event["changes"]],
+                                  reviewer_saving=[round(lo, 2), round(hi, 2)],
+                                  issuer_change=[round(il, 2), round(ih, 2)],
+                                  net_change=[round(lo + il, 2), round(hi + ih, 2)]))
+        previous = current
+    return revisions
+
+
 def score(folder):
     result = json.loads((folder / "result.json").read_text())
     game = result["game"]
@@ -24,8 +48,7 @@ def score(folder):
     team = next(t for t in matrix["items"] if t["team_name"] == TEAM)
     if team["cells"][col] is None:
         raise ValueError(f"Game {game} awaiting settlements")
-    arms = {name: {r["index"]: (r["charge_price"], r["acceptance_limit"])
-                   for r in receipt["lines"]} for name, receipt in receipts.items()}
+    arms = {name: prices(receipt) for name, receipt in receipts.items()}
     field = settled_field(src, matrix, game, arms["python"])
     by_line = []
     for position, state in field.items():
@@ -35,7 +58,9 @@ def score(folder):
     totals = {k: [round(sum(row[k][i] for row in by_line), 2) for i in (0, 1)]
               for k in ("reviewer_saving", "issuer_change", "net_change")}
     return dict(status="settled", game=game, official_team_net=team["cells"][col],
-                fable_minus_python_eur=totals, lines=by_line)
+                fable_minus_python_eur=totals, lines=by_line,
+                successive_revision_eur={name: revision_scores(folder / f"{name}.jsonl", field)
+                                         for name in arms})
 
 
 def save(folder):

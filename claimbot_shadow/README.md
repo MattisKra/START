@@ -27,6 +27,6 @@ Once a game settles, run the paired payoff replay from the project root with the
 .venv/bin/python research/bench/score_shadow.py runs/shadow/<run>/<game>
 ```
 
-`score.json` stores per-line bounds and totals for Fable minus Python under the opponents' observed decisions. Positive reviewer savings mean Fable paid less. Hidden charges and limits can leave either winner possible. Missing on-time decisions are marked unscored. The replay reads public settlements and reconciles each team's total against the standings.
+`score.json` stores per-line bounds and totals for Fable minus Python under the opponents' observed decisions. Positive reviewer savings mean Fable paid less. Within each arm, `successive_revision_eur` compares each complete on-time revision to the preceding decision, holding opponents fixed. Hidden charges and limits can leave either winner possible. Missing on-time decisions are marked unscored. The replay reads public settlements and reconciles each team's total against the standings.
 
 To score all three as settlements arrive, start the scorer once with `--follow runs/shadow/<run>`. It waits up to 15 minutes after each release. A single game can be rescored later if the public standings arrive late.
