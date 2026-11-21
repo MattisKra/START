@@ -119,11 +119,12 @@ def play_round(game_id: str, zip_path: Path, dry_run: bool = False, key: str | N
 
 # --- Ensemble ---------------------------------------------------------------
 
-def save_ensemble_run(tag: str, case: Case, results, failures, timed_out, prices: list[LinePrice]) -> Path:
+def save_ensemble_run(tag: str, case: Case, results, failures, timed_out, prices: list[LinePrice],
+                      game_id: str | None = None) -> Path:
     config.RUNS_DIR.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     path = config.RUNS_DIR / f"{stamp}_{tag}_ensemble.json"
-    path.write_text(json.dumps({
+    rec = {
         "tag": tag,
         "case_dir": str(case.case_dir),
         "members": [
@@ -134,7 +135,15 @@ def save_ensemble_run(tag: str, case: Case, results, failures, timed_out, prices
         "failures": [{"member": m.name, "error": err} for m, err in failures],
         "timed_out": [m.name for m in timed_out],
         "prices": [p.as_dict() for p in prices],
-    }, indent=2, ensure_ascii=False))
+    }
+    path.write_text(json.dumps(rec, indent=2, ensure_ascii=False))
+    if game_id is not None and str(game_id) != "0":  # live round (not test game 0): also goes into the tracked outputs file
+        try:
+            from . import outputs
+            outputs.record(game_id, rec["members"], rec["failures"], rec["timed_out"], rec["prices"])
+            print(f"outputs: game {game_id} written to {outputs.OUTPUTS_FILE}")
+        except Exception as e:  # noqa: BLE001 - bookkeeping must not break the loop
+            print(f"outputs: could not write game {game_id}: {e!r}")
     return path
 
 
@@ -214,4 +223,5 @@ def play_round_ensemble(game_id: str, zip_path: Path, dry_run: bool = False, key
         print(f"  timed out {m.name}")
     prices = ensemble.combine([(est, m.weight) for m, est, _ in results])
     _print_ensemble(results, prices)
-    print(f"log: {save_ensemble_run(f'game{game_id}', case, results, failures, timed_out, prices)}")
+    log = save_ensemble_run(f'game{game_id}', case, results, failures, timed_out, prices, game_id=None if dry_run else game_id)
+    print(f"log: {log}")
