@@ -39,7 +39,7 @@ Cite the source and the value it supports, or explain the assumption if there is
 The local recorder timestamps successful writes. Finish when done."""
 
 
-async def run_case(case, trace, *, require_policy=False, extra_reviews=False):
+async def run_case(case, trace, *, require_policy=False, extra_reviews=False, prompt_addition=""):
     with tempfile.TemporaryDirectory(prefix="claims-shadow-") as temp:
         work = Path(temp).resolve()
         (work / "policy.txt").write_text(case.policy)
@@ -53,6 +53,7 @@ async def run_case(case, trace, *, require_policy=False, extra_reviews=False):
                                            "ANTHROPIC_API_KEY", "CLAUDE_CODE_OAUTH_TOKEN") if k in os.environ}
         gate = PolicyGate(work, case.policy) if require_policy else None
         prompt = PROMPT + INSTRUCTION if require_policy else PROMPT
+        prompt += prompt_addition
         cmd = ["claude", "-p", "--model", MODEL, "--restricted", "--strict-mcp-config",
                "--mcp-config", '{"mcpServers":{}}', "--disable-slash-commands", "--no-session-persistence",
                "--permission-mode", "dontAsk", "--tools", TOOLS,
