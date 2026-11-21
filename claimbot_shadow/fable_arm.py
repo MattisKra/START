@@ -39,7 +39,7 @@ Cite the source and the value it supports, or explain the assumption if there is
 The local recorder timestamps successful writes. Finish when done."""
 
 
-async def run_case(case, trace, *, require_policy=False, extra_reviews=False, prompt_addition=""):
+async def run_case(case, trace, *, require_policy=False, extra_reviews=False, prompt_addition="", coverage_audit=None):
     with tempfile.TemporaryDirectory(prefix="claims-shadow-") as temp:
         work = Path(temp).resolve()
         (work / "policy.txt").write_text(case.policy)
@@ -116,6 +116,8 @@ async def run_case(case, trace, *, require_policy=False, extra_reviews=False, pr
                                         trace.log("policy_rejected", write=block["tool_use_id"], issues=issues)
                                         continue
                                     trigger["policy_proof"] = proof
+                                    if coverage_audit:
+                                        trigger["coverage_audit"] = coverage_audit(rows, gate, prior)
                                 write_json(work / "decision_check.json", {"issues": issues})
                                 trace.log("self_check", issues=issues, write=block["tool_use_id"])
                                 if reviews and issues:
