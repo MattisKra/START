@@ -1,0 +1,33 @@
+Invoice
+INVOICE NO.
+2026-0001
+DATE
+2 Mar 2026
+DUE
+16 Mar 2026
+TRADE
+Plumbing
+FROM
+Drip Doctors Plumbing Ltd
+7 Faucet Lane
+80469 Munich
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Leak detection and opening of the bathroom wall next
+to the washbasin
+2 hrs
+2 Replacement of split copper supply pipe section, 15
+mm, incl. fittings
+1 pcs
+3 Closing the wall opening, re-plastering and re-tiling
+approx. 0.2 m2
+0.2 m2
+4 Annual service and descaling of the gas boiler in the
+hallway
+1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

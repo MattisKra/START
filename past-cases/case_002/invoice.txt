@@ -1,0 +1,27 @@
+Invoice
+INVOICE NO.
+2026-0211
+DATE
+1 Apr 2026
+DUE
+15 Apr 2026
+TRADE
+Electronics Retail
+FROM
+Gadget Grotto Megastore Ltd
+128 Circuit Crescent
+10178 Techtonic
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Laptop screen crack repair 1 pcs
+2 Lower-right corner and housing repair 1 pcs
+3 Polish of pre-existing lid scuff (surface only, does not
+affect operation)
+1 pcs
+4 Diagnostic inspection 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
