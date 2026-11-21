@@ -24,9 +24,18 @@ def _parse(t: str) -> datetime:
 
 def _wait_for_key(api: GameAPI, game_id: int, start: datetime) -> str | None:
     """Sleep until start, then poll the key (403 = not started) for up to 30 s."""
-    delay = (start - datetime.now(timezone.utc)).total_seconds()
-    if delay > 0:
-        time.sleep(delay)
+    def left() -> float:
+        return (start - datetime.now(timezone.utc)).total_seconds()
+
+    if left() > 5:
+        time.sleep(left() - 5)
+    for n in range(5, 0, -1):  # countdown over the last 5 seconds
+        if left() > n:
+            time.sleep(left() - n)
+        if left() > n - 1:
+            print(f"{_ts()} game {game_id}: starts in {n}")
+    if left() > 0:
+        time.sleep(left())
     give_up = time.monotonic() + 30
     while time.monotonic() < give_up:
         try:
@@ -70,15 +79,16 @@ def watch() -> None:
         gid, start = upcoming[0]
         wait_s = (start - now).total_seconds()
         if wait_s > 90:
-            print(f"{_ts()} next: game {gid} at {start.astimezone():%H:%M:%S} (in {wait_s / 60:.1f} min)")
-            time.sleep(min(wait_s - 60, 300))  # wake up a minute early, re-check the list
+            m, sec = divmod(int(round(wait_s)), 60)
+            print(f"{_ts()} next: game {gid} at {start.astimezone():%H:%M:%S} (in {m}m {sec:02d}s)")
+            time.sleep(min(wait_s - 60, 60))  # one status line per minute; re-checks the game list
             continue
         zip_path = config.CASES_DIR / f"case_{gid:03d}.zip"
         done.add(gid)
         if not zip_path.exists():
             print(f"{_ts()} game {gid}: MISSING {zip_path}")
             continue
-        print(f"{_ts()} game {gid}: waiting for start at {start.astimezone():%H:%M:%S}")
+        print(f"{_ts()} game {gid}: waiting for start at {start.astimezone():%H:%M:%S} (in {max(wait_s, 0):.0f}s)")
         key = _wait_for_key(api, gid, start)
         if key is None:
             print(f"{_ts()} game {gid}: NO KEY after 30 s, skipping")
