@@ -118,6 +118,22 @@ single readers luna 586 / terra 513 / fable 566; median of the three in parallel
 - **Caveats on these first numbers:** the multipliers were picked from 7 candidates after seeing games 1-8 (multiple comparisons), cases 1-4 shaped the reader prompt, one saved draw per reader, game 9+ not yet included. Treat them as the first shortlist to confirm on the games that come next, not as a final choice.
 - Usage: `python3 -I research/raw4/scripts/fetch_field.py FIELD_DIR` (FIELD_DIR **outside** the repo), then `uv run --with pyzipper python research/bench/euro_eval.py FIELD_DIR --us "Team Name"`. Re-run `euro_replay_check.py FIELD_DIR --us "Team Name" --synthetic 2000` after any change to the replay.
 
+## Update 16:35: out-of-sample replay of games 9 and 10 (`euro_game_report.py`)
+
+The multiplier shortlist (luna KA .7/KB .9, KA .6/KB .6, KA .8/KB .8; terra KA .8/KB .8) was chosen from games 1-8 at 16:15. Games 9 and 10 came afterwards, so they are a genuine out-of-sample replay. Our official net was -8,872 (game 9) and -2,792 (game 10), sum **-11,664**. The evaluator's replay of our logged actual submission for game 9 returned [-8,872, -7,875], which contains the official result.
+| candidate | net range, games 9+10 | delta vs official (lower / upper bound) | verdict |
+| --- | ---: | ---: | --- |
+| luna KA .7 / KB .9 (shortlist) | [-2.6k, +1.7k] | +9.1k / +13.4k | surely better |
+| luna KA .6 / KB .6 (shortlist) | [+6.0k, +9.7k] | +17.6k / +21.3k | surely better |
+| luna KA .8 / KB .8 (shortlist) | [-3.1k, +0.5k] | +8.6k / +12.2k | surely better |
+| terra KA .8 / KB .8 (shortlist) | [-0.7k, +6.8k] | +11.0k / +18.4k | surely better (but see below) |
+| luna / fable engine defaults (KB 1.25) | [-12.6k, -3.8k] / [-12.8k, -3.5k] | -1.0k / +7.9k and -1.1k / +8.2k | unclear |
+| luna strict KA .8 / KB .45 (formulated after game 9) | [+5.9k, +9.5k] | +17.6k / +21.2k | surely better |
+| luna charge .8, reject everything | [+6.0k, +9.8k] | +17.7k / +21.4k | surely better |
+- **Reading:** every pre-chosen shortlist candidate beat the live result out of sample, the live-style engine defaults did not, and strict acceptance was the best family. All of this holds opponents fixed and one saved reader draw per cell.
+- **Caveats:** games 9 and 10 are in the same regime (the field over-charged), which favours strict rules; games 1-6 favoured lenient limits. The reader matters: in game 10 luna's candidates were positive while terra's and fable's were negative with the same multipliers (their prices were higher), so a rule is only as good as the reader behind it. Our logged submission for game 10 is missing (the log ends at game 9), so only the official net is known for it (-2,792, all of it paid for 9 accepted charges on one line whose true value was about 157-218).
+- **How the old proxy differs from the euro replay on the same two games:** it ranks the candidates in the same broad order for the limit (reject everything and strict best, defaults worst: b_regret 230-314 vs 4,848-5,201), but it gives no euro size, and it disagrees on terra KA .8 / KB .8, which its `a_score` rates 0.0 (charges counted as inflated) while the replay shows it earned on the charging side in game 9 ([+4.3k, +8.3k]). Use the euro replay for decisions.
+
 ## What this does and does not support
 
 - Supports: a benchmark loop exists; the live bot's actual `b` replay (regret ≈ 1142 on games 1-2, 281 on game 3) can be compared with any candidate on the same lines; model price-level bias is large and varies by case; ensembles and web search are not a fix by themselves.
