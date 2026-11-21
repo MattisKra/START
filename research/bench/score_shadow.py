@@ -1,6 +1,8 @@
 """Score completed paired shadow receipts against the same public, settled field."""
 import argparse
 import json
+import time
+from datetime import datetime
 from pathlib import Path
 
 from rate_check_replay import Source, TEAM, compare, settled_field
@@ -36,10 +38,42 @@ def score(folder):
                 fable_minus_python_eur=totals, lines=by_line)
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("game_folder", type=Path)
-    folder = parser.parse_args().game_folder
+def save(folder):
     report = score(folder)
     write_json(folder / "score.json", report)
-    print(report.get("fable_minus_python_eur", report))
+    print(folder.name, report.get("fable_minus_python_eur", report), flush=True)
+
+
+def follow(run):
+    games = json.loads((run / "manifest.json").read_text())["games"]
+    for game in games:
+        release = datetime.fromisoformat(game["start_time"]).timestamp()
+        folder = run / str(game["id"])
+        time.sleep(max(0, release + 62 - time.time()))
+        detail = "Awaiting local result"
+        while time.time() < release + 900:
+            if (folder / "error.json").exists():
+                detail = "Case preparation failed; see error.json"
+                break
+            if (folder / "result.json").exists():
+                try:
+                    save(folder)
+                    break
+                except ValueError as exc:
+                    detail = str(exc)
+            time.sleep(30)
+        if not (folder / "score.json").exists():
+            print(game["id"], detail, flush=True)
+            folder.mkdir(exist_ok=True)
+            write_json(folder / "score.json", dict(status="unscored", detail=detail))
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("folder", type=Path)
+    parser.add_argument("--follow", action="store_true", help="Follow the frozen manifest in a run folder")
+    args = parser.parse_args()
+    if args.follow:
+        follow(args.folder)
+    else:
+        save(args.folder)
