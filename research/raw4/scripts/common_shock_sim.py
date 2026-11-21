@@ -4,7 +4,7 @@
 
 World: every team prices from the same kind of LLM prior, so the price-level error is SHARED.
   consensus M = 1;  fair value  t = exp(eps),  eps ~ N(mu, sigma^2)                 (shared shock: nobody knows it)
-  opponent j: estimate m_j = exp(eta_j), eta_j ~ N(0, tau^2); charge a_j = alpha_j m_j; limit b_j = beta_j m_j; or silent (a = b = 0)
+  opponent j: estimate m_j = exp(eta_j), eta_j ~ N(0, tau^2); charge a_j = ka_j m_j; limit b_j = kb_j m_j; or silent (a = b = 0)
   we: estimate m = exp(eta_us) (uninformed) or m = t * exp(N(0, s_own^2)) (informed: memory / anchor / pin); a = x m, b = y m
 Payoff per ordered pair as in GAME_DESCRIPTION.md (cap ignored: no charge here exceeds 4 t by construction of the grid we report).
 Output: best multipliers and the value of information, in units of M per line, summed over the 11 opponents.
@@ -19,10 +19,10 @@ def world(mu, sigma, tau, silent, lax_share):
     eps = rng.normal(mu, sigma, K)
     t = np.exp(eps)
     m = np.exp(rng.normal(0, tau, (K, N)))
-    alpha = rng.uniform(0.70, 0.95, (K, N))
+    ka_opp = rng.uniform(0.70, 0.95, (K, N))
     kind = rng.random((K, N))
-    beta = np.where(kind < lax_share, rng.uniform(1.2, 1.6, (K, N)), np.where(kind < lax_share + 0.3, rng.uniform(0.7, 0.9, (K, N)), rng.uniform(0.95, 1.15, (K, N))))
-    a, b = alpha * m, beta * m
+    kb_opp = np.where(kind < lax_share, rng.uniform(1.2, 1.6, (K, N)), np.where(kind < lax_share + 0.3, rng.uniform(0.7, 0.9, (K, N)), rng.uniform(0.95, 1.15, (K, N))))
+    a, b = ka_opp * m, kb_opp * m
     is_silent = np.arange(N)[None, :] < silent
     a = np.where(is_silent, 0.0, a); b = np.where(is_silent, 0.0, b)
     return t, a, b

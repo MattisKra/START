@@ -44,6 +44,21 @@ def main():
         hi = f"{L['t_hi'] / m:.2f}" if L["t_hi"] < rr.INF else "inf"
         print(f"   g{g} L{ln} kind {k}: t/m in [{lo}, {hi})")
 
+
+    print("\nshare of other teams' positive charges that were inflated, by line kind (all teams, lines listed in KIND plus (8, 1)):")
+    cnt = {}
+    for g, G in D["games"].items():
+        for ln, L in G["lines"].items():
+            k = KIND.get((g, ln))
+            if not k:
+                continue
+            for t, A in L["A"].items():
+                if A["status"] == "zero":
+                    continue
+                c = cnt.setdefault(k, [0, 0]); c[0] += 1; c[1] += A["status"] == "inflated"
+    for k, (n, i) in sorted(cnt.items()):
+        print(f"   kind {k}: {i}/{n} = {i / n:.0%} inflated")
+
     def score(rule, label, mixed_as):
         inc_p = inc_o = cst = 0.0; per = {}
         for g, ln, L, m, k in lines:
