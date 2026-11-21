@@ -45,3 +45,4 @@ Filled in automatically by `claimbot archive` from our own rows on the public le
 | [10](case_010/) | Storm claim | todo | todo | todo | still open |
 | [10](case_010/results.json) | -2792.38 | 0.00 | 2792.38 | L1: 0 (nothing charged); L2: 0 (nothing charged) | L1: 0 / 2792.38; L2: 0 / 0 |
 | [11](case_011/) | Accidental damage claim on the home contents cover | todo | todo | todo | still open |
+| [11](case_011/results.json) | +1007.63 | 3175.51 | 2167.88 | L1: 123.16 (2/11, inflated); L2: 21.42 (2/11, inflated); L3: 0 (nothing charged); L4: 21.42 (2/11, inflated); L5: 192.78 (4/11, fair); L6: 0 (nothing charged); L7: 48.2 (1/11, inflated); L8: 0 (nothing charged); L9: 0 (nothing charged) | L1: 0 / 0; L2: 0 / 0; L3: 0 / 0; L4: 0 / 0; L5: 8 / 67.83; L6: 0 / 0; L7: 0 / 40.96; L8: 0 / 0; L9: 0 / 0 |
