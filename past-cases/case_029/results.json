@@ -1,0 +1,57 @@
+{
+  "game": 29,
+  "team": "Kiebler Software Solutions",
+  "net": 10866.21,
+  "income": 21000.0,
+  "costs": 10133.79,
+  "lines": {
+    "1": {
+      "charge": {
+        "a": 1200.0,
+        "n": 11,
+        "accepted": 3,
+        "penalty_paid_to_us": 8,
+        "rejected_as_fraud": 0,
+        "income": 18000.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 8
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 2,
+        "accepted_positive": 8,
+        "accepted_paid": 8637.1,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 1,
+        "b_lower": 1531.8,
+        "b_upper": null
+      }
+    },
+    "2": {
+      "charge": {
+        "a": 250.0,
+        "n": 11,
+        "accepted": 9,
+        "penalty_paid_to_us": 2,
+        "rejected_as_fraud": 0,
+        "income": 3000.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 2
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 2,
+        "accepted_positive": 4,
+        "accepted_paid": 1496.69,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 5,
+        "b_lower": 400.0,
+        "b_upper": null
+      }
+    }
+  }
+}
