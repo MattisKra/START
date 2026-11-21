@@ -215,12 +215,12 @@ def main():
             res = oc.call(m, variants[v], content[c], oc.pick_reasoning(cat, m, "min"), a.max_tokens, key, a.timeout,
                           extra={"plugins": [{"id": "web", "max_results": 3}]} if a.web else None)
             spent[0] += res.get("cost") or 0; tot_cost += res.get("cost") or 0; tot_lat += res.get("latency_s") or 0
-            if res.get("parsed") and len(res["parsed"].get("lines", [])) > 0:
+            if isinstance(res.get("parsed"), dict) and len(res["parsed"].get("lines", [])) > 0:
                 break
         out = dict(variant=v, model=m, case=c, rep=r, latency_s=round(tot_lat, 2), cost=tot_cost, tries=tries,
                    prompt_tokens=res.get("prompt_tokens"), completion_tokens=res.get("completion_tokens"), http=res.get("http"),
                    error=res.get("error") or res.get("parse_error"), finish=res.get("finish"), parsed=res.get("parsed"))
-        if res.get("parsed"):
+        if isinstance(res.get("parsed"), dict):
             try:
                 out["lines"] = score_answer(res["parsed"], labels[c], anns.get(c, {}))
             except Exception as e:  # noqa: BLE001
