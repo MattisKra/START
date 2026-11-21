@@ -38,3 +38,18 @@ Game 24 retrospective rerun, with the same Fable estimates on both sides. Ranges
 The frame and brakes account for at least €5,330 of reviewer savings. Both assembly lines favour Fable on review. On locksmith assembly the eligibility gate set the Python limit to €0 because Fable assigned a 60% probability of payability. Fable chose €90. The extra wrongful-rejection costs exceeded the issuer gain from charging €58.50 instead of €50. On bicycle assembly a 70% probability passed the gate, but the 0.55 multiplier still cut the limit from €120 to €49.50. This also increased reviewer costs. The two assembly examples share a direction within this invoice. A rule for other invoices needs forward evidence.
 
 As a cross-check, the original game 24 receipt also favoured its two assembly limits under the fixed-charge ratio diagnostic. That diagnostic helped on all eleven other review lines. It does not require a reconstruction of the original Fable median.
+
+## Forward check on game 25
+
+The tool-enabled Fable arm recorded all 16 decisions during the official minute. Applying the frozen Python factors to those same estimates produced three clear net wins, one clear net loss and twelve unresolved lines. The original and changed strategies faced the same historical opponents.
+
+| Position and item | Fable limit → factor limit | Reviewer savings from factors | Net change from factors |
+|---|---:|---:|---:|
+| 2. Connection hose | €40 → €15.40 | +€63.51 | +€97.31 to +€155.51 |
+| 3. Senior installer, three hours | €340 → €156.75 | −€1,095.89 | −€1,001.64 to −€748.39 |
+| 4. Auxiliary and cleaning material | €45 → €17.60 | +€77.39 to +€146.66 | +€52.39 to +€175.46 |
+| 6. Thermal imaging camera for leak detection | €220 → €88 | +€440.13 to +€813.96 | +€64.13 to +€985.96 |
+
+On the senior installer line, charging €256.50 instead of €250 gained €94.25–€347.50 in issuer income. The loss from tightening the reviewer limit outweighed even that upper bound. Fable also did better as reviewer on the filling valve, but the issuer uncertainty prevents a net verdict. The vehicle line is unresolved despite savings on review. Lines 7–16 have zero limits under both policies and uncertain issuer effects. The whole-game net interval spans zero.
+
+Taken with game 24, similar labour labels led to opposite results. The payoff depends on whether the reduced limit crosses fair or inflated opponent charges. Historical winners can diagnose which assumption to check in a future game. Line labels alone do not establish a switching rule.
