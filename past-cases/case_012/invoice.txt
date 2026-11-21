@@ -1,0 +1,75 @@
+Invoice
+INVOICE NO.
+2026-0138
+DATE
+25 Feb 2026
+DUE
+11 Mar 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Floor cleaning, washing machine connection check,
+and removal and replacement of water-damaged
+skirting boards in the utility room and hallway
+1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0139
+DATE
+25 Feb 2026
+DUE
+11 Mar 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+2 Moisture measurement and drying of the utility room
+and hallway floor, incl. drying unit and skilled labour
+1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0140
+DATE
+25 Feb 2026
+DUE
+11 Mar 2026
+TRADE
+Fine Art Restoration
+FROM
+Brushstroke Revival Fine Art Ltd
+5 Canvas Court
+01097 Palettetown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+3 Assessment and drying of a small framed decorative
+print from the hallway
+1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
