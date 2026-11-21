@@ -20,6 +20,9 @@ LLM_TIMEOUT_S = float(os.getenv("CLAIMS_LLM_TIMEOUT", "50"))
 # --- Game API --------------------------------------------------------------
 TEAM_API_KEY = os.getenv("TEAM_API_KEY")
 API_BASE = os.getenv("CLAIMS_API_BASE", "https://c2f.public.quantco.cloud")
+# Index of the first invoice line in the submission. The deep-dive slide
+# example uses 1, 2, ...; confirm against API_HANDBOOK.md / Game 0.
+INDEX_BASE = int(os.getenv("CLAIMS_INDEX_BASE", "1"))
 ROUND_SECONDS = 60
 # Stop waiting for the slow model this many seconds before the deadline.
 SAFETY_MARGIN_S = 6

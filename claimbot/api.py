@@ -1,9 +1,10 @@
 """QuantCo game API client.
 
-PLACEHOLDER: the endpoint paths come from the kickoff talk, but the auth
-header, the response shapes and the submission payload are guesses until we
-have API_HANDBOOK.md and starter_script.py. Everything that may need changing
-is in this file.
+Endpoints, auth header and submission format follow the challenge deep dive
+(claim-to-fame-challenge-deep-dive.md, slide 7). Still unconfirmed until we
+have API_HANDBOOK.md: the response shapes of /list and /key, and whether
+invoice indices start at 0 or 1 (the slide example uses 1, 2; see
+config.INDEX_BASE).
 """
 
 import requests
@@ -18,8 +19,7 @@ class GameAPI:
             raise RuntimeError("TEAM_API_KEY is not set (put it in .env)")
         self.base = base.rstrip("/")
         self.s = requests.Session()
-        # TODO(handbook): confirm header name/format.
-        self.s.headers["Authorization"] = f"Bearer {api_key}"
+        self.s.headers["X-API-Key"] = api_key
 
     def _get(self, path: str):
         r = self.s.get(f"{self.base}{path}", timeout=10)
@@ -40,13 +40,19 @@ class GameAPI:
         return str(data)
 
     @staticmethod
-    def build_payload(prices: list[LinePrice]) -> dict:
-        # TODO(handbook): confirm payload shape. One (a, b) per line, by index;
-        # gross line totals.
-        return {"items": [{"index": p.index, "a": p.a, "b": p.b} for p in prices]}
+    def build_payload(prices: list[LinePrice]) -> list[dict]:
+        # One (a, b) per line, gross line totals. LinePrice.index is 0-based.
+        return [
+            {
+                "index": p.index + config.INDEX_BASE,
+                "charge_price": round(p.a, 2),
+                "acceptance_limit": round(p.b, 2),
+            }
+            for p in prices
+        ]
 
     def submit(self, game_id: int | str, prices: list[LinePrice]):
-        r = self.s.post(
+        r = self.s.put(
             f"{self.base}/api/games/{game_id}/submissions",
             json=self.build_payload(prices),
             timeout=10,
