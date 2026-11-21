@@ -100,3 +100,4 @@ Filled in automatically by `claimbot archive` from our own rows on the public le
 | [37](case_037/results.json) | +0.00 | 0.00 | 0.00 | L1: 0 (nothing charged); L2: 0 (nothing charged) | L1: 0 / 0; L2: 0 / 0 |
 | [38](case_038/) | Electrical surge claim on the fixed building-services cover | todo | todo | todo | still open |
 | [38](case_038/results.json) | -874.89 | 15275.00 | 16149.89 | L1: 900.0 (10/11, fair); L2: 600.0 (1/11, inflated); L3: 250.0 (10/11, fair); L4: 150.0 (1/11, inflated); L5: 100.0 (8/11, inflated); L6: 40.0 (8/11, fair) | L1: 5 / 3248.82; L2: 0 / 0; L3: 3 / 577.65; L4: 0 / 0; L5: 0 / 630.59; L6: 0 / 242.73 |
+| [39](case_039/) | Bathroom leak, upstairs at Jonas's place, cold water line | todo | todo | todo | still open |
