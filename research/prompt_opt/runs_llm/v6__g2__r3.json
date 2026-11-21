@@ -1,0 +1,92 @@
+{
+ "cand": "v6",
+ "game": 2,
+ "run": 3,
+ "latency_s": 17.2,
+ "usage": {
+  "input_tokens": 19508,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 19505,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 1974,
+  "output_tokens_details": {
+   "reasoning_tokens": 827
+  },
+  "total_tokens": 21482
+ },
+ "estimate": {
+  "damage_summary": "During a swerve on the Berlin\u2013Munich drive, the laptop was thrown against the car door, cracking its screen and damaging its lower-right corner. The invoice describes screen and housing repairs, a polish of a pre-existing lid scuff, and a diagnostic inspection.",
+  "policy_notes": "The described sudden impact during a vehicle manoeuvre is covered under 2.6.1\u20132.6.2, and portable equipment temporarily away from the insured location in Germany is covered under 4.5.2; this assessment assumes the stated portable electronics cover and household-property co-insurance are agreed in the schedule. Necessary repairs are limited to event-damaged areas and the pre-loss standard under 7.1.5, 7.1.7 and 7.1.9; examination is covered under 5.2.3, subject to its EUR 250 gross cap per event. Polishing the pre-existing scuff is excluded under 7.1.11 and 7.1.8(a). No deductible or proportional reduction is specified in the supplied documents.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Laptop screen crack repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The screen cracked in the reported sudden impact, so repair of that affected area is covered under 2.6.1\u20132.6.3 and 7.1.5; the complete display assembly is a plausible repair method for the cracked screen. Under 7.1.7 and 7.1.9, the reasonable amount is limited to a standard-equivalent display repair for this 14-inch notebook, not an upgrade; one screen repair is justified, with the description indicating this is the larger share of the repair cost.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 650.0,
+    "net_unit_price_p50": 850.0,
+    "net_unit_price_p90": 1100.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Lower-right corner and housing repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The lower-right housing damage is expressly attributed to the same impact, and repair of that affected part is covered under 2.6.1\u20132.6.3 and 7.1.5. Replacing the dented housing shell is a plausible necessary repair under 7.1.7, subject to the equivalent pre-loss standard in 7.1.9; one repair is justified and its reasonable price should remain below the display repair.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 200.0,
+    "net_unit_price_p50": 300.0,
+    "net_unit_price_p90": 400.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Polish of pre-existing lid scuff (surface only, does not affect operation)",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The description identifies this as a pre-existing cosmetic scuff, not damage caused by the insured event, so it is outside the affected areas under 7.1.5 and is not a repair cost under 7.1.11 and 7.1.8(a). The line is unrelated to making good the screen or corner impact; one polish is the stated quantity, and its price estimate is given only on the assumption it were valid.",
+    "covered": false,
+    "related": false,
+    "p_valid": 0.02,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 20.0,
+    "net_unit_price_p50": 40.0,
+    "net_unit_price_p90": 80.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Diagnostic inspection",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The inspection was performed to establish the extent and scope of repair for an insured portable-equipment event, so it falls under 5.2.3, which expressly includes the repairing undertaking\u2019s diagnostic charge. One inspection is justified; a modest charge for a short diagnostic is reasonable, and reimbursement remains subject to the EUR 250 gross per-event cap in 5.2.3.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.97,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 30.0,
+    "net_unit_price_p50": 55.0,
+    "net_unit_price_p90": 90.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

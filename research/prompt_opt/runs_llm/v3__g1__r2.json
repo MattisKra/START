@@ -1,0 +1,60 @@
+{
+ "cand": "v3",
+ "game": 1,
+ "run": 2,
+ "latency_s": 18.7,
+ "usage": {
+  "input_tokens": 11418,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 11415,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 2050,
+  "output_tokens_details": {
+   "reasoning_tokens": 1511
+  },
+  "total_tokens": 13468
+ },
+ "estimate": {
+  "damage_summary": "A nearby atmospheric discharge caused an overvoltage on the building\u2019s electrical installation, physically damaging a speaker system and TV. A technician later attended to confirm the surge failure and check the wiring.",
+  "policy_notes": "The damaged appliances fall under the electrical-appliance sub-limit of EUR 5,000 including VAT per event. Because no overvoltage protective device was in use, indemnity for the appliances is halved after applying the no-improvement standard. Diagnostic/reporting work is not a repair cost; a call-out is indemnifiable only when tied to work that is itself indemnifiable.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Surge-damaged home electronics (speaker system and TV set)",
+    "unit": "pcs",
+    "quantity_invoiced": 2.0,
+    "rationale": "The two appliances are reported as physically damaged by the covered overvoltage event, so replacement with standard-grade equivalents is plausibly related and covered. The reasonable price is uncertain without model or specification details; the appliance sub-limit applies, and the missing protective device halves the otherwise payable amount.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.95,
+    "quantity_justified": 2.0,
+    "net_unit_price_p10": 350.0,
+    "net_unit_price_p50": 550.0,
+    "net_unit_price_p90": 900.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 0.5
+   },
+   {
+    "index": 1,
+    "invoice_text": "Diagnostic surge-failure report and technician call-out",
+    "unit": "pcs",
+    "quantity_invoiced": 3.0,
+    "rationale": "The reported attendance confirmed the cause and checked wiring safety, but the line describes no repair work on the damaged appliances; the diagnostic report is not a repair cost. The invoice\u2019s covered equipment supply does not by itself make this separate diagnostic attendance indemnifiable, and three units are not plausible for a single reported visit.",
+    "covered": false,
+    "related": false,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 50.0,
+    "net_unit_price_p50": 110.0,
+    "net_unit_price_p90": 200.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "cand": "baseline",
+ "game": 2,
+ "run": 1,
+ "latency_s": 13.5,
+ "usage": {
+  "input_tokens": 19031,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 19028,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 1416,
+  "output_tokens_details": {
+   "reasoning_tokens": 516
+  },
+  "total_tokens": 20447
+ },
+ "estimate": {
+  "damage_summary": "During a swerve on the Berlin\u2013Munich drive, the laptop struck the car door; its screen cracked and its lower-right corner/housing was damaged. The reported damage pattern is consistent with sudden external impact, and the laptop was recently purchased.",
+  "policy_notes": "The described impact is potentially covered under the portable-equipment peril, including while the laptop is being conveyed in a car. The schedule is not provided, so agreement of that optional peril and co-insurance of household contents cannot be verified; estimates assume the stated portable-electronics cover applies. The policy excludes polishing a pre-existing cosmetic scuff. Necessary diagnostic costs are covered only if the insured-event gateway is met and are capped at EUR 250 including VAT per event. No deductible or sub-limit is provided.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Laptop screen crack repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The cracked screen is expressly described and is consistent with the impact. A complete display assembly can be a reasonable repair where the glass is not separately replaceable; an upper reasonable allowance should cover a suitable assembly and fitting, without upgrading the laptop.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.92,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 350.0,
+    "net_unit_price_p50": 600.0,
+    "net_unit_price_p90": 850.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Lower-right corner and housing repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The lower-right corner damage is reported as part of the same impact, and the photo is consistent with damage to the laptop housing. Replacing the affected housing shell is a plausible repair; the allowance is for the damaged lower housing and fitting, not for unrelated casing work.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.9,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 120.0,
+    "net_unit_price_p50": 250.0,
+    "net_unit_price_p90": 400.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Polish of pre-existing lid scuff (surface only, does not affect operation)",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The invoice identifies this as a pre-existing surface scuff, not damage caused by the reported impact. The policy excludes treatment of pre-existing cosmetic condition, although the estimated price is stated as if the line were valid.",
+    "covered": false,
+    "related": false,
+    "p_valid": 0.0,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 20.0,
+    "net_unit_price_p50": 50.0,
+    "net_unit_price_p90": 100.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Diagnostic inspection",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "A diagnostic to determine the extent and scope of repair is a covered examination cost if the portable-equipment peril applies. The allowance reflects a reasonable single inspection; the policy separately caps this head at EUR 250 including VAT per event.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.88,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 40.0,
+    "net_unit_price_p50": 90.0,
+    "net_unit_price_p90": 160.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

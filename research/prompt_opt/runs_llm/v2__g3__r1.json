@@ -1,0 +1,124 @@
+{
+ "cand": "v2",
+ "game": 3,
+ "run": 1,
+ "latency_s": 26.0,
+ "usage": {
+  "input_tokens": 17410,
+  "input_tokens_details": {
+   "cache_write_tokens": 15709,
+   "cached_tokens": 1698,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 15709
+   }
+  },
+  "output_tokens": 3159,
+  "output_tokens_details": {
+   "reasoning_tokens": 1658
+  },
+  "total_tokens": 20569
+ },
+ "estimate": {
+  "damage_summary": "A heavy bowl fell against a display cabinet, cracking the door glass and damaging the solid-wood door frame and an interior shelf. The photo confirms the broken glass and substantial gouging to the frame; the shelf damage is reported in the description.",
+  "policy_notes": "Sudden accidental damage to household contents is covered under 2.6.1 if that peril is agreed in the missing schedule; the description identifies this as an accidental-damage claim. Glazing is expressly outside that peril under 2.6.4 and is covered only if optional glazing is agreed under 2.7 and the schedule. Sections 7.1.5 and 7.1.8 limit repairs to event-damaged parts and exclude general-condition or business-operation charges; 7.1.12 allows one attendance where indemnified work is performed. No schedule or deductible details were supplied.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Hole drilling",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "Under 2.7.2 and the definition of glazing work in 1.3, necessary preparation for fitting replacement glass can be included, but the glass peril must be agreed in the schedule (2.7.3, 3.5). One drilling operation is plausible if required by the pane or its hardware; the invoice does not explain its necessity, so the price allowance is for a single modest operation.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.3,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 20.0,
+    "net_unit_price_p50": 45.0,
+    "net_unit_price_p90": 90.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Installation of the new glass into the frame",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "Fitting the replacement pane is glazing work expressly included by 2.7.2, but breakage and its associated work are not covered unless the optional glazing peril is agreed (2.7.3, 3.5). One installation is appropriate for the single cracked cabinet-door pane; the price estimate assumes ordinary fitting rather than an upgrade.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.35,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 90.0,
+    "net_unit_price_p50": 160.0,
+    "net_unit_price_p90": 260.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Made-to-measure replacement glass pane",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "A replacement pane made to the cabinet-door dimensions is glazing work under 1.3 and 2.7.2, but it is not covered unless the schedule agrees the optional glazing peril (2.7.3, 3.5). One pane corresponds to the single cracked element shown; the price range allows for the uncertain dimensions and specification, without a premium upgrade under 7.1.10.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.35,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 140.0,
+    "net_unit_price_p50": 260.0,
+    "net_unit_price_p90": 450.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Repair of dented and gouged solid-wood door frame",
+    "unit": "flat rate",
+    "quantity_invoiced": 1.0,
+    "rationale": "Repair of the frame is plausibly covered sudden accidental damage to household contents under 2.6.1 and 4.2.6, assuming the accidental-damage peril identified in the claim is agreed; the photo confirms event-related gouging. Under 7.1.1(b) and 7.1.5, a localized repair and matching finish to the damaged portion is reasonable, but work on undamaged portions or general refinishing is not included.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.88,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 180.0,
+    "net_unit_price_p50": 320.0,
+    "net_unit_price_p90": 500.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 4,
+    "invoice_text": "Repair and refinish of scratched and chipped wooden shelf",
+    "unit": "flat rate",
+    "quantity_invoiced": 1.0,
+    "rationale": "The description attributes the shelf damage to the same sudden impact, which can fall under 2.6.1 for household contents (4.2.6), assuming that peril is agreed; ordinary-use scratching or chipping alone would be excluded by 2.6.3. Sections 7.1.1(b) and 7.1.5 support repair and refinishing limited to the affected shelf area, and the allowance is for one shelf rather than broader cabinet refinishing.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.78,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 90.0,
+    "net_unit_price_p50": 180.0,
+    "net_unit_price_p90": 300.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 5,
+    "invoice_text": "Vehicle costs",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "If this is the contractor\u2019s attendance charge, 7.1.12 permits one attendance per undertaking where indemnified work was performed; the reported timber repairs provide a potentially covered repair at that visit. The charge would not be payable for a separate visit with no indemnified work or as a duplicate charge, and its amount is limited to a reasonable single local call-out.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.8,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 35.0,
+    "net_unit_price_p50": 65.0,
+    "net_unit_price_p90": 110.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

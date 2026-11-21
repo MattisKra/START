@@ -1,0 +1,92 @@
+{
+ "cand": "v5",
+ "game": 2,
+ "run": 2,
+ "latency_s": 18.3,
+ "usage": {
+  "input_tokens": 19251,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 19248,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 2123,
+  "output_tokens_details": {
+   "reasoning_tokens": 1140
+  },
+  "total_tokens": 21374
+ },
+ "estimate": {
+  "damage_summary": "During an evasive swerve on the Berlin\u2013Munich drive, the laptop struck the car door, cracking its screen and damaging the lower-right housing corner. The pre-existing lid scuff was not caused by the event.",
+  "policy_notes": "The described impact during a swerve fits the portable-equipment cover for sudden external action caused by movement of a conveyance (2.6.1\u20132.6.2); the laptop was temporarily away from home within Germany. The schedule is not provided, so the optional peril and household contents cover are assumed agreed as indicated by the claim description. The policy excludes work on pre-existing cosmetic condition (7.1.5, 7.1.8 and 7.1.11); diagnostic costs are covered only if the insured-event gateway is passed and are subject to the EUR 250 gross per-event cap. No deductible or other proportional reduction is stated in the supplied material.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Laptop screen crack repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The cracked screen was caused by the described impact, and replacing the complete display assembly is a plausible repair where the glass is not separately replaceable. A standard equivalent assembly and workshop fitting support a maximum reasonable amount near the upper end of normal repair pricing; the other repair was stated to be the larger share of a combined cost close to the laptop\u2019s purchase price.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 700.0,
+    "net_unit_price_p50": 850.0,
+    "net_unit_price_p90": 950.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Lower-right corner and housing repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The damaged lower-right corner is expressly attributed to the same impact, and replacing the dented housing shell is a plausible necessary repair. A standard-grade shell and fitting support a maximum reasonable amount around EUR 400 net, with the two repair lines together consistent with the stated near-purchase-price total.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 300.0,
+    "net_unit_price_p50": 400.0,
+    "net_unit_price_p90": 500.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Polish of pre-existing lid scuff (surface only, does not affect operation)",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The description identifies this as a pre-existing cosmetic scuff, not damage from the insured impact. The policy excludes cosmetic restoration of an area the event did not affect; the price estimate is stated only on the assumption that the line were otherwise valid.",
+    "covered": false,
+    "related": false,
+    "p_valid": 0.0,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 25.0,
+    "net_unit_price_p50": 45.0,
+    "net_unit_price_p90": 70.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Diagnostic inspection",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The shop\u2019s diagnostic was a plausible examination to establish the damage and repair scope, and is covered under 5.2.3 if the insured-event gateway is met. A short diagnostic at a normal workshop rate is modest; the estimated amount is well below the EUR 250 gross per-event cap.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.95,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 35.0,
+    "net_unit_price_p50": 60.0,
+    "net_unit_price_p90": 90.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

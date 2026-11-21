@@ -1,0 +1,189 @@
+{
+ "1": {
+  "t_lo": 780.69,
+  "t_hi": 900.0,
+  "charges": {
+   "404": 780.69,
+   "Humble Legends": 117.81,
+   "TRINNERS4WINNERS": 450.15,
+   "alpha": 2215.16,
+   "Asgardians": 0.0,
+   "chineseModels": 900.0,
+   "CHOOMS": 0.0,
+   "FDN": 0.0,
+   "GemischtesHack": 0.0,
+   "Kiebler Software Solutions": 2592.74,
+   "Lumenauts": 0.0,
+   "vietgang": 0.0
+  },
+  "fair": [
+   [
+    "Humble Legends",
+    117.81
+   ],
+   [
+    "TRINNERS4WINNERS",
+    450.15
+   ],
+   [
+    "404",
+    780.69
+   ]
+  ],
+  "unfair": [
+   [
+    "chineseModels",
+    900.0
+   ],
+   [
+    "alpha",
+    2215.16
+   ],
+   [
+    "Kiebler Software Solutions",
+    2592.74
+   ]
+  ],
+  "b_range": {
+   "404": [
+    450.15,
+    900.0
+   ],
+   "Asgardians": [
+    0.0,
+    117.81
+   ],
+   "CHOOMS": [
+    0.0,
+    117.81
+   ],
+   "FDN": [
+    2592.74,
+    null
+   ],
+   "GemischtesHack": [
+    0.0,
+    117.81
+   ],
+   "Humble Legends": [
+    0.0,
+    450.15
+   ],
+   "Kiebler Software Solutions": [
+    2215.16,
+    null
+   ],
+   "Lumenauts": [
+    0.0,
+    117.81
+   ],
+   "TRINNERS4WINNERS": [
+    117.81,
+    780.69
+   ],
+   "alpha": [
+    900.0,
+    2592.74
+   ],
+   "chineseModels": [
+    780.69,
+    2215.16
+   ],
+   "vietgang": [
+    0.0,
+    117.81
+   ]
+  }
+ },
+ "2": {
+  "t_lo": 0.0,
+  "t_hi": 5.58,
+  "charges": {
+   "alpha": 0.0,
+   "Asgardians": 0.0,
+   "CHOOMS": 0.0,
+   "FDN": 0.0,
+   "GemischtesHack": 0.0,
+   "Kiebler Software Solutions": 147.89,
+   "Lumenauts": 0.0,
+   "vietgang": 0.0,
+   "404": 385.24,
+   "chineseModels": 250.0,
+   "Humble Legends": 176.72,
+   "TRINNERS4WINNERS": 5.58
+  },
+  "fair": [],
+  "unfair": [
+   [
+    "TRINNERS4WINNERS",
+    5.58
+   ],
+   [
+    "Kiebler Software Solutions",
+    147.89
+   ],
+   [
+    "Humble Legends",
+    176.72
+   ],
+   [
+    "chineseModels",
+    250.0
+   ],
+   [
+    "404",
+    385.24
+   ]
+  ],
+  "b_range": {
+   "404": [
+    0.0,
+    5.58
+   ],
+   "Asgardians": [
+    0.0,
+    5.58
+   ],
+   "CHOOMS": [
+    0.0,
+    5.58
+   ],
+   "FDN": [
+    385.24,
+    null
+   ],
+   "GemischtesHack": [
+    0.0,
+    5.58
+   ],
+   "Humble Legends": [
+    147.89,
+    250.0
+   ],
+   "Kiebler Software Solutions": [
+    0.0,
+    5.58
+   ],
+   "Lumenauts": [
+    0.0,
+    5.58
+   ],
+   "TRINNERS4WINNERS": [
+    0.0,
+    147.89
+   ],
+   "alpha": [
+    0.0,
+    5.58
+   ],
+   "chineseModels": [
+    0.0,
+    5.58
+   ],
+   "vietgang": [
+    0.0,
+    5.58
+   ]
+  }
+ }
+}

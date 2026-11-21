@@ -1,0 +1,92 @@
+{
+ "cand": "v4",
+ "game": 2,
+ "run": 2,
+ "latency_s": 18.9,
+ "usage": {
+  "input_tokens": 19562,
+  "input_tokens_details": {
+   "cache_write_tokens": 19559,
+   "cached_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 19559
+   }
+  },
+  "output_tokens": 2150,
+  "output_tokens_details": {
+   "reasoning_tokens": 1229
+  },
+  "total_tokens": 21712
+ },
+ "estimate": {
+  "damage_summary": "During an evasive swerve in a car, the laptop was thrown against the car door, cracking its screen and damaging its lower-right corner/housing. The invoice also includes polishing of an old lid scuff and a diagnostic inspection.",
+  "policy_notes": "Assuming the schedule has agreed the portable-equipment peril and co-insured household contents, the described impact during the swerve is covered under 2.6.1\u20132.6.2. Necessary repairs are assessed under 7.1.7 and 7.1.10; pre-existing cosmetic damage is excluded under 7.1.11 and 7.1.8(a). Examination is covered under 5.2.3, subject to its EUR 250 gross per-event cap. No deductible or proportional reduction is specified in the supplied policy text. For the repairs, the estimates are consistent with the stated near-EUR 1,500 combined cost, with most attributable to the display, and remain below the equivalent replacement cost as described.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Laptop screen crack repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The sudden impact and cracked screen are covered areas of damage under 2.6.1\u20132.6.3, and necessary repair components and labour are included by 7.1.7 and 7.1.10. A complete display assembly is plausible for this repair; the estimate reflects a standard equivalent part and authorised-workshop labour, not an upgrade, and fits the description that the display made up most of the repair cost.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 650.0,
+    "net_unit_price_p50": 850.0,
+    "net_unit_price_p90": 1100.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Lower-right corner and housing repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The damaged corner and lower housing are confirmed as damage from the same impact, covered under 2.6.1\u20132.6.3; replacing the dented shell is a necessary repair under 7.1.7 and 7.1.10. One housing repair is plausible, and the estimated standard replacement shell and labour, together with the display repair, remain consistent with the stated near-EUR 1,500 repair cost and below the equivalent new-unit cost.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 250.0,
+    "net_unit_price_p50": 350.0,
+    "net_unit_price_p90": 500.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Polish of pre-existing lid scuff (surface only, does not affect operation)",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The policy excludes treatment of a pre-existing surface condition that the event did not affect: 7.1.11 and 7.1.8(a) make cosmetic polishing not a repair cost. The line concerns the same laptop but not the reported impact damage, so it is not indemnifiable; the price estimate is stated as if the work were otherwise valid.",
+    "covered": false,
+    "related": false,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 25.0,
+    "net_unit_price_p50": 45.0,
+    "net_unit_price_p90": 80.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Diagnostic inspection",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The examination needed to establish the extent and scope of repair after an insured portable-equipment event is expressly reimbursable under 5.2.3, subject to the EUR 250 gross per-event cap. One diagnostic inspection is plausible and, as a modest standalone workshop charge, is within that cap; the line is payable only on the assumed insured-event gateway under 2.6.7.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.96,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 40.0,
+    "net_unit_price_p50": 70.0,
+    "net_unit_price_p90": 110.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

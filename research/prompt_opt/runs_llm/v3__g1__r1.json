@@ -1,0 +1,60 @@
+{
+ "cand": "v3",
+ "game": 1,
+ "run": 1,
+ "latency_s": 18.9,
+ "usage": {
+  "input_tokens": 11418,
+  "input_tokens_details": {
+   "cache_write_tokens": 11415,
+   "cached_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 11415
+   }
+  },
+  "output_tokens": 1907,
+  "output_tokens_details": {
+   "reasoning_tokens": 1477
+  },
+  "total_tokens": 13325
+ },
+ "estimate": {
+  "damage_summary": "An atmospheric overvoltage event damaged the television and speaker system connected to the building\u2019s mains. A technician subsequently documented the surge failure and checked the wiring.",
+  "policy_notes": "The damaged electronics are covered under the lightning-overvoltage peril, subject to the EUR 5,000 gross aggregate appliance sub-limit and the pre-loss-standard replacement basis. Because the description establishes that no overvoltage protective device was used, indemnity for the appliances is halved. Diagnostic/reporting and call-out charges are not repair costs on the information provided; VAT is reimbursed only if actually incurred and not recoverable as input tax.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Surge-damaged home electronics (speaker system and TV set)",
+    "unit": "pcs",
+    "quantity_invoiced": 2.0,
+    "rationale": "Both appliances are described as physically damaged by the covered overvoltage event, and two items is plausible. Allow only standard-grade equivalents of the pre-loss equipment; the absent protective device halves the otherwise payable amount.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.97,
+    "quantity_justified": 2.0,
+    "net_unit_price_p10": 550.0,
+    "net_unit_price_p50": 1000.0,
+    "net_unit_price_p90": 1600.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 0.5
+   },
+   {
+    "index": 1,
+    "invoice_text": "Diagnostic surge-failure report and technician call-out",
+    "unit": "pcs",
+    "quantity_invoiced": 3.0,
+    "rationale": "The visit relates to the reported event, but confirming failure, producing a diagnostic report and checking wiring are not identified as physical repair work; the call-out exception does not make a standalone diagnostic visit indemnifiable. If treated as valid, one report/attendance unit is plausible, not three.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 60.0,
+    "net_unit_price_p50": 120.0,
+    "net_unit_price_p90": 220.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

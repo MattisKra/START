@@ -1,0 +1,92 @@
+{
+ "cand": "v6",
+ "game": 2,
+ "run": 2,
+ "latency_s": 19.6,
+ "usage": {
+  "input_tokens": 19508,
+  "input_tokens_details": {
+   "cache_write_tokens": 17674,
+   "cached_tokens": 1831,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 17674
+   }
+  },
+  "output_tokens": 2075,
+  "output_tokens_details": {
+   "reasoning_tokens": 979
+  },
+  "total_tokens": 21583
+ },
+ "estimate": {
+  "damage_summary": "During a swerve on the Berlin\u2013Munich drive, the laptop was thrown against the car door, cracking its screen and damaging its lower-right corner and housing. The reported damage and photo are consistent with sudden external impact to portable equipment.",
+  "policy_notes": "Assuming the schedule agrees portable-equipment cover and no applicable deductible or sub-limit is shown, the event is covered under 2.6.1\u20132.6.2; the laptop remains insured equipment even though it was inside a car (3.1.4, 4.3(d), 4.5.2). Necessary repair costs are covered under 7.1.1(d) and 7.1.10, subject to the equivalent new-unit replacement-cost limit; examination costs are covered under 5.2.3, capped at EUR 250 including VAT. Polishing the pre-existing scuff is excluded by 7.1.5 and 7.1.11.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Laptop screen crack repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The cracked screen is damage from the reported impact and is covered as sudden external damage under 2.6.1\u20132.6.3; the necessary repair cost is covered under 7.1.1(d) and 7.1.10. A complete display assembly is a plausible repair for this damage, and the estimated price reflects a standard equivalent part and repair rather than a premium upgrade; the combined repair must remain below the equivalent new-unit amount.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.99,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 550.0,
+    "net_unit_price_p50": 750.0,
+    "net_unit_price_p90": 1050.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Lower-right corner and housing repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The reported and photographed lower-right impact damage to the housing is covered under 2.6.1\u20132.6.3, with necessary repair costs payable under 7.1.1(d) and 7.1.10. Replacing one dented housing shell is plausible for the affected area; the estimate allows for a standard equivalent shell and associated repair, not work on unaffected parts.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 160.0,
+    "net_unit_price_p50": 240.0,
+    "net_unit_price_p90": 350.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Polish of pre-existing lid scuff (surface only, does not affect operation)",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "This is work on a pre-existing cosmetic scuff, not damage caused by the insured event, so it is excluded as work beyond the affected parts and as treatment of a pre-existing surface condition under 7.1.5 and 7.1.11. The line is therefore not indemnifiable, although the stated single polish is a plausible quantity and its price is estimated as if the work were otherwise valid.",
+    "covered": false,
+    "related": false,
+    "p_valid": 0.02,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 15.0,
+    "net_unit_price_p50": 25.0,
+    "net_unit_price_p90": 45.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Diagnostic inspection",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The diagnostic was undertaken to establish the extent and scope of repair for an insured damaged unit, so it is covered as examination and assessment under 5.2.3, subject to the EUR 250 gross per-event cap. One modest inspection charge is plausible; the estimate is for a short diagnostic at a normal service rate, not a separate business or administration fee under 7.1.8(b).",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.96,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 35.0,
+    "net_unit_price_p50": 55.0,
+    "net_unit_price_p90": 90.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "cand": "v4",
+ "game": 2,
+ "run": 3,
+ "latency_s": 16.6,
+ "usage": {
+  "input_tokens": 19565,
+  "input_tokens_details": {
+   "cache_write_tokens": 17674,
+   "cached_tokens": 1888,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 17674
+   }
+  },
+  "output_tokens": 1953,
+  "output_tokens_details": {
+   "reasoning_tokens": 861
+  },
+  "total_tokens": 21518
+ },
+ "estimate": {
+  "damage_summary": "During an evasive swerve in a car, the laptop was thrown against the car door, cracking its screen and damaging its lower-right corner and housing. The photo and description support the reported impact damage; the pre-existing lid scuff is separate.",
+  "policy_notes": "Assuming the schedule includes portable-equipment cover and household contents, the sudden external impact during the swerve is covered under 2.6.1\u20132.6.2. Necessary repairs to the affected areas are covered under 7.1.7 and 7.1.10, subject to the pre-loss standard under 7.1.9; cosmetic treatment of the pre-existing scuff is excluded by 7.1.5, 7.1.8(a) and 7.1.11. Diagnostic examination is covered under 5.2.3 only because the insured-event gateway is met, subject to its EUR 250 gross cap per event.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Laptop screen crack repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "Under 2.6.3 and 7.1.7(c), the cracked screen is event damage and the necessary replacement component and repair labour are covered; 7.1.9 limits the work to the pre-loss specification. A complete display assembly is plausible for this repair, and an upper-end standard/OEM 14-inch assembly repair allowance of EUR 875 net is consistent with the statement that the display was most of a combined repair bill near the EUR 1,400 purchase price.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 650.0,
+    "net_unit_price_p50": 875.0,
+    "net_unit_price_p90": 1100.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Lower-right corner and housing repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The impact-damaged corner and housing are covered areas of the same unit under 2.6.3, with necessary shell replacement and fitting covered by 7.1.7(c) and 7.1.10. Replacing the damaged lower housing is plausible; an upper-end standard shell-and-labour allowance of EUR 300 net, together with the display repair, keeps the repair total close to but below the roughly EUR 1,400 pre-loss purchase price.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 200.0,
+    "net_unit_price_p50": 300.0,
+    "net_unit_price_p90": 400.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Polish of pre-existing lid scuff (surface only, does not affect operation)",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "This line treats a pre-existing cosmetic scuff, not damage caused by the reported impact. It is excluded as work on an unaffected area and as cosmetic restoration under 7.1.5, 7.1.8(a) and 7.1.11; its fair-value threshold is therefore zero.",
+    "covered": false,
+    "related": false,
+    "p_valid": 0.02,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 30.0,
+    "net_unit_price_p50": 60.0,
+    "net_unit_price_p90": 100.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Diagnostic inspection",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "Because the described sudden impact and damage pattern pass the portable-equipment gateway in 2.6.6, the necessary diagnostic examination is reimbursable under 5.2.3, subject to the EUR 250 gross event cap. One modest inspection charge is plausible; EUR 70 net is a reasonable upper-end allowance for a short diagnostic slot, rather than a premium flat fee.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.97,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 45.0,
+    "net_unit_price_p50": 70.0,
+    "net_unit_price_p90": 100.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

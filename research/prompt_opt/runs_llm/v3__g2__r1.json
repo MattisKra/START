@@ -1,0 +1,92 @@
+{
+ "cand": "v3",
+ "game": 2,
+ "run": 1,
+ "latency_s": 14.8,
+ "usage": {
+  "input_tokens": 19061,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 19058,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 1648,
+  "output_tokens_details": {
+   "reasoning_tokens": 772
+  },
+  "total_tokens": 20709
+ },
+ "estimate": {
+  "damage_summary": "During a swerve while travelling in a car, the laptop was thrown against the car door; the screen cracked and the lower-right housing was damaged. The invoice also includes polishing of an explicitly pre-existing lid scuff and a diagnostic inspection.",
+  "policy_notes": "The portable-equipment peril covers sudden external impact, including equipment displaced inside a conveyance. The described event and damage pattern appear consistent with cover, assuming the schedule shows the peril and household contents as agreed; no schedule or deductible details were supplied. The old scuff polish is excluded as pre-existing cosmetic work. Necessary diagnostics are covered following an insured event, subject to the EUR 250 including VAT per-event cap. No battery-capacity finding is provided to trigger the end-of-working-life provision.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Laptop screen crack repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The cracked screen is expressly part of the reported impact damage, and replacement of the display assembly is a plausible repair. The threshold allows for a standard equivalent display assembly and fitting, not an upgrade.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.94,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 500.0,
+    "net_unit_price_p50": 700.0,
+    "net_unit_price_p90": 850.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Lower-right corner and housing repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The lower-right corner and housing damage are expressly attributed to the same impact, and replacing the damaged lower housing shell is a plausible repair. One housing repair is justified; the price range allows for the shell and fitting.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.94,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 180.0,
+    "net_unit_price_p50": 300.0,
+    "net_unit_price_p90": 450.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Polish of pre-existing lid scuff (surface only, does not affect operation)",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The invoice identifies this as a pre-existing surface scuff, not damage caused by the insured impact. The work is cosmetic and is excluded even if carried out alongside covered repairs; the price estimate is for valuation purposes only.",
+    "covered": false,
+    "related": false,
+    "p_valid": 0.0,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 30.0,
+    "net_unit_price_p50": 60.0,
+    "net_unit_price_p90": 100.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Diagnostic inspection",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "A diagnostic inspection to establish the damage and scope of repair is an expressly covered cost after an insured portable-equipment event. One inspection is plausible; the reasonable amount is assessed below the EUR 250 including VAT per-event cap.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.9,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 60.0,
+    "net_unit_price_p50": 100.0,
+    "net_unit_price_p90": 180.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

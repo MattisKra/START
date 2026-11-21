@@ -1,0 +1,60 @@
+{
+ "cand": "v5",
+ "game": 1,
+ "run": 2,
+ "latency_s": 22.5,
+ "usage": {
+  "input_tokens": 11608,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 11605,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 2458,
+  "output_tokens_details": {
+   "reasoning_tokens": 1894
+  },
+  "total_tokens": 14066
+ },
+ "estimate": {
+  "damage_summary": "An atmospheric overvoltage damaged the speaker system and TV connected to the building installation. A technician later checked the surge failure and wiring safety.",
+  "policy_notes": "The damaged electronics are covered for lightning-related overvoltage, subject to the EUR 5,000 gross appliance sub-limit and the no-improvement standard. Because no surge-protective device was used, indemnity for the appliances is halved. The policy excludes arrangement/order charges and, in the circumstances described in clause 11.2, the attendance charge on that provider invoice; the supplied invoice instead identifies an electronics retailer.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Surge-damaged home electronics (speaker system and TV set)",
+    "unit": "pcs",
+    "quantity_invoiced": 2.0,
+    "rationale": "Both appliances are reported as physically damaged by the covered surge and are plausibly represented by the two invoiced pieces. The reasonable price is for standard-grade equivalents, without a premium upgrade; the likely combined value remains below the appliance sub-limit, before the required 50% reduction.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 2.0,
+    "net_unit_price_p10": 650.0,
+    "net_unit_price_p50": 1000.0,
+    "net_unit_price_p90": 1450.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 0.5
+   },
+   {
+    "index": 1,
+    "invoice_text": "Diagnostic surge-failure report and technician call-out",
+    "unit": "pcs",
+    "quantity_invoiced": 3.0,
+    "rationale": "The visit is plausibly connected to confirming the surge failure and checking wiring safety, but the invoice's three-piece quantity is not supported by the description of one technician attendance. The policy excludes the attendance charge on the arrangement/provider invoice described in clause 11.2; the supplied invoice is identified as a retailer invoice, so whether that specific exclusion applies to this line is uncertain. If valid, a modest single attendance and diagnostic charge is reasonable.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.25,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 70.0,
+    "net_unit_price_p50": 140.0,
+    "net_unit_price_p90": 230.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

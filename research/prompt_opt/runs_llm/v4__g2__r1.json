@@ -1,0 +1,92 @@
+{
+ "cand": "v4",
+ "game": 2,
+ "run": 1,
+ "latency_s": 14.5,
+ "usage": {
+  "input_tokens": 19562,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 19559,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 1654,
+  "output_tokens_details": {
+   "reasoning_tokens": 738
+  },
+  "total_tokens": 21216
+ },
+ "estimate": {
+  "damage_summary": "During a swerve on a drive in Germany, the laptop was thrown against the car door, cracking the screen and damaging the lower-right housing corner. The screen assembly and damaged housing shell were replaced; the lid scuff was pre-existing.",
+  "policy_notes": "The described impact is sudden external action, including displacement by a conveyance manoeuvre (2.6.1\u20132.6.2), and portable equipment is covered temporarily away from the insured location within Germany (4.5.2). Necessary repair work and corresponding replacement components are indemnifiable subject to the pre-loss standard (7.1.7, 7.1.9\u20137.1.10); necessary diagnostic examination is covered under 5.2.3, capped at EUR 250 including VAT per event. Polishing the pre-existing scuff is not covered (7.1.5, 7.1.8(a), 7.1.11).",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Laptop screen crack repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The screen cracked in the reported impact, and necessary repair or replacement of the affected display assembly is covered under 2.6.3 and 7.1.7(c), subject to the pre-loss standard in 7.1.9 and the repair basis in 7.1.10. One display repair is plausible; the upper-end reasonable net allowance reflects a standard equivalent assembly and fitting, with the description indicating that this was the larger share of the repair bill.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.97,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 650.0,
+    "net_unit_price_p50": 850.0,
+    "net_unit_price_p90": 1100.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Lower-right corner and housing repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The reported impact damaged the lower-right corner, and replacement of the affected housing shell is a plausible necessary repair under 2.6.3 and 7.1.7(c), limited to the pre-loss specification by 7.1.9\u20137.1.10. One housing repair is justified; the reasonable net amount allows for a standard replacement shell and fitting, while the description indicates this was the smaller share of the repair bill.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.97,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 160.0,
+    "net_unit_price_p50": 230.0,
+    "net_unit_price_p90": 350.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Polish of pre-existing lid scuff (surface only, does not affect operation)",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The polish concerns a pre-existing cosmetic scuff, not damage caused by the reported impact, so it is outside the affected parts under 7.1.5 and is not a repair cost under 7.1.8(a) and 7.1.11. The quantity is plausible as an optional polish, but the line has no indemnifiable value; the stated unit price is estimated only on the assumption that the line were valid.",
+    "covered": false,
+    "related": false,
+    "p_valid": 0.02,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 25.0,
+    "net_unit_price_p50": 45.0,
+    "net_unit_price_p90": 75.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Diagnostic inspection",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The shop\u2019s examination to establish the damage and repair scope is covered as an examination cost under 5.2.3, provided the 2.6 insured-event gateway is met; the per-event limit is EUR 250 including VAT. One initial inspection is plausible and the reasonable amount is modest for a short diagnostic slot; no further transport or duplicate charge is stated.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.96,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 40.0,
+    "net_unit_price_p50": 70.0,
+    "net_unit_price_p90": 100.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

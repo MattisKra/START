@@ -1,0 +1,60 @@
+{
+ "cand": "v1",
+ "game": 1,
+ "run": 2,
+ "latency_s": 18.0,
+ "usage": {
+  "input_tokens": 11693,
+  "input_tokens_details": {
+   "cache_write_tokens": 11690,
+   "cached_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 11690
+   }
+  },
+  "output_tokens": 1622,
+  "output_tokens_details": {
+   "reasoning_tokens": 1149
+  },
+  "total_tokens": 13315
+ },
+ "estimate": {
+  "damage_summary": "A nearby atmospheric discharge caused an overvoltage event that physically damaged a TV and speaker system connected to the building installation. A technician subsequently checked the surge failure and wiring safety.",
+  "policy_notes": "The damaged electronics are covered under the lightning-overvoltage appliance provision, subject to the EUR 5,000 VAT-inclusive aggregate sub-limit and the standard-grade pre-loss specification. Because no overvoltage protective device was used, indemnity for the affected appliances is reduced by half. Diagnostic/reporting costs are excluded; call-out costs are payable only alongside indemnifiable work on the same invoice, and no such work is listed here.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Surge-damaged home electronics (speaker system and TV set)",
+    "unit": "pcs",
+    "quantity_invoiced": 2.0,
+    "rationale": "The photos and claim description support physical surge damage to the TV and speaker system, so standard-grade replacement equipment is related and covered, subject to the appliance sub-limit and no-upgrade rule. The quantity of two is plausible; the unit-price estimate reflects a blended average for the two unlike items, and the missing surge protection halves the payable amount.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 2.0,
+    "net_unit_price_p10": 300.0,
+    "net_unit_price_p50": 575.0,
+    "net_unit_price_p90": 950.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 0.5
+   },
+   {
+    "index": 1,
+    "invoice_text": "Diagnostic surge-failure report and technician call-out",
+    "unit": "pcs",
+    "quantity_invoiced": 3.0,
+    "rationale": "The visit relates to the reported event, but the line is for diagnostics/reporting and attendance rather than repair work; the policy excludes the contractor\u2019s own diagnostics and makes call-out payable only alongside indemnifiable work on the same invoice. The claimed three units could represent two equipment checks and one attendance if the line were otherwise valid, but the line as invoiced is not indemnifiable.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 3.0,
+    "net_unit_price_p10": 80.0,
+    "net_unit_price_p50": 160.0,
+    "net_unit_price_p90": 300.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

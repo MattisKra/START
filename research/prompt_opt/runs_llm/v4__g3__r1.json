@@ -1,0 +1,124 @@
+{
+ "cand": "v4",
+ "game": 3,
+ "run": 1,
+ "latency_s": 20.1,
+ "usage": {
+  "input_tokens": 17600,
+  "input_tokens_details": {
+   "cache_write_tokens": 15709,
+   "cached_tokens": 1888,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 15709
+   }
+  },
+  "output_tokens": 2494,
+  "output_tokens_details": {
+   "reasoning_tokens": 1034
+  },
+  "total_tokens": 20094
+ },
+ "estimate": {
+  "damage_summary": "A heavy bowl struck a display cabinet, cracking the cabinet-door glass and denting/gouging its solid-wood frame; the description also reports impact damage to an internal wooden shelf. The photo supports the broken glass and substantial frame damage, but does not clearly confirm the shelf damage.",
+  "policy_notes": "The schedule is not provided. Sudden accidental damage is treated as agreed for the reported home-contents claim, but glazing is expressly outside that peril (2.6.4) and is covered only if the optional glazing peril is shown as agreed (2.7.3); no such agreement is evidenced here. Timber repairs are valued as repairs to damaged contents under 4.2.6 and 7.1.1(b), subject to the schedule\u2019s contents cover. Attendance/vehicle costs are payable only under 7.1.12 where the same undertaking carried out indemnified work at that attendance.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Hole drilling",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The drilling is preparatory work for fitting the replacement glazing, so it follows the glass work under 7.1.11. The glass is outside sudden accidental cover under 2.6.4 and the schedule does not show optional glazing cover as agreed under 2.7.3; the reasonable price is stated as if valid.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 15.0,
+    "net_unit_price_p50": 30.0,
+    "net_unit_price_p90": 55.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Installation of the new glass into the frame",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "Fitting is glazing work under 1.3 and 2.7.2, but 2.6.4 excludes glazing from accidental damage and 2.7.3 requires the optional glazing peril to be agreed in the schedule. That agreement is not evidenced, so the line is treated as not covered; the price estimate assumes one normal cabinet-pane fitting if valid.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 55.0,
+    "net_unit_price_p50": 95.0,
+    "net_unit_price_p90": 150.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Made-to-measure replacement glass pane",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The pane is the directly damaged glazing element, but 2.6.4 excludes it from sudden accidental cover and 2.7.3 provides cover only where optional glazing is shown as agreed; no schedule evidence of that agreement is supplied. The price estimate assumes one standard-grade replacement pane made to the cabinet-door dimensions, without an upgrade under 7.1.10.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 90.0,
+    "net_unit_price_p50": 170.0,
+    "net_unit_price_p90": 300.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Repair of dented and gouged solid-wood door frame",
+    "unit": "flat rate",
+    "quantity_invoiced": 1.0,
+    "rationale": "The reported knock is sudden external impact within 2.6.1, and the frame\u2019s timber is a non-glazing part of the cabinet, assessed separately from the glass under 4.2.2 and 7.1.1(b). The photo supports substantial frame gouging, making one repair-and-refinish flat rate plausible; 7.1.10 limits the work to the pre-loss standard.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.93,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 260.0,
+    "net_unit_price_p50": 380.0,
+    "net_unit_price_p90": 550.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 4,
+    "invoice_text": "Repair and refinish of scratched and chipped wooden shelf",
+    "unit": "flat rate",
+    "quantity_invoiced": 1.0,
+    "rationale": "If caused by the same sudden knock, repair of the shelf is within 2.6.1 and the movable cabinet contents cover in 4.2.6; 7.1.1(b) allows necessary repair and restoration of the affected finish. The description reports impact damage, though the photo does not clearly verify it, so relatedness is somewhat less certain than for the frame.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.78,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 100.0,
+    "net_unit_price_p50": 160.0,
+    "net_unit_price_p90": 250.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 5,
+    "invoice_text": "Vehicle costs",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "A vehicle or travel charge is an attendance charge under 1.3 and is payable under 7.1.12 only once for the undertaking if indemnified work was carried out at that visit. The timber-frame repair is potentially indemnified, but the invoice does not establish that this charge relates to that same attendance rather than solely to excluded glazing work.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.72,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 25.0,
+    "net_unit_price_p50": 45.0,
+    "net_unit_price_p90": 75.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

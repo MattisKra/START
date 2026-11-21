@@ -1,0 +1,60 @@
+{
+ "cand": "v1",
+ "game": 1,
+ "run": 1,
+ "latency_s": 15.0,
+ "usage": {
+  "input_tokens": 11693,
+  "input_tokens_details": {
+   "cache_write_tokens": 11690,
+   "cached_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 11690
+   }
+  },
+  "output_tokens": 1267,
+  "output_tokens_details": {
+   "reasoning_tokens": 821
+  },
+  "total_tokens": 12960
+ },
+ "estimate": {
+  "damage_summary": "A nearby atmospheric discharge caused an overvoltage surge through the building\u2019s electrical installation, physically damaging a speaker system and TV. No surge-protective device was used; a technician later attended to diagnose the surge failure and check wiring safety.",
+  "policy_notes": "The damaged appliances are covered under the lightning-overvoltage peril, subject to the EUR 5,000 VAT-inclusive event sub-limit and the standard-grade replacement basis. Because the appliances were connected without surge protection, indemnity for them is halved. Diagnostic reports and contractor business-operation charges are not repair costs; call-out charges are indemnifiable only alongside covered work on the same invoice.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Surge-damaged home electronics (speaker system and TV set)",
+    "unit": "pcs",
+    "quantity_invoiced": 2.0,
+    "rationale": "The description confirms physical surge damage to both appliances, which are within the covered appliance class; replacement is limited to standard-grade equivalents. With no surge-protective device, the otherwise reasonable amount is subject to the policy\u2019s 50% reduction; the event sub-limit is unlikely to bind for these two items.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 2.0,
+    "net_unit_price_p10": 250.0,
+    "net_unit_price_p50": 550.0,
+    "net_unit_price_p90": 950.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 0.5
+   },
+   {
+    "index": 1,
+    "invoice_text": "Diagnostic surge-failure report and technician call-out",
+    "unit": "pcs",
+    "quantity_invoiced": 3.0,
+    "rationale": "The diagnostic report is the contractor\u2019s own diagnostic/documentation outlay, not a repair cost. The call-out is also not payable here because it accompanies no indemnifiable work on this invoice; one attendance at most would be plausible if the line were otherwise valid.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 80.0,
+    "net_unit_price_p50": 150.0,
+    "net_unit_price_p90": 250.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "cand": "v5",
+ "game": 1,
+ "run": 1,
+ "latency_s": 21.0,
+ "usage": {
+  "input_tokens": 11608,
+  "input_tokens_details": {
+   "cache_write_tokens": 11605,
+   "cached_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 11605
+   }
+  },
+  "output_tokens": 2386,
+  "output_tokens_details": {
+   "reasoning_tokens": 1881
+  },
+  "total_tokens": 13994
+ },
+ "estimate": {
+  "damage_summary": "An atmospheric overvoltage damaged a speaker system and a TV in the dwelling. A technician subsequently checked the surge failure and wiring safety.",
+  "policy_notes": "The electronics are subject to the EUR 5,000 including VAT aggregate appliance sub-limit and the policy's no-improvement rule. Because no surge-protection device was used, indemnity for the damaged appliances is halved. Delivery and putting replacement equipment into service are not indemnifiable; service-arrangement charges are excluded.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Surge-damaged home electronics (speaker system and TV set)",
+    "unit": "pcs",
+    "quantity_invoiced": 2.0,
+    "rationale": "Both appliances are described as physically damaged by the covered overvoltage event, and the quantity matches the TV and speaker system. The policy pays for standard-grade new equivalents, subject to the appliance sub-limit and the 50% reduction for the missing surge protection.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 2.0,
+    "net_unit_price_p10": 600.0,
+    "net_unit_price_p50": 1200.0,
+    "net_unit_price_p90": 1800.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 0.5
+   },
+   {
+    "index": 1,
+    "invoice_text": "Diagnostic surge-failure report and technician call-out",
+    "unit": "pcs",
+    "quantity_invoiced": 3.0,
+    "rationale": "The attendance plausibly relates to confirming the reported surge damage and checking wiring safety, but diagnosis itself is not clearly a repair cost; the policy also excludes attendance associated with a non-indemnifiable service arrangement. At most one attendance is plausible, and any accepted charge would be modest.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.25,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 60.0,
+    "net_unit_price_p50": 140.0,
+    "net_unit_price_p90": 220.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

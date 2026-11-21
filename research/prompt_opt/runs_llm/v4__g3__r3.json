@@ -1,0 +1,124 @@
+{
+ "cand": "v4",
+ "game": 3,
+ "run": 3,
+ "latency_s": 22.1,
+ "usage": {
+  "input_tokens": 17600,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 17597,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 2755,
+  "output_tokens_details": {
+   "reasoning_tokens": 1226
+  },
+  "total_tokens": 20355
+ },
+ "estimate": {
+  "damage_summary": "A heavy bowl struck a display cabinet, cracking the glass panel in its door and denting/gouging the solid-wood door frame; the cabinet\u2019s internal wooden shelf was also scratched and chipped. The photo supports the broken pane and frame damage, and the description reports the shelf damage.",
+  "policy_notes": "The sudden external impact is consistent with sudden accidental damage under 2.6.1, but glazing elements are expressly excluded from that peril by 2.6.4 and are covered only if optional glazing is agreed under 2.7 and shown in the schedule; no schedule is provided. The timber repairs are potentially covered as repairs to affected household property under 7.1.1(b), while glazing-related lines depend on the optional peril. Section 7.1.12 permits one attendance per undertaking only where indemnified work was carried out at that attendance; no deductible or applicable limit can be determined from the supplied documents.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Hole drilling",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "Section 2.7.2 includes necessary preparatory glazing operations, including drilling, but 2.6.4 excludes glazing from accidental-damage cover and 2.7 requires the optional glazing peril to be agreed. Drilling is plausibly preparation for refitting the cracked cabinet pane, but the schedule is absent, so coverage is unconfirmed; one operation is plausible and \u20ac45 net is a reasonable upper-end allowance if valid.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 25.0,
+    "net_unit_price_p50": 45.0,
+    "net_unit_price_p90": 70.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Installation of the new glass into the frame",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "Fitting the replacement pane is glazing work under 2.7.2, but it is not covered under accidental damage alone because of 2.6.4; the schedule must show optional glazing agreed. Installation is related to the cracked cabinet-door pane and one fitting operation is plausible; \u20ac110 net is a reasonable upper-end allowance if the peril applies.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 60.0,
+    "net_unit_price_p50": 110.0,
+    "net_unit_price_p90": 160.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Made-to-measure replacement glass pane",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The pane is a glazing element, and its made-to-measure replacement falls within 2.7.2 only if optional glazing is agreed; 2.6.4 bars treating it as ordinary accidental damage. The cracked cabinet pane is confirmed by the description and photo, and one replacement is appropriate; absent dimensions and glass specification, \u20ac180 net is a reasonable upper-end standard-grade allowance if covered.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 90.0,
+    "net_unit_price_p50": 180.0,
+    "net_unit_price_p90": 300.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Repair of dented and gouged solid-wood door frame",
+    "unit": "flat rate",
+    "quantity_invoiced": 1.0,
+    "rationale": "The impact and visible gouging to the timber are consistent with sudden external action under 2.6.1; repair of the affected part is potentially indemnifiable under 7.1.1(b), subject to the schedule confirming accidental-damage cover. The frame damage is supported by the description and photo, and one localized repair/refinish is plausible; \u20ac400 net is a reasonable upper-end allowance for the shown damage without upgrading the pre-loss finish under 7.1.10.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.95,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 220.0,
+    "net_unit_price_p50": 400.0,
+    "net_unit_price_p90": 650.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 4,
+    "invoice_text": "Repair and refinish of scratched and chipped wooden shelf",
+    "unit": "flat rate",
+    "quantity_invoiced": 1.0,
+    "rationale": "A shelf damaged by the same sudden impact is potentially covered under 2.6.1 and 7.1.1(b), provided accidental-damage cover is shown in the schedule; 7.1.5 limits payment to the affected item and damaged part. The description reports impact damage to this shelf, and one localized repair/refinish is plausible; \u20ac150 net is a reasonable upper-end allowance, excluding any unrelated or pre-existing finish work under 7.1.9.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.95,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 80.0,
+    "net_unit_price_p50": 150.0,
+    "net_unit_price_p90": 260.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 5,
+    "invoice_text": "Vehicle costs",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "If this is the undertaking\u2019s attendance charge, 7.1.12 allows one attendance only where indemnified work was carried out at that visit; it is not independently payable for excluded glazing work alone. It is plausibly related to the cabinet repairs, including potentially covered timber work, and one visit is reasonable; \u20ac50 net is a reasonable upper-end vehicle/attendance allowance if qualifying work was done.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.95,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 25.0,
+    "net_unit_price_p50": 50.0,
+    "net_unit_price_p90": 80.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

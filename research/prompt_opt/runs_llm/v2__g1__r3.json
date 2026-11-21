@@ -1,0 +1,60 @@
+{
+ "cand": "v2",
+ "game": 1,
+ "run": 3,
+ "latency_s": 13.2,
+ "usage": {
+  "input_tokens": 11732,
+  "input_tokens_details": {
+   "cache_write_tokens": 10031,
+   "cached_tokens": 1698,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 10031
+   }
+  },
+  "output_tokens": 1502,
+  "output_tokens_details": {
+   "reasoning_tokens": 849
+  },
+  "total_tokens": 13234
+ },
+ "estimate": {
+  "damage_summary": "A nearby atmospheric discharge caused an overvoltage event on the building\u2019s electrical installation, physically damaging the speaker system and TV. A technician subsequently checked the surge failure and wiring safety.",
+  "policy_notes": "The appliances are covered for established physical damage from lightning-related overvoltage under clauses 2.3.3 and 4.2.4, subject to the EUR 5,000 gross appliance sub-limit per event and the pre-loss-standard cap in 7.1.9. Because the appliances were not connected through surge-protective devices, clause 2.3.3 reduces indemnity for them by half; use payout_fraction 0.5. Diagnostic reports and contractor call-out charges are excluded under 7.1.8(d)\u2013(e); attendance is not payable where the same invoice contains no indemnifiable work.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Surge-damaged home electronics (speaker system and TV set)",
+    "unit": "pcs",
+    "quantity_invoiced": 2.0,
+    "rationale": "Clauses 2.3.3, 4.2.4 and 7.1.1 cover replacement of appliances with established physical damage from the reported overvoltage, while 7.1.9 limits payment to standard-grade equivalents of the pre-loss items. The two appliances are related and the invoiced quantity is plausible; the absence of surge protection halves otherwise payable indemnity under 2.3.3, and the EUR 5,000 gross sub-limit applies across the appliance claim.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.97,
+    "quantity_justified": 2.0,
+    "net_unit_price_p10": 300.0,
+    "net_unit_price_p50": 600.0,
+    "net_unit_price_p90": 1200.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 0.5
+   },
+   {
+    "index": 1,
+    "invoice_text": "Diagnostic surge-failure report and technician call-out",
+    "unit": "pcs",
+    "quantity_invoiced": 3.0,
+    "rationale": "The diagnostic report is related to the surge event, but clause 7.1.8(e) excludes the contractor\u2019s own diagnostics and reports; clause 7.1.8(d) excludes the accompanying call-out where the invoice contains no indemnifiable work. The three-unit quantity is recorded as invoiced, but neither the report nor attendance has a positive fair value under these clauses.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 3.0,
+    "net_unit_price_p10": 60.0,
+    "net_unit_price_p50": 120.0,
+    "net_unit_price_p90": 240.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

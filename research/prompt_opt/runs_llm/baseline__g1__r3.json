@@ -1,0 +1,60 @@
+{
+ "cand": "baseline",
+ "game": 1,
+ "run": 3,
+ "latency_s": 21.6,
+ "usage": {
+  "input_tokens": 11388,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 11385,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 2134,
+  "output_tokens_details": {
+   "reasoning_tokens": 1552
+  },
+  "total_tokens": 13522
+ },
+ "estimate": {
+  "damage_summary": "An atmospheric overvoltage damaged a speaker system and TV connected to the building\u2019s electrical installation. A technician also attended to diagnose the surge failure and check wiring safety.",
+  "policy_notes": "The damaged electronics are covered for the overvoltage peril, subject to the EUR 5,000 (including VAT) aggregate appliance sub-limit and the no-improvement standard. Because the description establishes that no affected appliance was connected through a surge-protective device, the policy halves the otherwise payable indemnity for the appliances and their indemnifiable accessories. Diagnostic/reporting and attendance costs are not indemnifiable repair costs on the stated facts; attendance is covered only when incurred on the same invoice as indemnifiable work, and the policy also excludes charges for service or arrangement administration. No deductible is specified.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Surge-damaged home electronics (speaker system and TV set)",
+    "unit": "pcs",
+    "quantity_invoiced": 2.0,
+    "rationale": "Both appliances are reported physically damaged by the insured overvoltage event, so replacement to the pre-loss standard is plausibly covered. The invoiced quantity matches the two appliances; the appliance sub-limit may constrain the aggregate settlement, and the missing surge protection halves the otherwise payable amount.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 2.0,
+    "net_unit_price_p10": 350.0,
+    "net_unit_price_p50": 900.0,
+    "net_unit_price_p90": 2000.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 0.5
+   },
+   {
+    "index": 1,
+    "invoice_text": "Diagnostic surge-failure report and technician call-out",
+    "unit": "pcs",
+    "quantity_invoiced": 3.0,
+    "rationale": "The diagnostic visit relates to the reported event, but confirming the failure and checking wiring are investigative/safety services rather than making good physical damage. The call-out is not payable on these facts without indemnifiable work on that attendance, and three pieces are not plausible for one report and one visit; prices below assume a valid unit of this combined service.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.08,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 75.0,
+    "net_unit_price_p50": 150.0,
+    "net_unit_price_p90": 300.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

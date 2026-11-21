@@ -1,0 +1,124 @@
+{
+ "cand": "v4",
+ "game": 3,
+ "run": 2,
+ "latency_s": 21.7,
+ "usage": {
+  "input_tokens": 17600,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 17597,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 2692,
+  "output_tokens_details": {
+   "reasoning_tokens": 1206
+  },
+  "total_tokens": 20292
+ },
+ "estimate": {
+  "damage_summary": "A heavy bowl struck the household display cabinet, cracking the glass panel in its door and denting/gouging the solid-wood door frame; the description also reports impact damage to an internal wooden shelf. The timber repairs are plausibly related to the incident, while the glass breakage is subject to the optional glazing cover.",
+  "policy_notes": "The claim description indicates accidental-damage cover for household contents, so the timber damage is assessed under 2.6.1 and the cabinet as movable household property under 4.2.6. The schedule is not provided and does not establish that optional glazing cover was agreed; under 2.6.4 and 3.5, the glass pane and associated glazing work are therefore treated as excluded. One vehicle/attendance charge may be payable under 7.1.12 only if indemnified timber work was performed at that visit; no deductible or other proportional reduction is specified.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Hole drilling",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "Sections 2.6.4 and 3.5 exclude the cabinet glazing and its preparatory glazing work because the schedule supplied does not show optional glazing cover as agreed; drilling to receive the replacement pane is such preparatory work. One drilling operation is plausible, and the price estimate is for that operation assuming it were covered.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 15.0,
+    "net_unit_price_p50": 35.0,
+    "net_unit_price_p90": 60.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Installation of the new glass into the frame",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The fitting is directly related to replacing the cracked cabinet-door pane, but sections 2.6.4 and 3.5 exclude glazing work and its fitting where optional glazing cover is not shown as agreed. One pane installation is plausible; the price estimate assumes the work were covered.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 40.0,
+    "net_unit_price_p50": 90.0,
+    "net_unit_price_p90": 160.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Made-to-measure replacement glass pane",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The pane is the glass element that broke in the reported impact, but sections 2.6.4 and 3.5 exclude its replacement unless the optional glazing peril is agreed in the schedule, which is not provided here. One replacement pane is consistent with the damage; the price estimate assumes a standard-grade made-to-measure pane were covered.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 80.0,
+    "net_unit_price_p50": 160.0,
+    "net_unit_price_p90": 300.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Repair of dented and gouged solid-wood door frame",
+    "unit": "flat rate",
+    "quantity_invoiced": 1.0,
+    "rationale": "The described impact damage to the cabinet\u2019s timber frame is consistent with sudden accidental damage under 2.6.1, and the frame is plausibly insured household property under 4.2.6. Sections 7.1.1(b), 7.1.5 and 7.1.10 permit necessary repair and restoration to the pre-loss standard; one flat-rate repair is plausible given the visible gouging, with no upgrade indicated.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.95,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 250.0,
+    "net_unit_price_p50": 450.0,
+    "net_unit_price_p90": 750.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 4,
+    "invoice_text": "Repair and refinish of scratched and chipped wooden shelf",
+    "unit": "flat rate",
+    "quantity_invoiced": 1.0,
+    "rationale": "The description attributes the shelf\u2019s scratches and chips to the same impact, which is plausibly covered under 2.6.1; the policy includes movable household furnishings under 4.2.6. Necessary repair and restoration of the affected part are within 7.1.1(b) and 7.1.5, but any treatment of pre-existing marks or unaffected areas would be excluded under 7.1.9; one flat-rate repair is plausible, though the photo is less conclusive for the shelf than for the frame.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.85,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 80.0,
+    "net_unit_price_p50": 160.0,
+    "net_unit_price_p90": 300.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 5,
+    "invoice_text": "Vehicle costs",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "If this is the contractor\u2019s attendance for the covered timber repairs, one visit charge is indemnifiable under 7.1.12; it is payable only if covered work was carried out at that visit and no duplicate or return-visit charge is included. One vehicle charge is plausible, and the estimate assumes it represents a single reasonable attendance rather than an additional administrative surcharge under 7.1.8(b).",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.75,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 20.0,
+    "net_unit_price_p50": 45.0,
+    "net_unit_price_p90": 90.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

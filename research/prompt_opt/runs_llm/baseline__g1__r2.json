@@ -1,0 +1,60 @@
+{
+ "cand": "baseline",
+ "game": 1,
+ "run": 2,
+ "latency_s": 16.5,
+ "usage": {
+  "input_tokens": 11388,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 11385,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 1540,
+  "output_tokens_details": {
+   "reasoning_tokens": 1034
+  },
+  "total_tokens": 12928
+ },
+ "estimate": {
+  "damage_summary": "A mains overvoltage during a thunderstorm damaged a TV and speaker system. A technician subsequently checked the surge failure and wiring; no surge-protective device was used.",
+  "policy_notes": "Overvoltage damage to appliances is covered subject to the EUR 5,000 aggregate appliance sub-limit and the pre-loss-standard restriction. Because the description establishes that no surge-protective device was used, the indemnity for the affected appliances is halved. Technician diagnosis and attendance are not indemnifiable repair costs on these facts.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Surge-damaged home electronics (speaker system and TV set)",
+    "unit": "pcs",
+    "quantity_invoiced": 2.0,
+    "rationale": "The two appliances are plausibly the physically damaged electronics described, and the photo supports damage to the TV and audio equipment. The unit estimate allows for equivalent standard-grade replacements without an upgrade; the policy halves otherwise payable indemnity because no surge protector was used.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.95,
+    "quantity_justified": 2.0,
+    "net_unit_price_p10": 400.0,
+    "net_unit_price_p50": 700.0,
+    "net_unit_price_p90": 1200.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 0.5
+   },
+   {
+    "index": 1,
+    "invoice_text": "Diagnostic surge-failure report and technician call-out",
+    "unit": "pcs",
+    "quantity_invoiced": 3.0,
+    "rationale": "The diagnostic visit relates to the reported event, but inspection, reporting and attendance alone are not a repair cost or an insured cost head under the stated policy terms. Even assuming validity, one report/attendance is plausible; three units are not supported.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 80.0,
+    "net_unit_price_p50": 180.0,
+    "net_unit_price_p90": 350.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "cand": "v6",
+ "game": 2,
+ "run": 1,
+ "latency_s": 21.5,
+ "usage": {
+  "input_tokens": 19508,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 19505,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 1798,
+  "output_tokens_details": {
+   "reasoning_tokens": 715
+  },
+  "total_tokens": 21306
+ },
+ "estimate": {
+  "damage_summary": "During an evasive swerve, the laptop was thrown against the car door; its screen cracked and its lower-right corner and housing were damaged. The reported impact damage is consistent with sudden external action under the portable-equipment peril.",
+  "policy_notes": "The portable-equipment peril in 2.6 covers sudden external impact, including displacement inside a conveyance (2.6.1\u20132.6.2); the car itself and its interior surfaces are not insured property (3.1.4). Necessary repair costs and related dismantling, reassembly, calibration and testing are covered under 7.1.1(d), 7.1.7(e) and 7.1.10, subject to equivalent pre-loss specification under 7.1.9. The pre-existing scuff polish is excluded under 7.1.5 and 7.1.11. Necessary examination is covered under 5.2.3, capped at EUR 250 including VAT per event. No schedule deductible or sub-limit is provided in the documents.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Laptop screen crack repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The cracked screen is damage to an affected area of the laptop caused by the reported impact, and necessary repair is covered under 2.6.3 and 7.1.1(d), with repair costs assessed under 7.1.10. A complete display assembly is a plausible repair where the screen glass cannot reasonably be replaced separately; the price threshold assumes a standard equivalent assembly, not an upgrade, and one repair is justified.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 850.0,
+    "net_unit_price_p50": 1050.0,
+    "net_unit_price_p90": 1250.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Lower-right corner and housing repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The reported impact damaged the lower-right corner, and the described replacement of the dented housing shell is a repair of an affected part under 2.6.3 and 7.1.1(d). The threshold reflects a standard equivalent shell and necessary fitting under 7.1.7(e), without allowing improvement; one housing repair is justified.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.97,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 250.0,
+    "net_unit_price_p50": 350.0,
+    "net_unit_price_p90": 450.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Polish of pre-existing lid scuff (surface only, does not affect operation)",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "This line treats a pre-existing cosmetic scuff rather than damage caused by the insured impact, so it is not a repair cost under 7.1.5 and 7.1.11 and has a fair-value threshold of zero. The price estimate is stated only on the required assumption that the line were valid; one polish is the stated quantity.",
+    "covered": false,
+    "related": false,
+    "p_valid": 0.02,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 20.0,
+    "net_unit_price_p50": 35.0,
+    "net_unit_price_p90": 60.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Diagnostic inspection",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The examination was needed to establish the extent of damage and repair scope, which is expressly covered under 5.2.3 when the 2.6 insured-event gateway is passed. One diagnostic inspection is plausible; a modest charge is reasonable, subject to the policy cap of EUR 250 including VAT per event and exclusion of any duplicated or general administrative charge under 7.1.8.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.97,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 40.0,
+    "net_unit_price_p50": 70.0,
+    "net_unit_price_p90": 110.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

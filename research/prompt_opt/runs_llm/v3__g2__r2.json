@@ -1,0 +1,92 @@
+{
+ "cand": "v3",
+ "game": 2,
+ "run": 2,
+ "latency_s": 16.1,
+ "usage": {
+  "input_tokens": 19061,
+  "input_tokens_details": {
+   "cache_write_tokens": 17671,
+   "cached_tokens": 1387,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 17671
+   }
+  },
+  "output_tokens": 1912,
+  "output_tokens_details": {
+   "reasoning_tokens": 955
+  },
+  "total_tokens": 20973
+ },
+ "estimate": {
+  "damage_summary": "During a drive, the laptop was thrown against the car door during an evasive swerve, cracking its screen and damaging the lower-right corner/housing. The screen assembly and damaged housing shell were replaced; the invoice also includes polishing of a pre-existing lid scuff.",
+  "policy_notes": "The described impact during a swerve is consistent with sudden external action under 2.6.1\u20132.6.2, and the laptop is separate from the excluded conveyance. The schedule was not provided, so agreement of the portable-equipment peril, household contents cover, any deductible and any sub-limit cannot be confirmed. The invoice names a company as recipient, so private-use eligibility and the absence of commercial use should also be verified. The pre-existing scuff polish is excluded under 7.1.11. Diagnostic costs are subject to the EUR 250 gross per-event cap under 5.2.3; no proportional reduction is evident from the supplied documents.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Laptop screen crack repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The cracked screen is expressly described and the complete display assembly is a plausible repair for it; repair costs for the affected unit are covered if the portable-equipment gateway is met. A standard-equivalent display assembly and fitting can justify a substantial price, but not a premium upgrade.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.8,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 400.0,
+    "net_unit_price_p50": 650.0,
+    "net_unit_price_p90": 850.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Lower-right corner and housing repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The lower-right corner damage is reported as part of the same impact, and replacing the dented housing shell is a plausible repair step. One housing repair is reasonable; the price should reflect a standard-equivalent shell and necessary fitting only.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.8,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 150.0,
+    "net_unit_price_p50": 320.0,
+    "net_unit_price_p90": 500.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Polish of pre-existing lid scuff (surface only, does not affect operation)",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The invoice identifies this as polishing an old, pre-existing cosmetic scuff, not damage caused by the reported impact. The policy excludes treatment of pre-existing surface condition; the hypothetical price is estimated as if the work were otherwise valid.",
+    "covered": false,
+    "related": false,
+    "p_valid": 0.0,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 25.0,
+    "net_unit_price_p50": 60.0,
+    "net_unit_price_p90": 120.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Diagnostic inspection",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The shop\u2019s diagnostic inspection was a reasonable step to establish damage and repair scope for the affected laptop, and such examination costs are covered following an insured event under 2.6. The policy caps this head at EUR 250 including VAT per event; the estimated reasonable charge is below that cap.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.8,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 40.0,
+    "net_unit_price_p50": 80.0,
+    "net_unit_price_p90": 150.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

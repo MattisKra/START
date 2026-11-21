@@ -1,0 +1,92 @@
+{
+ "cand": "baseline",
+ "game": 2,
+ "run": 3,
+ "latency_s": 17.1,
+ "usage": {
+  "input_tokens": 19031,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 19028,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 1785,
+  "output_tokens_details": {
+   "reasoning_tokens": 858
+  },
+  "total_tokens": 20816
+ },
+ "estimate": {
+  "damage_summary": "During a swerve in a car, the laptop was thrown against the car door, cracking the screen and damaging the lower-right housing corner. The damage pattern and described impact are consistent with sudden external action to the laptop.",
+  "policy_notes": "The portable-equipment peril covers impact caused by movement of a conveyance, including an evasive manoeuvre, if the peril and household contents cover are agreed in the schedule. The schedule is not supplied; the description indicates portable-electronics cover. Repair costs are limited to damage caused by the event, and portable-equipment examination costs are capped at EUR 250 including VAT per event. The expressly pre-existing lid scuff is not indemnified. If repair is uneconomic, the policy provides for an equivalent new unit less the achievable sale price of the damaged unit.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Laptop screen crack repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The cracked screen is directly attributable to the described impact; fitting a complete display assembly is a plausible repair where replacing glass alone is not appropriate. A reasonable maximum should include the display component and fitting, without exceeding the policy's applicable repair-versus-replacement limit for the unit.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.92,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 350.0,
+    "net_unit_price_p50": 600.0,
+    "net_unit_price_p90": 850.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Lower-right corner and housing repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The lower-right corner and housing were damaged in the same impact, so replacement of the affected shell is a related repair. The estimate allows for a suitable replacement shell and fitting, not unrelated housing work.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.92,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 100.0,
+    "net_unit_price_p50": 220.0,
+    "net_unit_price_p90": 350.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Polish of pre-existing lid scuff (surface only, does not affect operation)",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The scuff pre-dated the event and was not affected by the impact. Polishing it is cosmetic work on a pre-existing condition, not a repair cost under the policy; the price estimate is stated only on the assumption the line were valid.",
+    "covered": false,
+    "related": false,
+    "p_valid": 0.01,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 30.0,
+    "net_unit_price_p50": 60.0,
+    "net_unit_price_p90": 100.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Diagnostic inspection",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The diagnostic was performed to establish the extent of damage and repair scope, so it is related to the insured impact and is an eligible examination cost if the portable-equipment cover gateway is met. The policy caps examination costs at EUR 250 including VAT per event; the reasonable net price for one inspection is estimated below that cap.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.88,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 40.0,
+    "net_unit_price_p50": 85.0,
+    "net_unit_price_p90": 140.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

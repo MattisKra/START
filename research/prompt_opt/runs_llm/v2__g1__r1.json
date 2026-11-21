@@ -1,0 +1,60 @@
+{
+ "cand": "v2",
+ "game": 1,
+ "run": 1,
+ "latency_s": 19.4,
+ "usage": {
+  "input_tokens": 11729,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 11726,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   }
+  },
+  "output_tokens": 2172,
+  "output_tokens_details": {
+   "reasoning_tokens": 1520
+  },
+  "total_tokens": 13901
+ },
+ "estimate": {
+  "damage_summary": "An atmospheric surge through the mains physically damaged the speaker system and TV. The technician attended afterwards to confirm the surge failure and check wiring safety.",
+  "policy_notes": "Overvoltage damage to established damaged appliances is covered under 2.3.3, subject to a EUR 5,000 gross aggregate appliance sub-limit and the standard-grade replacement basis in 7.1.9. Because the description establishes that no surge-protective device was used, indemnity for the damaged appliances is halved. Diagnostic and administrative outlay, and attendance charges not accompanying indemnifiable work, are excluded under 7.1.8(d), (e) and (f) and 3.1.5.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Surge-damaged home electronics (speaker system and TV set)",
+    "unit": "pcs",
+    "quantity_invoiced": 2.0,
+    "rationale": "Clauses 2.3.3, 4.2.4 and 7.1.1 cover physically damaged appliances from the established overvoltage event, subject to the EUR 5,000 gross appliance sub-limit; 7.1.9 limits replacement to the pre-loss standard. The two listed appliances correspond to the reported damage, and the price range reflects the unspecified models without allowing a premium upgrade; under 2.3.3 the absence of a protective device halves the otherwise payable amount.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 2.0,
+    "net_unit_price_p10": 350.0,
+    "net_unit_price_p50": 650.0,
+    "net_unit_price_p90": 1200.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 0.5
+   },
+   {
+    "index": 1,
+    "invoice_text": "Diagnostic surge-failure report and technician call-out",
+    "unit": "pcs",
+    "quantity_invoiced": 3.0,
+    "rationale": "Although the attendance relates to the reported surge, the operative provisions describe this invoice as involving an equipment property/liability arrangement and order placement, excluded by 3.1.5 and 7.1.8(f). The diagnostic report is the contractor\u2019s own diagnostic outlay under 7.1.8(e), and the call-out is not payable under 7.1.8(d) without indemnifiable work on the same invoice; the quantity and illustrative service price are assessed as if valid.",
+    "covered": false,
+    "related": true,
+    "p_valid": 0.03,
+    "quantity_justified": 3.0,
+    "net_unit_price_p10": 70.0,
+    "net_unit_price_p50": 150.0,
+    "net_unit_price_p90": 250.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}

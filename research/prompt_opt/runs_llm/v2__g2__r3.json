@@ -1,0 +1,92 @@
+{
+ "cand": "v2",
+ "game": 2,
+ "run": 3,
+ "latency_s": 15.4,
+ "usage": {
+  "input_tokens": 19375,
+  "input_tokens_details": {
+   "cache_write_tokens": 17674,
+   "cached_tokens": 1698,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 17674
+   }
+  },
+  "output_tokens": 1719,
+  "output_tokens_details": {
+   "reasoning_tokens": 818
+  },
+  "total_tokens": 21094
+ },
+ "estimate": {
+  "damage_summary": "During a swerve on the Berlin\u2013Munich drive, the laptop struck the car door, cracking its screen and damaging the lower-right housing corner. The lid scuff was pre-existing and was not caused by this event.",
+  "policy_notes": "The described portable-electronics cover and sudden external impact fit clauses 2.6.1\u20132.6.2; the settlement assumes the schedule gateway in 2.6.7 is met. Necessary repairs are valued under 7.1.1(d), 7.1.7(e) and 7.1.10, capped at the equivalent new-unit amount if repair is uneconomic. Polishing the pre-existing scuff is excluded as cosmetic work under 7.1.5 and 7.1.11. The diagnostic charge is an expressly covered examination cost under 5.2.3, subject to its EUR 250 gross event cap. No deductible or other proportional reduction is supplied.",
+  "lines": [
+   {
+    "index": 0,
+    "invoice_text": "Laptop screen crack repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "Clauses 2.6.1\u20132.6.3 cover the screen damage from the impact, and 7.1.1(d), 7.1.7(e) and 7.1.10 allow necessary repair parts and labour without upgrading the unit. One display repair is plausible for the documented cracked screen; the estimated reasonable ceiling allows for a complete display assembly on a 14-inch notebook but not an uneconomic repair exceeding the equivalent replacement value.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.98,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 350.0,
+    "net_unit_price_p50": 500.0,
+    "net_unit_price_p90": 700.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 1,
+    "invoice_text": "Lower-right corner and housing repair",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "The impact-related corner damage is covered under 2.6.1\u20132.6.3, and 7.1.7(e) permits necessary replacement components and reassembly under 7.1.10. One housing-shell repair is plausible for the single damaged corner; the reasonable price range allows for a replacement lower shell and fitting, but not work on unaffected parts.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.97,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 100.0,
+    "net_unit_price_p50": 180.0,
+    "net_unit_price_p90": 280.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 2,
+    "invoice_text": "Polish of pre-existing lid scuff (surface only, does not affect operation)",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "Clauses 7.1.5, 7.1.8(a) and 7.1.11 exclude polishing or cosmetic restoration of a pre-existing surface condition, even when performed with covered repairs. It is not needed to repair the event-caused screen or housing damage; the one-unit quantity is plausible if the service were otherwise valid, and the price estimate is for that service only.",
+    "covered": false,
+    "related": false,
+    "p_valid": 0.03,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 15.0,
+    "net_unit_price_p50": 30.0,
+    "net_unit_price_p90": 50.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   },
+   {
+    "index": 3,
+    "invoice_text": "Diagnostic inspection",
+    "unit": "pcs",
+    "quantity_invoiced": 1.0,
+    "rationale": "Clause 5.2.3 expressly reimburses the necessary examination of portable insured equipment after an insured event under 2.6, including a repairing undertaking\u2019s diagnostic charge; the EUR 250 cap is gross per event. One inspection is plausible to assess the screen and housing damage, and the price range reflects a reasonable shop diagnostic charge, subject to the cap and any credit against repair charges.",
+    "covered": true,
+    "related": true,
+    "p_valid": 0.97,
+    "quantity_justified": 1.0,
+    "net_unit_price_p10": 40.0,
+    "net_unit_price_p50": 70.0,
+    "net_unit_price_p90": 110.0,
+    "vat_rate": 0.19,
+    "payout_fraction": 1.0
+   }
+  ]
+ }
+}
