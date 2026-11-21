@@ -75,6 +75,23 @@ single readers luna 586 / terra 513 / fable 566; median of the three in parallel
 **Photos:** no photo vs full photo vs full photo + four zoomed crops (a stand-in for a zoom/crop tool), 2 readers x 8 cases: no photo was as good or better for both (luna regret 667 none / 887 full / 845 tiles; terra 622 / 659 / 692), photos raised the bias (+0.18 to +0.28 for luna, +0.23 to +0.37 for terra) and the prompt by 1.6-3.8k tokens. The photos are generated scenes that repeat the text (case 8: shed, debris, soil heaps, root ball). **No evidence that photos, zooming or cropping help.**
 **Multiplier sweep** (all saved answers, KA/KB for open lines): regret by KB_open on games 1-6 / games 7-8 / all: 0.5 -> 680 / 547 / 641; 0.8 -> 293 / 1,438 / 630; 1.0 -> 148 / 1,592 / 573; 1.25 -> 116 / 1,778 / 605. KA_open: share of our charges that would be inflated at 0.8 / 0.9: games 1-6 0% / 18%; games 7-8 100% / 100% (even 0.5: 75%). A multiplier tuned on games 1-6 is wrong for games 7-8 and vice versa: **the price-level bias depends on the kind of line** (devices and repairs: readers low; disposal, lump-sum and service lines: readers 2-5x too high), so one number cannot fix it.
 
+## Update 15:58: is parsing a bottleneck, and are specialist agents better? (`parse_profile.py`, `specialist_bench.py`)
+
+**Parsing is not a bottleneck.** On the 8 decrypted cases `load_case` takes 0.02-0.12 s (including the photo downscale), `pdftotext` about 15 ms, and the printed POS numbers parse correctly on all 8 (including the two-page invoice of game 7). The policy is 97.7 % of the prompt characters (9-19k tokens; the invoice is 240-470 tokens).
+**Model latency follows OUTPUT tokens, not input.** Regression over the saved answers: per 1,000 input tokens the latency changes by about -0.3 to +0.2 s for nearly every model (Fable +0.14, luna -0.03, terra -0.19), per 1,000 output tokens it grows by 3-13 s (luna 6.3, terra 10-13, Fable 9.7, Gemini Flash 3.9, GLM-flashx 3.6). Reading a 19k-token policy is nearly free in time; writing the JSON (about 1,000-1,350 output tokens, mostly the rationales) is what takes the 8-19 s. Levers: shorter rationales / a compact schema (latency), prompt caching or an edition digest (cost: for Fable 24k input tokens are about $0.19 of its $0.25 per case).
+
+**Specialist agents vs one generalist** (26 lines, 8 cases, same metric; coverage agent reads the whole policy and returns validity, quantity, fraction, limits, anchors but no prices; price agents see only description + invoice, no policy, k cheap models from different providers, median price):
+| architecture | b_regret | a_score | bias | $/case | latency |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| generalist luna / terra / fable | 549 / 613 / 653 | 0.34 / 0.39 / 0.49 | +0.25 / +0.33 / +0.28 | 0.001 / 0.023 / 0.247 | 10 / 17 / 19 s |
+| coverage(luna) + 1 price agent | 573 | 0.59 | +0.13 | 0.003 | 9 s |
+| coverage(luna) + panel of 3 | 680 | 0.54 | +0.07 | 0.008 | 9 s |
+| coverage(luna) + panel of 5 | 614 | 0.56 | -0.03 | 0.009 | 9 s |
+| coverage(terra) + panel of 1 / 3 / 5 | 565 / 673 / 607 | 0.59 / 0.54 / 0.56 | +0.13 / +0.07 / -0.03 | 0.024-0.030 | 14 s |
+- **No clear gain.** b_regret is within noise of the generalists (and one game dominates it); excluding games 7-8 the generalists are as good or better (terra 66 vs 138). The specialists lower the over-pricing (bias +0.25..+0.33 to +0.13..-0.03) and raise the `a` score (0.34-0.49 to 0.54-0.59), probably because the price agents without the policy do not inherit a policy-reader's inflated amounts; that is the one consistent difference and it is untested out of sample.
+- **More price agents do not help** (k = 1, 3, 5: 573, 680, 614): cheap models from different providers share their price-level error, so a bigger panel averages the same mistake. The decomposition is not slower (parallel, about 9-14 s) and costs $0.003-0.03 per case.
+- **How many agents?** The data supports 1 reader, or 2 specialists (coverage + one price call). More agents only make sense if each brings **independent information** (a labour/parts breakdown, a stated anchor, a same-edition memory), not another look at the same inputs.
+
 ## What this does and does not support
 
 - Supports: a benchmark loop exists; the live bot's actual `b` replay (regret ≈ 1142 on games 1-2, 281 on game 3) can be compared with any candidate on the same lines; model price-level bias is large and varies by case; ensembles and web search are not a fix by themselves.
