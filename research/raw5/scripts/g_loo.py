@@ -1,6 +1,6 @@
 """Audit G, step 3: GENUINE out-of-sample tests of research/bench/euro_replay.py on the real public settlement rows.
 
-    python3 -I research/raw5/scripts/g_loo.py FIELD_DIR --us "Team Name"
+    python3 -I research/raw5/scripts/g_loo.py FIELD_DIR --us "Team Name" [--replay PATH_TO_euro_replay.py]
 
 FIELD_DIR = scratch folder written by research/raw4/scripts/fetch_field.py (OUTSIDE the repo). Prints our own numbers and anonymous aggregates only.
 
@@ -19,17 +19,15 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 
 
-def _load(name, path):
-    sp = importlib.util.spec_from_file_location(name, path); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m); return m
-
-
-er = _load("er", ROOT / "research/bench/euro_replay.py")
-fx = _load("fx", HERE / "g_replay_fixed.py")
+sys.path.insert(0, str(HERE))
+import g_common                                                   # noqa: E402
+er, ER_LABEL = g_common.replay_under_test()
+fx = g_common.fixed_reference()
 INF = float("inf")
 TOL = 0.02
 
 field_dir, us = sys.argv[1], sys.argv[sys.argv.index("--us") + 1]
-games = er.load_field(field_dir)
+games = g_common.load_field(field_dir)
 logs = json.loads((ROOT / "outputs/model_outputs.json").read_text())["games"]
 
 
@@ -129,6 +127,6 @@ def loo_all(mod, label):
         print(f"    total excess over all violations: {sum(max(v - hi, lo - v) for _, _, _, v, lo, hi in viol):.0f} EUR in {len(viol)} line tests")
 
 
-for mod, label in ((er, "ORIGINAL euro_replay.py"), (fx, "FIXED g_replay_fixed.py")):
+for mod, label in ((er, f"UNDER TEST: {ER_LABEL}"), (fx, "REFERENCE g_replay_fixed.py")):
     loo_us(mod, label)
     loo_all(mod, label)

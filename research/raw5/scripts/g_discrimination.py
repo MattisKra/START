@@ -1,10 +1,10 @@
 """Audit G, step 4b: can the replay RANK policies?  Synthetic tournaments with known truth (no data in this file).
 
-    python3 -I research/raw5/scripts/g_discrimination.py [--n 300] [--seed 3]
+    python3 -I research/raw5/scripts/g_discrimination.py [--n 300] [--seed 3] [--replay PATH_TO_euro_replay.py]
 
 A tournament = 8 games (1-7 lines, 12 teams: ~30 % silent, the rest price with a reader that shares a common error with ours, own multipliers, and
-sometimes misjudges validity; ~35 % of the lines are excluded, t = 0). We 'actually' play KA 0.9 / KB 1.25 on our own noisy reader answer; the
-candidates are the 25 multiplier pairs KA x KB on the SAME reader answer (exactly the situation of euro_eval.py). For every candidate we know the true
+sometimes misjudges validity; ~35 % of the lines are excluded, t = 0). We 'actually' played KA 0.9 / KB 1.25 on the live reader answer; the candidates
+are the 25 multiplier pairs KA x KB on ANOTHER saved draw of the same reader (exactly the situation of euro_eval.py). For every candidate we know the true
 counterfactual net and compute the replay range from the settlement rows only. Reported: does lo / midpoint / hi rank the candidates like the truth,
 how often is a truly better candidate 'surely better', and how wide is the range compared with the true differences between candidates.
 The numbers depend on this generator (stated in the report); they are an order of magnitude, not a calibration of the real field.
@@ -16,12 +16,10 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 
 
-def _load(name, path):
-    sp = importlib.util.spec_from_file_location(name, path); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m); return m
-
-
-er = _load("er", ROOT / "research/bench/euro_replay.py")
-fx = _load("fx", HERE / "g_replay_fixed.py")
+sys.path.insert(0, str(HERE))
+import g_common                                                   # noqa: E402
+er, ER_LABEL = g_common.replay_under_test()
+fx = g_common.fixed_reference()
 KA = (0.6, 0.7, 0.8, 0.9, 1.0); KB = (0.6, 0.8, 0.9, 1.0, 1.25)
 CANDS = [(ka, kb) for ka in KA for kb in KB]
 BASE = (0.9, 1.25)
@@ -60,13 +58,16 @@ def tournament(rng, n_games=8, n_teams=12, reader_sd=0.3, common_sd=0.35, p_excl
                 strat[j] = (r2(T["ka"] * m) if (bel or T["free"]) else 0.0, r2(T["kb"] * m) if bel else 0.0)
             m0 = ref * math.exp(common + rng.gauss(0, reader_sd))
             bel0 = valid if rng.random() < p_valid_ok else (not valid)
-            lines.append(dict(ln=ln, t=t, c=c, strat=strat, m0=m0, bel0=bel0))
+            mb = ref * math.exp(common + rng.gauss(0, reader_sd))          # what the LIVE bot read at the time: another draw of the same reader
+            belb = valid if rng.random() < p_valid_ok else (not valid)
+            lines.append(dict(ln=ln, t=t, c=c, strat=strat, m0=m0, bel0=bel0, mb=mb, belb=belb))
         games.append(lines)
     return games
 
 
-def policy(lines, ka, kb):
-    return {L["ln"]: (r2(ka * L["m0"]), r2(kb * L["m0"]) if L["bel0"] else 0.0) for L in lines}
+def policy(lines, ka, kb, live=False):
+    m, bel = ("mb", "belb") if live else ("m0", "bel0")
+    return {L["ln"]: (r2(ka * L[m]), r2(kb * L[m]) if L[bel] else 0.0) for L in lines}
 
 
 def rows_of(lines, pol):
@@ -114,7 +115,7 @@ def main(n, seed, mod, label, **kw):
         T = tournament(rng, **kw)
         tr = [0.0] * len(CANDS); lo = [0.0] * len(CANDS); hi = [0.0] * len(CANDS); act = 0.0
         for lines in T:
-            base = policy(lines, *BASE)
+            base = policy(lines, *BASE, live=True)
             rows = rows_of(lines, base)
             rec = mod.reconstruct(rows, 0, our_b={l: b for l, (a, b) in base.items()}, our_a={l: a for l, (a, b) in base.items()})
             act += truth(lines, base)
@@ -171,8 +172,8 @@ def main(n, seed, mod, label, **kw):
 if __name__ == "__main__":
     n = int(sys.argv[sys.argv.index("--n") + 1]) if "--n" in sys.argv else 300
     seed = int(sys.argv[sys.argv.index("--seed") + 1]) if "--seed" in sys.argv else 3
-    main(n, seed, er, "ORIGINAL euro_replay.py, default field")
-    main(n, seed, fx, "FIXED g_replay_fixed.py, default field")
-    main(n, seed, fx, "FIXED, no silent teams and nobody misjudges validity (best case for identification)", p_silent=0.0, p_valid_ok=1.0)
-    main(n, seed, fx, "FIXED, half the field silent", p_silent=0.5)
-    main(n, seed, fx, "FIXED, our reader much noisier (sd 0.6)", reader_sd=0.6)
+    main(n, seed, er, f"UNDER TEST: {ER_LABEL}, default field")
+    main(n, seed, fx, "REFERENCE g_replay_fixed.py, default field")
+    main(n, seed, fx, "REFERENCE, no silent teams and nobody misjudges validity (best case for identification)", p_silent=0.0, p_valid_ok=1.0)
+    main(n, seed, fx, "REFERENCE, half the field silent", p_silent=0.5)
+    main(n, seed, fx, "REFERENCE, our reader much noisier (sd 0.6)", reader_sd=0.6)

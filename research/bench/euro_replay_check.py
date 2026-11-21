@@ -105,6 +105,7 @@ def synthetic(n_games, seed=7):
                 viol.append((g, tn, lo, hi))
             elif not exact:
                 rounding.append(max(lo - tn, tn - hi))
+    print("  NOTE: this synthetic test is WEAK (benign generator, game totals, 1 EUR tolerance) and could not detect two real defects; the regression gate is research/raw5/scripts/g_adversarial.py")
     print(f"synthetic: truth inside the range in {inside}/{tot} cases ({inside / tot:.1%}); median width {st.median(widths):.0f} EUR "
           f"(median |true net| scale {st.median([abs(v) for v in widths]):.0f}); median identified share {st.median([x for x in ident if x == x]):.0%}")
     print(f"  boundary cases beyond 0.01 EUR but within 1 EUR (cent rounding of the rows): {len(rounding)}; largest excess {max(rounding, default=0):.2f} EUR")

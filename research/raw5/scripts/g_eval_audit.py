@@ -1,6 +1,6 @@
 """Audit G, step 5: re-run the candidates of research/bench/euro_eval.py and test how much its headline numbers can carry.
 
-    .venv/bin/python -I research/raw5/scripts/g_eval_audit.py FIELD_DIR --us "Team Name" [--games 1-8]
+    .venv/bin/python -I research/raw5/scripts/g_eval_audit.py FIELD_DIR --us "Team Name" [--games 1-8] [--replay PATH_TO_euro_replay.py]
 
 --games A-B restricts the games (default 1-8 = the games behind the README table; euro_eval.py itself takes every game that has saved answers).
 
@@ -17,19 +17,17 @@ ROOT = HERE.parents[2]
 sys.path.insert(0, str(ROOT))
 
 
-def _load(name, path):
-    sp = importlib.util.spec_from_file_location(name, path); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m); return m
-
-
-er = _load("er", ROOT / "research/bench/euro_replay.py")
-fx = _load("fx", HERE / "g_replay_fixed.py")
+sys.path.insert(0, str(HERE))
+import g_common                                                   # noqa: E402
+er, ER_LABEL = g_common.replay_under_test()
+fx = g_common.fixed_reference()
 from claimbot_fable import engine                      # noqa: E402
 from claimbot_fable.schema import ReaderCase           # noqa: E402
 
 INF = float("inf")
 LUNA, TERRA, FABLE = ("openrouter:openai/gpt-6-luna:low:noimage", "openrouter:openai/gpt-6.1-terra:medium", "openrouter:anthropic/claude-fable-5.2:low")
 field_dir, us = sys.argv[1], sys.argv[sys.argv.index("--us") + 1]
-games = er.load_field(field_dir)
+games = g_common.load_field(field_dir)
 logs = json.loads((ROOT / "outputs/model_outputs.json").read_text())["games"]
 saved = {}
 for f in sorted(glob.glob(str(ROOT / "runs/bench/fable_eval/*.json"))):
@@ -91,6 +89,7 @@ for ex in ("as_valid", "zero"):
 
 # line coverage of every candidate (a missing line trades with a = b = 0 in reality; euro_replay.game_value skips it)
 miss = {n: sum(len(set(rec[g]["er"]) - set(p[g])) for g in G) for n, p in cands.items()}
+print(f"evaluator under test ('orig' columns): {ER_LABEL}; reference ('fixed' columns): g_replay_fixed.py")
 print(f"games {G}; our actual net over these games {act_total:+.0f}; candidate lines missing from a policy: {sum(miss.values())}")
 print(f"\n(a) lower / upper bound of the net, ORIGINAL vs FIXED replay, and the part of the original lower bound that is the unproven hidden-charge ceiling")
 print(f"{'candidate':38s} {'orig lo':>9s} {'orig hi':>9s} | {'fixed lo':>9s} {'fixed hi':>9s} | {'d_lo orig':>9s} {'d_lo fixed':>10s} | hidden pairs: n, heuristic EUR, proven ceiling EUR")

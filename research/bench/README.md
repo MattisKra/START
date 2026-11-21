@@ -150,6 +150,26 @@ A GPT reviewer audited `euro_replay.py` adversarially (a second audit by a Fable
 - *Do not say or do:* guarantee a live gain, call the lower endpoint a "worst case", pick a multiplier by its midpoint or lower endpoint alone, quote an expected euro return, estimate a reader's quality from one saved draw, convert our net to ranking points, or treat a replay of our own actual submission as a test of a different policy.
 - *Next gates before the evaluator may choose a live policy:* a frozen shortlist scored on consecutive games played after the freeze, with saved submission receipts and timing; paired same-field comparisons; exact cent-grid accounting once the contract is confirmed; the second audit's findings.
 
+## Update 17:05: second audit (Fable, `../raw5/fable-G-evaluator-audit.md`) and RETRACTIONS
+
+Two independent audits now agree. **The patched `euro_replay.py` is sound as a bound** (0 misses in 480,000 adversarial line replays and 1.2 M more by field size; 0 of 732 real leave-one-team-out tests; 9 of 9 games and 33 of 33 lines with all of OUR rows withheld; the organisers' matrix equals the row sums in 120 of 120 team-game cells). **The version I first shipped was not**: truth fell below `lo` in 2.81 % of 240,000 adversarial line replays (0.49 % in 12-team fields, worst miss EUR 29k) and once on real rows. My published "100 % of 12,000 synthetic cases" could not detect either defect (it sums 88 pairs per game with a EUR 1 tolerance and a benign generator), and `euro_replay_check.py` still reports 100 % on the broken version. **Use `research/raw5/scripts/g_adversarial.py` as the regression gate, not that number.**
+
+**What the tool actually measures.** Split every candidate range into revenue (set by `a`) and cost (set by `b`):
+- **Acceptance limit `b` (cost side): measured.** Range width EUR 0.1k-4.2k over games 1-8; it separates 97 of 171 candidate pairs.
+- **Charge `a` (revenue side): NOT measured.** Range width EUR 32k-104k; it separates 0 of 342 pairs, and the lower bound moves by 9-16k when the multiplier moves by 0.05. **Do not use the evaluator to choose the charge multiplier or to rank two candidates.**
+- Synthetic power about 47 %: it stays silent on half of the truly better candidates.
+
+**Retractions of things I said earlier (and the correct statement):**
+1. *"luna KA .7 / KB .9 is surely better by 11k"* -> with the patch it is +15.4k, of which **+10.1k (66 %) is game 1**, where the live bot misread the policy. On games 5-8 the order of the three luna candidates reverses, and it reverses again with the second saved luna draw (bounds move by EUR 3-14k). Not robust.
+2. *"Engine defaults can lose 22k, this is why the 1.25 limit hurt"* -> misattributed: 16.8k of it is the unidentified revenue side of KA 0.9. On the cost side the defaults (KB 1.25) are **surely 2.7k better than what we actually played**; KB 1.25 against KB 1.0 costs between 0.8k less and 5.5k more.
+3. *"Games 9 and 10 are a genuine out-of-sample test"* -> **only game 10 is.** Game 9 had already been played and its rows were public before the shortlist; I did not use it for the selection, but it is not clean.
+4. *"The worst case consistent with the data"* -> say "proven lower bound on those past games", not an attained worst case.
+5. *"The free option does not change the worst case"* -> true by construction (the worst case of a charge on an excluded line is 0); it is not evidence for or against the free option.
+
+**The limit evidence, honestly (cost by acceptance multiplier, luna answer, actual cost over games 1-8 was 37.1k):** KB 0.5 / 0.8 / 1.0 / 1.25 -> cost about 30.5k / 29.2k / 28.8k / 30.1k-34k: **flat between 0.5 and 1.0 over eight games** (within 2.5k). Per game: strict limits cost MORE in games 5 and 6 (penalties for rejecting fair charges: KB 0.5 costs 7.9k and 6.6k against 5.4k and 4.9k) and far LESS in games 7-9 (the field over-charged; game 8 about 0.3k vs 1.3-1.8k, game 9 1.9k vs 14.2k-15.2k). **Game 9 alone is worth 12-13k between KB 0.5 and KB 1.0.** So the measured evidence says: lower limits win when the field over-charges and lose a few thousand euros per game when it does not; the generalisation depends on which regime the next games are in. The case for a strict default rests on the asymmetry (a wrong acceptance costs a full charge, a wrong rejection half a charge) and on what the strongest opponents do, not on this evaluator alone.
+
+**Safe to use the evaluator for:** reconciling our net with the public rows; discarding candidates that are *surely worse* than what we played on those games; setting the limit rule from the cost side. **Not for:** the charge multiplier, ranking candidates, forecasts or expected gains, tournament rank (the tool scores our net only), or any claim that identified share means accuracy. Do not pick by a lower-bound difference smaller than the draw noise (EUR 3-14k). Exact safe write-up wording is in the Fable audit, section 8.
+
 ## What this does and does not support
 
 - Supports: a benchmark loop exists; the live bot's actual `b` replay (regret ≈ 1142 on games 1-2, 281 on game 3) can be compared with any candidate on the same lines; model price-level bias is large and varies by case; ensembles and web search are not a fix by themselves.

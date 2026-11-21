@@ -1,6 +1,6 @@
 """Audit G, step 4: adversarial synthetic soundness search for research/bench/euro_replay.py (and the fixed reference g_replay_fixed.py).
 
-    python3 -I research/raw5/scripts/g_adversarial.py [--n 20000] [--seed 1] [--minimal]
+    python3 -I research/raw5/scripts/g_adversarial.py [--n 3000] [--seed 1] [--minimal] [--replay PATH_TO_euro_replay.py]
 
 Fields with KNOWN truth (t, cap, every team's a and b) are generated with the official payoff rule, settlement rows are produced exactly like the
 platform does (unrounded amounts), the field is reconstructed from the ROWS ONLY and candidate policies are replayed. The true counterfactual must lie
@@ -15,12 +15,11 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 
 
-def _load(name, path):
-    sp = importlib.util.spec_from_file_location(name, path); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m); return m
-
-
-er = _load("er", ROOT / "research/bench/euro_replay.py")
-fx = _load("fx", HERE / "g_replay_fixed.py")
+sys.path.insert(0, str(HERE))
+import g_common                                                   # noqa: E402
+_load = g_common.load
+er, ER_LABEL = g_common.replay_under_test()
+fx = g_common.fixed_reference()
 BIG = 1e9
 
 
@@ -176,7 +175,7 @@ def by_cause_and_size(n, seed):
     """Attribute the violations of the original: switch one fix on at a time; and split by field size."""
     print("\nATTRIBUTION (line replays with the truth outside the range, all families pooled, with our own log)")
     print(f"  {'variant':58s} {'cases':>7s} {'truth<lo':>9s} {'truth>hi':>9s}")
-    for label, f1, f2 in (("original logic (no fix)", False, False), ("only FIX 1 (top accepted amount is not 'inflated')", True, False),
+    for label, f1, f2 in (("shipped logic for both (FIX 1 and FIX 2 off)", False, False), ("only FIX 1 (top accepted amount is not 'inflated')", True, False),
                           ("only FIX 2 (hidden charge ceiling = b')", False, True), ("FIX 1 + FIX 2", True, True)):
         fx.FLAGS.update(fix1=f1, fix2=f2)
         tot = collections.Counter()
@@ -252,7 +251,7 @@ def targeted():
 if __name__ == "__main__":
     n = int(sys.argv[sys.argv.index("--n") + 1]) if "--n" in sys.argv else 4000
     seed = int(sys.argv[sys.argv.index("--seed") + 1]) if "--seed" in sys.argv else 1
-    for label, mod in (("ORIGINAL euro_replay.py", er), ("FIXED g_replay_fixed.py", fx)):
+    for label, mod in ((f"UNDER TEST: {ER_LABEL}", er), ("REFERENCE g_replay_fixed.py", fx)):
         for logs in (True, False):
             coll = []
             res = run(mod, n, seed, with_logs=logs, collect=coll)
