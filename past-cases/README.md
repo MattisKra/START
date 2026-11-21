@@ -47,3 +47,4 @@ Filled in automatically by `claimbot archive` from our own rows on the public le
 | [11](case_011/) | Accidental damage claim on the home contents cover | todo | todo | todo | still open |
 | [11](case_011/results.json) | +1007.63 | 3175.51 | 2167.88 | L1: 123.16 (2/11, inflated); L2: 21.42 (2/11, inflated); L3: 0 (nothing charged); L4: 21.42 (2/11, inflated); L5: 192.78 (4/11, fair); L6: 0 (nothing charged); L7: 48.2 (1/11, inflated); L8: 0 (nothing charged); L9: 0 (nothing charged) | L1: 0 / 0; L2: 0 / 0; L3: 0 / 0; L4: 0 / 0; L5: 8 / 67.83; L6: 0 / 0; L7: 0 / 40.96; L8: 0 / 0; L9: 0 / 0 |
 | [12](case_012/) | Utility room water damage | todo | todo | todo | still open |
+| [12](case_012/results.json) | -1200.66 | 8605.48 | 9806.15 | L1: 514.08 (2/11, inflated); L2: 514.08 (4/11, fair); L3: 123.16 (1/11, inflated) | L1: 7 / 67.83; L2: 8 / 67.83; L3: 0 / 0 |
