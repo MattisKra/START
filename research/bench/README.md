@@ -170,6 +170,22 @@ Two independent audits now agree. **The patched `euro_replay.py` is sound as a b
 
 **Safe to use the evaluator for:** reconciling our net with the public rows; discarding candidates that are *surely worse* than what we played on those games; setting the limit rule from the cost side. **Not for:** the charge multiplier, ranking candidates, forecasts or expected gains, tournament rank (the tool scores our net only), or any claim that identified share means accuracy. Do not pick by a lower-bound difference smaller than the draw noise (EUR 3-14k). Exact safe write-up wording is in the Fable audit, section 8.
 
+## Update 17:15: the acceptance limit measured on the trusted cost side over games 1-14 (`limit_sweep.py`)
+
+Only the reviewer cost is evaluated (our charge is set to 0), using the audited `euro_replay.py`; cost ranges are narrow (often exact). `b = k x median` on lines with P(valid) >= 2/3, else 0. The live default is k = 1.25.
+| k | LIVE medians, games 1-9 (actual cost 52.3k) | luna medians, games 1-14 (actual cost 69.0k) |
+| --- | ---: | ---: |
+| 0 (reject all) | 32.0-32.3k, saves 20.0k | 45.6-45.8k, saves 23.2k |
+| 0.45 | 34.0k, saves 18.3k | 44.6-44.7k, saves 24.3k |
+| 0.6 | 36.3k, saves 16.0k | 44.8-44.9k, saves 24.0k |
+| 0.8 | 45.5-45.8k, saves 6.5-6.8k | 52.4-54.0k, saves 14.9-16.5k |
+| 1.0 | 46.1-47.8k, saves 4.5-6.2k | 56.7-60.7k, saves 8.2-12.3k |
+| **1.25 (live default)** | 48.7-52.3k, saves 0.0-3.5k | 58.4-65.0k, saves 4.0-10.6k |
+- **Reading:** the live default saves almost nothing against what we actually played (it IS roughly what we played). Cost falls steeply between k = 0.8 and k = 0.6 (the field's fair charges cluster around 0.7-0.8 of the value) and is flat below 0.6, down to reject-all. Strict limits cost more only where the field charged fairly: games 2, 5, 6 (+0.9k, +2.5k, +1.8k at k = 0.45) and a few hundred euros in game 13; they save 2.4k in game 10, 1.0k in game 14 and 13-14k in game 9.
+- **Freshest games, 11-14 (not used for any choice):** k = 0.45 costs 12.7k against 13.9k actually paid (saves 1.2k); k = 1.0 and 1.25 save nothing. In a calm stretch the choice barely matters; in an over-charging stretch it is worth 10k+ per game. Asymmetric: the downside of strict is a few thousand in fair-heavy games, the downside of lenient is 5-15k in over-charging games.
+- **Mechanics:** the live code uses `b = max(1/3-quantile of the belief, B_VALID_MULT x median)`, so lowering `B_VALID_MULT` alone cannot go below the quantile (about 0.9 x median at a spread of 0.2); a median-based cap is needed to reach 0.45-0.6.
+- **Not measured here (and not measurable by this evaluator):** the charge multiplier, model or ensemble choice, memory.
+
 ## What this does and does not support
 
 - Supports: a benchmark loop exists; the live bot's actual `b` replay (regret ≈ 1142 on games 1-2, 281 on game 3) can be compared with any candidate on the same lines; model price-level bias is large and varies by case; ensembles and web search are not a fix by themselves.
