@@ -75,12 +75,13 @@ def _best_charge(mu: float, sigma: float) -> float:
 
 
 def _accept_limit(q: float, mu: float, sigma: float) -> float:
-    """Largest x with P(t < x) <= REJECT_P under the mixture belief."""
+    """Largest x with P(t < x) <= REJECT_P under the mixture belief, raised to at
+    least B_VALID_MULT x median for lines we consider valid."""
     p_zero = 1 - q
     if q <= 0 or p_zero >= config.REJECT_P:
         return 0.0
     z = _N.inv_cdf((config.REJECT_P - p_zero) / q)
-    return math.exp(mu + sigma * z)
+    return max(math.exp(mu + sigma * z), config.B_VALID_MULT * math.exp(mu))
 
 
 def price_line(line: LineEstimate) -> LinePrice:

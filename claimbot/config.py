@@ -33,6 +33,10 @@ SAFETY_MARGIN_S = 6
 # Insurer: reject a charge when P(charge is inflated) exceeds this.
 # 1/3 is the break-even from the payoff matrix (1.5a * (1-p) < a).
 REJECT_P = float(os.getenv("CLAIMS_REJECT_P", str(1 / 3)))
+# Insurer: for lines we believe are valid (P(invalid) below REJECT_P), accept
+# up to at least this multiple of our median. Games 1-3 showed our medians
+# run low and the 1/3-quantile rejected many fair charges.
+B_VALID_MULT = float(os.getenv("CLAIMS_B_VALID_MULT", "1.25"))
 # Handyman: multiply the computed optimal charge by this (1.0 = no change).
 CHARGE_MULT = float(os.getenv("CLAIMS_CHARGE_MULT", "1.0"))
 # Floor on log-space spread so the model can't claim false certainty.
