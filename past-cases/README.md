@@ -94,3 +94,4 @@ Filled in automatically by `claimbot archive` from our own rows on the public le
 | [34](case_034/results.json) | +7479.02 | 20681.00 | 13201.98 | L1: 470.0 (2/11, fair); L2: 480.0 (2/11, fair); L3: 110.0 (9/11, fair); L4: 76.0 (2/11, fair); L5: 190.0 (9/11, fair); L6: 0 (nothing charged); L7: 0 (nothing charged); L8: 76.0 (2/11, fair) | L1: 0 / 3823.59; L2: 0 / 3662.09; L3: 10 / 0; L4: 0 / 642.17; L5: 3 / 94.9; L6: 0 / 0; L7: 0 / 0; L8: 0 / 548.8 |
 | [35](case_035/) | Theft claim from a trip abroad | todo | todo | todo | still open |
 | [35](case_035/results.json) | +60.00 | 60.00 | 0.00 | L1: 0 (nothing charged); L2: 60.0 (1/11, inflated) | L1: 0 / 0; L2: 0 / 0 |
+| [36](case_036/) | Water damage from washing machine leak | todo | todo | todo | still open |

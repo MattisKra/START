@@ -1,0 +1,98 @@
+Invoice
+INVOICE NO.
+2026-0141
+DATE
+26 Feb 2026
+DUE
+12 Mar 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Cleaning of affected floor areas in the utility room 1 pcs
+2 Cleaning of affected floor areas in the adjoining
+hallway
+1 pcs
+3 Inspection of the washing machine and supply/drain
+connection to confirm no further leakage
+1 pcs
+4 Removal and disposal of water-damaged skirting
+boards
+1 pcs
+5 Replace skirting boards 1 pcs
+6 Cleaning and repainting of the upstairs bedroom not
+reached by the water
+1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0142
+DATE
+26 Feb 2026
+DUE
+12 Mar 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+7 Moisture measurement of the utility room and hallway
+floor
+1 pcs
+8 Drying of the affected floor area 1 pcs
+9 Drying unit rental 1 pcs
+10 Skilled worker hours 4 hrs
+11 Moisture measurement and drying of the basement
+storage room
+1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0143
+DATE
+26 Feb 2026
+DUE
+12 Mar 2026
+TRADE
+Fine Art Restoration
+FROM
+Brushstroke Revival Fine Art Ltd
+5 Canvas Court
+01097 Palettetown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+12 Transport of the high-value painting to the specialist
+restorer
+1 pcs
+13 Professional assessment of the high-value painting 1 pcs
+14 Conservatory drying and stabilisation of the painting 1 pcs
+15 Full restoration of the painting 1 pcs
+16 Restoration of a second painting stored in the
+basement, unaffected by the utility-room leak
+1 pcs
+17 Administrative and claim-processing fee 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
