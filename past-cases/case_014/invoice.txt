@@ -1,0 +1,25 @@
+Invoice
+INVOICE NO.
+2026-0202
+DATE
+24 Mar 2026
+DUE
+7 Apr 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Hole drilling 1 pcs
+2 Installation of the new glass into the frame 1 pcs
+3 Made-to-measure replacement glass pane 1 pcs
+4 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
