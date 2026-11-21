@@ -79,3 +79,4 @@ Filled in automatically by `claimbot archive` from our own rows on the public le
 | [27](case_027/) | Kitchen on the ground floor, the sink under the bay window at the back of the house | todo | todo | todo | still open |
 | [27](case_027/results.json) | +20488.11 | 32901.00 | 12412.89 | L1: 1400.0 (0/11, fair); L2: 450.0 (1/11, fair); L3: 74.0 (0/11, fair); L4: 120.0 (10/11, fair) | L1: 0 / 8508.33; L2: 0 / 3377.59; L3: 0 / 526.97; L4: 0 / 0 |
 | [28](case_028/) | Electrical surge claim on the fixed building-services cover | todo | todo | todo | still open |
+| [28](case_028/results.json) | +600.00 | 600.00 | 0.00 | L1: 600.0 (1/11, inflated) | L1: 0 / 0 |
