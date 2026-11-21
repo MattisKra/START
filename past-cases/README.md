@@ -34,3 +34,4 @@ Filled in automatically by `claimbot archive` from our own rows on the public le
 | [3](case_003/results.json) | +2195.39 | 4767.83 | 2572.43 | L1: 0 (nothing charged); L2: 0 (nothing charged); L3: 0 (nothing charged); L4: 176.55 (4/11, fair); L5: 130.85 (2/11, fair); L6: 44.92 (4/11, inflated) | L1: 0 / 0; L2: 0 / 0; L3: 0 / 0; L4: 5 / 0; L5: 3 / 104.38; L6: 0 / 28.32 |
 | [4](case_004/results.json) | +2613.11 | 4697.24 | 2084.14 | L1: 119.55 (4/11, inflated); L2: 220.21 (3/11, fair); L3: 59.09 (2/11, fair) | L1: 0 / 333.1; L2: 0 / 1167.08; L3: 2 / 244.19 |
 | [5](case_005/results.json) | +7562.32 | 12975.90 | 5413.58 | L1: 926.85 (5/11, fair) | L1: 0 / 5413.58 |
+| [6](case_006/) | Accidental damage claim on the portable electronics cover | todo | todo | todo | still open |
