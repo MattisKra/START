@@ -1,0 +1,61 @@
+Invoice
+INVOICE NO.
+2026-0177
+DATE
+10 Mar 2026
+DUE
+24 Mar 2026
+TRADE
+Bicycle Service
+FROM
+Wobbly Wheels Bike Rescue Ltd
+7 Pedal Pusher Alley
+48001 Spokesburg
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Bicycle frame replacement 1 pcs
+2 Bicycle brake replacement 1 pcs
+3 Replacement AirTag tracker 1 pcs
+4 Service second household bicycle (not stolen) 1 flat rate
+5 New helmet and lights 2 pcs
+6 Shipping 1 pcs
+7 Vehicle costs 1 pcs
+8 Assembly costs 1 pcs
+9 Miscellaneous items 1 pcs
+10 Apprentice hours 1 hrs
+11 Skilled worker hours 1 hrs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0178
+DATE
+10 Mar 2026
+DUE
+24 Mar 2026
+TRADE
+Locksmith
+FROM
+Picky Fingers Locksmiths Ltd
+6 Deadbolt Drive
+80336 Keyhole City
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+12 Locksmith call-out to recovery site 1 pcs
+13 Cut and remove seized lock to release bicycle 2 pcs
+14 Vehicle costs – return visit 1 pcs
+15 Impound release / storage fee paid to recover bicycle 1 –
+16 Administrative and claim-processing fee 1 flat rate
+17 Apprentice hours 1 hrs
+18 Skilled worker hours 1 hrs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
