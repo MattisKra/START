@@ -32,8 +32,10 @@ LOGS = {
     4: "runs/20261121-144031_game4_ensemble.json",
     5: "runs/20261121-145533_game_5_ensemble.json",
 }
-for extra in sorted((ROOT / "runs").glob("*_game6_ensemble.json")):
-    LOGS[6] = str(extra.relative_to(ROOT))
+for extra in sorted((ROOT / "runs").glob("*_game[0-9]*_ensemble.json")):  # live rounds from game 6 on
+    n = int(extra.name.split("_game")[1].split("_")[0])
+    if n >= 6:
+        LOGS[n] = str(extra.relative_to(ROOT))
 
 # USD per 1M tokens: (input, cached input, output). Anthropic from the SDK reference, OpenAI from the pricing page.
 PRICE = {
