@@ -9,7 +9,30 @@ def gap(field, original, changed):
         ("reviewer_saving", lo, hi), ("issuer_change", il, ih), ("net", lo + il, hi + ih))}
 
 
-def replay(field, python, receipt, config):
+def winner(interval):
+    low, high = interval
+    if low > 0:
+        return "python_factors"
+    if high < 0:
+        return "fable"
+    if low == high == 0:
+        return "tie"
+    return "unresolved"
+
+
+def line_effects(field, native, changed, labels):
+    effects = []
+    for pos, state in sorted(field.items()):
+        delta = gap({pos: state}, native, changed)
+        effects.append(dict(position=pos, description=labels.get(pos), fable_charge=native[pos][0],
+                            fable_limit=native[pos][1], factor_charge=changed[pos][0],
+                            factor_limit=changed[pos][1], **delta,
+                            winner={role: winner(bounds) for role, bounds in delta.items()}))
+    return effects
+
+
+def replay(field, python, receipt, config, labels=None):
+    labels = labels or {}
     a, b = config["charge_factor"], config["limit_factor"]
     if min(a, b) <= 0:
         return {"status": "python_policy_is_not_two_positive_multipliers"}
@@ -29,12 +52,15 @@ def replay(field, python, receipt, config):
     report["charge_as_median_vs_python"] = gap(field, python, anchor)
     issues = check(rows, set(field))
     if issues:
+        report["fixed_charge_ratio_lines"] = line_effects(field, native, matched, labels)
+        report["charge_as_median_lines"] = line_effects(field, native, anchor, labels)
         report["explicit_beliefs"] = {"status": "unavailable", "issues": issues}
         return report
     hybrid = {r["index"]: (round(a * r["fair_median_gross_if_valid"], 2),
                            round(b * r["fair_median_gross_if_valid"], 2)
                            if 1 - r["p_valid"] < config["reject_p"] else 0.) for r in rows}
     report["explicit_beliefs"] = dict(status="scored", hybrid_actions=hybrid,
+                                      lines=line_effects(field, native, hybrid, labels),
                                       python_factors_vs_native=gap(field, native, hybrid),
                                       fable_beliefs_vs_python_beliefs=gap(field, python, hybrid),
                                       native_vs_python=gap(field, python, native))

@@ -14,3 +14,27 @@ The first comparison isolates reviewer strategy by holding issuer income fixed. 
 Fable had public web tools in the fresh run and used local document checks. One rerun of a known case cannot recover the original process or establish an overall estimator ranking. Games 25 and 26 add an independently timed, tool-enabled Fable shadow alongside the frozen arms.
 
 [Replay implementation](bench/factor_replay.py) · [Shadow runner and scoring instructions](../claimbot_shadow/README.md)
+
+## Which lines benefit?
+
+Game 24 retrospective rerun, with the same Fable estimates on both sides. Ranges show the change in euros from replacing Fable’s strategy with Python’s factors. Reviewer savings and issuer income can move in opposite directions. The bounds allow for hidden opponent actions.
+
+| Position and item | Reviewer savings | Issuer income change | Net change | Net winner |
+|---|---:|---:|---:|---|
+| 1. Bicycle shop · Bicycle frame replacement | 4,237.56 to 6,733.47 | −2,000.00 to 2,160.00 | 2,237.56 to 8,893.47 | Python factors |
+| 2. Bicycle shop · Bicycle brake replacement | 1,092.88 to 1,312.88 | −891.00 to 1,164.00 | 201.88 to 2,476.88 | Python factors |
+| 3. Bicycle shop · Shipping | 74.24 to 164.25 | −294.00 to 330.00 | −219.75 to 494.25 | Unresolved |
+| 4. Bicycle shop · Vehicle costs | 162.02 to 384.03 | −88.50 to 33.00 | 73.52 to 417.03 | Python factors |
+| 5. Bicycle shop · Assembly costs | −296.81 to −176.81 | 113.50 to 334.50 | −183.31 to 157.69 | Unresolved |
+| 6. Bicycle shop · Miscellaneous items | 101.86 to 162.06 | −37.50 to 47.50 | 64.36 to 209.56 | Python factors |
+| 7. Bicycle shop · Apprentice hours | 256.01 to 300.98 | −156.80 to 6.40 | 99.21 to 307.38 | Python factors |
+| 8. Bicycle shop · Skilled worker hours | 361.53 to 539.60 | −181.00 to 21.00 | 180.53 to 560.60 | Python factors |
+| 9. Locksmith · Vehicle costs | 259.18 to 319.18 | −112.50 to 189.50 | 146.68 to 508.68 | Python factors |
+| 10. Locksmith · Assembly costs | −176.10 | 94.00 to 148.25 | −82.10 to −27.85 | Fable |
+| 11. Locksmith · Miscellaneous items | 81.32 to 145.15 | −9.00 to 31.50 | 72.32 to 176.65 | Python factors |
+| 12. Locksmith · Apprentice hours | 193.00 to 298.53 | −70.40 to 96.00 | 122.60 to 394.53 | Python factors |
+| 13. Locksmith · Skilled worker hours | 500.81 to 605.81 | −190.50 to 26.00 | 310.31 to 631.81 | Python factors |
+
+The frame and brakes account for at least €5,330 of reviewer savings. Both assembly lines favour Fable on review. On locksmith assembly the eligibility gate set the Python limit to €0 because Fable assigned a 60% probability of payability. Fable chose €90. The extra wrongful-rejection costs exceeded the issuer gain from charging €58.50 instead of €50. On bicycle assembly a 70% probability passed the gate, but the 0.55 multiplier still cut the limit from €120 to €49.50. This also increased reviewer costs. The two assembly examples share a direction within this invoice. A rule for other invoices needs forward evidence.
+
+As a cross-check, the original game 24 receipt also favoured its two assembly limits under the fixed-charge ratio diagnostic. That diagnostic helped on all eleven other review lines. It does not require a reconstruction of the original Fable median.

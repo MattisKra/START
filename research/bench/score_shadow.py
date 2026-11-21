@@ -64,13 +64,15 @@ def score(folder):
     field = settled_field(src, matrix, game, arms["python"])
     events = map(json.loads, (folder / "python.jsonl").read_text().splitlines())
     config = next(e for e in events if e["event"] == "configured")
+    labels = {r["index"]: (r.get("arriving_reader") or {}).get("invoice_text")
+              for r in receipts["python"]["lines"]}
     factors = {}
     if companion.exists():
-        factors["verified_fable"] = (replay(field, arms["python"], extra, config) if extra
+        factors["verified_fable"] = (replay(field, arms["python"], extra, config, labels) if extra
                                      else {"status": "no_on_time_receipt_available"})
     if absent:
         return dict(status="missing_on_time_receipt", missing=absent, factor_replay=factors)
-    factors["primary_fable"] = replay(field, arms["python"], receipts["fable"], config)
+    factors["primary_fable"] = replay(field, arms["python"], receipts["fable"], config, labels)
     by_line = []
     for position, state in field.items():
         lo, hi, il, ih = compare({position: state}, arms["python"], arms["fable"])
