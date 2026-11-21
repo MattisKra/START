@@ -9,6 +9,7 @@ from pathlib import Path
 
 from claimbot import config
 from .checks import check
+from .policy_gate import INSTRUCTION, PolicyGate
 from .trace import write_json
 
 MODEL = "claude-fable-5-2"
@@ -37,7 +38,7 @@ Cite the source and the value it supports, or explain the assumption if there is
 The local recorder timestamps successful writes. Finish when done."""
 
 
-async def run_case(case, trace):
+async def run_case(case, trace, *, require_policy=False):
     with tempfile.TemporaryDirectory(prefix="claims-shadow-") as temp:
         work = Path(temp).resolve()
         (work / "policy.txt").write_text(case.policy)
@@ -49,11 +50,13 @@ async def run_case(case, trace):
             shutil.copy(file, work / file.name)
         env = {k: os.environ[k] for k in ("HOME", "PATH", "USER", "LANG", "TMPDIR",
                                            "ANTHROPIC_API_KEY", "CLAUDE_CODE_OAUTH_TOKEN") if k in os.environ}
+        gate = PolicyGate(work, case.policy) if require_policy else None
+        prompt = PROMPT + INSTRUCTION if require_policy else PROMPT
         cmd = ["claude", "-p", "--model", MODEL, "--restricted", "--strict-mcp-config",
                "--mcp-config", '{"mcpServers":{}}', "--disable-slash-commands", "--no-session-persistence",
                "--permission-mode", "dontAsk", "--tools", TOOLS,
                "--allowedTools", TOOLS, "--output-format", "stream-json",
-               "--verbose", "--", PROMPT]
+               "--verbose", "--", prompt]
         proc = await asyncio.create_subprocess_exec(*cmd, cwd=work, env=env,
                     stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE, limit=16*1024*1024)
         stderr = asyncio.create_task(proc.stderr.read())
@@ -70,20 +73,34 @@ async def run_case(case, trace):
                             continue
                         if block.get("type") == "tool_use":
                             name, inp = block["name"], block["input"]
-                            calls[block["id"]] = (name, inp)
+                            turn = event["message"].get("id") or block["id"]
+                            prior = gate.prior_reads(turn) if gate and name == "Write" else []
+                            calls[block["id"]] = (name, inp, turn, prior)
                             trace.log("tool", tool=name, id=block["id"], arguments={k:v for k,v in inp.items() if k!="content"})
                         if block.get("type") != "tool_result":
                             continue
-                        name, inp = calls.pop(block["tool_use_id"], ("", {}))
+                        name, inp, turn, prior = calls.pop(block["tool_use_id"], ("", {}, None, []))
+                        if gate:
+                            gate.result(block["tool_use_id"], turn, name, inp, block)
                         failed = bool(block.get("is_error"))
                         trace.log("tool_result", tool=name, id=block["tool_use_id"], failed=failed)
                         if name == "Write" and not failed and (work / inp["file_path"]).resolve() == work / "decision.json":
                             try:
                                 rows = json.loads(inp["content"])
                                 issues = check(rows, trace.positions)
+                                trigger = dict(tool_call=block["tool_use_id"])
+                                if gate:
+                                    proof = gate.proof(rows, prior)
+                                    if not proof:
+                                        issues.append("Read the body of the relevant clause in policy.txt first, then "
+                                                      "supply its heading number and a matching six-word or longer quote.")
+                                        write_json(work / "decision_check.json", {"issues": issues})
+                                        trace.log("policy_rejected", write=block["tool_use_id"], issues=issues)
+                                        continue
+                                    trigger["policy_proof"] = proof
                                 write_json(work / "decision_check.json", {"issues": issues})
                                 trace.log("self_check", issues=issues, write=block["tool_use_id"])
-                                trace.record(rows, dict(tool_call=block["tool_use_id"]))
+                                trace.record(rows, trigger)
                             except (KeyError, ValueError, TypeError) as exc:
                                 write_json(work / "decision_check.json", {"issues": [str(exc)]})
                                 trace.log("invalid_revision", error=str(exc))
@@ -104,3 +121,7 @@ async def run_case(case, trace):
 
 def run(case, trace):
     asyncio.run(run_case(case, trace))
+
+
+def run_policy_first(case, trace):
+    asyncio.run(run_case(case, trace, require_policy=True))
