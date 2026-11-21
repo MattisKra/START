@@ -8,7 +8,8 @@
     a_i  = KA[pinned_i] x m_i                      (also for lines we believe excluded: the free option, switchable)
     b_i  = 0 if P(valid_i) < B_ZERO_BELOW else KB[pinned_i] x m_i
 
-Defaults from the review, section E3: open lines KA 0.90 / KB 1.25, pinned lines KA 0.85 / KB 1.05, b = 0 below P(valid) 2/3.
+Defaults: open lines KA 0.90 / KB 0.55, pinned lines KA 0.85 / KB 0.55, b = 0 below P(valid) 2/3. KB was 1.25 / 1.05 in the first review; the audited cost
+replay (research/bench/README.md, 17:15 and 17:35) moved it to 0.55.
 Every constant can be overridden by an environment variable (FABLE_*), so the calibration loop can move them without code changes.
 """
 
@@ -27,9 +28,9 @@ def _f(name: str, default: float) -> float:
 @dataclass(frozen=True)
 class Params:
     ka_open: float = field(default_factory=lambda: _f("FABLE_KA_OPEN", 0.90))
-    kb_open: float = field(default_factory=lambda: _f("FABLE_KB_OPEN", 1.25))
+    kb_open: float = field(default_factory=lambda: _f("FABLE_KB_OPEN", 0.55))
     ka_pinned: float = field(default_factory=lambda: _f("FABLE_KA_PINNED", 0.85))
-    kb_pinned: float = field(default_factory=lambda: _f("FABLE_KB_PINNED", 1.05))
+    kb_pinned: float = field(default_factory=lambda: _f("FABLE_KB_PINNED", 0.55))
     b_zero_below: float = field(default_factory=lambda: _f("FABLE_B_ZERO_BELOW", 2 / 3))
     # Excluded / unrelated lines (P(valid) below this): how to set a. 'as_valid' = charge like a valid line (free option, to be
     # disclosed in the write-up), 'zero' = charge nothing, or a fraction of the valid-line charge, e.g. '0.5'.

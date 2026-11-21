@@ -186,6 +186,20 @@ Only the reviewer cost is evaluated (our charge is set to 0), using the audited 
 - **Mechanics:** the live code uses `b = max(1/3-quantile of the belief, B_VALID_MULT x median)`, so lowering `B_VALID_MULT` alone cannot go below the quantile (about 0.9 x median at a spread of 0.2); a median-based cap is needed to reach 0.45-0.6.
 - **Not measured here (and not measurable by this evaluator):** the charge multiplier, model or ensemble choice, memory.
 
+## Update 17:35: the acceptance factor chosen, and why 0.55 (cost side, trusted part of the evaluator)
+
+Money saved against what we actually paid, by factor `k` (`b = k x median` on valid lines, else 0):
+| k | LIVE medians g1-9 | cheap reader g1-6 (calm) | g7-10 (over-charging) | g11-15 (latest 5) | g1-15 (all) |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 0.40 | +18.9k | -2.4k | +24.4k | +0.5k | +22.4k |
+| 0.45 | +18.3k | -2.0k | +25.1k | +1.2k | +24.3k |
+| 0.50 | +18.5k | -1.4k | +23.6-23.8k | +0.7..1.2k | +22.9..23.5k |
+| **0.55** | **+17.4k** | **-1.1k** | **+21.8-21.9k** | **+1.8..2.3k** | **+22.5..23.1k** |
+| 0.60 | +16.0k | -0.7k | +21.7-21.8k | +0.7..2.0k | +21.8..23.2k |
+| 0.70 | +11.8-12.0k | +0.6..0.9k | +17.6-17.7k | +0.1..2.2k | +18.3..20.8k |
+| 0.80 | +6.5-6.8k | +2.8..3.5k | +11.0k | -1.5..+1.0k | +12.2..15.6k |
+**Choice: 0.55.** It sits safely below the cliff (savings drop from about 17k to 12k between 0.6 and 0.7 on the live medians), keeps about 95 % of the best overall saving, costs less than 0.45 in calm stretches (-1.1k vs -2.0k per six games) and is the best tested value in the latest five games. Going from 0.55 to 0.45 buys 3k more in an over-charging stretch and loses about 1k per calm stretch. The previous default of 0.9 sits above the cliff (about 5-6k saved), as does the old 1.25 (0-3.5k). `CLAIMS_B_MEDIAN_MULT` overrides it (0 restores the quantile rule with the `B_VALID_MULT` floor); check that no `.env` on the live machine sets it explicitly. Cost side only; the charge multiplier is not evaluated.
+
 ## What this does and does not support
 
 - Supports: a benchmark loop exists; the live bot's actual `b` replay (regret ≈ 1142 on games 1-2, 281 on game 3) can be compared with any candidate on the same lines; model price-level bias is large and varies by case; ensembles and web search are not a fix by themselves.

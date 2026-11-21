@@ -42,10 +42,17 @@ CHARGE_MULT = float(os.getenv("CLAIMS_CHARGE_MULT", "1.0"))
 # Ensemble charge as a multiple of the combined median. Replay on games 1-6: 0.9 gave 40,302 against 34,249 for the
 # argmax rule (about 0.75 x median); see research/ensemble_analysis/fable_vs_ensemble.py. 0 switches back to the argmax rule.
 A_MEDIAN_MULT = float(os.getenv("CLAIMS_A_MEDIAN_MULT", "0.9"))
-# Ensemble acceptance limit as a multiple of the combined median (valid lines only). Games 6-9: most incoming charges were
-# inflated and our medians about 2x too high, so 1.25 accepted nearly all of them. Replay on games 1-9: 0.5 gives 37,046
-# against 22,716 for 1.25. 0 switches back to the quantile rule with the B_VALID_MULT floor.
-B_MEDIAN_MULT = float(os.getenv("CLAIMS_B_MEDIAN_MULT", "0.9"))
+# Acceptance limit as a multiple of our combined median (valid lines only; b stays 0 where the line is probably invalid).
+# Set to 0.55 from the audited euro replay of the reviewer COST side (research/bench/limit_sweep.py, README 17:15 and 17:35).
+# Money saved against what we actually paid, by factor (live medians games 1-9 | cheap-reader medians games 1-15):
+#   0.45: +18.3k | +24.3k   0.55: +17.4k | +22.5k..23.1k   0.6: +16.0k | +21.8k..23.2k   0.8: +6.5k | +12.2k..15.6k
+#   0.9-1.0: +4.5k..6.2k | +8.2k..12.3k   1.25: 0..+3.5k | +4.0k..10.6k.   Cost falls steeply between 0.8 and 0.6 (the field's fair
+# charges cluster at about 0.7-0.8 of the value) and is flat below 0.6. 0.55 sits safely below that cliff.
+# Regime dependence: in fair-heavy stretches (games 1-6) a strict limit costs about 1-2k per six games (penalties for rejecting fair
+# charges); in over-charging stretches (games 7-10) it saves about 22-25k; in the latest 5 games about 1-2k. A fixed value is as good
+# as an adaptive one (+0.6k over 14 games). Cost side only: the evaluator cannot measure the charge side.
+# 0 switches back to the quantile rule with the B_VALID_MULT floor.
+B_MEDIAN_MULT = float(os.getenv("CLAIMS_B_MEDIAN_MULT", "0.55"))
 # Floor on log-space spread so the model can't claim false certainty.
 MIN_SIGMA = float(os.getenv("CLAIMS_MIN_SIGMA", "0.08"))
 

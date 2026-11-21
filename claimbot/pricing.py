@@ -90,6 +90,8 @@ def price_line(line: LineEstimate) -> LinePrice:
         return LinePrice(line.index, 0.0, 0.0, 0.0, q, sigma)
     a = _best_charge(mu, sigma) * config.CHARGE_MULT
     b = _accept_limit(q, mu, sigma)
+    if config.B_MEDIAN_MULT > 0 and b > 0:  # same median-based limit as the ensemble (b stays 0 where the line is probably invalid)
+        b = config.B_MEDIAN_MULT * median
     return LinePrice(line.index, round(a, 2), round(b, 2), round(median, 2), round(q, 3), round(sigma, 3))
 
 
