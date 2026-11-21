@@ -7265,6 +7265,3410 @@
    ],
    "failures": [],
    "timed_out": []
+  },
+  "8": {
+   "game": 8,
+   "played_at": "2026-11-21T15:33:41+01:00",
+   "submitted": [
+    {
+     "index": 0,
+     "a": 235.62,
+     "b": 327.25,
+     "t_median": 261.8,
+     "q": 0.961,
+     "sigma": 0.699
+    },
+    {
+     "index": 1,
+     "a": 37.49,
+     "b": 52.06,
+     "t_median": 41.65,
+     "q": 0.955,
+     "sigma": 0.722
+    },
+    {
+     "index": 2,
+     "a": 278.46,
+     "b": 386.75,
+     "t_median": 309.4,
+     "q": 0.948,
+     "sigma": 0.732
+    },
+    {
+     "index": 3,
+     "a": 128.52,
+     "b": 178.5,
+     "t_median": 142.8,
+     "q": 0.894,
+     "sigma": 0.655
+    },
+    {
+     "index": 4,
+     "a": 160.65,
+     "b": 0.0,
+     "t_median": 178.5,
+     "q": 0.032,
+     "sigma": 0.764
+    },
+    {
+     "index": 5,
+     "a": 85.68,
+     "b": 0.0,
+     "t_median": 95.2,
+     "q": 0.041,
+     "sigma": 0.797
+    },
+    {
+     "index": 6,
+     "a": 171.36,
+     "b": 0.0,
+     "t_median": 190.4,
+     "q": 0.032,
+     "sigma": 0.751
+    }
+   ],
+   "members": [
+    {
+     "member": "gpt-6.1-terra/low",
+     "weight": 1.5,
+     "meta": {
+      "model": "gpt-6.1-terra",
+      "effort": "low",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 13.92,
+      "usage": {
+       "input_tokens": 11712,
+       "input_tokens_details": {
+        "cache_write_tokens": 10352,
+        "cached_tokens": 1357,
+        "cache_write_tokens_details": {
+         "ttl_12h_tokens": 0,
+         "ttl_30m_tokens": 10352
+        }
+       },
+       "output_tokens": 991,
+       "output_tokens_details": {
+        "reasoning_tokens": 0
+       },
+       "total_tokens": 12703
+      },
+      "response_id": "resp_040385adc93db4b3006b01abb11cb487d2bc6f077bc998d6f5"
+     },
+     "estimate": {
+      "damage_summary": "A storm-felled tree damaged the roof and glazing of the insured garden shed. Tree clearance also disturbed the surrounding soil and paving.",
+      "policy_notes": "Storm cover and the shed’s insured status are assumed as described; the schedule, cost limits and any deductible are not provided. Covered debris includes shed components and the fallen tree’s root mass under 1 m³. Standalone disposal of ground material is excluded; VAT is payable only if incurred and not recoverable. Any deductible applies once per event.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Disposal of shed roof timber removed from the damaged garden building",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Damaged shed timber is covered debris. One disposal lot is plausible; the price range reflects uncertainty about its volume and haulage allocation.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.98,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 230.0,
+        "net_unit_price_p90": 450.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Disposal of the broken glass pane from the damaged shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The broken pane is insured debris and is visible in the photograph. One pane is plausible; disposal pricing depends on handling and the shared collection.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.98,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 20.0,
+        "net_unit_price_p50": 55.0,
+        "net_unit_price_p90": 110.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Disposal of green waste from the storm-felled tree (branches and foliage)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Branches and foliage from the storm-felled tree qualify as covered debris. One lot is plausible, although its volume and share of the single haul are uncertain.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.98,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 250.0,
+        "net_unit_price_p90": 500.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "Disposal of the tree root ball (single mass under one cubic metre)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The described single root mass is below the 1 m³ clearance limit and qualifies as covered debris. One lot is plausible; disposal charges vary with weight and adhering soil.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.98,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 220.0,
+        "net_unit_price_p90": 400.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Disposal of sieved topsoil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Topsoil remains excluded ground material even after sieving; no qualifying ancillary reinstatement and making-good operation is described. One disposal lot is plausible if assessed independently.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.01,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 80.0,
+        "net_unit_price_p50": 200.0,
+        "net_unit_price_p90": 450.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Disposal of paving grit displaced around the shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Paving grit is ground material, and the described standalone clearance does not meet the ground-works conditions. One disposal lot is plausible, with uncertain volume.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.01,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 60.0,
+        "net_unit_price_p50": 160.0,
+        "net_unit_price_p90": 350.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Disposal of excavated soil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Excavated soil is excluded from standalone debris clearance; no qualifying reinstatement-related ground operation is described. One lot is plausible, subject to confirming its volume and separation from the topsoil.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.01,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 250.0,
+        "net_unit_price_p90": 550.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 222.88,
+       "b": 342.12,
+       "t_median": 273.7,
+       "q": 0.98,
+       "sigma": 0.587
+      },
+      {
+       "index": 1,
+       "a": 56.54,
+       "b": 81.81,
+       "t_median": 65.45,
+       "q": 0.98,
+       "sigma": 0.665
+      },
+      {
+       "index": 2,
+       "a": 249.53,
+       "b": 371.88,
+       "t_median": 297.5,
+       "q": 0.98,
+       "sigma": 0.628
+      },
+      {
+       "index": 3,
+       "a": 206.36,
+       "b": 327.25,
+       "t_median": 261.8,
+       "q": 0.98,
+       "sigma": 0.541
+      },
+      {
+       "index": 4,
+       "a": 207.99,
+       "b": 0.0,
+       "t_median": 238.0,
+       "q": 0.01,
+       "sigma": 0.674
+      },
+      {
+       "index": 5,
+       "a": 168.22,
+       "b": 0.0,
+       "t_median": 190.4,
+       "q": 0.01,
+       "sigma": 0.688
+      },
+      {
+       "index": 6,
+       "a": 257.0,
+       "b": 0.0,
+       "t_median": 297.5,
+       "q": 0.01,
+       "sigma": 0.665
+      }
+     ]
+    },
+    {
+     "member": "claude-opus-5-5/low",
+     "weight": 2.5,
+     "meta": {
+      "model": "claude-opus-5-5",
+      "effort": "low",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 13.07,
+      "usage": {
+       "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+       },
+       "cache_creation_input_tokens": 0,
+       "cache_read_input_tokens": 0,
+       "inference_geo": "global",
+       "input_tokens": 17227,
+       "output_tokens": 1581,
+       "output_tokens_details": {
+        "thinking_tokens": 0
+       },
+       "server_tool_use": null,
+       "service_tier": "standard",
+       "speed": "standard"
+      },
+      "response_id": "msg_011ChGEjaYRB1dkvRumCM6yu"
+     },
+     "estimate": {
+      "damage_summary": "Storm-felled tree landed on the insured garden shed, destroying the roof and breaking a door glass pane; clearing churned up surrounding ground and displaced paving.",
+      "policy_notes": "Storm throwing trees onto insured site installation covered (2.5.3c). Clearance under 5.2.1 covers remains of insured property, felled tree vegetation and root mass ≤1 m³. Ground material (topsoil, grit, soil) excluded from clearance (5.2.1d); ground works only under 5.2.2 with reinstatement and making good, which is not the case here (no foundation work, standalone disposal). Haulage by disposal service is separate, positions are disposal only.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Disposal of shed roof timber removed from the damaged garden building",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Remains of insured shed roof destroyed by storm event; covered clearance/disposal. Lump sum for roughly 1-2 t mixed timber with roofing felt.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.95,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 120.0,
+        "net_unit_price_p50": 250.0,
+        "net_unit_price_p90": 450.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Disposal of the broken glass pane from the damaged shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Broken door pane is a building component of the shed; small disposal amount.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.93,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 15.0,
+        "net_unit_price_p50": 35.0,
+        "net_unit_price_p90": 70.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Disposal of green waste from the storm-felled tree (branches and foliage)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Felled tree material counts as material arising under 5.2.1(b); large tree, several m³ green waste.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.92,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 150.0,
+        "net_unit_price_p50": 320.0,
+        "net_unit_price_p90": 600.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "Disposal of the tree root ball (single mass under one cubic metre)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Root mass ≤1 m³ is material arising under 5.2.1(b); described as under 1 m³, though photo root ball looks large-ish, volume uncertain.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.8,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 50.0,
+        "net_unit_price_p50": 110.0,
+        "net_unit_price_p90": 220.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Disposal of sieved topsoil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Ground material excluded from clearance (5.2.1d); no reinstatement/making good so 5.2.2 not met.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 60.0,
+        "net_unit_price_p50": 130.0,
+        "net_unit_price_p90": 250.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Disposal of paving grit displaced around the shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Paving grit is ground material; standalone disposal not indemnified.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 30.0,
+        "net_unit_price_p50": 70.0,
+        "net_unit_price_p90": 150.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Disposal of excavated soil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Excavated soil is ground material; excluded under 5.2.1(d) and 5.2.2 conditions unmet.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 60.0,
+        "net_unit_price_p50": 140.0,
+        "net_unit_price_p90": 280.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 231.07,
+       "b": 371.88,
+       "t_median": 297.5,
+       "q": 0.95,
+       "sigma": 0.516
+      },
+      {
+       "index": 1,
+       "a": 34.16,
+       "b": 52.06,
+       "t_median": 41.65,
+       "q": 0.93,
+       "sigma": 0.601
+      },
+      {
+       "index": 2,
+       "a": 300.15,
+       "b": 476.0,
+       "t_median": 380.8,
+       "q": 0.92,
+       "sigma": 0.541
+      },
+      {
+       "index": 3,
+       "a": 105.69,
+       "b": 163.62,
+       "t_median": 130.9,
+       "q": 0.8,
+       "sigma": 0.578
+      },
+      {
+       "index": 4,
+       "a": 123.13,
+       "b": 0.0,
+       "t_median": 154.7,
+       "q": 0.05,
+       "sigma": 0.557
+      },
+      {
+       "index": 5,
+       "a": 69.87,
+       "b": 0.0,
+       "t_median": 83.3,
+       "q": 0.05,
+       "sigma": 0.628
+      },
+      {
+       "index": 6,
+       "a": 136.63,
+       "b": 0.0,
+       "t_median": 166.6,
+       "q": 0.05,
+       "sigma": 0.601
+      }
+     ]
+    },
+    {
+     "member": "claude-fable-5-2/low",
+     "weight": 3.0,
+     "meta": {
+      "model": "claude-fable-5-2",
+      "effort": "low",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 15.81,
+      "usage": {
+       "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+       },
+       "cache_creation_input_tokens": 0,
+       "cache_read_input_tokens": 0,
+       "inference_geo": "global",
+       "input_tokens": 17227,
+       "output_tokens": 1714,
+       "output_tokens_details": {
+        "thinking_tokens": 0
+       },
+       "server_tool_use": null,
+       "service_tier": "standard",
+       "speed": "standard"
+      },
+      "response_id": "msg_011ChGEjaUTW5X44GrrL2TF2"
+     },
+     "estimate": {
+      "damage_summary": "Storm felled a garden tree onto the insured garden shed, destroying the roof and breaking a glass pane; clearing churned up surrounding ground and shifted paving. Recycling firm hauled away shed debris, green waste, root ball and ground material.",
+      "policy_notes": "5.2.1 covers clearance of remains of insured property, storm-felled vegetation and root mass up to 1 m3. Ground material (topsoil, grit, excavated soil) is not material arising (5.2.1(d)) and is only indemnified under 5.2.2 if ancillary to reinstatement with the ground made good; standalone disposal is excluded. No foundation work or making good is evidenced. Deductible per schedule not stated.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Disposal of shed roof timber removed from the damaged garden building",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Remains of insured property destroyed by storm; covered clearance under 5.2.1(a). Lump sum for roof timber/bitumen debris of a small shed.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.95,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 120.0,
+        "net_unit_price_p50": 240.0,
+        "net_unit_price_p90": 450.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Disposal of the broken glass pane from the damaged shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Broken shed door glazing is visible in the photo; a building component of the insured site installation, disposal covered under 5.2.1(a). Small quantity.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.95,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 20.0,
+        "net_unit_price_p50": 45.0,
+        "net_unit_price_p90": 100.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Disposal of green waste from the storm-felled tree (branches and foliage)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Storm-felled tree thrown onto insured property counts as material arising under 2.5.3(c) and 5.2.1(b). Large tree, several m3 of green waste.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.93,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 150.0,
+        "net_unit_price_p50": 320.0,
+        "net_unit_price_p90": 650.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "Disposal of the tree root ball (single mass under one cubic metre)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Root mass as a single lump under 1 m3 is expressly material arising under 5.2.1(b); the photo shows a modest root ball consistent with this.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.88,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 60.0,
+        "net_unit_price_p50": 130.0,
+        "net_unit_price_p90": 280.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Disposal of sieved topsoil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Ground material, however processed, is not material arising (5.2.1(d)); no reinstatement-related ground works or making good, so 5.2.2 is not met. Excluded.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 60.0,
+        "net_unit_price_p50": 150.0,
+        "net_unit_price_p90": 320.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Disposal of paving grit displaced around the shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Paving grit/bedding is ground material under 1.3; the paving is not a terrace adjoining the building and no making good is done. Standalone disposal is excluded by 5.2.1(d) and 5.2.2.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.07,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 50.0,
+        "net_unit_price_p50": 120.0,
+        "net_unit_price_p90": 260.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Disposal of excavated soil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Excavated soil is ground material; disposal as a standalone clearance measure without reinstatement ground works is not indemnified (5.2.1(d), 5.2.2).",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 80.0,
+        "net_unit_price_p50": 200.0,
+        "net_unit_price_p90": 450.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 221.83,
+       "b": 357.0,
+       "t_median": 285.6,
+       "q": 0.95,
+       "sigma": 0.516
+      },
+      {
+       "index": 1,
+       "a": 44.92,
+       "b": 66.94,
+       "t_median": 53.55,
+       "q": 0.95,
+       "sigma": 0.628
+      },
+      {
+       "index": 2,
+       "a": 306.4,
+       "b": 476.0,
+       "t_median": 380.8,
+       "q": 0.93,
+       "sigma": 0.572
+      },
+      {
+       "index": 3,
+       "a": 126.87,
+       "b": 193.37,
+       "t_median": 154.7,
+       "q": 0.88,
+       "sigma": 0.601
+      },
+      {
+       "index": 4,
+       "a": 152.6,
+       "b": 0.0,
+       "t_median": 178.5,
+       "q": 0.05,
+       "sigma": 0.653
+      },
+      {
+       "index": 5,
+       "a": 121.59,
+       "b": 0.0,
+       "t_median": 142.8,
+       "q": 0.07,
+       "sigma": 0.643
+      },
+      {
+       "index": 6,
+       "a": 207.99,
+       "b": 0.0,
+       "t_median": 238.0,
+       "q": 0.05,
+       "sigma": 0.674
+      }
+     ]
+    },
+    {
+     "member": "claude-fable-5-2/medium",
+     "weight": 4.5,
+     "meta": {
+      "model": "claude-fable-5-2",
+      "effort": "medium",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 16.97,
+      "usage": {
+       "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+       },
+       "cache_creation_input_tokens": 0,
+       "cache_read_input_tokens": 0,
+       "inference_geo": "global",
+       "input_tokens": 17227,
+       "output_tokens": 1821,
+       "output_tokens_details": {
+        "thinking_tokens": 0
+       },
+       "server_tool_use": null,
+       "service_tier": "standard",
+       "speed": "standard"
+      },
+      "response_id": "msg_011ChGEjaKmKgBkCW98mY7os"
+     },
+     "estimate": {
+      "damage_summary": "Storm-felled tree landed on the insured garden shed, destroying the roof and breaking a door glass pane; clearing the tree churned up surrounding ground and displaced paving. A recycling service hauled away shed debris, green waste, root ball and ground material.",
+      "policy_notes": "Clearance of material arising (5.2.1 a-c) is covered: remains of insured property, storm-felled vegetation, and a root ball of at most 1 m3. Ground material (topsoil, paving grit, excavated soil) is not material arising (5.2.1 d) and is only covered under 5.2.2 if ancillary to reinstatement and the ground is made good, which is not the case here (no foundation work, standalone disposal). Paving around the shed is not a terrace adjoining the building (4.3 d). Deductible per schedule not specified.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Disposal of shed roof timber removed from the damaged garden building",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Remains of insured property destroyed by the storm; covered under 5.2.1(a). Lump sum for a small load of treated waste wood, about 1-2 m3, including haulage.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.95,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 90.0,
+        "net_unit_price_p50": 190.0,
+        "net_unit_price_p90": 380.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Disposal of the broken glass pane from the damaged shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Broken pane visible in the photo on the shed door; glazing is a building component of the insured site installation, disposal covered under 5.2.1(a). Small quantity, low price.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.94,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 20.0,
+        "net_unit_price_p50": 45.0,
+        "net_unit_price_p90": 110.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Disposal of green waste from the storm-felled tree (branches and foliage)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Storm-felled tree thrown onto insured property counts as material arising under 2.5.3(c) and 5.2.1(b). Lump sum for several m3 of green waste from a large tree.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.94,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 120.0,
+        "net_unit_price_p50": 260.0,
+        "net_unit_price_p90": 550.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "Disposal of the tree root ball (single mass under one cubic metre)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Single root mass under 1 m3 is expressly material arising under 5.2.1(b); the description and the photo support a modest single lump. Root stock disposal is heavier and dearer per m3 than green waste.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.88,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 60.0,
+        "net_unit_price_p50": 130.0,
+        "net_unit_price_p90": 280.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Disposal of sieved topsoil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Ground material, excluded from clearance under 5.2.1(d) however processed; the conditions of 5.2.2 are not met because there is no reinstatement-related ground work and the ground is not made good. Standalone disposal is not indemnified.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 60.0,
+        "net_unit_price_p50": 150.0,
+        "net_unit_price_p90": 320.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Disposal of paving grit displaced around the shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Paving grit is ground material under 1.3 and the paving is not an insured terrace (4.3 d). Excluded under 5.2.1(d); 5.2.2 is not met as the surface is not made good as part of a reinstatement.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.07,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 50.0,
+        "net_unit_price_p50": 120.0,
+        "net_unit_price_p90": 260.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Disposal of excavated soil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Excavated soil is ground material, excluded under 5.2.1(d) and 4.3(d). No foundation or reinstatement ground works took place, so 5.2.2 does not apply.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 70.0,
+        "net_unit_price_p50": 170.0,
+        "net_unit_price_p90": 380.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 180.58,
+       "b": 282.62,
+       "t_median": 226.1,
+       "q": 0.95,
+       "sigma": 0.562
+      },
+      {
+       "index": 1,
+       "a": 46.26,
+       "b": 66.94,
+       "t_median": 53.55,
+       "q": 0.94,
+       "sigma": 0.665
+      },
+      {
+       "index": 2,
+       "a": 252.82,
+       "b": 386.75,
+       "t_median": 309.4,
+       "q": 0.94,
+       "sigma": 0.594
+      },
+      {
+       "index": 3,
+       "a": 126.87,
+       "b": 193.37,
+       "t_median": 154.7,
+       "q": 0.88,
+       "sigma": 0.601
+      },
+      {
+       "index": 4,
+       "a": 152.6,
+       "b": 0.0,
+       "t_median": 178.5,
+       "q": 0.05,
+       "sigma": 0.653
+      },
+      {
+       "index": 5,
+       "a": 121.59,
+       "b": 0.0,
+       "t_median": 142.8,
+       "q": 0.07,
+       "sigma": 0.643
+      },
+      {
+       "index": 6,
+       "a": 173.81,
+       "b": 0.0,
+       "t_median": 202.3,
+       "q": 0.05,
+       "sigma": 0.66
+      }
+     ]
+    },
+    {
+     "member": "claude-opus-5-5/medium",
+     "weight": 3.75,
+     "meta": {
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 18.81,
+      "usage": {
+       "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+       },
+       "cache_creation_input_tokens": 0,
+       "cache_read_input_tokens": 0,
+       "inference_geo": "global",
+       "input_tokens": 17227,
+       "output_tokens": 2191,
+       "output_tokens_details": {
+        "thinking_tokens": 394
+       },
+       "server_tool_use": null,
+       "service_tier": "standard",
+       "speed": "standard"
+      },
+      "response_id": "msg_011ChGEjaXgLmJDRDkfwM3fM"
+     },
+     "estimate": {
+      "damage_summary": "A storm-felled garden tree landed on the insured garden shed, destroying its roof and breaking a door glass pane. Clearing the tree churned up the surrounding ground and displaced paving. A recycling firm hauled and disposed of the shed debris, the tree material and the ground material in one run.",
+      "policy_notes": "Storm throwing a tree onto an insured ancillary structure is covered (2.5.3c, 4.2.5). Clearance and disposal under 5.2.1 covers the remains of damaged insured property, the felled tree material, and a root mass of up to 1 m³. Ground material (topsoil, grit, excavated soil) is excluded from clearance under 5.2.1(d). It is indemnifiable only as part of ground works under 5.2.2, which requires reinstatement of insured property and making good of the ground. That is not met here: no foundation work was done, and this is standalone disposal. Paving that is not a terrace and the vegetation itself are not insured (4.3d/e). The deductible is not quantified, so payout_fraction is 1.0.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Disposal of shed roof timber removed from the damaged garden building",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Remains of damaged insured property, which is material arising under 5.2.1(a). The lump sum covers roughly 1–3 m³ of roof timber and felt, likely treated wood.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.93,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 220.0,
+        "net_unit_price_p90": 400.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Disposal of the broken glass pane from the damaged shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The broken door glazing is visible in the photo and is a building component of the shed; its disposal is covered. It is a small quantity.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.92,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 15.0,
+        "net_unit_price_p50": 35.0,
+        "net_unit_price_p90": 70.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Disposal of green waste from the storm-felled tree (branches and foliage)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Branches and foliage deposited by the storm are material arising under 5.2.1(b). The photo shows a large tree, so the volume is substantial.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.9,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 120.0,
+        "net_unit_price_p50": 280.0,
+        "net_unit_price_p90": 550.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "Disposal of the tree root ball (single mass under one cubic metre)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "A root mass under 1 m³ counts as material arising under 5.2.1(b). The volume is claimed but its recording is uncertain, which slightly lowers validity.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.8,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 50.0,
+        "net_unit_price_p50": 120.0,
+        "net_unit_price_p90": 250.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Disposal of sieved topsoil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "This is ground material, excluded from clearance under 5.2.1(d). The 5.2.2 conditions (reinstatement-related work, ground made good) are not met, so this is standalone disposal.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 60.0,
+        "net_unit_price_p50": 150.0,
+        "net_unit_price_p90": 300.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Disposal of paving grit displaced around the shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Paving grit and bedding are ground material, excluded under 5.2.1(d) and 4.3(d). It is not part of a 5.2.2 reinstatement with making good.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.06,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 30.0,
+        "net_unit_price_p50": 80.0,
+        "net_unit_price_p90": 160.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Disposal of excavated soil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Excavated soil is ground material, and standalone disposal of it is expressly not indemnified under 5.2.2.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 60.0,
+        "net_unit_price_p50": 160.0,
+        "net_unit_price_p90": 320.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 206.36,
+       "b": 327.25,
+       "t_median": 261.8,
+       "q": 0.93,
+       "sigma": 0.541
+      },
+      {
+       "index": 1,
+       "a": 34.16,
+       "b": 52.06,
+       "t_median": 41.65,
+       "q": 0.92,
+       "sigma": 0.601
+      },
+      {
+       "index": 2,
+       "a": 272.27,
+       "b": 416.5,
+       "t_median": 333.2,
+       "q": 0.9,
+       "sigma": 0.594
+      },
+      {
+       "index": 3,
+       "a": 119.78,
+       "b": 178.5,
+       "t_median": 142.8,
+       "q": 0.8,
+       "sigma": 0.628
+      },
+      {
+       "index": 4,
+       "a": 149.72,
+       "b": 0.0,
+       "t_median": 178.5,
+       "q": 0.05,
+       "sigma": 0.628
+      },
+      {
+       "index": 5,
+       "a": 81.39,
+       "b": 0.0,
+       "t_median": 95.2,
+       "q": 0.06,
+       "sigma": 0.653
+      },
+      {
+       "index": 6,
+       "a": 162.78,
+       "b": 0.0,
+       "t_median": 190.4,
+       "q": 0.05,
+       "sigma": 0.653
+      }
+     ]
+    },
+    {
+     "member": "gpt-6.1-terra/medium",
+     "weight": 2.25,
+     "meta": {
+      "model": "gpt-6.1-terra",
+      "effort": "medium",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 20.01,
+      "usage": {
+       "input_tokens": 11712,
+       "input_tokens_details": {
+        "cache_write_tokens": 10352,
+        "cached_tokens": 1357,
+        "cache_write_tokens_details": {
+         "ttl_12h_tokens": 0,
+         "ttl_30m_tokens": 10352
+        }
+       },
+       "output_tokens": 1462,
+       "output_tokens_details": {
+        "reasoning_tokens": 132
+       },
+       "total_tokens": 13174
+      },
+      "response_id": "resp_02bf29ae4041310f006b01abb11dbc87d2a72777193e45b215"
+     },
+     "estimate": {
+      "damage_summary": "A storm-felled tree damaged the roof and a glass pane of the insured garden shed. Tree clearance also disturbed surrounding soil and paving.",
+      "policy_notes": "Storm damage to the declared shed and clearance of its debris, the fallen tree and its root ball under 1 m³ are covered, subject to proof of costs and schedule limits. Ground material is excluded from standalone clearance; no qualifying reinstatement groundworks are described. The schedule and any event deductible were not supplied, so payout fractions assume no reduction. VAT is payable only if incurred and not recoverable as input tax.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Disposal of shed roof timber removed from the damaged garden building",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Damaged shed timber qualifies as insured debris. One lot is plausible; the estimate allows for a share of the common haul and disposal.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.98,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 120.0,
+        "net_unit_price_p50": 220.0,
+        "net_unit_price_p90": 400.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Disposal of the broken glass pane from the damaged shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The broken pane is insured shed debris, and one pane is supported by the description and photo. The estimate allows for handling and disposal within the shared collection.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.98,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 25.0,
+        "net_unit_price_p50": 55.0,
+        "net_unit_price_p90": 110.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Disposal of green waste from the storm-felled tree (branches and foliage)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Branches and foliage from the storm-felled tree qualify as material arising. One lot is plausible, although its actual volume and disposal charge are uncertain.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.98,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 120.0,
+        "net_unit_price_p50": 250.0,
+        "net_unit_price_p90": 480.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "Disposal of the tree root ball (single mass under one cubic metre)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The single root mass is reported as under 1 m³, including adhering earth, and qualifies for clearance. One lot is plausible; disposal costs depend on weight and contamination.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.98,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 210.0,
+        "net_unit_price_p90": 380.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Disposal of sieved topsoil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Sieved topsoil remains excluded ground material, and no qualifying reinstatement groundworks are described. One lot is plausible; the price assumes disposal were covered.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.01,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 90.0,
+        "net_unit_price_p50": 200.0,
+        "net_unit_price_p90": 400.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Disposal of paving grit displaced around the shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Displaced paving grit is ground material and its standalone disposal is excluded; no qualifying reinstatement groundworks are described. One lot is plausible, with price dependent on volume and disposal classification.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.01,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 80.0,
+        "net_unit_price_p50": 180.0,
+        "net_unit_price_p90": 380.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Disposal of excavated soil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Excavated soil is excluded from standalone clearance, and the stated circumstances do not establish qualifying reinstatement groundworks. One lot is plausible; the conditional price varies with quantity and contamination.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.01,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 220.0,
+        "net_unit_price_p90": 450.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 199.36,
+       "b": 327.25,
+       "t_median": 261.8,
+       "q": 0.98,
+       "sigma": 0.47
+      },
+      {
+       "index": 1,
+       "a": 52.85,
+       "b": 81.81,
+       "t_median": 65.45,
+       "q": 0.98,
+       "sigma": 0.578
+      },
+      {
+       "index": 2,
+       "a": 234.49,
+       "b": 371.88,
+       "t_median": 297.5,
+       "q": 0.98,
+       "sigma": 0.541
+      },
+      {
+       "index": 3,
+       "a": 194.62,
+       "b": 312.37,
+       "t_median": 249.9,
+       "q": 0.98,
+       "sigma": 0.521
+      },
+      {
+       "index": 4,
+       "a": 193.01,
+       "b": 0.0,
+       "t_median": 238.0,
+       "q": 0.01,
+       "sigma": 0.582
+      },
+      {
+       "index": 5,
+       "a": 176.33,
+       "b": 0.0,
+       "t_median": 214.2,
+       "q": 0.01,
+       "sigma": 0.608
+      },
+      {
+       "index": 6,
+       "a": 213.19,
+       "b": 0.0,
+       "t_median": 261.8,
+       "q": 0.01,
+       "sigma": 0.587
+      }
+     ]
+    },
+    {
+     "member": "gpt-6.2-sol/low",
+     "weight": 2.0,
+     "meta": {
+      "model": "gpt-6.2-sol",
+      "effort": "low",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 20.04,
+      "usage": {
+       "input_tokens": 11788,
+       "input_tokens_details": {
+        "cache_write_tokens": 11287,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+         "ttl_12h_tokens": 0,
+         "ttl_30m_tokens": 11287
+        }
+       },
+       "output_tokens": 1551,
+       "output_tokens_details": {
+        "reasoning_tokens": 0
+       },
+       "total_tokens": 13339
+      },
+      "response_id": "resp_0722c88bbe74ee30006b01abb10ce487d2a47220172417c7bd"
+     },
+     "estimate": {
+      "damage_summary": "A storm-felled tree struck the insured garden shed, badly damaging its roof and breaking a glass pane. The fall and subsequent clearance churned up soil and displaced paving around the shed; no ground works needed for shed reinstatement are documented.",
+      "policy_notes": "Section 5.2.1 covers disposal of damaged shed components, storm-felled branches and foliage, and the single root ball reported to be under 1 m³ including adhering earth. Standalone disposal of soil and paving grit is excluded under §§5.2.1–5.2.2: there is no evidence that removal was necessary for shed reinstatement or that the ground was made good as part of that work. The materials are separately itemized, so the shared haul does not by itself make these lines a combined position under §7.1.10. The estimates are for disposal by material category, not a separate full haul for each; any haulage already charged for the same material is excluded under §7.1.8(c), but separate disposal remains eligible. Actual charges and any required root-volume record should be verified. No schedule was supplied, so no cost-head limit or once-per-event deductible has been applied. VAT is reimbursable only where actually incurred and not recoverable.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Disposal of shed roof timber removed from the damaged garden building",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The roof timber is debris from insured property under §5.2.1(a), and the photo supports one disposal lot. The price range reflects uncertain weight and the disposal classification of the timber.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.99,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 35.0,
+        "net_unit_price_p50": 85.0,
+        "net_unit_price_p90": 170.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Disposal of the broken glass pane from the damaged shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The photo shows one broken shed pane, which qualifies as insured debris under §5.2.1(a). The estimate allows for separate flat-glass acceptance and any minimum disposal fee, not replacement glazing.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.99,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 8.0,
+        "net_unit_price_p50": 18.0,
+        "net_unit_price_p90": 35.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Disposal of green waste from the storm-felled tree (branches and foliage)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Storm-felled branches and foliage qualify under §5.2.1(b), and one bulk disposal lot is consistent with the photo. The range reflects uncertain volume and facility charges and excludes the separately billed root ball.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.99,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 40.0,
+        "net_unit_price_p50": 95.0,
+        "net_unit_price_p90": 185.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "Disposal of the tree root ball (single mass under one cubic metre)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "One connected root ball is reported below the one-cubic-metre limit under §5.2.1(b); confirm its recorded volume including adhering soil. Disposal can cost more than ordinary green waste because of the soil attached to the roots.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.97,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 35.0,
+        "net_unit_price_p50": 80.0,
+        "net_unit_price_p90": 155.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Disposal of sieved topsoil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The topsoil is related to the incident, but sieving does not change its status as excluded ground material, and no qualifying reinstatement operation is shown. One lot is plausible; the conditional price reflects clean-soil acceptance charges at an unknown weight.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 20.0,
+        "net_unit_price_p50": 55.0,
+        "net_unit_price_p90": 120.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Disposal of paving grit displaced around the shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The displaced grit is related to the incident but is excluded ground material; neither an insured adjoining terrace nor qualifying reinstatement ground works are shown. One small aggregate lot is plausible, with the conditional price reflecting disposal weight and minimum charges.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 15.0,
+        "net_unit_price_p50": 40.0,
+        "net_unit_price_p90": 90.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Disposal of excavated soil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The excavated soil comes from the incident area, but its standalone disposal is excluded because removal and making good are not documented as part of shed reinstatement. One lot is plausible; the conditional price reflects uncertainty in weight and soil acceptance charges.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 25.0,
+        "net_unit_price_p50": 70.0,
+        "net_unit_price_p90": 155.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 84.07,
+       "b": 126.44,
+       "t_median": 101.15,
+       "q": 0.99,
+       "sigma": 0.617
+      },
+      {
+       "index": 1,
+       "a": 17.31,
+       "b": 26.78,
+       "t_median": 21.42,
+       "q": 0.99,
+       "sigma": 0.576
+      },
+      {
+       "index": 2,
+       "a": 92.27,
+       "b": 141.31,
+       "t_median": 113.05,
+       "q": 0.99,
+       "sigma": 0.598
+      },
+      {
+       "index": 3,
+       "a": 76.8,
+       "b": 119.0,
+       "t_median": 95.2,
+       "q": 0.97,
+       "sigma": 0.581
+      },
+      {
+       "index": 4,
+       "a": 58.52,
+       "b": 0.0,
+       "t_median": 65.45,
+       "q": 0.0,
+       "sigma": 0.699
+      },
+      {
+       "index": 5,
+       "a": 42.56,
+       "b": 0.0,
+       "t_median": 47.6,
+       "q": 0.0,
+       "sigma": 0.699
+      },
+      {
+       "index": 6,
+       "a": 75.4,
+       "b": 0.0,
+       "t_median": 83.3,
+       "q": 0.0,
+       "sigma": 0.712
+      }
+     ]
+    },
+    {
+     "member": "gpt-6.2-sol/medium",
+     "weight": 3.0,
+     "meta": {
+      "model": "gpt-6.2-sol",
+      "effort": "medium",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 21.62,
+      "usage": {
+       "input_tokens": 11788,
+       "input_tokens_details": {
+        "cache_write_tokens": 11287,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+         "ttl_12h_tokens": 0,
+         "ttl_30m_tokens": 11287
+        }
+       },
+       "output_tokens": 1683,
+       "output_tokens_details": {
+        "reasoning_tokens": 68
+       },
+       "total_tokens": 13471
+      },
+      "response_id": "resp_080ab3c426a4668c006b01abb1217087d29a19d8df92d67349"
+     },
+     "estimate": {
+      "damage_summary": "A storm-felled tree struck the insured garden shed, breaking roof timbers and a glass pane. The fall and subsequent clearance disturbed the surrounding soil and shifted paving; no foundation work or ground reinstatement was reported.",
+      "policy_notes": "Section 5.2.1 covers disposal of damaged shed debris, storm-felled branches and foliage, and a single root mass no larger than 1 m³, including adhering earth. Separately listed soil and paving grit are excluded from clearance even if screened or displaced; §5.2.2 covers them only as part of necessary insured reinstatement that also makes good the surrounding ground or paving. The shared haul does not make the separately listed disposal categories a combined position under §7.1.10. Disposal fees are distinct from haulage, but any haulage already charged by the first crew cannot be paid again under §7.1.8(c). The extract shows no prices or weights, so the figures are estimated net disposal thresholds per lot, not verified charges. Actual charges and the applicable schedule limits must be verified; any deductible applies once to the event. No reduction is quantified because the schedule is unavailable. VAT is reimbursable only if incurred and not recoverable.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Disposal of shed roof timber removed from the damaged garden building",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The broken roof timber is debris from the insured shed and qualifies under §5.2.1(a). One disposal lot is plausible; the price range reflects uncertainty in weight and waste-wood classification without adding a separate haul.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.99,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 35.0,
+        "net_unit_price_p50": 75.0,
+        "net_unit_price_p90": 150.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Disposal of the broken glass pane from the damaged shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The photo supports one broken pane, and its disposal is covered as insured shed debris under §5.2.1(a). For such a small lot, the disposal charge is likely driven by the facility's minimum fee rather than weight.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.99,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 8.0,
+        "net_unit_price_p50": 20.0,
+        "net_unit_price_p90": 40.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Disposal of green waste from the storm-felled tree (branches and foliage)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Branches and foliage from the storm-felled tree qualify under §5.2.1(b), although the tree itself is not insured property. One bulk disposal lot is plausible; the range reflects the unknown volume and weight of the material delivered.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.99,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 45.0,
+        "net_unit_price_p50": 100.0,
+        "net_unit_price_p90": 200.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "Disposal of the tree root ball (single mass under one cubic metre)",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The reported single root mass under 1 m³ qualifies under §5.2.1(b), measured with adhering earth; confirm the volume record required by §9.2. One root ball is plausible, and its weight and the facility's acceptance tariff drive the disposal estimate.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.97,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 40.0,
+        "net_unit_price_p50": 90.0,
+        "net_unit_price_p90": 180.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Disposal of sieved topsoil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Sieving does not change the topsoil's exclusion under §5.2.1(d); the soil is linked to the cleanup, but its disposal was not shown to be necessary for shed repair or part of making good under §5.2.2. One disposal lot is plausible if assessed as valid, with price depending on weight and the facility's soil tariff.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 25.0,
+        "net_unit_price_p50": 65.0,
+        "net_unit_price_p90": 145.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Disposal of paving grit displaced around the shed",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Displaced paving grit remains excluded ground material under §5.2.1(d), and no repair-related lifting and making good of the paving is documented under §5.2.2. One small aggregate disposal lot is plausible if assessed as valid; weight and minimum facility charges drive the estimate.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 20.0,
+        "net_unit_price_p50": 50.0,
+        "net_unit_price_p90": 110.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Disposal of excavated soil from the churned-up ground",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Standalone excavated-soil disposal is excluded under §5.2.1(d); no shed reinstatement requiring excavation or associated making good is documented under §5.2.2. One soil disposal lot is plausible if assessed as valid, but its tonnage and acceptance tariff are unknown.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 35.0,
+        "net_unit_price_p50": 90.0,
+        "net_unit_price_p90": 200.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 71.52,
+       "b": 111.56,
+       "t_median": 89.25,
+       "q": 0.99,
+       "sigma": 0.568
+      },
+      {
+       "index": 1,
+       "a": 19.96,
+       "b": 29.75,
+       "t_median": 23.8,
+       "q": 0.99,
+       "sigma": 0.628
+      },
+      {
+       "index": 2,
+       "a": 96.51,
+       "b": 148.75,
+       "t_median": 119.0,
+       "q": 0.99,
+       "sigma": 0.582
+      },
+      {
+       "index": 3,
+       "a": 87.22,
+       "b": 133.87,
+       "t_median": 107.1,
+       "q": 0.97,
+       "sigma": 0.587
+      },
+      {
+       "index": 4,
+       "a": 68.37,
+       "b": 0.0,
+       "t_median": 77.35,
+       "q": 0.0,
+       "sigma": 0.686
+      },
+      {
+       "index": 5,
+       "a": 51.4,
+       "b": 0.0,
+       "t_median": 59.5,
+       "q": 0.0,
+       "sigma": 0.665
+      },
+      {
+       "index": 6,
+       "a": 94.12,
+       "b": 0.0,
+       "t_median": 107.1,
+       "q": 0.0,
+       "sigma": 0.68
+      }
+     ]
+    }
+   ],
+   "failures": [],
+   "timed_out": []
+  },
+  "9": {
+   "game": 9,
+   "played_at": "2026-11-21T15:47:01+01:00",
+   "submitted": [
+    {
+     "index": 0,
+     "a": 856.8,
+     "b": 1190.0,
+     "t_median": 952.0,
+     "q": 0.943,
+     "sigma": 0.689
+    },
+    {
+     "index": 1,
+     "a": 53.55,
+     "b": 0.0,
+     "t_median": 59.5,
+     "q": 0.022,
+     "sigma": 0.64
+    },
+    {
+     "index": 2,
+     "a": 160.65,
+     "b": 0.0,
+     "t_median": 178.5,
+     "q": 0.022,
+     "sigma": 0.555
+    },
+    {
+     "index": 3,
+     "a": 963.9,
+     "b": 1338.75,
+     "t_median": 1071.0,
+     "q": 0.946,
+     "sigma": 0.648
+    },
+    {
+     "index": 4,
+     "a": 267.75,
+     "b": 0.0,
+     "t_median": 297.5,
+     "q": 0.029,
+     "sigma": 0.811
+    },
+    {
+     "index": 5,
+     "a": 80.33,
+     "b": 0.0,
+     "t_median": 89.25,
+     "q": 0.018,
+     "sigma": 0.74
+    },
+    {
+     "index": 6,
+     "a": 53.55,
+     "b": 0.0,
+     "t_median": 59.5,
+     "q": 0.031,
+     "sigma": 0.517
+    }
+   ],
+   "members": [
+    {
+     "member": "claude-fable-5-2/low",
+     "weight": 3.0,
+     "meta": {
+      "model": "claude-fable-5-2",
+      "effort": "low",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 13.45,
+      "usage": {
+       "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+       },
+       "cache_creation_input_tokens": 0,
+       "cache_read_input_tokens": 0,
+       "inference_geo": "global",
+       "input_tokens": 18071,
+       "output_tokens": 1576,
+       "output_tokens_details": {
+        "thinking_tokens": 0
+       },
+       "server_tool_use": null,
+       "service_tier": "standard",
+       "speed": "standard"
+      },
+      "response_id": "msg_011ChGFkUBpx8owgJmZYyuit"
+     },
+     "estimate": {
+      "damage_summary": "Lightning-induced overvoltage damaged a TV set and a speaker system in the living room; diagnostic reports confirm surge failure for both. A technician attended to check electronics and wiring.",
+      "policy_notes": "Appliances covered under 2.3.3 with aggregate sub-limit EUR 5,000 gross per event; no improvement (7.1.9). Surge-protection endorsement waives the 50% reduction. Shipping (7.1.8b) and installation (7.1.8c) of replacement property are not repair costs. Combined property/liability charges and service-order arrangements are excluded (3.1.4, 3.1.5, 7.1.8f); attendance charge on a non-indemnifiable invoice is excluded (7.1.8d).",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Speaker system",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Damaged by surge, confirmed by diagnostic report; covered under 2.3.3 at standard-grade equivalent replacement. Endorsement waives the halving; sub-limit unlikely to bite together with the TV.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.93,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 350.0,
+        "net_unit_price_p50": 800.0,
+        "net_unit_price_p90": 1600.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Shipping",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Delivery charge for replacement property is expressly not a repair cost under 7.1.8(b).",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.04,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 20.0,
+        "net_unit_price_p50": 50.0,
+        "net_unit_price_p90": 100.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Installation",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Fitting, mounting and commissioning of replacement property is excluded under 7.1.8(c).",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.04,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 80.0,
+        "net_unit_price_p50": 150.0,
+        "net_unit_price_p90": 300.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "TV set",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "TV damaged by surge, confirmed by diagnostic report; covered under 2.3.3 at equivalent standard-grade replacement (large wall-mounted flat screen). No halving due to the endorsement.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.93,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 500.0,
+        "net_unit_price_p50": 1000.0,
+        "net_unit_price_p90": 2000.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Property and liability damage to electronics",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Bundles property and liability exposure without separate pricing, under a service-type arrangement; excluded by 3.1.4, 3.1.5 and 7.1.8(f).",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 250.0,
+        "net_unit_price_p90": 600.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Property and liability damage to electronics - service order",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Charge for placing an order under a service arrangement; excluded by 3.1.5 and 7.1.8(f).",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.03,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 40.0,
+        "net_unit_price_p50": 100.0,
+        "net_unit_price_p90": 250.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Vehicle costs",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Attendance charge on an invoice with no indemnifiable work; excluded under 7.1.8(d).",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 30.0,
+        "net_unit_price_p50": 60.0,
+        "net_unit_price_p90": 120.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 778.18,
+       "b": 1190.0,
+       "t_median": 952.0,
+       "q": 0.93,
+       "sigma": 0.593
+      },
+      {
+       "index": 1,
+       "a": 49.91,
+       "b": 0.0,
+       "t_median": 59.5,
+       "q": 0.04,
+       "sigma": 0.628
+      },
+      {
+       "index": 2,
+       "a": 138.64,
+       "b": 0.0,
+       "t_median": 178.5,
+       "q": 0.04,
+       "sigma": 0.516
+      },
+      {
+       "index": 3,
+       "a": 937.98,
+       "b": 1487.5,
+       "t_median": 1190.0,
+       "q": 0.93,
+       "sigma": 0.541
+      },
+      {
+       "index": 4,
+       "a": 266.02,
+       "b": 0.0,
+       "t_median": 297.5,
+       "q": 0.05,
+       "sigma": 0.699
+      },
+      {
+       "index": 5,
+       "a": 108.44,
+       "b": 0.0,
+       "t_median": 119.0,
+       "q": 0.03,
+       "sigma": 0.715
+      },
+      {
+       "index": 6,
+       "a": 56.28,
+       "b": 0.0,
+       "t_median": 71.4,
+       "q": 0.05,
+       "sigma": 0.541
+      }
+     ]
+    },
+    {
+     "member": "claude-opus-5-5/low",
+     "weight": 2.5,
+     "meta": {
+      "model": "claude-opus-5-5",
+      "effort": "low",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 13.46,
+      "usage": {
+       "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+       },
+       "cache_creation_input_tokens": 0,
+       "cache_read_input_tokens": 0,
+       "inference_geo": "global",
+       "input_tokens": 18071,
+       "output_tokens": 1661,
+       "output_tokens_details": {
+        "thinking_tokens": 0
+       },
+       "server_tool_use": null,
+       "service_tier": "standard",
+       "speed": "standard"
+      },
+      "response_id": "msg_011ChGFkTX9MKsTwaAL4SPDm"
+     },
+     "estimate": {
+      "damage_summary": "Lightning-induced overvoltage damaged a speaker system and a TV set in the insured dwelling; diagnostic reports confirm surge failure. Replacement equipment was supplied by a retailer, and a building-services firm billed an arrangement/service order plus vehicle costs.",
+      "policy_notes": "Appliances are covered only under 2.3.3, subject to a EUR 5,000 sub-limit (incl. VAT) per event, aggregated across all appliances and invoices. Indemnity is limited to pre-loss standard with no improvement (7.1.9). The 50% reduction for missing surge protection is waived by the endorsement, so payout_fraction is 1. Shipping (7.1.8b) and installation (7.1.8c) are not indemnifiable. Lines 5 and 6 relate to a liability/service arrangement and order placement (3.1.4, 3.1.5, 7.1.8f), so they are excluded. Vehicle costs fall away under 7.1.8(d) because nothing else on that invoice is indemnifiable.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Speaker system",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Damage is confirmed by the diagnostic report and the cause is a covered lightning surge. Valued at pre-loss equivalent standard; the item counts toward the 5,000 EUR appliance sub-limit.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.9,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 300.0,
+        "net_unit_price_p50": 700.0,
+        "net_unit_price_p90": 1500.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Shipping",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Delivery of replacement property is expressly excluded under 7.1.8(b).",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.03,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 20.0,
+        "net_unit_price_p50": 40.0,
+        "net_unit_price_p90": 80.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Installation",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Installation and setup of replacement property is excluded under 7.1.8(c).",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.03,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 50.0,
+        "net_unit_price_p50": 100.0,
+        "net_unit_price_p90": 200.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "TV set",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Surge damage to the TV is confirmed. Replaced at an equivalent standard model and pre-loss value, within the sub-limit.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.9,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 400.0,
+        "net_unit_price_p50": 900.0,
+        "net_unit_price_p90": 1800.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Property and liability damage to electronics",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "This is a bundled property/liability arrangement charge without a separately priced property element, so it is excluded under 3.1.4, 3.1.5 and 7.1.8(f).",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.03,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 50.0,
+        "net_unit_price_p50": 150.0,
+        "net_unit_price_p90": 400.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Property and liability damage to electronics - service order",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "A charge for placing an order under a service arrangement is excluded under 3.1.5 and 7.1.8(f).",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.02,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 30.0,
+        "net_unit_price_p50": 80.0,
+        "net_unit_price_p90": 200.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Vehicle costs",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "An attendance charge is only payable alongside indemnifiable work on the same invoice. No other line on this invoice is indemnifiable, so it is excluded under 7.1.8(d).",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 30.0,
+        "net_unit_price_p50": 60.0,
+        "net_unit_price_p90": 100.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 698.7,
+       "b": 1041.25,
+       "t_median": 833.0,
+       "q": 0.9,
+       "sigma": 0.628
+      },
+      {
+       "index": 1,
+       "a": 37.52,
+       "b": 0.0,
+       "t_median": 47.6,
+       "q": 0.03,
+       "sigma": 0.541
+      },
+      {
+       "index": 2,
+       "a": 93.8,
+       "b": 0.0,
+       "t_median": 119.0,
+       "q": 0.03,
+       "sigma": 0.541
+      },
+      {
+       "index": 3,
+       "a": 872.15,
+       "b": 1338.75,
+       "t_median": 1071.0,
+       "q": 0.9,
+       "sigma": 0.587
+      },
+      {
+       "index": 4,
+       "a": 181.42,
+       "b": 0.0,
+       "t_median": 178.5,
+       "q": 0.03,
+       "sigma": 0.811
+      },
+      {
+       "index": 5,
+       "a": 89.06,
+       "b": 0.0,
+       "t_median": 95.2,
+       "q": 0.02,
+       "sigma": 0.74
+      },
+      {
+       "index": 6,
+       "a": 54.37,
+       "b": 0.0,
+       "t_median": 71.4,
+       "q": 0.05,
+       "sigma": 0.47
+      }
+     ]
+    },
+    {
+     "member": "claude-fable-5-2/medium",
+     "weight": 4.5,
+     "meta": {
+      "model": "claude-fable-5-2",
+      "effort": "medium",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 15.23,
+      "usage": {
+       "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+       },
+       "cache_creation_input_tokens": 0,
+       "cache_read_input_tokens": 0,
+       "inference_geo": "global",
+       "input_tokens": 18071,
+       "output_tokens": 1714,
+       "output_tokens_details": {
+        "thinking_tokens": 0
+       },
+       "server_tool_use": null,
+       "service_tier": "standard",
+       "speed": "standard"
+      },
+      "response_id": "msg_011ChGFkTsii5DF4Sf1J3zG3"
+     },
+     "estimate": {
+      "damage_summary": "Lightning-induced overvoltage damaged a speaker system and a wall-mounted TV in the living room; diagnostic reports confirm surge failure for both. A technician checked electronics and wiring afterwards.",
+      "policy_notes": "Appliances covered under 2.3.3 with an aggregate sub-limit of EUR 5,000 incl. VAT; no improvement on pre-loss standard (7.1.9). Surge-protection endorsement waives the 50% reduction. Shipping (7.1.8(b)) and installation (7.1.8(c)) are not repair costs. Service/warranty arrangements and combined property/liability charges are excluded (3.1.4, 3.1.5, 7.1.8(f)); attendance charges on an invoice with no indemnifiable work are excluded (7.1.8(d)). Deductible per schedule not specified.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Speaker system",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Speaker system confirmed surge-damaged by diagnostic report; covered under 2.3.3, endorsement waives the halving. Price limited to an equivalent standard-grade replacement (7.1.9); together with the TV likely within the EUR 5,000 gross sub-limit.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.93,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 350.0,
+        "net_unit_price_p50": 800.0,
+        "net_unit_price_p90": 1600.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Shipping",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Delivery/freight of replacement property is expressly not a repair cost under 7.1.8(b).",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.03,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 20.0,
+        "net_unit_price_p50": 50.0,
+        "net_unit_price_p90": 100.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Installation",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Fitting, mounting and commissioning of replacement property is excluded under 7.1.8(c), regardless of who invoices it.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.03,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 80.0,
+        "net_unit_price_p50": 150.0,
+        "net_unit_price_p90": 300.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "TV set",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "TV confirmed surge-damaged by diagnostic report and visible in photo; covered under 2.3.3 with no reduction due to the endorsement. Price limited to an equivalent standard-grade large-format TV (7.1.9), within the sub-limit.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.93,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 500.0,
+        "net_unit_price_p50": 1000.0,
+        "net_unit_price_p90": 1900.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Property and liability damage to electronics",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Charge under an arrangement combining property and liability exposures with no separately priced physical-damage element; excluded under 3.1.4, 3.1.5 and 7.1.8(f). The damaged appliances are already replaced on the retail invoice.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 250.0,
+        "net_unit_price_p90": 600.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Property and liability damage to electronics - service order",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Charge for placing a service order under a service/liability arrangement; expressly not indemnifiable under 3.1.5 and 7.1.8(f).",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.03,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 40.0,
+        "net_unit_price_p50": 90.0,
+        "net_unit_price_p90": 200.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Vehicle costs",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Attendance/vehicle charge on an invoice whose billed work is not indemnifiable; under 7.1.8(d) it is therefore not indemnifiable either.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.04,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 25.0,
+        "net_unit_price_p50": 50.0,
+        "net_unit_price_p90": 95.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 778.18,
+       "b": 1190.0,
+       "t_median": 952.0,
+       "q": 0.93,
+       "sigma": 0.593
+      },
+      {
+       "index": 1,
+       "a": 49.91,
+       "b": 0.0,
+       "t_median": 59.5,
+       "q": 0.03,
+       "sigma": 0.628
+      },
+      {
+       "index": 2,
+       "a": 138.64,
+       "b": 0.0,
+       "t_median": 178.5,
+       "q": 0.03,
+       "sigma": 0.516
+      },
+      {
+       "index": 3,
+       "a": 926.76,
+       "b": 1487.5,
+       "t_median": 1190.0,
+       "q": 0.93,
+       "sigma": 0.521
+      },
+      {
+       "index": 4,
+       "a": 266.02,
+       "b": 0.0,
+       "t_median": 297.5,
+       "q": 0.05,
+       "sigma": 0.699
+      },
+      {
+       "index": 5,
+       "a": 89.83,
+       "b": 0.0,
+       "t_median": 107.1,
+       "q": 0.03,
+       "sigma": 0.628
+      },
+      {
+       "index": 6,
+       "a": 46.34,
+       "b": 0.0,
+       "t_median": 59.5,
+       "q": 0.04,
+       "sigma": 0.521
+      }
+     ]
+    },
+    {
+     "member": "gpt-6.1-terra/low",
+     "weight": 1.5,
+     "meta": {
+      "model": "gpt-6.1-terra",
+      "effort": "low",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 16.62,
+      "usage": {
+       "input_tokens": 11585,
+       "input_tokens_details": {
+        "cache_write_tokens": 10225,
+        "cached_tokens": 1357,
+        "cache_write_tokens_details": {
+         "ttl_12h_tokens": 0,
+         "ttl_30m_tokens": 10225
+        }
+       },
+       "output_tokens": 1258,
+       "output_tokens_details": {
+        "reasoning_tokens": 0
+       },
+       "total_tokens": 12843
+      },
+      "response_id": "resp_07d7cbff3b3a9aea006b01aed0836487d2b4a9cdce815ea2d0"
+     },
+     "estimate": {
+      "damage_summary": "A lightning-related power surge damaged a speaker system and a TV connected to the building wiring. Diagnostic reports confirm surge failure of both devices.",
+      "policy_notes": "The surge-protection endorsement waives the usual halving. Appliance indemnity is subject to a shared EUR 5,000 gross event limit and no improvement on the pre-loss specification; replacement delivery and installation are excluded. The building-services arrangement and its order charge are excluded, as is attendance on an invoice containing no indemnifiable work. Any scheduled event deductible is unknown; VAT is payable only if incurred and not recoverable.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Speaker system",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The reported speaker system has confirmed surge damage. One equivalent system is plausible; its age and specification are unknown, so the value range is wide and reflects the assumed pre-loss value.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.98,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 350.0,
+        "net_unit_price_p90": 1000.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Shipping",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Delivery of replacement property is expressly excluded, although it relates to the replacements. One shipment is plausible; the price range assumes an otherwise valid delivery charge.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.01,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 15.0,
+        "net_unit_price_p50": 35.0,
+        "net_unit_price_p90": 90.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Installation",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Installation and commissioning of replacement property are expressly excluded, though related to the loss. One installation charge is plausible if assessed as valid.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.01,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 80.0,
+        "net_unit_price_p50": 160.0,
+        "net_unit_price_p90": 350.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "TV set",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The TV has confirmed surge damage and one equivalent replacement is plausible. Its age and model are unknown, so the assumed pre-loss value has a wide range.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.98,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 300.0,
+        "net_unit_price_p90": 850.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Property and liability damage to electronics",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The policy identifies this as a combined property and liability arrangement, not separately priced physical repair; it is excluded in full. One arrangement is plausible, with considerable uncertainty in its hypothetical price.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.01,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 50.0,
+        "net_unit_price_p50": 200.0,
+        "net_unit_price_p90": 600.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Property and liability damage to electronics - service order",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The charge for placing an order under the excluded arrangement is itself excluded. One order charge is plausible, with a broad hypothetical price range.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.01,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 20.0,
+        "net_unit_price_p50": 60.0,
+        "net_unit_price_p90": 150.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Vehicle costs",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The building-services invoice contains no indemnifiable work, so its attendance charge is excluded despite the reported technician visit. One attendance charge is plausible if otherwise valid.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.01,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 25.0,
+        "net_unit_price_p50": 50.0,
+        "net_unit_price_p90": 90.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 476.58,
+       "b": 520.63,
+       "t_median": 416.5,
+       "q": 0.98,
+       "sigma": 0.898
+      },
+      {
+       "index": 1,
+       "a": 37.24,
+       "b": 0.0,
+       "t_median": 41.65,
+       "q": 0.01,
+       "sigma": 0.699
+      },
+      {
+       "index": 2,
+       "a": 153.86,
+       "b": 0.0,
+       "t_median": 190.4,
+       "q": 0.01,
+       "sigma": 0.576
+      },
+      {
+       "index": 3,
+       "a": 375.34,
+       "b": 446.25,
+       "t_median": 357.0,
+       "q": 0.98,
+       "sigma": 0.835
+      },
+      {
+       "index": 4,
+       "a": 306.23,
+       "b": 0.0,
+       "t_median": 238.0,
+       "q": 0.01,
+       "sigma": 0.969
+      },
+      {
+       "index": 5,
+       "a": 70.29,
+       "b": 0.0,
+       "t_median": 71.4,
+       "q": 0.01,
+       "sigma": 0.786
+      },
+      {
+       "index": 6,
+       "a": 45.88,
+       "b": 0.0,
+       "t_median": 59.5,
+       "q": 0.01,
+       "sigma": 0.5
+      }
+     ]
+    },
+    {
+     "member": "claude-opus-5-5/medium",
+     "weight": 3.75,
+     "meta": {
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 17.96,
+      "usage": {
+       "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+       },
+       "cache_creation_input_tokens": 0,
+       "cache_read_input_tokens": 0,
+       "inference_geo": "global",
+       "input_tokens": 18071,
+       "output_tokens": 2181,
+       "output_tokens_details": {
+        "thinking_tokens": 472
+       },
+       "server_tool_use": null,
+       "service_tier": "standard",
+       "speed": "standard"
+      },
+      "response_id": "msg_011ChGFkTdb4ARJ77CYQir6Q"
+     },
+     "estimate": {
+      "damage_summary": "A lightning-induced overvoltage during a thunderstorm damaged a speaker system and a TV set in the insured dwelling; diagnostic reports confirm surge failure on both. Two invoices were rendered: replacement equipment from a retailer, and an arrangement/service-order charge from a building-services firm.",
+      "policy_notes": "Overvoltage from lightning is covered under 2.3.3 for appliances, subject to an aggregate appliance sub-limit of EUR 5,000 incl. VAT per event. The no-improvement rule (7.1.9) applies, and the policy pays replacement in new condition of equivalent standard grade (7.1.1c). The surge-protection endorsement waives the 50% reduction. Excluded: shipping/delivery (7.1.8b); installation/commissioning (7.1.8c); service, maintenance or liability arrangements and the placing of orders under them (3.1.4, 3.1.5, 7.1.8f). The attendance charge on a non-indemnifiable invoice is also excluded (7.1.8d). Any deductible is not stated in the schedule.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Speaker system",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Damaged speaker system, confirmed by a diagnostic report, so it is covered under 2.3.3. Indemnity is limited to a standard-grade equivalent of the pre-loss system; the combined total stays within the EUR 5,000 sub-limit.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.92,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 450.0,
+        "net_unit_price_p50": 900.0,
+        "net_unit_price_p90": 1600.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Shipping",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Delivery of replacement property is expressly not a repair cost (7.1.8b).",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.04,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 20.0,
+        "net_unit_price_p50": 40.0,
+        "net_unit_price_p90": 80.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Installation",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Fitting and commissioning of replacement property is excluded (7.1.8c).",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.04,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 60.0,
+        "net_unit_price_p50": 120.0,
+        "net_unit_price_p90": 220.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "TV set",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "TV damaged by the surge, confirmed by a diagnostic report, so it is covered. Replacement is at an equivalent standard grade with no upgrade (7.1.9), within the sub-limit.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.92,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 500.0,
+        "net_unit_price_p50": 1000.0,
+        "net_unit_price_p90": 1800.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Property and liability damage to electronics",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Charge under a property/liability arrangement for electronics, with no separately priced physical-damage element. It is excluded entirely under 3.1.4, 3.1.5 and 7.1.8f.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 60.0,
+        "net_unit_price_p50": 150.0,
+        "net_unit_price_p90": 300.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Property and liability damage to electronics - service order",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Charge for placing an order under a service/liability arrangement, which is expressly excluded (3.1.5, 7.1.8f).",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.03,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 25.0,
+        "net_unit_price_p50": 60.0,
+        "net_unit_price_p90": 120.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Vehicle costs",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Attendance charge on an invoice whose billed work is not indemnifiable, so it is excluded (7.1.8d).",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.06,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 25.0,
+        "net_unit_price_p50": 45.0,
+        "net_unit_price_p90": 80.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 823.9,
+       "b": 1338.75,
+       "t_median": 1071.0,
+       "q": 0.92,
+       "sigma": 0.495
+      },
+      {
+       "index": 1,
+       "a": 37.52,
+       "b": 0.0,
+       "t_median": 47.6,
+       "q": 0.04,
+       "sigma": 0.541
+      },
+      {
+       "index": 2,
+       "a": 110.83,
+       "b": 0.0,
+       "t_median": 142.8,
+       "q": 0.04,
+       "sigma": 0.507
+      },
+      {
+       "index": 3,
+       "a": 917.67,
+       "b": 1487.5,
+       "t_median": 1190.0,
+       "q": 0.92,
+       "sigma": 0.5
+      },
+      {
+       "index": 4,
+       "a": 149.72,
+       "b": 0.0,
+       "t_median": 178.5,
+       "q": 0.05,
+       "sigma": 0.628
+      },
+      {
+       "index": 5,
+       "a": 59.06,
+       "b": 0.0,
+       "t_median": 71.4,
+       "q": 0.03,
+       "sigma": 0.612
+      },
+      {
+       "index": 6,
+       "a": 40.6,
+       "b": 0.0,
+       "t_median": 53.55,
+       "q": 0.06,
+       "sigma": 0.454
+      }
+     ]
+    },
+    {
+     "member": "gpt-6.2-sol/low",
+     "weight": 2.0,
+     "meta": {
+      "model": "gpt-6.2-sol",
+      "effort": "low",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 18.55,
+      "usage": {
+       "input_tokens": 11661,
+       "input_tokens_details": {
+        "cache_write_tokens": 11160,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+         "ttl_12h_tokens": 0,
+         "ttl_30m_tokens": 11160
+        }
+       },
+       "output_tokens": 1440,
+       "output_tokens_details": {
+        "reasoning_tokens": 0
+       },
+       "total_tokens": 13101
+      },
+      "response_id": "resp_08925683bf28bb36006b01aed078cc87d2a062bcaf4af91e4e"
+     },
+     "estimate": {
+      "damage_summary": "A thunderstorm-related surge travelled through the dwelling’s electrical installation and physically damaged the connected speaker system and TV. Diagnostic reports confirm surge failure in both devices; no wiring repair is itemised.",
+      "policy_notes": "The surge-protection endorsement waives the 50% reduction. The €5,000 gross appliance sub-limit applies once across all appliances and invoices for the event; it does not bind at the estimated prices. Clauses 7.1.1, 7.1.6 and 7.1.9–7.1.10 limit replacement to the damaged equipment at equivalent pre-loss specification, without upgrades or replacement of intact system components. The appliance estimates assume equivalent reinstatement is secured within three years under 7.6; otherwise only current-value loss is payable. VAT is reimbursable only if incurred and not recoverable. No deductible amount was supplied; any scheduled deductible applies once to the event and is not reflected in the line fractions. Prices on excluded lines are hypothetical benchmarks, not payable amounts.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Speaker system",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The diagnostic report supports one surge-damaged speaker system, but the line does not establish that every separately replaceable component failed. The net range reflects the unknown specification and extent of damage, allowing equivalent replacement only for the affected unit or components.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.98,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 220.0,
+        "net_unit_price_p50": 550.0,
+        "net_unit_price_p90": 1200.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Shipping",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "One shipment is plausible for delivering the replacement electronics, but clause 7.1.8(b) expressly excludes delivery. The benchmark ranges from ordinary parcel carriage to bulky-TV delivery.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 15.0,
+        "net_unit_price_p50": 45.0,
+        "net_unit_price_p90": 100.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Installation",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "One setup visit is plausible for the replacement equipment, but clause 7.1.8(c) excludes installation and commissioning even if the original equipment was installed. The range reflects basic connection through mounting and setup.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 75.0,
+        "net_unit_price_p50": 160.0,
+        "net_unit_price_p90": 300.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "TV set",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The diagnostic report supports one surge-damaged TV. The estimate is for an equivalent replacement, with a wide range because the pre-loss model, screen size and specification are not reliably established.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.99,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 300.0,
+        "net_unit_price_p50": 650.0,
+        "net_unit_price_p90": 1300.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Property and liability damage to electronics",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The line bundles property and liability exposures without separately pricing physical repair, so clauses 3.1.4 and 7.1.8(f) exclude it in full. It is not shown to make good either damaged device; the hypothetical benchmark is for one electronics damage assessment and targeted intervention.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 250.0,
+        "net_unit_price_p90": 600.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Property and liability damage to electronics - service order",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "This is an order-placement charge under the excluded arrangement, not work that repairs the surge damage, and is excluded by clauses 3.1.5 and 7.1.8(f). The benchmark is for processing one order if separately chargeable.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 15.0,
+        "net_unit_price_p50": 35.0,
+        "net_unit_price_p90": 80.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Vehicle costs",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "One post-loss attendance is plausible, but clause 7.1.8(d) requires indemnifiable work on the same invoice, and no such work is itemised here. The benchmark is for one local vehicle call-out.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 25.0,
+        "net_unit_price_p50": 50.0,
+        "net_unit_price_p90": 90.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 565.81,
+       "b": 818.13,
+       "t_median": 654.5,
+       "q": 0.98,
+       "sigma": 0.662
+      },
+      {
+       "index": 1,
+       "a": 50.1,
+       "b": 0.0,
+       "t_median": 53.55,
+       "q": 0.0,
+       "sigma": 0.74
+      },
+      {
+       "index": 2,
+       "a": 150.08,
+       "b": 0.0,
+       "t_median": 190.4,
+       "q": 0.0,
+       "sigma": 0.541
+      },
+      {
+       "index": 3,
+       "a": 622.37,
+       "b": 966.87,
+       "t_median": 773.5,
+       "q": 0.99,
+       "sigma": 0.572
+      },
+      {
+       "index": 4,
+       "a": 266.02,
+       "b": 0.0,
+       "t_median": 297.5,
+       "q": 0.0,
+       "sigma": 0.699
+      },
+      {
+       "index": 5,
+       "a": 35.61,
+       "b": 0.0,
+       "t_median": 41.65,
+       "q": 0.0,
+       "sigma": 0.653
+      },
+      {
+       "index": 6,
+       "a": 45.88,
+       "b": 0.0,
+       "t_median": 59.5,
+       "q": 0.0,
+       "sigma": 0.5
+      }
+     ]
+    },
+    {
+     "member": "gpt-6.2-sol/medium",
+     "weight": 3.0,
+     "meta": {
+      "model": "gpt-6.2-sol",
+      "effort": "medium",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 19.52,
+      "usage": {
+       "input_tokens": 11661,
+       "input_tokens_details": {
+        "cache_write_tokens": 11160,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+         "ttl_12h_tokens": 0,
+         "ttl_30m_tokens": 11160
+        }
+       },
+       "output_tokens": 1530,
+       "output_tokens_details": {
+        "reasoning_tokens": 92
+       },
+       "total_tokens": 13191
+      },
+      "response_id": "resp_0267cfcde328467b006b01aed0849c87d29cf6517eb94ad298"
+     },
+     "estimate": {
+      "damage_summary": "A thunderstorm-related surge through the dwelling’s wiring damaged a plugged-in TV and speaker system. Diagnostic reports confirmed surge failure in both devices; a technician also checked the wiring for safety.",
+      "policy_notes": "The reported endorsement waives the surge-protection requirement, so the 50% reduction does not apply. The EUR 5,000 VAT-inclusive appliance cap applies once across the entire event and is not reached by the supported lines at the estimated prices; no deductible amount is shown. Appliance prices reflect like-for-like replacement at the pre-loss specification under §§7.1.1 and 7.1.9, not an upgrade. Any amount above current value is payable only once qualifying replacement is secured under §7.6. VAT is assumed at 19% and reimbursable only if actually incurred and not recoverable. The extracted invoices show no line prices, so the estimates are ceilings, not confirmed settlement amounts.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Speaker system",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The diagnostic report supports surge damage to the speaker system. One equivalent consumer system is a plausible replacement if it is an integral unit; if its components are independently replaceable, cover is limited to those shown to be damaged, and the unknown model and component scope widen the price range.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.96,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 220.0,
+        "net_unit_price_p50": 480.0,
+        "net_unit_price_p90": 1050.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Shipping",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "One shipment is plausibly attributable to the replacement order, and the estimate allows for bulky electronics delivery. Section 7.1.8(b) expressly excludes delivery of replacement property.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 20.0,
+        "net_unit_price_p50": 50.0,
+        "net_unit_price_p90": 100.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Installation",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "One installation visit is plausible for mounting, connecting and setting up the replacement electronics. That work is expressly excluded by §7.1.8(c), even though the original TV was wall-mounted.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 85.0,
+        "net_unit_price_p50": 165.0,
+        "net_unit_price_p90": 300.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "TV set",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The diagnostic report supports one surge-damaged TV. The range reflects the cost of an equivalent large-screen consumer TV, with uncertainty about the original size, panel type and specification rather than an allowance for an upgrade.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.98,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 350.0,
+        "net_unit_price_p50": 650.0,
+        "net_unit_price_p90": 1200.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Property and liability damage to electronics",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The line bills a combined property and liability arrangement, not an identified repair, and no physical-damage element is separately itemised and priced as required by §3.1.4. One lump sum is plausible, but the conditional price range is broad because no scope is given.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 300.0,
+        "net_unit_price_p90": 800.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Property and liability damage to electronics - service order",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "This is a charge for placing an order under the excluded arrangement, not for work that makes good the surge damage, and is excluded under §§3.1.5 and 7.1.8(f). One order-processing fee is plausible for pricing purposes.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 25.0,
+        "net_unit_price_p50": 60.0,
+        "net_unit_price_p90": 130.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Vehicle costs",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "One local attendance charge is plausible and may relate to the reported visit, but this invoice contains no indemnifiable work. Section 7.1.8(d) requires covered work on the same invoice; the covered equipment on the retailer’s invoice does not qualify this charge.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.0,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 25.0,
+        "net_unit_price_p50": 50.0,
+        "net_unit_price_p90": 90.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 472.82,
+       "b": 714.0,
+       "t_median": 571.2,
+       "q": 0.96,
+       "sigma": 0.61
+      },
+      {
+       "index": 1,
+       "a": 49.91,
+       "b": 0.0,
+       "t_median": 59.5,
+       "q": 0.0,
+       "sigma": 0.628
+      },
+      {
+       "index": 2,
+       "a": 151.28,
+       "b": 0.0,
+       "t_median": 196.35,
+       "q": 0.0,
+       "sigma": 0.492
+      },
+      {
+       "index": 3,
+       "a": 590.94,
+       "b": 966.87,
+       "t_median": 773.5,
+       "q": 0.98,
+       "sigma": 0.481
+      },
+      {
+       "index": 4,
+       "a": 362.84,
+       "b": 0.0,
+       "t_median": 357.0,
+       "q": 0.0,
+       "sigma": 0.811
+      },
+      {
+       "index": 5,
+       "a": 60.79,
+       "b": 0.0,
+       "t_median": 71.4,
+       "q": 0.0,
+       "sigma": 0.643
+      },
+      {
+       "index": 6,
+       "a": 45.88,
+       "b": 0.0,
+       "t_median": 59.5,
+       "q": 0.0,
+       "sigma": 0.5
+      }
+     ]
+    },
+    {
+     "member": "gpt-6.1-terra/medium",
+     "weight": 2.25,
+     "meta": {
+      "model": "gpt-6.1-terra",
+      "effort": "medium",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 20.93,
+      "usage": {
+       "input_tokens": 11585,
+       "input_tokens_details": {
+        "cache_write_tokens": 10225,
+        "cached_tokens": 1357,
+        "cache_write_tokens_details": {
+         "ttl_12h_tokens": 0,
+         "ttl_30m_tokens": 10225
+        }
+       },
+       "output_tokens": 1553,
+       "output_tokens_details": {
+        "reasoning_tokens": 339
+       },
+       "total_tokens": 13138
+      },
+      "response_id": "resp_02c1680b140af430006b01aed07f0887d2a63c4d3398277372"
+     },
+     "estimate": {
+      "damage_summary": "A lightning-related power surge damaged a speaker system and a TV connected to the building’s wiring. Diagnostic reports confirmed surge failure for both devices.",
+      "policy_notes": "The surge-protection endorsement waives the usual reduction. Equivalent replacement in new condition is covered, subject to the reinstatement conditions and a shared EUR 5,000 gross appliance limit; upgrades are not covered. Delivery and installation are excluded. The building-services invoice concerns an excluded property-and-liability arrangement, so its associated vehicle charge is also excluded. No deductible amount is supplied; the shared appliance limit cannot be allocated without prices or a settlement total.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Speaker system",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The speaker system was confirmed damaged by the surge. The price range reflects an equivalent new system, with wide uncertainty about its specification.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.99,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 300.0,
+        "net_unit_price_p50": 850.0,
+        "net_unit_price_p90": 2000.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Shipping",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Delivery of replacement equipment is expressly excluded, although one shipment is plausible.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.001,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 20.0,
+        "net_unit_price_p50": 50.0,
+        "net_unit_price_p90": 120.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 2,
+        "invoice_text": "Installation",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "Installation and commissioning of replacement equipment are expressly excluded. One installation charge is plausible for the supplied equipment.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.001,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 80.0,
+        "net_unit_price_p50": 180.0,
+        "net_unit_price_p90": 350.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 3,
+        "invoice_text": "TV set",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The TV was confirmed damaged by the surge. The range reflects an equivalent new TV, with uncertainty about size and specification.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.99,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 350.0,
+        "net_unit_price_p50": 800.0,
+        "net_unit_price_p90": 1800.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 4,
+        "invoice_text": "Property and liability damage to electronics",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The policy identifies this as an arrangement covering property and liability exposures, not separately priced physical repair work; the combined charge is excluded. Its hypothetical price is highly uncertain.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.001,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 100.0,
+        "net_unit_price_p50": 350.0,
+        "net_unit_price_p90": 1000.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 5,
+        "invoice_text": "Property and liability damage to electronics - service order",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "The order charge relates to the excluded arrangement rather than separately priced repair work. One order charge is plausible if considered in isolation.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.001,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 25.0,
+        "net_unit_price_p50": 75.0,
+        "net_unit_price_p90": 180.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 6,
+        "invoice_text": "Vehicle costs",
+        "unit": "pcs",
+        "quantity_invoiced": 1.0,
+        "rationale": "A visit is plausible, but the same invoice contains no indemnifiable work, so its attendance charge is excluded.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.001,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 25.0,
+        "net_unit_price_p50": 55.0,
+        "net_unit_price_p90": 110.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 946.31,
+       "b": 1264.38,
+       "t_median": 1011.5,
+       "q": 0.99,
+       "sigma": 0.74
+      },
+      {
+       "index": 1,
+       "a": 53.2,
+       "b": 0.0,
+       "t_median": 59.5,
+       "q": 0.001,
+       "sigma": 0.699
+      },
+      {
+       "index": 2,
+       "a": 173.1,
+       "b": 0.0,
+       "t_median": 214.2,
+       "q": 0.001,
+       "sigma": 0.576
+      },
+      {
+       "index": 3,
+       "a": 806.29,
+       "b": 1190.0,
+       "t_median": 952.0,
+       "q": 0.99,
+       "sigma": 0.639
+      },
+      {
+       "index": 4,
+       "a": 476.58,
+       "b": 0.0,
+       "t_median": 416.5,
+       "q": 0.001,
+       "sigma": 0.898
+      },
+      {
+       "index": 5,
+       "a": 86.54,
+       "b": 0.0,
+       "t_median": 89.25,
+       "q": 0.001,
+       "sigma": 0.77
+      },
+      {
+       "index": 6,
+       "a": 52.85,
+       "b": 0.0,
+       "t_median": 65.45,
+       "q": 0.001,
+       "sigma": 0.578
+      }
+     ]
+    }
+   ],
+   "failures": [],
+   "timed_out": []
   }
  }
 }
