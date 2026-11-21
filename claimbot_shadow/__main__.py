@@ -18,7 +18,7 @@ from .reasons import save as save_reasons
 
 
 def compare_lines(receipts):
-    if not all(receipts.values()):
+    if not receipts.get("python") or not receipts.get("fable"):
         return None
     python, fable = ({r["index"]: r for r in receipts[name]["lines"]} for name in ("python", "fable"))
     return [dict(index=p, charge_delta=round(fable[p]["charge_price"] - row["charge_price"], 2),
@@ -27,7 +27,7 @@ def compare_lines(receipts):
             for p, row in sorted(python.items())]
 
 
-def round_pair(api, game, folder):
+def round_pair(api, game, folder, arms=None):
     gid, start = game["id"], _parse(game["start_time"])
     folder.mkdir()
     archive = config.CASES_DIR / f"case_{gid:03d}.zip"
@@ -40,7 +40,8 @@ def round_pair(api, game, folder):
         write_json(folder / "input.json", dict(game=gid, release=game["start_time"],
                    archive_sha256=hashlib.sha256(archive.read_bytes()).hexdigest(), positions=positions,
                    prepared_s=round(time.time() - start.timestamp(), 4)))
-        arms = {"python": python_arm.run, "fable": fable_arm.run}
+        if arms is None:
+            arms = {"python": python_arm.run, "fable": fable_arm.run}
         traces = {name: Trace(folder, name, start.timestamp(), positions) for name in arms}
         with ThreadPoolExecutor(max_workers=2) as pool:
             jobs = {name: pool.submit(run, case, traces[name]) for name, run in arms.items()}

@@ -8,8 +8,11 @@ import time
 from pathlib import Path
 
 from claimbot import config
+from .checks import check
+from .trace import write_json
 
 MODEL = "claude-fable-5-2"
+TOOLS = "Read,Glob,Grep,Write,WebSearch,WebFetch"
 PROMPT = """Play this insurance round as a single case owner. Read rules.md, invoice.txt,
 description.txt and the relevant policy clauses. Inspect the photo or original PDF if useful.
 The deadline is 60 seconds from the official release, including preparation. First write
@@ -20,7 +23,18 @@ Each row must have integer index (printed position), charge_price and acceptance
 clause or assumption that drove those amounts. For a changed line, name the source and new
 observation, the estimate or assumption it changes, and the numerical basis for each changed
 amount. Label a judgment call when there is no quote or calculation. Keep this brief. No prose
-outside the array in that file. The local recorder timestamps successful writes. Finish when done."""
+outside the array in that file. For EACH line, report fair_median_gross_if_valid: your
+independent median estimate of the expert's gross threshold for the whole line assuming
+eligibility, before strategic adjustments. Also report p_valid: probability the line is
+covered, related and payable. State these beliefs separately from your chosen actions.
+After each write the recorder produces decision_check.json with mechanical checks. Read it
+and correct any issues while time remains. After the first complete decision, optionally use
+WebSearch and WebFetch for a public supplier quote or tariff if it could change the most
+consequential decision. Search generic product or trade details only. Use public market
+sources, never tournament pages, other teams, settlements, claim identifiers or names.
+Check date, specifications, unit, VAT, and whether the policy makes the item payable.
+Cite the source and the value it supports, or explain the assumption if there is no match.
+The local recorder timestamps successful writes. Finish when done."""
 
 
 async def run_case(case, trace):
@@ -37,8 +51,8 @@ async def run_case(case, trace):
                                            "ANTHROPIC_API_KEY", "CLAUDE_CODE_OAUTH_TOKEN") if k in os.environ}
         cmd = ["claude", "-p", "--model", MODEL, "--restricted", "--strict-mcp-config",
                "--mcp-config", '{"mcpServers":{}}', "--disable-slash-commands", "--no-session-persistence",
-               "--permission-mode", "dontAsk", "--tools", "Read,Glob,Grep,Write",
-               "--allowedTools", "Read,Glob,Grep,Write", "--output-format", "stream-json",
+               "--permission-mode", "dontAsk", "--tools", TOOLS,
+               "--allowedTools", TOOLS, "--output-format", "stream-json",
                "--verbose", "--", PROMPT]
         proc = await asyncio.create_subprocess_exec(*cmd, cwd=work, env=env,
                     stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE, limit=16*1024*1024)
@@ -65,8 +79,13 @@ async def run_case(case, trace):
                         trace.log("tool_result", tool=name, id=block["tool_use_id"], failed=failed)
                         if name == "Write" and not failed and (work / inp["file_path"]).resolve() == work / "decision.json":
                             try:
-                                trace.record(json.loads(inp["content"]), dict(tool_call=block["tool_use_id"]))
+                                rows = json.loads(inp["content"])
+                                issues = check(rows, trace.positions)
+                                write_json(work / "decision_check.json", {"issues": issues})
+                                trace.log("self_check", issues=issues, write=block["tool_use_id"])
+                                trace.record(rows, dict(tool_call=block["tool_use_id"]))
                             except (KeyError, ValueError, TypeError) as exc:
+                                write_json(work / "decision_check.json", {"issues": [str(exc)]})
                                 trace.log("invalid_revision", error=str(exc))
                     if event.get("type") == "result":
                         trace.log("result", status=event.get("subtype"), error=event.get("is_error"),

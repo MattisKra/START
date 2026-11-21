@@ -5,6 +5,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
+from factor_replay import replay
 from rate_check_replay import Source, TEAM, compare, settled_field
 from claimbot_shadow.reasons import save as save_reasons
 from claimbot_shadow.trace import write_json
@@ -38,8 +39,18 @@ def score(folder):
     result = json.loads((folder / "result.json").read_text())
     game = result["game"]
     receipts = result["final"]
+    companion = folder.parent / "verified-fable" / str(game)
+    extra = None
+    if (companion / "result.json").exists():
+        for case_folder in (companion, folder):
+            if not (case_folder / "input.json").exists():
+                raise ValueError("Missing case digest for companion comparison")
+        same_input = [json.loads((d / "input.json").read_text())["archive_sha256"] for d in (folder, companion)]
+        if same_input[0] != same_input[1]:
+            raise ValueError("Companion and frozen arms received different archives")
+        extra = json.loads((companion / "result.json").read_text())["final"]["fable"]
     absent = [name for name in ("python", "fable") if not receipts.get(name)]
-    if absent:
+    if not receipts.get("python") or (absent and not extra):
         return dict(status="missing_on_time_receipt", missing=absent)
     src = Source()
     matrix = src.get("matrix", page=1, game_limit=game)
@@ -49,8 +60,17 @@ def score(folder):
     team = next(t for t in matrix["items"] if t["team_name"] == TEAM)
     if team["cells"][col] is None:
         raise ValueError(f"Game {game} awaiting settlements")
-    arms = {name: prices(receipt) for name, receipt in receipts.items()}
+    arms = {name: prices(receipt) for name, receipt in receipts.items() if receipt}
     field = settled_field(src, matrix, game, arms["python"])
+    events = map(json.loads, (folder / "python.jsonl").read_text().splitlines())
+    config = next(e for e in events if e["event"] == "configured")
+    factors = {}
+    if companion.exists():
+        factors["verified_fable"] = (replay(field, arms["python"], extra, config) if extra
+                                     else {"status": "no_on_time_receipt_available"})
+    if absent:
+        return dict(status="missing_on_time_receipt", missing=absent, factor_replay=factors)
+    factors["primary_fable"] = replay(field, arms["python"], receipts["fable"], config)
     by_line = []
     for position, state in field.items():
         lo, hi, il, ih = compare({position: state}, arms["python"], arms["fable"])
@@ -58,7 +78,7 @@ def score(folder):
                             issuer_change=[il, ih], net_change=[lo + il, hi + ih]))
     totals = {k: [round(sum(row[k][i] for row in by_line), 2) for i in (0, 1)]
               for k in ("reviewer_saving", "issuer_change", "net_change")}
-    return dict(status="settled", game=game, official_team_net=team["cells"][col],
+    return dict(status="settled", game=game, factor_replay=factors, official_team_net=team["cells"][col],
                 fable_minus_python_eur=totals, lines=by_line,
                 successive_revision_eur={name: revision_scores(folder / f"{name}.jsonl", field)
                                          for name in arms})

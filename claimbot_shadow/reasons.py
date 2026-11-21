@@ -20,7 +20,7 @@ def collect(folder):
             kind = event["event"]
             if kind == "configured" and arm == "python":
                 audit["python_configuration"] = event
-            if kind == "tool" and event["tool"] in {"Read", "Grep", "Glob"}:
+            if kind == "tool" and event["tool"] in {"Read", "Grep", "Glob", "WebSearch", "WebFetch"}:
                 requests[event["id"]] = event
             if kind == "tool_result" and event["id"] in requests:
                 request = requests.pop(event["id"])
@@ -43,7 +43,9 @@ def collect(folder):
                 row = dict(elapsed_s=event["elapsed_s"], on_time=event["on_time"], change=change,
                            charge_price=line["charge_price"], acceptance_limit=line["acceptance_limit"])
                 if arm == "fable":
-                    row.update(write=trigger["tool_call"], stated_reason=line.get("evidence") or None)
+                    row.update(write=trigger["tool_call"], stated_reason=line.get("evidence") or None,
+                               fair_median_gross_if_valid=line.get("fair_median_gross_if_valid"),
+                               p_valid=line.get("p_valid"))
                 else:
                     estimate = line.get("arriving_reader") or {}
                     row.update(reader=trigger["member"], stated_reason=estimate.get("rationale") or None,
