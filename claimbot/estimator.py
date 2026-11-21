@@ -76,16 +76,17 @@ def case_text(case: Case) -> str:
 
 
 def build_input(case: Case, web: bool = False) -> list[dict]:
-    content = [{"type": "input_text", "text": case_text(case) + (WEB_HINT if web else "")}]
+    content = [{"type": "input_text", "text": (WEB_HINT if web else "") + case_text(case)}]
     content += [_image_part(p) for p in case.images]
     return [{"role": "user", "content": content}]
 
 
 WEB_HINT = (
-    "\n\nYou have a web search tool. Before answering, run one or two web searches "
-    "for current German market prices of the most expensive invoice items (parts, "
-    "materials or hourly labour rates), and use what you find to anchor the price "
-    "percentiles. Do not search for anything else. Keep it quick."
+    "MANDATORY FIRST STEP: you have a web_search tool and you MUST use it before "
+    "answering. Run one or two web searches for current German market prices of the "
+    "most expensive invoice items (parts, materials, appliances or hourly labour rates "
+    "of the relevant trade) and anchor your price percentiles on what you find. An "
+    "answer without a web search is invalid. Search only for prices, nothing else.\n\n"
 )
 
 
@@ -93,7 +94,7 @@ def estimate(case: Case, effort: str = config.EFFORT, model: str | None = None, 
     """Returns the parsed estimate and some metadata (latency, token usage)."""
     model = model or config.MODEL
     t0 = time.monotonic()
-    extra = {"tools": [{"type": "web_search"}]} if web else {}
+    extra = {"tools": [{"type": "web_search"}], "tool_choice": "required"} if web else {}
     resp = _client().responses.parse(
         model=model,
         instructions=INSTRUCTIONS,
@@ -109,6 +110,7 @@ def estimate(case: Case, effort: str = config.EFFORT, model: str | None = None, 
         "model": model,
         "effort": effort,
         "web": web,
+        "web_searches": sum(1 for o in (resp.output or []) if getattr(o, "type", "") == "web_search_call"),
         "latency_s": round(time.monotonic() - t0, 2),
         "usage": resp.usage.model_dump() if resp.usage else None,
         "response_id": resp.id,

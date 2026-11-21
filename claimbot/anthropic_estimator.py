@@ -37,14 +37,14 @@ WEB_TOOL = {"type": "web_search_20260209", "name": "web_search", "max_uses": 3}
 
 def estimate(case: Case, effort: str, model: str, web: bool = False) -> tuple[CaseEstimate, dict]:
     t0 = time.monotonic()
-    content = [_image_block(p) for p in case.images] + [{"type": "text", "text": case_text(case) + (WEB_HINT if web else "")}]
+    content = [_image_block(p) for p in case.images] + [{"type": "text", "text": (WEB_HINT if web else "") + case_text(case)}]
     messages = [{"role": "user", "content": content}]
     extra = {"tools": [WEB_TOOL]} if web else {}
     for _ in range(3):  # resume server-side tool loops that pause (pause_turn)
         resp = _get_client().messages.parse(
             model=model,
             max_tokens=16000,
-            system=INSTRUCTIONS,
+            system=INSTRUCTIONS + ("\n\nAlways run a web search for current prices before answering." if web else ""),
             messages=messages,
             output_config={"effort": effort},
             output_format=CaseEstimate,
@@ -63,6 +63,8 @@ def estimate(case: Case, effort: str, model: str, web: bool = False) -> tuple[Ca
         "model": model,
         "effort": effort,
         "web": web,
+        "web_searches": (resp.usage.server_tool_use.web_search_requests
+                         if resp.usage and resp.usage.server_tool_use else 0),
         "latency_s": round(time.monotonic() - t0, 2),
         "usage": resp.usage.model_dump() if resp.usage else None,
         "response_id": resp.id,
