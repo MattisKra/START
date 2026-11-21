@@ -1,0 +1,5 @@
+During a thunderstorm a power surge came through the mains and damaged several pieces of the home entertainment setup that were plugged in and running - the TV, the speaker system and the AV receiver. A technician attended, produced a surge-failure report and checked the building wiring.
+
+Nothing on that circuit was on a surge-protected strip. One of the mains plugs and its power lead were physically melted by the surge. The claim also lists the HDMI cables and remotes and the wall bracket.
+
+A couple of items need flagging. The DVD player had already been playing up for months before the storm and is showing its age, and the router is on the claim but no diagnostic report was produced for it. The technician's invoice carries a return visit, a distribution-board wiring check, an admin fee and a separate call-out line.
