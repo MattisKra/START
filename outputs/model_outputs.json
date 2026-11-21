@@ -6563,6 +6563,708 @@
    ],
    "failures": [],
    "timed_out": []
+  },
+  "7": {
+   "game": 7,
+   "played_at": "2026-11-21T15:20:13+01:00",
+   "submitted": [
+    {
+     "index": 0,
+     "a": 731.68,
+     "b": 1190.0,
+     "t_median": 952.0,
+     "q": 0.929,
+     "sigma": 0.487
+    },
+    {
+     "index": 1,
+     "a": 3504.12,
+     "b": 0.0,
+     "t_median": 4522.0,
+     "q": 0.06,
+     "sigma": 0.51
+    }
+   ],
+   "members": [
+    {
+     "member": "claude-opus-5-5/low",
+     "weight": 2.5,
+     "meta": {
+      "model": "claude-opus-5-5",
+      "effort": "low",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 7.84,
+      "usage": {
+       "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+       },
+       "cache_creation_input_tokens": 0,
+       "cache_read_input_tokens": 0,
+       "inference_geo": "global",
+       "input_tokens": 26178,
+       "output_tokens": 756,
+       "output_tokens_details": {
+        "thinking_tokens": 0
+       },
+       "server_tool_use": null,
+       "service_tier": "standard",
+       "speed": "standard"
+      },
+      "response_id": "msg_011ChGDiazp97Ggj6ZbftU5G"
+     },
+     "estimate": {
+      "damage_summary": "An internal water fitting burst in frost (located by thermal imaging, in the garage) and was repaired. Separately, the exterior render cracked and spalled on the front elevation due to outdoor frost acting from without.",
+      "policy_notes": "Frost fracture of internal fittings is covered under escape of water (2.4.4, 7.1.9), and leak location is covered up to EUR 2,500 (2.4.6, 5.2.2). External frost damage requires the optional peril 2.1(d). The schedule does not show it as agreed, and the description attributes the facade damage to outdoor cold, not escaped water. Under 3.5 and 7.1.13 the combined facade line therefore falls entirely.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Internal frost-burst fitting repair including thermal-imaging leak detection",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "Frost fracture of an internal fitting is covered under 2.4.4 and 7.1.9, and thermal-imaging leak location is covered under 2.4.6. A reasonable flat rate covers attendance, the fitting, labour and the leak location.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.92,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 350.0,
+        "net_unit_price_p50": 650.0,
+        "net_unit_price_p90": 1100.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Exterior facade frost damage repair (re-plaster and repaint)",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "The damage is frost acting on the external surface from without, which is an optional peril not shown as agreed, so 3.5 excludes it. There is no evidence that escaped water saturated the facade, which is a different elevation from the garage. If the line were valid, a sizeable render patch plus repaint with scaffolding would cost several thousand euros.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 2000.0,
+        "net_unit_price_p50": 3800.0,
+        "net_unit_price_p90": 6500.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 583.74,
+       "b": 966.87,
+       "t_median": 773.5,
+       "q": 0.92,
+       "sigma": 0.447
+      },
+      {
+       "index": 1,
+       "a": 3431.65,
+       "b": 0.0,
+       "t_median": 4522.0,
+       "q": 0.05,
+       "sigma": 0.46
+      }
+     ]
+    },
+    {
+     "member": "gpt-6.2-sol/low",
+     "weight": 2.0,
+     "meta": {
+      "model": "gpt-6.2-sol",
+      "effort": "low",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 8.89,
+      "usage": {
+       "input_tokens": 17434,
+       "input_tokens_details": {
+        "cache_write_tokens": 16933,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+         "ttl_12h_tokens": 0,
+         "ttl_30m_tokens": 16933
+        }
+       },
+       "output_tokens": 595,
+       "output_tokens_details": {
+        "reasoning_tokens": 0
+       },
+       "total_tokens": 18029
+      },
+      "response_id": "resp_0ec1cc684cdbae94006b01a890917087d292f4e13048d17e26"
+     },
+     "estimate": {
+      "damage_summary": "During a cold snap, an internal water fitting burst and was repaired after the leak was located by thermal imaging. Separately, outdoor frost caused facade plaster to crack and fall away; no evidence links the facade damage to water escaping from the internal fitting.",
+      "policy_notes": "The schedule is missing. The plumbing estimate assumes escape-of-water cover was agreed; that cover includes internal frost fractures and necessary leak location, with a €2,500 gross cap on the leak-location portion per event. External frost damage requires the separate optional peril to be expressly agreed, and no such agreement is evidenced. No deductible is assumed; any scheduled deductible applies once per insured event. VAT is reimbursable only if actually incurred and not recoverable.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Internal frost-burst fitting repair including thermal-imaging leak detection",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "The internal frost fracture and thermal-imaging leak location qualify under §§ 2.4.4 and 2.4.6 if escape-of-water cover was agreed. One lump sum is reasonable for the diagnostic work, like-for-like fitting renewal, labour and one attendance; the estimated diagnostic portion is below the gross cap.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.95,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 350.0,
+        "net_unit_price_p50": 650.0,
+        "net_unit_price_p90": 1150.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Exterior facade frost damage repair (re-plaster and repaint)",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "Replastering and repainting address the reported spalling, but the damage is attributed to outdoor frost, not escaped water, so the combined line is not payable without the optional cover (§§ 3.5 and 7.1.13). If covered, one lump sum is plausible for like-for-like repair of the damaged area only; the range reflects uncertainty over the area and access needs.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 1200.0,
+        "net_unit_price_p50": 2500.0,
+        "net_unit_price_p90": 4800.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 588.22,
+       "b": 966.87,
+       "t_median": 773.5,
+       "q": 0.95,
+       "sigma": 0.464
+      },
+      {
+       "index": 1,
+       "a": 2344.95,
+       "b": 0.0,
+       "t_median": 2975.0,
+       "q": 0.05,
+       "sigma": 0.541
+      }
+     ]
+    },
+    {
+     "member": "claude-fable-5-2/medium",
+     "weight": 4.5,
+     "meta": {
+      "model": "claude-fable-5-2",
+      "effort": "medium",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 8.07,
+      "usage": {
+       "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+       },
+       "cache_creation_input_tokens": 0,
+       "cache_read_input_tokens": 0,
+       "inference_geo": "global",
+       "input_tokens": 26178,
+       "output_tokens": 749,
+       "output_tokens_details": {
+        "thinking_tokens": 0
+       },
+       "server_tool_use": null,
+       "service_tier": "standard",
+       "speed": "standard"
+      },
+      "response_id": "msg_011ChGDiaxLM4jFBtWH4F9LT"
+     },
+     "estimate": {
+      "damage_summary": "An internal water fitting burst from frost and was repaired after thermal-imaging leak location. Separately, exterior render cracked and fell off the facade due to outdoor frost acting from without.",
+      "policy_notes": "Frost fracture of internal fittings is covered (2.4.4, 7.1.9), as is leak location (2.4.6, cap EUR 2,500 gross). Frost action on external surfaces is an optional peril (2.1(d)); the schedule does not show it as agreed and the description attributes the facade damage to outdoor cold, not escaped water, so 3.5 and 3.1.5 exclude it, including lump sums (7.1.12, 7.1.13). Deductible unknown.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Internal frost-burst fitting repair including thermal-imaging leak detection",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "Frost fracture of an internal fitting is covered under 2.4.4/7.1.9 and the thermal-imaging leak location under 2.4.6; the lump sum prices covered work. A reasonable price covers attendance, thermography, fitting replacement and a few hours of labour.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.93,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 450.0,
+        "net_unit_price_p50": 800.0,
+        "net_unit_price_p90": 1400.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Exterior facade frost damage repair (re-plaster and repaint)",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "The facade damage was caused by frost acting from without, not by escaped water; the optional peril 2.1(d) is not shown as agreed, so 3.5 excludes the whole lump sum. The price assumes about 15-25 m2 of render repair and repainting with scaffolding.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.07,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 2000.0,
+        "net_unit_price_p50": 3800.0,
+        "net_unit_price_p90": 7000.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 720.25,
+       "b": 1190.0,
+       "t_median": 952.0,
+       "q": 0.93,
+       "sigma": 0.443
+      },
+      {
+       "index": 1,
+       "a": 3473.0,
+       "b": 0.0,
+       "t_median": 4522.0,
+       "q": 0.07,
+       "sigma": 0.489
+      }
+     ]
+    },
+    {
+     "member": "gpt-6.2-sol/medium",
+     "weight": 3.0,
+     "meta": {
+      "model": "gpt-6.2-sol",
+      "effort": "medium",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 9.23,
+      "usage": {
+       "input_tokens": 17434,
+       "input_tokens_details": {
+        "cache_write_tokens": 16933,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+         "ttl_12h_tokens": 0,
+         "ttl_30m_tokens": 16933
+        }
+       },
+       "output_tokens": 649,
+       "output_tokens_details": {
+        "reasoning_tokens": 0
+       },
+       "total_tokens": 18083
+      },
+      "response_id": "resp_02dba376a03ebca9006b01a8908f5c87d2927303c52cc78fd3"
+     },
+     "estimate": {
+      "damage_summary": "During a cold snap, an internal water fitting froze and burst. The leak was located by thermal imaging and the fitting was repaired. Separately, exterior render cracked and fell from the front façade due to outdoor frost; there is no evidence that water from the internal leak reached the façade.",
+      "policy_notes": "No schedule was supplied. The estimate assumes escape-of-water cover is in force and treats optional external-surface frost cover as unconfirmed, not as agreed. Under §§2.4.3 and 3.5, façade damage from internally escaped water would be covered without the option, but the reported façade damage is attributed to outdoor frost. Leak location is capped at EUR 2,500 including VAT per insured event under §5.2.2; the cap does not bind at the estimated plumbing prices. No deductible amount or other reduction is evidenced. VAT is reimbursable only if incurred and not recoverable as input tax.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Internal frost-burst fitting repair including thermal-imaging leak detection",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "Assuming escape-of-water cover is in force, §§2.4.4, 2.4.6 and 7.1.9 cover the frost-fractured fitting and the thermal imaging used to locate the leak. One lump sum is plausible for one attendance, thermal imaging, labour and a like-for-like fitting with necessary connectors and seals.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.95,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 450.0,
+        "net_unit_price_p50": 750.0,
+        "net_unit_price_p90": 1200.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Exterior facade frost damage repair (re-plaster and repaint)",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "Re-plastering and repainting are plausible repairs for the documented façade damage, but the whole line is not payable on the evidence supplied because outdoor frost is the reported cause and the optional cover is not evidenced. If valid, one lump sum would allow for removal of failed render, substrate preparation, like-for-like re-rendering and painting of the affected area, and necessary access; the range reflects uncertain area and access costs.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.05,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 1800.0,
+        "net_unit_price_p50": 3200.0,
+        "net_unit_price_p90": 5300.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 664.72,
+       "b": 1115.62,
+       "t_median": 892.5,
+       "q": 0.95,
+       "sigma": 0.383
+      },
+      {
+       "index": 1,
+       "a": 2859.36,
+       "b": 0.0,
+       "t_median": 3808.0,
+       "q": 0.05,
+       "sigma": 0.421
+      }
+     ]
+    },
+    {
+     "member": "gpt-6.1-terra/low",
+     "weight": 1.5,
+     "meta": {
+      "model": "gpt-6.1-terra",
+      "effort": "low",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 9.34,
+      "usage": {
+       "input_tokens": 17358,
+       "input_tokens_details": {
+        "cache_write_tokens": 15998,
+        "cached_tokens": 1357,
+        "cache_write_tokens_details": {
+         "ttl_12h_tokens": 0,
+         "ttl_30m_tokens": 15998
+        }
+       },
+       "output_tokens": 576,
+       "output_tokens_details": {
+        "reasoning_tokens": 57
+       },
+       "total_tokens": 17934
+      },
+      "response_id": "resp_0539a4edadbcd8f5006b01a8908d0487d2895f90259f502ef4"
+     },
+     "estimate": {
+      "damage_summary": "An internal water fitting burst during freezing weather; the escape was located using thermal imaging and the fitting repaired. Separately, exterior frost caused facade plaster to crack and fall away.",
+      "policy_notes": "The schedule was not supplied, so agreement of escape-of-water cover and the optional external-surface frost peril cannot be confirmed. Facade damage from outdoor frost is covered only if that optional peril was agreed; it is separate from the internal escape. Leak-location costs are capped at €2,500 gross per event. Any deductible is unknown, and VAT is payable only to the extent actually incurred and not recoverable as input tax.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Internal frost-burst fitting repair including thermal-imaging leak detection",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "The fitting repair and thermal-imaging investigation are plausible covered work, provided escape-of-water cover was agreed. One combined charge is plausible, but an itemisation is needed to check the separate leak-location cap.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.9,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 650.0,
+        "net_unit_price_p50": 1200.0,
+        "net_unit_price_p90": 2200.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Exterior facade frost damage repair (re-plaster and repaint)",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "The photographed facade damage makes a repair plausible, but outdoor frost is a separate optional peril whose inclusion is not documented. The hypothetical price range allows for local plastering, painting and access; the damaged area and detailed scope remain uncertain.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.15,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 1800.0,
+        "net_unit_price_p50": 4000.0,
+        "net_unit_price_p90": 8000.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 1088.86,
+       "b": 1785.0,
+       "t_median": 1428.0,
+       "q": 0.9,
+       "sigma": 0.476
+      },
+      {
+       "index": 1,
+       "a": 3860.27,
+       "b": 0.0,
+       "t_median": 4760.0,
+       "q": 0.15,
+       "sigma": 0.582
+      }
+     ]
+    },
+    {
+     "member": "claude-fable-5-2/low",
+     "weight": 3.0,
+     "meta": {
+      "model": "claude-fable-5-2",
+      "effort": "low",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 8.68,
+      "usage": {
+       "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+       },
+       "cache_creation_input_tokens": 0,
+       "cache_read_input_tokens": 0,
+       "inference_geo": "global",
+       "input_tokens": 26178,
+       "output_tokens": 782,
+       "output_tokens_details": {
+        "thinking_tokens": 0
+       },
+       "server_tool_use": null,
+       "service_tier": "standard",
+       "speed": "standard"
+      },
+      "response_id": "msg_011ChGDiat7VuMvWBwS2nZXn"
+     },
+     "estimate": {
+      "damage_summary": "An internal water fitting burst from frost and was located by thermal imaging and repaired (garage/utility area). Separately, exterior render on the facade cracked and spalled due to outdoor frost acting from without.",
+      "policy_notes": "Escape of water / frost fracture of internal fittings is covered (2.4.4, 7.1.9), including leak location (2.4.6, cap EUR 2,500 gross). Frost action on external surfaces is an optional peril (2.1(d)), not shown as agreed; 3.5 excludes facade re-plastering, repainting and all ancillary charges unless water escaped from inside reached the facade (2.4.3), which the description does not claim. Lump-sum items are assessed by the work they price (7.1.12, 7.1.13).",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Internal frost-burst fitting repair including thermal-imaging leak detection",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "Frost fracture of an internal fitting is covered under 2.4.4/7.1.9, and thermal-imaging leak location under 2.4.6; the lump sum prices covered work. Reasonable flat rate covers attendance, thermography, opening up, fitting replacement and making good.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.95,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 450.0,
+        "net_unit_price_p50": 800.0,
+        "net_unit_price_p90": 1400.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Exterior facade frost damage repair (re-plaster and repaint)",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "Facade damage is described as caused by outdoor cold acting from without; the optional frost-on-external-surfaces peril is not shown as agreed, so 3.5 and 3.1.5 exclude the whole combined line. Price estimated for approx. 10-20 m2 of render repair and repainting with access provision.",
+        "covered": false,
+        "related": false,
+        "p_valid": 0.07,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 1500.0,
+        "net_unit_price_p50": 3000.0,
+        "net_unit_price_p90": 5500.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 720.25,
+       "b": 1190.0,
+       "t_median": 952.0,
+       "q": 0.95,
+       "sigma": 0.443
+      },
+      {
+       "index": 1,
+       "a": 2770.72,
+       "b": 0.0,
+       "t_median": 3570.0,
+       "q": 0.07,
+       "sigma": 0.507
+      }
+     ]
+    },
+    {
+     "member": "claude-opus-5-5/medium",
+     "weight": 3.75,
+     "meta": {
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 9.28,
+      "usage": {
+       "cache_creation": {
+        "ephemeral_1h_input_tokens": 0,
+        "ephemeral_5m_input_tokens": 0
+       },
+       "cache_creation_input_tokens": 0,
+       "cache_read_input_tokens": 0,
+       "inference_geo": "global",
+       "input_tokens": 26178,
+       "output_tokens": 815,
+       "output_tokens_details": {
+        "thinking_tokens": 0
+       },
+       "server_tool_use": null,
+       "service_tier": "standard",
+       "speed": "standard"
+      },
+      "response_id": "msg_011ChGDiat7Wtyysm72mzKkb"
+     },
+     "estimate": {
+      "damage_summary": "An internal water fitting in the garage burst due to frost and was repaired after thermal-imaging leak location. Separately, the exterior render on the front elevation cracked and spalled from outdoor frost acting from without (not from escaped water).",
+      "policy_notes": "Escape of water covers frost fracture of internal fittings (2.4.4, 7.1.9) plus leak location (2.4.6, capped at EUR 2,500 incl. VAT). Frost on external surfaces is an optional peril (2.1(d)) and the schedule does not show it as agreed. Under 3.5, 3.1.5 and 7.1.13, the combined facade re-plaster/repaint line is therefore excluded. 2.4.3 does not help, because the description attributes the facade damage to outdoor cold, not to escaped water.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Internal frost-burst fitting repair including thermal-imaging leak detection",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "A frost-fractured internal fitting is covered under 2.4.4/7.1.9, and leak location under 2.4.6 is covered within the EUR 2,500 cap. A flat rate for the attendance, thermal imaging, fitting replacement and making good is plausible at roughly EUR 600-1,200 net.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.93,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 450.0,
+        "net_unit_price_p50": 800.0,
+        "net_unit_price_p90": 1400.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Exterior facade frost damage repair (re-plaster and repaint)",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "External-surface frost is an optional peril that is not agreed. The damage stems from outdoor cold, so 3.5 excludes the re-plaster, repaint, access provision and attendance alike. If the line were valid, re-plastering and repainting the spalled area (about 15-25 m2) including scaffolding would cost several thousand euros.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.04,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 2000.0,
+        "net_unit_price_p50": 3800.0,
+        "net_unit_price_p90": 6500.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 720.25,
+       "b": 1190.0,
+       "t_median": 952.0,
+       "q": 0.93,
+       "sigma": 0.443
+      },
+      {
+       "index": 1,
+       "a": 3431.65,
+       "b": 0.0,
+       "t_median": 4522.0,
+       "q": 0.04,
+       "sigma": 0.46
+      }
+     ]
+    },
+    {
+     "member": "gpt-6.1-terra/medium",
+     "weight": 2.25,
+     "meta": {
+      "model": "gpt-6.1-terra",
+      "effort": "medium",
+      "web": false,
+      "web_searches": 0,
+      "latency_s": 13.72,
+      "usage": {
+       "input_tokens": 17358,
+       "input_tokens_details": {
+        "cache_write_tokens": 15998,
+        "cached_tokens": 1357,
+        "cache_write_tokens_details": {
+         "ttl_12h_tokens": 0,
+         "ttl_30m_tokens": 15998
+        }
+       },
+       "output_tokens": 818,
+       "output_tokens_details": {
+        "reasoning_tokens": 292
+       },
+       "total_tokens": 18176
+      },
+      "response_id": "resp_049bed935957e998006b01a890950887d2a950af3b577f2b0a"
+     },
+     "estimate": {
+      "damage_summary": "An internal water fitting burst during freezing weather and was repaired after thermal-imaging leak detection. Separately, exterior plaster cracked and detached under outdoor frost.",
+      "policy_notes": "The schedule is not supplied, so agreement of escape-of-water cover and any deductible must be verified. External-surface frost cover is optional and is not shown as agreed; the described facade damage is separate from the internal escape. Leak-location costs are capped at €2,500 including VAT per event; the combined plumbing line needs a breakdown to test the cap. VAT is payable only if incurred and not recoverable.",
+      "lines": [
+       {
+        "index": 0,
+        "invoice_text": "Internal frost-burst fitting repair including thermal-imaging leak detection",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "The frost-fractured internal fitting and leak detection are plausibly covered, subject to confirmation that escape-of-water cover was agreed. One combined repair and investigation is plausible; the price range reflects uncertainty about the fitting, access and investigation effort.",
+        "covered": true,
+        "related": true,
+        "p_valid": 0.88,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 500.0,
+        "net_unit_price_p50": 1100.0,
+        "net_unit_price_p90": 2200.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       },
+       {
+        "index": 1,
+        "invoice_text": "Exterior facade frost damage repair (re-plaster and repaint)",
+        "unit": "flat rate",
+        "quantity_invoiced": 1.0,
+        "rationale": "The facade repair relates to visible damage, but external frost cover is not shown as agreed and the damage is described as separate from the water escape. One repair package is plausible; its potential cost is uncertain because the affected area, finish and access requirements are not itemised.",
+        "covered": false,
+        "related": true,
+        "p_valid": 0.03,
+        "quantity_justified": 1.0,
+        "net_unit_price_p10": 2000.0,
+        "net_unit_price_p50": 4000.0,
+        "net_unit_price_p90": 7500.0,
+        "vat_rate": 0.19,
+        "payout_fraction": 1.0
+       }
+      ]
+     },
+     "prices": [
+      {
+       "index": 0,
+       "a": 1056.95,
+       "b": 1636.25,
+       "t_median": 1309.0,
+       "q": 0.88,
+       "sigma": 0.578
+      },
+      {
+       "index": 1,
+       "a": 3697.15,
+       "b": 0.0,
+       "t_median": 4760.0,
+       "q": 0.03,
+       "sigma": 0.516
+      }
+     ]
+    }
+   ],
+   "failures": [],
+   "timed_out": []
   }
  }
 }
