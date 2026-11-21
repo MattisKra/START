@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claim Explorer</title>
+<style>
+:root{--bg:#f7f7f5;--panel:#fff;--ink:#1c1c1a;--mute:#6b6b66;--line:#e3e3de;--accent:#2f5bd8;--good:#1f8f4e;--bad:#c9372c;--warn:#b7791f;--band:#2f5bd822}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#151516;--panel:#1d1d1f;--ink:#ececea;--mute:#9a9a94;--line:#2e2e31;--accent:#7a9bff;--good:#4cc183;--bad:#ef6a5e;--warn:#e0a94a;--band:#7a9bff2a}}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel);position:sticky;top:0;z-index:5}
+h1{font-size:16px;margin:0 8px 0 0}
+nav button,.chip{border:1px solid var(--line);background:transparent;color:var(--ink);padding:5px 12px;border-radius:6px;cursor:pointer;font:inherit}
+nav button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+label.chk{color:var(--mute);margin-left:auto;display:flex;gap:6px;align-items:center}
+main{padding:16px;max-width:1280px;margin:0 auto}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:16px;overflow-x:auto}
+.card h2{font-size:14px;margin:0 0 10px}
+table{border-collapse:collapse;width:100%}
+th,td{padding:5px 9px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--mute);font-weight:600;font-size:12px;cursor:default}
+th:first-child,td:first-child,td.l,th.l{text-align:left}
+td.txt{white-space:normal;text-align:left;max-width:420px}
+tr.click{cursor:pointer}tr.click:hover{background:var(--band)}tr.sel{background:var(--band)}
+.pos{color:var(--good)}.neg{color:var(--bad)}.mute{color:var(--mute)}
+.us{font-weight:700}
+.row{display:flex;gap:16px;flex-wrap:wrap}.row>.grow{flex:1 1 320px}
+.kpi{display:flex;gap:24px;flex-wrap:wrap}.kpi div b{display:block;font-size:20px}.kpi div span{color:var(--mute);font-size:12px}
+select{font:inherit;padding:4px 8px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--ink)}
+svg text{fill:var(--mute);font:11px sans-serif}
+.legend{display:flex;gap:14px;flex-wrap:wrap;color:var(--mute);font-size:12px;margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+details{margin:6px 0}summary{cursor:pointer;color:var(--accent)}
+.why{color:var(--mute);font-size:12px;white-space:normal;text-align:left;max-width:560px}
+.hint{color:var(--mute);font-size:12px}
+.cell{min-width:48px;text-align:center;border-radius:4px}
+@media (max-width:640px){main{padding:10px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Claim Explorer</h1>
+  <nav id="nav"></nav>
+  <label class="chk"><input type="checkbox" id="anon"> hide team names</label>
+</header>
+<main id="main"></main>
+<script>
+const D = /*__DATA__*/null;
+const US = D.us;
+const $ = (s, el=document) => el.querySelector(s);
+const eur = v => v==null ? '–' : (Math.abs(v)>=1000 ? Math.round(v).toLocaleString('en-US') : v.toFixed(v%1?2:0));
+const sgn = v => `<span class="${v>=0?'pos':'neg'}">${v>=0?'+':''}${eur(v)}</span>`;
+const esc = s => String(s??'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let state = {tab:'overview', game: null, line: null, anon:false};
+try { const s = JSON.parse(localStorage.getItem('claimExplorer')||'{}'); Object.assign(state, s); } catch(e){}
+const save = () => { try { localStorage.setItem('claimExplorer', JSON.stringify(state)); } catch(e){} };
+const gids = Object.keys(D.games).map(Number).sort((a,b)=>a-b);
+if (!gids.includes(state.game)) state.game = gids[gids.length-1];
+const tname = t => t===US ? t : (state.anon ? 'Team '+(D.teams.filter(x=>x!==US).sort().indexOf(t)+1) : t);
+const gi = g => D.game_ids.indexOf(g);
+const gameNet = (t,g) => D.net[t][gi(g)];
+const rank = (t,g) => D.teams.slice().sort((a,b)=>gameNet(b,g)-gameNet(a,g)).indexOf(t)+1;
+const cum = t => D.net[t].reduce((s,v)=>s+(v||0),0);
+
+function nav(){
+  $('#nav').innerHTML = [['overview','Overview'],['game','Game'],['teams','Teams']].map(([k,l])=>`<button data-k="${k}" class="${state.tab===k?'on':''}">${l}</button>`).join(' ');
+  $('#nav').onclick = e => { const k=e.target.dataset.k; if(k){state.tab=k; save(); render();} };
+}
+$('#anon').checked = state.anon;
+$('#anon').onchange = e => { state.anon = e.target.checked; save(); render(); };
+
+/* ---------- charts ---------- */
+function barChart(vals, labels, w=900, h=190){
+  const pad={l:48,r:8,t:10,b:22}, n=vals.length, max=Math.max(...vals.map(Math.abs),1), iw=w-pad.l-pad.r, ih=h-pad.t-pad.b;
+  const zero = pad.t + ih*max/(2*max), sc = ih/(2*max), bw = iw/n*0.7;
+  let s=`<svg viewBox="0 0 ${w} ${h}" width="100%" role="img" aria-label="Our net per game">`;
+  s+=`<line x1="${pad.l}" x2="${w-pad.r}" y1="${zero}" y2="${zero}" stroke="var(--line)"/>`;
+  s+=`<text x="${pad.l-6}" y="${pad.t+8}" text-anchor="end">${eur(max)}</text><text x="${pad.l-6}" y="${h-pad.b}" text-anchor="end">${eur(-max)}</text>`;
+  vals.forEach((v,i)=>{ if(v==null) return; const x=pad.l+iw/n*i+(iw/n-bw)/2, y=v>=0?zero-v*sc:zero;
+    s+=`<rect x="${x}" y="${y}" width="${bw}" height="${Math.max(1,Math.abs(v)*sc)}" fill="${v>=0?'var(--good)':'var(--bad)'}" rx="2" data-g="${labels[i]}" style="cursor:pointer"><title>game ${labels[i]}: ${eur(v)}</title></rect>`;
+    s+=`<text x="${x+bw/2}" y="${h-6}" text-anchor="middle">${labels[i]}</text>`; });
+  return s+'</svg>';
+}
+
+function stripChart(L){
+  const vals=[]; const push=v=>{ if(v!=null && v>0) vals.push(v); };
+  push(L.L); push(L.U); Object.values(L.charges).forEach(c=>push(c.a)); L.members.forEach(m=>{push(m.median);push(m.b);});
+  if(L.ours){push(L.ours.a);push(L.ours.b);push(L.ours.median);}
+  if(!vals.length) return '<div class="hint">nothing to plot</div>';
+  let lo=Math.min(...vals), hi=Math.max(...vals); lo=Math.log(lo)-0.12; hi=Math.log(hi)+0.12;
+  const w=900,h=190,pl=20,pr=20, X=v=>pl+(Math.log(Math.max(v,1e-9))-lo)/(hi-lo)*(w-pl-pr);
+  let s=`<svg viewBox="0 0 ${w} ${h}" width="100%" role="img" aria-label="Charges on a log scale">`;
+  // axis ticks
+  const t0=Math.ceil(lo/Math.LN10*3)/3;
+  [1,2,5].forEach(()=>{});
+  for(let e=Math.floor(Math.log10(Math.exp(lo)));e<=Math.ceil(Math.log10(Math.exp(hi)));e++) for(const m of [1,2,5]){ const v=m*10**e; if(Math.log(v)>lo&&Math.log(v)<hi){ s+=`<line x1="${X(v)}" x2="${X(v)}" y1="20" y2="${h-22}" stroke="var(--line)"/><text x="${X(v)}" y="${h-8}" text-anchor="middle">${eur(v)}</text>`; } }
+  // t bracket
+  const x1 = L.L>0?X(L.L):pl, x2 = L.U!=null?X(L.U):w-pr;
+  s+=`<rect x="${x1}" y="20" width="${Math.max(2,x2-x1)}" height="${h-42}" fill="var(--band)"><title>fair value t is in [${eur(L.L)}, ${L.U==null?'∞':eur(L.U)})</title></rect>`;
+  s+=`<text x="${x1+4}" y="16" text-anchor="start">t bracket</text>`;
+  // other teams' charges
+  const rowsY=[60,82,104]; let k=0;
+  Object.entries(L.charges).forEach(([t,c])=>{ if(t===US||c.a==null||c.a<=0) return;
+    const col=c.status==='fair'?'var(--good)':c.status==='inflated'?'var(--bad)':'var(--mute)';
+    s+=`<circle cx="${X(c.a)}" cy="${rowsY[k++%3]}" r="5" fill="${col}" fill-opacity=".85"><title>${esc(tname(t))} charges ${eur(c.a)} (${c.status})</title></circle>`; });
+  // member medians
+  L.members.forEach((m,i)=>{ if(m.median>0) s+=`<path d="M${X(m.median)} 128 l4 6 l-4 6 l-4 -6z" fill="var(--accent)" fill-opacity=".45"><title>${esc(m.name)} median ${eur(m.median)}, P(valid) ${m.q}</title></path>`; });
+  s+=`<text x="${pl}" y="${137}" text-anchor="start">model members' medians</text>`;
+  if(L.ours){
+    s+=`<line x1="${X(L.ours.median)}" x2="${X(L.ours.median)}" y1="26" y2="${h-26}" stroke="var(--accent)" stroke-width="1.5"><title>our combined median ${eur(L.ours.median)}</title></line>`;
+    if(L.ours.b>0) s+=`<line x1="${X(L.ours.b)}" x2="${X(L.ours.b)}" y1="26" y2="${h-26}" stroke="var(--warn)" stroke-width="2" stroke-dasharray="5 3"><title>our acceptance limit b = ${eur(L.ours.b)}</title></line><text x="${X(L.ours.b)+4}" y="34" text-anchor="start" style="fill:var(--warn)">b</text>`;
+    else s+=`<text x="${pl}" y="34" text-anchor="start" style="fill:var(--warn)">b = 0 (reject everything on this line)</text>`;
+    s+=`<path d="M${X(L.ours.a)} 40 l6 -10 h-12z" fill="var(--ink)"><title>our charge a = ${eur(L.ours.a)}</title></path><text x="${X(L.ours.a)+8}" y="38" text-anchor="start" style="fill:var(--ink)">a</text>`;
+  }
+  return s+'</svg>';
+}
+
+/* ---------- views ---------- */
+function overview(){
+  const rows = gids.map(g=>{ const ls=D.games[g].lines, rec=ls.reduce((s,l)=>s+l.received,0), paid=ls.reduce((s,l)=>s+l.paid,0);
+    const f=ls.filter(l=>l.ours&&l.ours.b>0).map(l=>l.ours.b/l.ours.median); const fm=f.length?f.reduce((a,b)=>a+b,0)/f.length:null;
+    return {g, rec, paid, net:gameNet(US,g), rk:rank(US,g), n:ls.length, f:fm, logged:D.games[g].logged}; });
+  const total=rows.reduce((s,r)=>s+r.net,0);
+  const p=D.perf[US]||{};
+  return `<div class="card"><div class="kpi"><div><b class="${total>=0?'pos':'neg'}">${eur(total)}</b><span>our net, ${gids.length} games</span></div>
+    <div><b>${D.teams.slice().sort((a,b)=>cum(b)-cum(a)).indexOf(US)+1} / ${D.teams.length}</b><span>rank by net</span></div>
+    <div><b>${eur(p.income)}</b><span>income as issuer</span></div><div><b>${eur(p.costs)}</b><span>cost as reviewer</span></div></div></div>
+  <div class="card"><h2>Our net per game <span class="hint">(click a bar to open the game)</span></h2><div id="bars">${barChart(rows.map(r=>r.net), rows.map(r=>r.g))}</div></div>
+  <div class="card"><h2>Games</h2><table><tr><th>game</th><th>lines</th><th>received</th><th>paid</th><th>net</th><th>rank</th><th title="mean of our limit b divided by our median, on lines where b&gt;0">mean b / median</th><th>decisions logged</th></tr>
+  ${rows.map(r=>`<tr class="click" data-g="${r.g}"><td>${r.g}</td><td>${r.n}</td><td>${eur(r.rec)}</td><td>${eur(r.paid)}</td><td>${sgn(r.net)}</td><td>${r.rk}</td><td>${r.f==null?'–':r.f.toFixed(2)}</td><td>${r.logged?'yes':'<span class="mute">no</span>'}</td></tr>`).join('')}</table></div>`;
+}
+
+function gameView(){
+  const G=D.games[state.game], ls=G.lines;
+  const net=gameNet(US,G.id), rec=ls.reduce((s,l)=>s+l.received,0), paid=ls.reduce((s,l)=>s+l.paid,0);
+  if(!ls.find(l=>l.ln===state.line)) state.line=ls[0]?.ln;
+  let h=`<div class="card"><div class="row" style="align-items:center"><select id="gsel">${gids.map(g=>`<option ${g===G.id?'selected':''} value="${g}">game ${g}</option>`).join('')}</select>
+    <div class="kpi"><div><b>${sgn(net)}</b><span>our net</span></div><div><b>${rank(US,G.id)} / ${D.teams.length}</b><span>rank in this game</span></div><div><b>${eur(rec)}</b><span>received</span></div><div><b>${eur(paid)}</b><span>paid</span></div></div></div>
+    ${G.summary?`<details><summary>Case summary and policy notes (from our first model member)</summary><p>${esc(G.summary)}</p><p class="mute">${esc(G.policy_notes)}</p></details>`:''}
+    ${G.failures.length||G.timed_out.length?`<div class="neg">failed members: ${esc(JSON.stringify(G.failures))} timed out: ${esc(JSON.stringify(G.timed_out))}</div>`:''}</div>`;
+  h+=`<div class="card"><h2>Invoice lines <span class="hint">(click one)</span></h2><table><tr><th>#</th><th class="l">line</th><th>t bracket</th><th>our median</th><th>P(valid)</th><th>our a</th><th>our b</th><th>received</th><th>paid</th></tr>
+  ${ls.map(l=>`<tr class="click ${l.ln===state.line?'sel':''}" data-l="${l.ln}"><td>${l.ln}</td><td class="txt">${esc(l.text||'(no model log)').slice(0,110)}</td><td>${l.L>0?eur(l.L):'0'} – ${l.U==null?'∞':eur(l.U)}</td><td>${l.ours?eur(l.ours.median):'–'}</td><td>${l.ours?l.ours.q:'–'}</td><td>${l.ours?eur(l.ours.a):'–'}</td><td>${l.ours?eur(l.ours.b):'–'}</td><td>${eur(l.received)}</td><td>${eur(l.paid)}</td></tr>`).join('')}</table></div>`;
+  const L=ls.find(l=>l.ln===state.line);
+  if(L) h+=lineView(L);
+  return h;
+}
+
+function lineView(L){
+  const teams=D.teams.slice().sort((a,b)=>a===US?-1:b===US?1:a.localeCompare(b));
+  const pair={}; L.pairs.forEach(([i,r,acc,amt])=>pair[i+'|'+r]=[acc,amt]);
+  const ch=teams.map(t=>{const c=L.charges[t]; return c?{t,...c}:null}).filter(Boolean);
+  let h=`<div class="card"><h2>Line ${L.ln}: ${esc(L.text||'')} ${L.qty?`<span class="hint">(${L.qty} ${esc(L.unit)})</span>`:''}</h2>
+  <div class="hint">Fair value t is only known as a bracket: highest charge that was rejected with a penalty (fair) up to the lowest charge rejected for 0 (inflated).</div>${stripChart(L)}
+  <div class="legend"><span><i style="background:var(--good)"></i>other team, charge was fair</span><span><i style="background:var(--bad)"></i>inflated</span><span><i style="background:var(--mute)"></i>unknown</span><span>▲ a = our charge</span><span style="color:var(--warn)">┆ b = our acceptance limit</span><span style="color:var(--accent)">| our median, ◆ each member's median</span></div></div>`;
+  if(L.ours) h+=`<div class="card"><h2>Our decision</h2><div class="kpi"><div><b>${eur(L.ours.median)}</b><span>combined median</span></div><div><b>${L.ours.q}</b><span>P(valid)</span></div><div><b>${eur(L.ours.a)}</b><span>charge a</span></div><div><b>${eur(L.ours.b)}</b><span>limit b ${L.ours.b>0?'('+(L.ours.b/L.ours.median).toFixed(2)+' x median)':''}</span></div><div><b>${eur(L.received)} / ${eur(L.paid)}</b><span>received / paid</span></div></div>
+   ${L.members.length?`<table style="margin-top:10px"><tr><th class="l">member</th><th>weight</th><th>median</th><th>P(valid)</th><th class="l">reasoning</th></tr>${L.members.map(m=>`<tr><td class="l">${esc(m.name)}</td><td>${m.w}</td><td>${eur(m.median)}</td><td>${m.q}</td><td class="why">${esc(m.why)}</td></tr>`).join('')}</table>`:''}</div>`;
+  h+=`<div class="card"><h2>Who charged what, and each team's reconstructed limit</h2><table><tr><th class="l">team</th><th>charge a</th><th>status</th><th title="interval for the reviewer limit from accepted and rejected charges">limit b between</th></tr>
+  ${teams.map(t=>{const c=L.charges[t], b=L.limits[t]; return `<tr class="${t===US?'us':''}"><td class="l">${esc(tname(t))}</td><td>${c?(c.a==null?'hidden (rejected by all)':eur(c.a)):'–'}</td><td class="${c&&c.status==='fair'?'pos':c&&c.status==='inflated'?'neg':'mute'}">${c?c.status:''}</td><td>${b?eur(b[0])+' – '+(b[1]==null?'∞':eur(b[1])):'–'}</td></tr>`}).join('')}</table></div>`;
+  h+=`<div class="card"><h2>Pair outcomes on this line <span class="hint">(row = issuer, column = reviewer; green = accepted and paid, red = rejected, amount in EUR)</span></h2><div style="overflow-x:auto"><table><tr><th class="l">issuer \\ reviewer</th>${teams.map(t=>`<th class="${t===US?'us':''}">${esc(tname(t)).slice(0,10)}</th>`).join('')}</tr>
+  ${teams.map(i=>`<tr class="${i===US?'us':''}"><td class="l">${esc(tname(i))}</td>${teams.map(r=>{ if(i===r) return '<td class="mute">·</td>'; const p=pair[i+'|'+r]; if(!p) return '<td>–</td>'; const col=p[0]?'var(--good)':'var(--bad)'; return `<td><span class="cell" style="display:inline-block;padding:1px 6px;color:${col};background:color-mix(in srgb, ${col} 14%, transparent)">${p[0]?'':'✕ '}${eur(p[1])}</span></td>`}).join('')}</tr>`).join('')}</table></div></div>`;
+  return h;
+}
+
+function teamsView(){
+  const order=D.teams.slice().sort((a,b)=>cum(b)-cum(a)); const mx=Math.max(...D.teams.flatMap(t=>D.net[t].map(Math.abs)),1);
+  const cellBg=v=>{ const a=Math.min(1,Math.abs(v)/mx)*0.55; return `background:color-mix(in srgb, ${v>=0?'var(--good)':'var(--bad)'} ${Math.round(a*100)}%, transparent)`; };
+  return `<div class="card"><h2>Standing</h2><table><tr><th>#</th><th class="l">team</th><th>net</th><th>income</th><th>costs</th><th title="share of charges we issued that were accepted">issued accepted</th><th title="reviews that accepted a fair claim or rejected an inflated one, over all reviews">reviews right</th><th title="accepted although inflated">wrongly accepted</th><th title="rejected a fair claim (1.5x penalty)">penalties</th></tr>
+  ${order.map((t,i)=>{const p=D.perf[t]||{}; return `<tr class="${t===US?'us':''}"><td>${i+1}</td><td class="l">${esc(tname(t))}</td><td>${sgn(cum(t))}</td><td>${eur(p.income)}</td><td>${eur(p.costs)}</td><td>${p.issued_count?Math.round(100*p.issued_accepted/p.issued_count)+'%':'–'}</td><td>${p.reviewed_count?Math.round(100*(p.reviewed_accepted_right+p.reviewed_correct_rejections)/p.reviewed_count)+'%':'–'}</td><td>${p.reviewed_accepted_wrong??'–'}</td><td>${p.reviewed_penalties??'–'}</td></tr>`}).join('')}</table></div>
+  <div class="card"><h2>Net per game and team <span class="hint">(click a column to open the game)</span></h2><table><tr><th class="l">team</th>${D.game_ids.map(g=>`<th data-g="${g}" style="cursor:pointer">${g}</th>`).join('')}</tr>
+  ${order.map(t=>`<tr class="${t===US?'us':''}"><td class="l">${esc(tname(t))}</td>${D.net[t].map(v=>`<td style="${cellBg(v)}">${eur(v)}</td>`).join('')}</tr>`).join('')}</table></div>`;
+}
+
+function render(){
+  nav();
+  $('#main').innerHTML = state.tab==='overview'?overview():state.tab==='game'?gameView():teamsView();
+  const m=$('#main');
+  m.onclick = e => {
+    const g=e.target.closest('[data-g]'), l=e.target.closest('[data-l]');
+    if(l){ state.line=+l.dataset.l; save(); render(); return; }
+    if(g){ state.game=+g.dataset.g; state.line=null; state.tab='game'; save(); render(); window.scrollTo(0,0); }
+  };
+  const gs=$('#gsel'); if(gs) gs.onchange=e=>{ state.game=+e.target.value; state.line=null; save(); render(); };
+}
+render();
+</script>
+</body>
+</html>
