@@ -52,7 +52,7 @@ def run_local(path: Path, password: str | None, effort: str) -> list[LinePrice]:
     return prices
 
 
-def play_round(game_id: str, zip_path: Path, dry_run: bool = False) -> None:
+def play_round(game_id: str, zip_path: Path, dry_run: bool = False, key: str | None = None) -> None:
     """Full round: key -> decrypt -> race fast/full estimates -> submit.
 
     The fast estimate is submitted as soon as it arrives (if the full one isn't
@@ -65,7 +65,8 @@ def play_round(game_id: str, zip_path: Path, dry_run: bool = False) -> None:
     t0 = time.monotonic()
     deadline = t0 + config.ROUND_SECONDS - config.SAFETY_MARGIN_S
 
-    key = api.get_key(game_id)
+    if key is None:
+        key = api.get_key(game_id)
     case_dir = extract_zip(Path(zip_path), key, config.WORK_DIR / f"game_{game_id}")
     case = load_case(case_dir)
     print(f"[{time.monotonic() - t0:5.1f}s] case loaded: {case_dir} ({len(case.images)} images)")

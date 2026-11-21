@@ -47,7 +47,10 @@ def _belief(line: LineEstimate) -> tuple[float, float, float, float]:
     qty = max(min(line.quantity_justified, line.quantity_invoiced), 0.0)
     vat = line.vat_rate if 0.0 <= line.vat_rate <= 0.3 else 0.19
     p10, p50, p90 = sorted([line.net_unit_price_p10, line.net_unit_price_p50, line.net_unit_price_p90])
-    scale = qty * (1 + vat)
+    payout = min(max(line.payout_fraction, 0.0), 1.0)
+    if payout <= 0:  # "nothing payable" is a validity question; keep a price so we still charge
+        payout, q = 1.0, min(q, 0.05)
+    scale = qty * (1 + vat) * payout
     median = p50 * scale
     if median <= 0:
         return 0.0, 0.0, config.MIN_SIGMA, 0.0

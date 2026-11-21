@@ -36,6 +36,15 @@ Rules:
   unless the invoice or policy says otherwise).
 - p10/p50/p90 describe your uncertainty about the maximum reasonable net unit
   price. Make the range wide when you are unsure.
+- t is what the insurer OWES under the policy, not what the work costs on the
+  open market. For damaged property (appliances, furniture, electronics) use
+  the policy's valuation basis: usually the pre-loss / time value after
+  depreciation for age and wear ("no improvement"), not the price of new
+  equipment. Old consumer electronics are often worth a small fraction of the
+  new price.
+- Proportional reductions in the policy (e.g. indemnity halved for a missing
+  surge protector, deductibles, sub-limits) go into payout_fraction, not into
+  the unit price.
 - Price and quantity are always estimated AS IF the line were valid, even for
   lines you think are excluded or unrelated. Validity goes only into p_valid.
 - p_valid is your probability that the line passes both the coverage and the

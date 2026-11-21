@@ -27,15 +27,21 @@ class LineEstimate(BaseModel):
         "the line is excluded or unrelated; that is captured by p_valid."
     )
     net_unit_price_p10: float = Field(
-        description="10th percentile of the maximum reasonable NET price per unit in EUR, assuming the line is valid. Never 0 just because the line is excluded or unrelated."
+        description="10th percentile of the maximum reasonable NET price per unit in EUR, assuming the line is valid. For replaced property this is the indemnity value the policy pays (pre-loss / time value after depreciation, no improvement), not the price of new equipment, unless the policy pays new-for-old. Before payout_fraction. Never 0 just because the line is excluded or unrelated."
     )
     net_unit_price_p50: float = Field(
-        description="Median of the maximum reasonable NET price per unit in EUR, assuming the line is valid. Never 0 just because the line is excluded or unrelated."
+        description="Median of the maximum reasonable NET price per unit in EUR, assuming the line is valid. For replaced property this is the indemnity value the policy pays (pre-loss / time value after depreciation, no improvement), not the price of new equipment, unless the policy pays new-for-old. Before payout_fraction. Never 0 just because the line is excluded or unrelated."
     )
     net_unit_price_p90: float = Field(
-        description="90th percentile of the maximum reasonable NET price per unit in EUR, assuming the line is valid. Never 0 just because the line is excluded or unrelated."
+        description="90th percentile of the maximum reasonable NET price per unit in EUR, assuming the line is valid. For replaced property this is the indemnity value the policy pays (pre-loss / time value after depreciation, no improvement), not the price of new equipment, unless the policy pays new-for-old. Before payout_fraction. Never 0 just because the line is excluded or unrelated."
     )
     vat_rate: float = Field(description="VAT rate as a fraction, e.g. 0.19 for 19%.")
+    payout_fraction: float = Field(
+        description="Fraction from 0 to 1 of the reasonable amount that the insurer must actually pay under the "
+        "policy because of proportional reductions, e.g. 0.5 when the policy halves the indemnity for a missing "
+        "protective device, or the share left after a deductible or sub-limit. 1.0 if no such reduction applies. "
+        "Depreciation for age and wear is NOT included here; it belongs in the unit price."
+    )
 
 
 class CaseEstimate(BaseModel):
