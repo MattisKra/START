@@ -16,8 +16,11 @@ A candidate policy (a', b') for one of our lines is replayed against that recons
 the result for a game is a range [lo, hi]; 'identified share' reports how many pair outcomes were pinned down.
 Cap: c >= 4t >= 4L, so an accepted charge up to 4L is paid in full; above that the payment is only bounded (between 4L and a').
 
-Validation (see euro_replay_check.py): (1) replaying our ACTUAL submissions reproduces our actual net, (2) on synthetic fields with known truth the
-range always contains the true counterfactual.   Other teams' rows are held in memory / a scratch dir OUTSIDE the repo; nothing is written here.
+STATUS (after the GPT audit, research/raw5/gpt-G-evaluator-audit.md): the ranges are CONDITIONAL, historical bounds that hold only under the stated
+assumptions (complete rows, exact cent-grid amounts, opponents held fixed). They are NOT a 'worst case consistent with the data': the sum of per-pair
+endpoints can include states that cannot coexist, and soundness was only tested on synthetic fields. Use the tool to reconcile accounting and to shortlist
+candidates, not as the sole live selector. The audit's logic patch A (clipped-amount status, hidden-charge cost <= b, omitted lines at defaults) is applied.
+   Other teams' rows are held in memory / a scratch dir OUTSIDE the repo; nothing is written here.
 """
 import collections, json, math, sys
 from pathlib import Path
@@ -49,7 +52,7 @@ def reconstruct(rows, us, our_b=None, our_a=None):
             elif acc_pos:
                 x = max(acc_pos)
                 # exact only if x is below the proven cap level (then x = min(a, c) < c forces a = x); a clipped amount means a > c >= 4t: inflated
-                A[i] = dict(a=x, x=x, exact=x < c_lo, status=("inflated" if (zero_rej or x >= c_lo) else "unknown"))
+                A[i] = dict(a=x, x=x, exact=x < c_lo, status=("inflated" if zero_rej else "unknown"))
             elif zero_rej:
                 A[i] = dict(a=None, status="hidden", exact=False, x=None)
             else:
@@ -118,7 +121,7 @@ def line_value(line, us, a_c, b_c):
             if b_c <= floor:
                 ident += 1                          # still above our limit: rejected, inflated, costs nothing
             else:
-                cost_hi += 4 * max(U if U < INF else L, floor, 1.0)   # unidentified exposure, heuristic ceiling
+                cost_hi += b_c  # acceptance requires a <= b_c, and the payment is at most a
             continue
         x = Ai["x"] if Ai["x"] is not None else a
         if Ai["exact"]:
@@ -129,7 +132,9 @@ def line_value(line, us, a_c, b_c):
                 cost_lo += pr[0]; cost_hi += pr[1]; ident += int(pr[0] == pr[1])
         else:                                       # amount may be clipped by the cap: a >= x, and a clipped charge is certainly inflated
             if b_c < x:
-                ident += 1                          # rejected for sure, inflated: costs 0
+                pr = _rej_pay(x, L, U, Ai["status"])
+                cost_hi += pr[1]                    # only the uncapped a == x branch can be fair
+                ident += int(pr[1] == 0)
             else:
                 cost_hi += x                        # accepted pays exactly x (same cap); rejected pays 0
     return rev_lo - cost_hi, rev_hi - cost_lo, n, ident
@@ -138,9 +143,12 @@ def line_value(line, us, a_c, b_c):
 def game_value(lines, us, policy):
     """policy: {line: (a, b)} for our lines. Returns (lo, hi, identified_share)."""
     lo = hi = 0.0; n = ident = 0
-    for ln, (a, b) in policy.items():
-        if ln not in lines:
-            continue
+    if policy.keys() - lines.keys():
+        raise ValueError("policy contains unknown line indices")
+    for ln in lines:
+        a, b = policy.get(ln, (0.0, 0.0))                    # an omitted line is settled at the defaults a = b = 0
+        if not all(math.isfinite(v) and v >= 0 for v in (a, b)):
+            raise ValueError("charge and limit must be finite and nonnegative")
         l, h, k, i = line_value(lines[ln], us, a, b)
         lo += l; hi += h; n += k; ident += i
     return lo, hi, (ident / n if n else float("nan"))
