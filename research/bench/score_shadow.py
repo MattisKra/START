@@ -94,7 +94,7 @@ def save(folder):
     print(folder.name, report.get("fable_minus_python_eur", report), flush=True)
 
 
-def follow(run):
+def follow(run, scorer=save):
     games = json.loads((run / "manifest.json").read_text())["games"]
     for game in games:
         release = datetime.fromisoformat(game["start_time"]).timestamp()
@@ -107,7 +107,7 @@ def follow(run):
                 break
             if (folder / "result.json").exists():
                 try:
-                    save(folder)
+                    scorer(folder)
                     break
                 except ValueError as exc:
                     detail = str(exc)
