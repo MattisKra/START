@@ -1,0 +1,33 @@
+Invoice
+INVOICE NO.
+2026-0206
+DATE
+27 Mar 2026
+DUE
+10 Apr 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Air conditioning unit - living room (surge damaged,
+replaced like-for-like)
+1 pcs
+2 Air conditioning unit - kitchen (wall-mounted a couple
+of metres from the hob)
+1 pcs
+3 Installation - living-room unit 1 pcs
+4 Installation - kitchen unit 1 pcs
+5 Floor console (equivalent stand for the living-room
+unit)
+1 pcs
+6 Freight shipping 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
