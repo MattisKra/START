@@ -1,0 +1,80 @@
+Invoice
+INVOICE NO.
+2026-0071
+DATE
+4 Feb 2026
+DUE
+18 Feb 2026
+TRADE
+Damage Assessment
+FROM
+Sherlock Damages Inspection Ltd
+221 Magnifier Mews
+80333 Cluesbury
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Damage assessment and inspection 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0072
+DATE
+4 Feb 2026
+DUE
+18 Feb 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+2 Indoor leak detection 1 flat rate
+3 Measurement technician 2.5 hrs
+4 Vehicle costs 1 hrs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0073
+DATE
+4 Feb 2026
+DUE
+18 Feb 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+5 Repair of the copper joints verified as actively leaking
+(seal/renew failed sections)
+1 flat rate
+6 Precautionary replacement of the remaining original
+copper supply run across the ground floor (sections
+not themselves shown to be leaking)
+1 flat rate
+7 Upgrade surcharge – premium multilayer composite
+piping in lieu of standard copper
+1 flat rate
+8 Vehicle costs 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
