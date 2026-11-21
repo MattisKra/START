@@ -1,0 +1,76 @@
+Invoice
+INVOICE NO.
+2026-0125
+DATE
+21 Feb 2026
+DUE
+7 Mar 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Leak detection and moisture measurement for the
+kitchen sink supply leak, incl. technician labour and
+call-out
+1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0126
+DATE
+21 Feb 2026
+DUE
+7 Mar 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+2 Freeing, repair and re-insulation of the leaking kitchen
+sink supply pipe, incl. replacement copper section
+1 flat rate
+3 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0127
+DATE
+21 Feb 2026
+DUE
+7 Mar 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+4 Drying of the kitchen floor and wall base, incl.
+condensation dryer
+1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
