@@ -20,3 +20,11 @@ The printed run directory contains a frozen manifest and one folder per game:
 Times are local observations relative to release. Tool results identify what Fable opened. Its evidence strings report what it says drove each decision. The ensemble log identifies the reader arrival that changed the arithmetic. Neither arm provides access to private model reasoning.
 
 For a specific line, follow its position through successive decision events. The first event establishes the baseline. Later events show each change to the charge and limit in gross euros. Compare the final amounts across arms in `fable_minus_python`. A price difference alone does not establish a payoff.
+
+Once a game settles, run the paired payoff replay from the project root with the game folder printed by the watcher:
+
+```sh
+.venv/bin/python research/bench/score_shadow.py runs/shadow/<run>/<game>
+```
+
+`score.json` stores per-line bounds and totals for Fable minus Python under the opponents' observed decisions. Positive reviewer savings mean Fable paid less. Hidden charges and limits can leave either winner possible. Missing on-time decisions are marked unscored. The replay reads public settlements and reconciles each team's total against the standings.
