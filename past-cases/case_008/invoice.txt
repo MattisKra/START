@@ -1,0 +1,36 @@
+Invoice
+INVOICE NO.
+2026-0215
+DATE
+4 Apr 2026
+DUE
+18 Apr 2026
+TRADE
+Recycling Service
+FROM
+Trash to Treasure Recycling Ltd
+3 Landfill Loop
+34117 Binbrook
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Disposal of shed roof timber removed from the
+damaged garden building
+1 pcs
+2 Disposal of the broken glass pane from the damaged
+shed
+1 pcs
+3 Disposal of green waste from the storm-felled tree
+(branches and foliage)
+1 pcs
+4 Disposal of the tree root ball (single mass under one
+cubic metre)
+1 pcs
+5 Disposal of sieved topsoil from the churned-up ground 1 pcs
+6 Disposal of paving grit displaced around the shed 1 pcs
+7 Disposal of excavated soil from the churned-up ground 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

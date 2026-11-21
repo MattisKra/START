@@ -38,3 +38,4 @@ Filled in automatically by `claimbot archive` from our own rows on the public le
 | [6](case_006/results.json) | +4.76 | 4881.50 | 4876.74 | L1: 375.5 (7/11, fair) | L1: 1 / 3760.76 |
 | [7](case_007/) | Buildings frost claim after a cold snap | todo | todo | todo | still open |
 | [7](case_007/results.json) | -4136.70 | 2195.04 | 6331.74 | L1: 731.68 (3/11, inflated); L2: 0 (nothing charged) | L1: 0 / 6331.74; L2: 0 / 0 |
+| [8](case_008/) | Storm claim at the policyholder's place | todo | todo | todo | still open |
