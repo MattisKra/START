@@ -6,6 +6,7 @@ from datetime import datetime
 from pathlib import Path
 
 from rate_check_replay import Source, TEAM, compare, settled_field
+from claimbot_shadow.reasons import save as save_reasons
 from claimbot_shadow.trace import write_json
 
 
@@ -64,6 +65,8 @@ def score(folder):
 
 
 def save(folder):
+    if not (folder / "decision_reasons.json").exists():
+        save_reasons(folder)
     report = score(folder)
     write_json(folder / "score.json", report)
     print(folder.name, report.get("fable_minus_python_eur", report), flush=True)

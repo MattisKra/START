@@ -17,7 +17,9 @@ a COMPLETE JSON array to decision.json with Write as soon as possible. Then use 
 remaining to check the most consequential uncertain line and overwrite decision.json if needed.
 Each row must have integer index (printed position), charge_price and acceptance_limit
 (nonnegative gross EUR for the whole line), and a short evidence string giving the case fact,
-clause or assumption that drove those amounts. For a revision say what changed. No prose
+clause or assumption that drove those amounts. For a changed line, name the source and new
+observation, the estimate or assumption it changes, and the numerical basis for each changed
+amount. Label a judgment call when there is no quote or calculation. Keep this brief. No prose
 outside the array in that file. The local recorder timestamps successful writes. Finish when done."""
 
 

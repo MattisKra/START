@@ -8,7 +8,7 @@ def run(case, trace):
     trace.log("configured", readers=[m.name for m in members],
               weights={m.name: m.weight for m in members}, charge_factor=config.A_MEDIAN_MULT,
               limit_factor=config.B_MEDIAN_MULT, reject_p=config.REJECT_P,
-              price_references=bool(case.refs))
+              price_references=bool(case.refs), attached_image_count=len(case.image_blobs))
     seen = []
 
     def update(prices, done, total, member, estimate, meta):
@@ -18,7 +18,8 @@ def run(case, trace):
                       median=p.t_median, validity=p.q, spread=p.sigma,
                       arriving_reader=evidence.get(p.index)) for p in prices]
         try:
-            trace.record(lines, dict(member=member.name, arrived=list(seen), meta=meta))
+            trace.record(lines, dict(member=member.name, arrived=list(seen), meta=meta,
+                                     damage_summary=estimate.damage_summary, policy_notes=estimate.policy_notes))
         except ValueError as exc:
             trace.log("invalid_revision", member=member.name, error=str(exc), lines=lines)
 

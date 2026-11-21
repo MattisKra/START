@@ -14,6 +14,7 @@ from claimbot_multiagent.settlement import invoice_items
 
 from . import fable_arm, python_arm
 from .trace import Trace, write_json
+from .reasons import save as save_reasons
 
 
 def compare_lines(receipts):
@@ -49,6 +50,7 @@ def round_pair(api, game, folder):
                 except Exception as exc:
                     traces[name].log("arm_error", exception=type(exc).__name__, detail=str(exc)[:500])
         receipts = {name: trace.last_on_time for name, trace in traces.items()}
+        save_reasons(folder)
         write_json(folder / "result.json", dict(game=gid, final=receipts,
                    fable_minus_python=compare_lines(receipts)))
 
