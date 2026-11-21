@@ -30,6 +30,18 @@ README = PAST_DIR / "README.md"
 KEEP_SUFFIXES = {".txt", ".pdf", ".png", ".jpg", ".jpeg", ".webp"}
 
 
+def _update_labels() -> None:
+    """Brackets for the hidden fair values from ALL teams' public leaderboard rows of completed games
+    (research/bench/build_labels.py, 1 request/s; organisers' OK on 2026-11-21). Failures leave the old labels."""
+    spec = importlib.util.spec_from_file_location("build_labels", config.ROOT / "research" / "bench" / "build_labels.py")
+    bl = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(bl)
+    try:
+        bl.update(TEAM)
+    except Exception as e:  # noqa: BLE001
+        print(f"{_ts()} labels FAILED {e!r}")
+
+
 def _ts() -> str:
     return datetime.now().strftime("%H:%M:%S")
 
@@ -288,6 +300,14 @@ def archive_loop(once: bool = False, push: bool = True) -> None:
                         changed.append(f"results {gid}")
             except Exception as e:  # noqa: BLE001
                 print(f"{_ts()} results FAILED {e!r}")
+        if config.MEMORY_AUTOBUILD and any(c.startswith("results") for c in changed):
+            try:  # new settlement rows -> rebuild the case memory (one cheap LLM call per new case; cached otherwise)
+                if config.MEMORY_LABELS == "leaderboard":
+                    _update_labels()
+                from .memory_build import build
+                build()
+            except (Exception, SystemExit) as e:  # noqa: BLE001 - the memory must never stop the archive
+                print(f"{_ts()} memory build FAILED {e!r}")
         if push and (changed or first_pass):  # the first pass also pushes anything archived earlier
             try:
                 push_cases("Archive past cases: " + (", ".join(changed) or "backfill"))

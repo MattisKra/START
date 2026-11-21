@@ -58,6 +58,18 @@ def watch() -> None:
         print(f"{_ts()} watching for games (ensemble: {', '.join(m.name for m in members())})")
     else:
         print(f"{_ts()} watching for games (model {config.MODEL}, efforts {config.FAST_EFFORT}/{config.EFFORT})")
+    mem = None
+    if config.MEMORY:
+        try:
+            from . import memory
+            mem = memory.get()
+            mem.warm()  # embedding model loaded now, not in the first live round
+            st = mem.state
+            print(f"{_ts()} memory ON: build {st.name if st else 'none'} ({len(st.entries) if st else 0} entries), "
+                  f"budget {config.MEMORY_BUDGET_S}s")
+        except Exception as e:  # noqa: BLE001 - play without memory
+            print(f"{_ts()} memory: could not start ({e!r}); playing without it")
+            mem = None
     while True:
         try:
             games = api.list_games()
@@ -88,6 +100,8 @@ def watch() -> None:
         if not zip_path.exists():
             print(f"{_ts()} game {gid}: MISSING {zip_path}")
             continue
+        if mem is not None:
+            mem.maybe_reload()  # between rounds: pick up the build made after the previous game
         print(f"{_ts()} game {gid}: waiting for start at {start.astimezone():%H:%M:%S} (in {max(wait_s, 0):.0f}s)")
         key = _wait_for_key(api, gid, start)
         if key is None:

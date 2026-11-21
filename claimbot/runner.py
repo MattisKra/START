@@ -13,6 +13,20 @@ from .pricing import LinePrice, price_case
 from .schema import CaseEstimate
 
 
+def start_memory(case: Case, case_path=None):
+    """Kick off the memory query in its worker right after load_case (None when CLAIMS_MEMORY is off). For an old case
+    from past-cases/case_NNN only games < N are used, so a re-estimate never sees its own outcome."""
+    if not config.MEMORY:
+        return None
+    try:
+        from . import memory
+        g = memory.game_of(case_path) if case_path is not None else None
+        return memory.get().submit(case, until=None if g is None else g - 1)
+    except Exception as e:  # noqa: BLE001 - the memory must never cost the round
+        print(f"memory: query not started ({e!r})")
+        return None
+
+
 def save_run(tag: str, case: Case, est: CaseEstimate, prices: list[LinePrice], meta: dict) -> Path:
     config.RUNS_DIR.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
@@ -45,7 +59,15 @@ def run_local(path: Path, password: str | None, effort: str) -> list[LinePrice]:
             raise SystemExit("--password is required for a zip")
         path = extract_zip(path, password, config.WORK_DIR / path.stem)
     case = load_case(path)
-    est, meta = estimate(case, effort)
+    mem = start_memory(case, path)
+    refs = None
+    if mem is not None:
+        from . import memory
+        refs, info = memory.wait_block(mem, time.monotonic() + 30)  # local run: no round clock, wait for the block
+        print(f"memory: {info}\n{refs or '(no hint block)'}\n")
+    est, meta = estimate(case, effort, references=refs)
+    if mem is not None:
+        meta["memory"] = memory.summary(mem)
     prices = price_case(est)
     print_table(est, prices)
     print(f"\nlatency {meta['latency_s']}s, log: {save_run(path.name, case, est, prices, meta)}")
@@ -75,8 +97,24 @@ def play_round(game_id: str, zip_path: Path, dry_run: bool = False, key: str | N
     if config.FAST_EFFORT and config.FAST_EFFORT != config.EFFORT:
         efforts.append(config.FAST_EFFORT)
 
+    mem = start_memory(case)
+    until = time.monotonic() + config.MEMORY_BUDGET_S
+
+    def run_effort(e):
+        if mem is None:
+            return estimate(case, e)
+        from . import memory
+        if e == config.FAST_EFFORT and len(efforts) > 1:  # the fast call is the bypass: it never waits
+            est, meta = estimate(case, e)
+            meta["memory"] = dict(used=False, status="bypass")
+            return est, meta
+        block, info = memory.wait_block(mem, until)
+        est, meta = estimate(case, e, references=block)
+        meta["memory"] = info
+        return est, meta
+
     pool = ThreadPoolExecutor(max_workers=len(efforts))
-    futures = {pool.submit(estimate, case, e): e for e in efforts}
+    futures = {pool.submit(run_effort, e): e for e in efforts}
     full_done = False
     pending = set(futures)
     try:
@@ -120,7 +158,7 @@ def play_round(game_id: str, zip_path: Path, dry_run: bool = False, key: str | N
 # --- Ensemble ---------------------------------------------------------------
 
 def save_ensemble_run(tag: str, case: Case, results, failures, timed_out, prices: list[LinePrice],
-                      game_id: str | None = None) -> Path:
+                      game_id: str | None = None, extra: dict | None = None) -> Path:
     config.RUNS_DIR.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     path = config.RUNS_DIR / f"{stamp}_{tag}_ensemble.json"
@@ -135,6 +173,7 @@ def save_ensemble_run(tag: str, case: Case, results, failures, timed_out, prices
         "failures": [{"member": m.name, "error": err} for m, err in failures],
         "timed_out": [m.name for m in timed_out],
         "prices": [p.as_dict() for p in prices],
+        **(extra or {}),
     }
     path.write_text(json.dumps(rec, indent=2, ensure_ascii=False))
     if game_id is not None and str(game_id) != "0":  # live round (not test game 0): also goes into the tracked outputs file
@@ -173,21 +212,34 @@ def run_local_ensemble(path: Path, password: str | None) -> list[LinePrice]:
         path = extract_zip(path, password, config.WORK_DIR / path.stem)
     case = load_case(path)
     t0 = time.monotonic()
+    mem = start_memory(case, path)
+    t_first = []
 
     def on_update(prices, done, total, m, est, meta):
-        print(f"[{time.monotonic() - t0:5.1f}s] {done}/{total} {m.name} ({meta['latency_s']}s)")
+        t_first.append(round(time.monotonic() - t0, 2))
+        print(f"[{time.monotonic() - t0:5.1f}s] {done}/{total} {m.name} ({meta['latency_s']}s, memory {meta.get('memory', {}).get('status', 'off')})")
 
     ms = ensemble.members()
     print(f"{len(ms)} members: {', '.join(m.name for m in ms)}")
-    results, failures, timed_out = ensemble.run(case, t0 + config.ROUND_SECONDS - config.SAFETY_MARGIN_S, on_update, ms)
+    results, failures, timed_out = ensemble.run(case, t0 + config.ROUND_SECONDS - config.SAFETY_MARGIN_S, on_update, ms,
+                                                references=mem)
     for m, err in failures:
         print(f"FAILED {m.name}: {err[:200]}")
     for m in timed_out:
         print(f"TIMED OUT {m.name}")
     prices = ensemble.combine([(est, m.weight) for m, est, _ in results])
     _print_ensemble(results, prices)
-    print(f"\nlog: {save_ensemble_run(path.name, case, results, failures, timed_out, prices)}")
+    extra = dict(t_first_estimate_s=t_first[0] if t_first else None, memory=_mem_summary(mem))
+    print(f"\nfirst estimate after {extra['t_first_estimate_s']}s; memory {(extra['memory'] or {}).get('status', 'off')}")
+    print(f"log: {save_ensemble_run(path.name, case, results, failures, timed_out, prices, extra=extra)}")
     return prices
+
+
+def _mem_summary(mem):
+    if mem is None:
+        return None
+    from . import memory
+    return memory.summary(mem)
 
 
 def play_round_ensemble(game_id: str, zip_path: Path, dry_run: bool = False, key: str | None = None) -> None:
@@ -202,11 +254,16 @@ def play_round_ensemble(game_id: str, zip_path: Path, dry_run: bool = False, key
         key = api.get_key(game_id)
     case_dir = extract_zip(Path(zip_path), key, config.WORK_DIR / f"game_{game_id}")
     case = load_case(case_dir)
+    mem = start_memory(case)
     ms = ensemble.members()
-    print(f"[{time.monotonic() - t0:5.1f}s] case loaded: {case_dir} ({len(case.image_blobs)} images), {len(ms)} members")
+    print(f"[{time.monotonic() - t0:5.1f}s] case loaded: {case_dir} ({len(case.image_blobs)} images), {len(ms)} members"
+          + (", memory on" if mem is not None else ""))
+    t_first = []
 
     def on_update(prices, done, total, m, est, meta):
-        tag = f"[{time.monotonic() - t0:5.1f}s] {done}/{total} {m.name}"
+        t_first.append(round(time.monotonic() - t0, 2))
+        tag = f"[{time.monotonic() - t0:5.1f}s] {done}/{total} {m.name}" + (
+            f" (memory {meta['memory']['status']})" if "memory" in meta else "")
         if dry_run:
             print(f"{tag}: dry run")
             return
@@ -216,12 +273,15 @@ def play_round_ensemble(game_id: str, zip_path: Path, dry_run: bool = False, key
         except Exception as e:  # noqa: BLE001 - the next member will submit again
             print(f"{tag}: SUBMIT FAILED {e!r}")
 
-    results, failures, timed_out = ensemble.run(case, deadline, on_update, ms)
+    results, failures, timed_out = ensemble.run(case, deadline, on_update, ms, references=mem)
     for m, err in failures:
         print(f"  failed {m.name}: {err[:160]}")
     for m in timed_out:
         print(f"  timed out {m.name}")
     prices = ensemble.combine([(est, m.weight) for m, est, _ in results])
     _print_ensemble(results, prices)
-    log = save_ensemble_run(f'game{game_id}', case, results, failures, timed_out, prices, game_id=None if dry_run else game_id)
+    extra = dict(t_first_estimate_s=t_first[0] if t_first else None, memory=_mem_summary(mem))
+    print(f"first submittable estimate after {extra['t_first_estimate_s']}s; memory {(extra['memory'] or {}).get('status', 'off')}")
+    log = save_ensemble_run(f'game{game_id}', case, results, failures, timed_out, prices, game_id=None if dry_run else game_id,
+                            extra=extra)
     print(f"log: {log}")

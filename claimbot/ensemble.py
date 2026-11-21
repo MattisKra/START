@@ -72,12 +72,42 @@ def members() -> list[Member]:
     return out
 
 
-def run_member(case: Case, m: Member) -> tuple[CaseEstimate, dict]:
+def run_member(case: Case, m: Member, references: str | None = None) -> tuple[CaseEstimate, dict]:
     if m.provider == "anthropic":
         from .anthropic_estimator import estimate
-        return estimate(case, m.effort, m.model, web=m.web)
+        return estimate(case, m.effort, m.model, web=m.web, references=references)
     from .estimator import estimate
-    return estimate(case, m.effort, m.model, web=m.web)
+    return estimate(case, m.effort, m.model, web=m.web, references=references)
+
+
+_bypass_cache: dict[tuple, set[str]] = {}
+
+
+def bypass_names(ms: list[Member]) -> set[str]:
+    """Members that start at once without memory hints, so the first submission is never later than without memory.
+    CLAIMS_MEMORY_BYPASS, else the low-effort member with the smallest median latency in outputs/model_outputs.json."""
+    key = tuple(m.name for m in ms)
+    if key in _bypass_cache:
+        return _bypass_cache[key]
+    names = {m.name for m in ms}
+    if config.MEMORY_BYPASS:
+        out = {n for n in config.MEMORY_BYPASS if n in names}
+    else:
+        lat: dict[str, list[float]] = {}
+        try:
+            import json
+            from . import outputs
+            for g in json.loads(outputs.OUTPUTS_FILE.read_text()).get("games", []):
+                for mem in g.get("members", []):
+                    if (mem.get("meta") or {}).get("latency_s"):
+                        lat.setdefault(mem["member"], []).append(mem["meta"]["latency_s"])
+        except Exception:  # noqa: BLE001 - no history: fall back to the first low-effort member
+            pass
+        low = [m for m in ms if m.effort == "low" and not m.web] or list(ms)
+        med = lambda n: sorted(lat[n])[len(lat[n]) // 2] if lat.get(n) else float("inf")
+        out = {min(low, key=lambda m: med(m.name)).name} if low else set()
+    _bypass_cache[key] = out
+    return out
 
 
 def _wmedian(values: list[float], weights: list[float]) -> float:
@@ -122,16 +152,36 @@ def combine(results: list[tuple[CaseEstimate, float]]) -> list[pricing.LinePrice
     return prices
 
 
-def run(case: Case, deadline: float, on_update=None, ms: list[Member] | None = None):
+def run(case: Case, deadline: float, on_update=None, ms: list[Member] | None = None, references=None):
     """Runs all members in parallel until done or the monotonic deadline.
 
     on_update(prices, done, total, member, est, meta) is called after every
     successful member with the combined prices so far.
-    Returns (results, failures) where results = [(member, est, meta)].
+    references: None (memory off), or the Future of a memory query (memory.Memory.submit). Bypass members start at
+    once without hints; every other member waits at most CLAIMS_MEMORY_BUDGET_S for the hint block, then runs with or
+    without it. meta["memory"] records which.
+    Returns (results, failures, timed_out) where results = [(member, est, meta)].
     """
     ms = ms if ms is not None else members()
     pool = ThreadPoolExecutor(max_workers=max(len(ms), 1))
-    futures = {pool.submit(run_member, case, m): m for m in ms}
+    if references is None:
+        futures = {pool.submit(run_member, case, m): m for m in ms}
+    else:
+        from . import memory
+        bypass = bypass_names(ms)
+        until = time.monotonic() + config.MEMORY_BUDGET_S
+
+        def task(m: Member):
+            if m.name in bypass:
+                info = dict(used=False, status="bypass")
+                est, meta = run_member(case, m)
+            else:
+                block, info = memory.wait_block(references, until)
+                est, meta = run_member(case, m, block)
+            meta["memory"] = info
+            return est, meta
+
+        futures = {pool.submit(task, m): m for m in ms}
     results, failures = [], []
     pending = set(futures)
     try:

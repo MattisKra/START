@@ -20,6 +20,11 @@ uv run python -m claimbot estimate CASE_DIR_OR_ZIP [--password PW] [--effort med
 uv run python -m claimbot round GAME_ID --zip cases/case_017.zip --dry-run              # full round without submitting
 uv run python -m claimbot games                                       # GET /api/games/list
 uv run python -m claimbot archive [--once]                            # decrypt each released case into past-cases/ (never submits)
+uv run python -m claimbot memory build [--until N] [--out DIR]       # case memory from past-cases/ + our own settlements
+uv run python -m claimbot memory query past-cases/case_006            # print the hint block a case would get
+uv run python -m claimbot memory prompts | memory import              # enrichment by hand in a chat UI instead of the API
+uv run python -I research/bench/test_clause_parser.py                 # clause / invoice parser checks
+uv run python research/bench/memory_eval.py [--dry]                   # forward eval of the memory vs our OWN settlements
 python3 -I research/sim/payoff_check.py                               # payoff-model sanity checks (numpy)
 python3 -I research/sim/review_pricing_rule.py
 ```
@@ -59,6 +64,15 @@ estimates facts and uncertainty, and Python owns all arithmetic and strategy**, 
   running overnight: `nohup caffeinate -i .venv/bin/python -u -m claimbot archive >> runs/archive.log 2>&1 &`
   (stop with `pkill -f "claimbot archive"`). The team name comes from `CLAIMS_TEAM`.
 
+- `memory_build.py` / `memory.py` / `memtext.py` (case memory, **off** by default, `CLAIMS_MEMORY=1`): offline, one cheap LLM
+  call per released case turns past-cases/ plus our OWN settlement rows (`results.json`) into entries with what the data
+  proves (`observed`) and a checked hypothesis (outcome, deciding clause, verbatim quotes). Builds are versioned under
+  `runs/memory/builds/` and activated atomically via `runs/memory/CURRENT`; `archive` rebuilds after each game's results.
+  Online, one worker thread embeds the invoice lines (fastembed, local ONNX), matches deciding clauses in the NEW policy by
+  hash/MinHash and appends a <= 600-token hint block. A bypass member starts at once without hints; the others wait at most
+  `CLAIMS_MEMORY_BUDGET_S` (0.5 s). By default it also learns from the brackets of all teams' public rows (`CLAIMS_MEMORY_LABELS=leaderboard`; `archive`
+  refreshes `runs/bench/labels.jsonl` before each rebuild).
+
 ## Rules that are easy to get wrong
 
 - **`a` and `b` are gross (incl. VAT) totals for the whole line**, never net and never per unit.
@@ -68,7 +82,10 @@ estimates facts and uncertainty, and Python owns all arithmetic and strategy**, 
 - Later submissions overwrite earlier ones, and only one team member should submit live. Use `--dry-run` or `estimate` for
   testing. Game 0 is the sanctioned test game.
 - Fair play, where breaking it means disqualification: never fetch keys before release, never probe or overload the API, never
-  read other teams' data. Case zips (`cases/case_000…100.zip`, gitignored) stay encrypted until their round.
+  coordinate with other teams. Case zips (`cases/case_000…100.zip`, gitignored) stay encrypted until their round.
+  The PUBLIC leaderboard data of completed games, all teams' rows included, may be read and used (organisers' OK,
+  2026-11-21): `research/bench/build_labels.py` turns it into per-line brackets for t (`runs/bench/labels.jsonl`, gitignored,
+  no team names). Read it through the leaderboard endpoints at 1 request/s, never during a running round for that round.
 - The jury (30 % of the grade) rewards economical methods ("no token maxing"), evidence and honesty. Keep LLM usage lean and
   record token usage (`meta.usage` in the run logs).
 

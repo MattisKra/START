@@ -12,4 +12,5 @@ dependencies = [
     "anthropic>=2.12.0",
     "pillow>=13.0.0",
     "pypdfium2>=5.15.2",
+    "fastembed>=0.9.1,<0.10",  # case memory embeddings (claimbot/memory.py)
 ]

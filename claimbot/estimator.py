@@ -64,7 +64,9 @@ def _image_part(blob: tuple[str, bytes]) -> dict:
     return {"type": "input_image", "image_url": f"data:{mime};base64,{data}", "detail": "high"}
 
 
-def case_text(case: Case) -> str:
+def case_text(case: Case, references: str | None = None) -> str:
+    """The case as prompt text. `references` is the optional hint block from the case memory (memory.py); without it
+    the text is exactly what it was before the memory existed."""
     text = (
         f"=== policy.txt ===\n{case.policy}\n\n"
         f"=== description.txt ===\n{case.description}\n\n"
@@ -72,11 +74,13 @@ def case_text(case: Case) -> str:
     )
     if case.image_blobs:
         text += f"\n{len(case.image_blobs)} photo(s) of the damage are attached.\n"
+    if references:
+        text += f"\n=== hints from earlier claims (case memory) ===\n{references}\n"
     return text
 
 
-def build_input(case: Case, web: bool = False) -> list[dict]:
-    content = [{"type": "input_text", "text": (WEB_HINT if web else "") + case_text(case)}]
+def build_input(case: Case, web: bool = False, references: str | None = None) -> list[dict]:
+    content = [{"type": "input_text", "text": (WEB_HINT if web else "") + case_text(case, references)}]
     content += [_image_part(b) for b in case.image_blobs]
     return [{"role": "user", "content": content}]
 
@@ -90,7 +94,8 @@ WEB_HINT = (
 )
 
 
-def estimate(case: Case, effort: str = config.EFFORT, model: str | None = None, web: bool = False) -> tuple[CaseEstimate, dict]:
+def estimate(case: Case, effort: str = config.EFFORT, model: str | None = None, web: bool = False,
+             references: str | None = None) -> tuple[CaseEstimate, dict]:
     """Returns the parsed estimate and some metadata (latency, token usage)."""
     model = model or config.MODEL
     t0 = time.monotonic()
@@ -99,7 +104,7 @@ def estimate(case: Case, effort: str = config.EFFORT, model: str | None = None, 
         model=model,
         instructions=INSTRUCTIONS,
         **extra,
-        input=build_input(case, web),
+        input=build_input(case, web, references),
         reasoning={"effort": effort},
         text_format=CaseEstimate,
     )

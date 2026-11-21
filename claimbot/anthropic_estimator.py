@@ -35,9 +35,9 @@ def _image_block(blob: tuple[str, bytes]) -> dict:
 WEB_TOOL = {"type": "web_search_20260209", "name": "web_search", "max_uses": 3}
 
 
-def estimate(case: Case, effort: str, model: str, web: bool = False) -> tuple[CaseEstimate, dict]:
+def estimate(case: Case, effort: str, model: str, web: bool = False, references: str | None = None) -> tuple[CaseEstimate, dict]:
     t0 = time.monotonic()
-    content = [_image_block(b) for b in case.image_blobs] + [{"type": "text", "text": (WEB_HINT if web else "") + case_text(case)}]
+    content = [_image_block(b) for b in case.image_blobs] + [{"type": "text", "text": (WEB_HINT if web else "") + case_text(case, references)}]
     messages = [{"role": "user", "content": content}]
     extra = {"tools": [WEB_TOOL]} if web else {}
     for _ in range(3):  # resume server-side tool loops that pause (pause_turn)

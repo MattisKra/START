@@ -26,13 +26,21 @@ OUT = ROOT / "runs" / "bench" / "labels.jsonl"   # gitignored: derived from othe
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--team", required=True); ap.add_argument("--refresh", action="store_true")
     a = ap.parse_args()
+    update(a.team, a.refresh)
+
+
+def update(team: str, refresh: bool = False, games=None) -> list[int]:
+    """Label every completed game not yet in labels.jsonl (or only `games`). Returns the games labelled now.
+    Also called by `claimbot archive` after each game's results."""
+    from types import SimpleNamespace
+    a = SimpleNamespace(team=team, refresh=refresh)
     src = lb.Source()
     g = src.get("games", completed_only="true", page_size=1000)
     done = sorted(x["id"] for x in (g or {}).get("items", []) if x["status"] == "completed")
     have = set()
     if OUT.exists() and not a.refresh:
         have = {json.loads(l)["game"] for l in OUT.read_text().splitlines() if l.strip()}
-    todo = [d for d in done if d not in have]
+    todo = [d for d in done if d not in have and (games is None or d in games)]
     print(f"completed games {done}; to label: {todo}")
     new = []
     for gid in todo:
@@ -59,6 +67,7 @@ def main():
             for n in new:
                 f.write(json.dumps(n, ensure_ascii=False) + "\n")
     print(f"labels.jsonl now has {sum(1 for _ in open(OUT)) if OUT.exists() else 0} line labels")
+    return sorted({n["game"] for n in new})
 
 
 if __name__ == "__main__":

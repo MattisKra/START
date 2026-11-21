@@ -45,7 +45,31 @@ A_MEDIAN_MULT = float(os.getenv("CLAIMS_A_MEDIAN_MULT", "0.9"))
 # Floor on log-space spread so the model can't claim false certainty.
 MIN_SIGMA = float(os.getenv("CLAIMS_MIN_SIGMA", "0.08"))
 
+# --- Case memory (claimbot/memory.py) ----------------------------------------
+# Hints from earlier, settled games in the prompt. OFF by default: switch it on only after the forward evaluation
+# (research/bench/rag_bench.py --retriever memory --forward) shows a gain and the first submission is not later.
+MEMORY = os.getenv("CLAIMS_MEMORY", "0") == "1"
+MEMORY_K = int(os.getenv("CLAIMS_MEMORY_K", "3"))  # neighbours per invoice line
+MEMORY_MIN_SCORE = float(os.getenv("CLAIMS_MEMORY_MIN_SCORE", "0.25"))
+# Members outside the bypass wait at most this long for the hint block; after that they run without it.
+MEMORY_BUDGET_S = float(os.getenv("CLAIMS_MEMORY_BUDGET_S", "0.5"))
+# Members (names like "gpt-6.1-terra/low") that always start at once without hints. Empty = the low-effort member with
+# the smallest median latency in outputs/model_outputs.json.
+MEMORY_BYPASS = [s.strip() for s in os.getenv("CLAIMS_MEMORY_BYPASS", "").split(",") if s.strip()]
+# `claimbot archive` rebuilds the memory after each game's results (one cheap LLM call per new case).
+MEMORY_AUTOBUILD = os.getenv("CLAIMS_MEMORY_AUTOBUILD", "1") == "1"
+MEMORY_MODEL = os.getenv("CLAIMS_MEMORY_MODEL", MODEL)
+MEMORY_EFFORT = os.getenv("CLAIMS_MEMORY_EFFORT", "low")
+# Which settlement data the memory learns from: "leaderboard" = our own rows plus brackets from ALL teams' public
+# leaderboard rows of completed games (runs/bench/labels.jsonl; the organisers confirmed this use on 2026-11-21),
+# "own" = only our own rows.
+MEMORY_LABELS = os.getenv("CLAIMS_MEMORY_LABELS", "leaderboard")
+TEAM = os.getenv("CLAIMS_TEAM", "Kiebler Software Solutions")
+LABELS_FILE = ROOT / "runs" / "bench" / "labels.jsonl"
+
 # --- Paths -----------------------------------------------------------------
 CASES_DIR = ROOT / "cases"  # encrypted zips go here
 WORK_DIR = ROOT / "runs" / "extracted"  # decrypted cases (untrusted data)
 RUNS_DIR = ROOT / "runs"  # one JSON log per run
+MEMORY_DIR = ROOT / "runs" / "memory"  # versioned memory builds (gitignored: holds settled amounts)
+PAST_DIR = ROOT / "past-cases"
