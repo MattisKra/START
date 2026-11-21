@@ -52,17 +52,19 @@ That makes the edge a *measurement* problem. Ranked by expected value, with how 
 
 What does **not** work and should not be planned on: online recalibration from rejection outcomes, adaptive conformal updates, or any "learn `t` from settlements" step. They need feedback the API does not provide.
 
-## 5. A decision for you: the `t = 0` free option
+## 5. The `t = 0` free option: decided to TEST, not to lock in
 
-For a line that is excluded or unrelated, a positive `a` can only gain money (a rejected inflated charge pays 0, an accepted one pays `min(a, c)`), and **all five reports flag it**.
-But `GAME_DESCRIPTION.md` frames the handyman as setting "the price … that you think you're entitled to", and the jury scores "clarity and honesty".
-The rules allow it and the claimbot already does it implicitly (excluded lines are priced as if valid). Options:
+Decision (user, 2026-11-21): the option is within the game's bounds, so we test it; **no early commitment to any decision architecture.**
+Why it is within bounds: the payoff table pays `min(a, c)` to the handyman when an insurer accepts an inflated charge, and the cap exists
+precisely "so one absurd charge can't win the game" (`materials/GAME_DESCRIPTION.md`); the fair-play list does not mention it.
+Soft spots: the same text says the handyman sets the price "you think you're entitled to", and the jury scores honesty. A one-line
+check with QuantCo on Discord (Marvin / Moritz / Simon, tag `[QuantCo]`) is cheap insurance; the organisers are the authority, not our reading.
 
-- **Use it deliberately and disclose it** in the write-up as a game-mechanics finding, with the measured gain (if any).
-- **Don't use it** (set `a = 0` on lines we believe excluded) and give up the upside against weak opponents.
-- **Use it only at a small amount** and report it as an experiment.
-
-My recommendation: disclose and use it, because the payoff is real and the rules text does not forbid it, but this is a call on spirit-of-the-game risk that is yours, not mine.
+How to keep it open (design, not built):
+- A **switch, not a constant:** `EXCLUDED_CHARGE_MODE ∈ {off, fraction, as-valid}` plus a fraction, read from config per round.
+- It has **no downside in the payoff model** (rejected inflated = 0, `b` unaffected), so it needs no measurement to justify; measure only to size it and to report it.
+- Log, per excluded line: mode, `a`, round id. Whether it earned anything can only be read from leaderboard deltas, so expect a weak signal.
+- Disclose it in the write-up whatever we choose.
 
 ## 6. Next steps I'd take (nothing started)
 
