@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live leaderboard</title>
+<style>
+  :root {
+    --bg: #ffffff; --ink: #1b1b1b; --ink2: #555b63; --muted: #8a9099; --grid: #e4e6ea; --axis: #b9bec6;
+    --zero: #6f757e; --border: #d8dbe0; --tip: #ffffff; --chip: #f2f3f5; --ok: #2e9e5b; --warn: #c98a00;
+  }
+  :root { color-scheme: light; }   /* always white, also when the system is in dark mode */
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 1320px; margin: 0 auto; padding: 18px 16px 32px; }
+  h1 { font-size: 19px; margin: 0 0 2px; font-weight: 650; }
+  .sub { color: var(--ink2); margin: 0 0 10px; }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-bottom: 10px; }
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .seg button { border: 0; background: transparent; color: var(--ink2); font: inherit; padding: 5px 12px; cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--chip); color: var(--ink); font-weight: 600; }
+  label.chk { color: var(--ink2); display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+  .status { margin-left: auto; color: var(--ink2); display: inline-flex; gap: 7px; align-items: center;
+            font-variant-numeric: tabular-nums; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); flex: none; }
+  .dot.ok { background: var(--ok); } .dot.warn { background: var(--warn); }
+  .legend { display: flex; flex-wrap: wrap; gap: 2px 6px; margin-bottom: 6px; }
+  .legend button { border: 0; background: transparent; color: var(--ink); font: inherit; padding: 3px 6px; border-radius: 6px;
+                   cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; }
+  .legend button:hover { background: var(--chip); }
+  .legend button[aria-pressed="false"] { opacity: .38; text-decoration: line-through; }
+  .legend .rk { color: var(--muted); min-width: 1.1em; text-align: right; }
+  .legend .me { font-weight: 700; }
+  .legend .val { color: var(--ink2); }
+  #plot { position: relative; }
+  #plot svg { display: block; touch-action: pan-y; }
+  svg text { fill: var(--ink2); font-size: 12px; }
+  svg .title { fill: var(--ink); font-size: 13px; }
+  .tip { position: absolute; pointer-events: none; background: var(--tip); border: 1px solid var(--border); border-radius: 8px;
+         padding: 8px 10px; box-shadow: 0 4px 16px rgba(0,0,0,.14); font-size: 12.5px; white-space: nowrap; display: none;
+         font-variant-numeric: tabular-nums; z-index: 2; }
+  .tip h3 { margin: 0 0 5px; font-size: 12.5px; font-weight: 650; }
+  .tip h3 span { color: var(--muted); font-weight: 400; }
+  .tip table { border-collapse: collapse; }
+  .tip td { padding: 1px 0 1px 10px; }
+  .tip td:first-child { padding-left: 0; color: var(--muted); text-align: right; }
+  .tip td.num { text-align: right; }
+  .tip td.d { color: var(--ink2); text-align: right; }
+  .tip tr.me td { font-weight: 700; }
+  .note { color: var(--ink2); margin: 8px 0 0; max-width: 1100px; }
+  details { margin-top: 14px; }
+  summary { cursor: pointer; color: var(--ink2); }
+  table.data { border-collapse: collapse; margin-top: 8px; font-variant-numeric: tabular-nums; }
+  table.data th, table.data td { padding: 4px 14px 4px 0; text-align: right; border-bottom: 1px solid var(--grid); }
+  table.data th { color: var(--ink2); font-weight: 600; }
+  table.data th:nth-child(2), table.data td:nth-child(2) { text-align: left; }
+  .empty { padding: 60px 0; color: var(--ink2); text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <h1 id="title">Live leaderboard</h1>
+  <p class="sub">Live from the public leaderboard. Click a legend entry to hide or show a team.</p>
+  <div class="bar">
+    <div class="seg" role="group" aria-label="View">
+      <button id="vScore" aria-pressed="true">Score</button>
+      <button id="vRank" aria-pressed="false">Rank</button>
+    </div>
+    <label class="chk" id="cutWrap"><input type="checkbox" id="cut" checked> Cut axis at −150k</label>
+    <label class="chk" id="marksWrap"><input type="checkbox" id="marks" checked> <span id="marksText">Markers</span></label>
+    <div class="status" aria-live="polite"><span class="dot" id="dot"></span><span id="status">Connecting …</span></div>
+  </div>
+  <div class="legend" id="legend"></div>
+  <div id="plot"><svg id="svg" role="img" aria-labelledby="title"></svg><div class="tip" id="tip"></div></div>
+  <p class="note" id="note"></p>
+  <details><summary>Table</summary><div id="table"></div></details>
+</main>
+<script>
+"use strict";
+const POLL_MS = 20000, CUT = -150000, NS = "http://www.w3.org/2000/svg";
+// Colours follow the team, not its rank. A second use of a hue is always dashed.
+const KNOWN = {
+  "Kiebler Software Solutions": ["#e15759", 0], "chineseModels": ["#76b7b2", 0], "Humble Legends": ["#9c755f", 0],
+  "FDN": ["#59a14f", 0], "TRINNERS4WINNERS": ["#f28e2b", 0], "GemischtesHack": ["#edc948", 0], "CHOOMS": ["#f28e2b", 1],
+  "404": ["#4e79a7", 0], "alpha": ["#b07aa1", 0], "Lumenauts": ["#e15759", 1], "Asgardians": ["#4e79a7", 1],
+  "vietgang": ["#59a14f", 1],
+};
+const SPARE = [["#ff9da7", 0], ["#bab0ac", 0], ["#76b7b2", 1], ["#9c755f", 1], ["#b07aa1", 1], ["#edc948", 1]];
+const DASH = "6 4";
+
+const $ = s => document.querySelector(s);
+const fmt = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
+const signed = v => (v > 0 ? "+" : "") + fmt.format(v);
+const store = {
+  get(k, d) { try { const v = localStorage.getItem("lb." + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem("lb." + k, JSON.stringify(v)); } catch { /* private window */ } },
+};
+const state = { view: new URLSearchParams(location.search).get("view") || store.get("view", "score"), cut: store.get("cut", true), marks: store.get("marks", true),
+                hidden: new Set(store.get("hidden", [])), hover: null };
+let raw = null, model = null, geo = null, lastOk = false;
+
+function el(tag, attrs, ...kids) {
+  const e = document.createElement(tag);
+  for (const k in attrs || {}) e.setAttribute(k, attrs[k]);
+  for (const c of kids) e.append(c);
+  return e;
+}
+function S(tag, attrs, text) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs || {}) e.setAttribute(k, attrs[k]);
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
+
+function build(d) {
+  const ids = d.game_ids, n = ids.length;
+  const teams = d.teams.map(t => {
+    let s = 0;
+    const cells = ids.map((_, i) => t.cells[i] || 0);
+    return { name: t.name, cells, cum: cells.map(v => (s += v)), rank: new Array(n) };
+  });
+  for (let i = 0; i < n; i++) {
+    [...teams].sort((a, b) => b.cum[i] - a.cum[i] || a.name.localeCompare(b.name)).forEach((t, k) => (t.rank[i] = k + 1));
+  }
+  if (n) teams.sort((a, b) => a.rank[n - 1] - b.rank[n - 1]);
+  const unknown = teams.map(t => t.name).filter(x => !KNOWN[x]).sort();
+  for (const t of teams) {
+    const [color, dashed] = KNOWN[t.name] || SPARE[unknown.indexOf(t.name) % SPARE.length];
+    t.color = color; t.dashed = !!dashed; t.me = t.name === d.team;
+  }
+  const empty = ids.filter((_, i) => teams.every(t => t.cells[i] === 0));
+  const start = {};
+  for (const g of d.games || []) start[g.id] = g.start_time;
+  return { ids, n, teams, empty, start, marks: d.marks || [], markLabel: d.mark_label || "Marker" };
+}
+
+function niceStep(span, target) {
+  const rawStep = span / target, p = Math.pow(10, Math.floor(Math.log10(rawStep))), f = rawStep / p;
+  return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 5 ? 5 : 10) * p;
+}
+function axisLabel(v, step) {
+  if (v === 0) return "0";
+  if (step >= 1e6 || (Math.abs(v) >= 2e6 && step >= 1e5)) return (v / 1e6).toFixed(step >= 1e6 ? 0 : 1) + "M";
+  return step >= 1000 ? v / 1000 + "k" : fmt.format(v);
+}
+function swatch(t, w) {
+  const s = S("svg", { width: w, height: 10, viewBox: `0 0 ${w} 10`, "aria-hidden": "true" });
+  s.style.flex = "none";
+  s.append(S("line", { x1: 1, x2: w - 1, y1: 5, y2: 5, stroke: t.color, "stroke-width": t.me ? 4 : 2.5,
+                       "stroke-linecap": "round", "stroke-dasharray": t.dashed ? "5 3" : "" }));
+  return s;
+}
+
+function render() {
+  const m = model;
+  if (!m) return;
+  const rankView = state.view === "rank", last = m.n - 1;
+  $("#vScore").setAttribute("aria-pressed", String(!rankView));
+  $("#vRank").setAttribute("aria-pressed", String(rankView));
+  $("#cutWrap").style.display = rankView ? "none" : "";
+  $("#marksWrap").style.display = m.marks.length ? "" : "none";
+  $("#marksText").textContent = `"${m.markLabel}" markers`;
+  $("#cut").checked = state.cut; $("#marks").checked = state.marks;
+  const range = m.n ? `rounds ${m.ids[0]} to ${m.ids[last]}` : "no completed round yet";
+  $("#title").textContent = (rankView ? "Rank per team, " : "Cumulative score per team, ") + range;
+  document.title = m.n ? `Round ${m.ids[last]} · live leaderboard` : "Live leaderboard";
+
+  // Legend: current standing, best first.
+  const legend = $("#legend");
+  legend.replaceChildren(...m.teams.map(t => {
+    const b = el("button", { type: "button", "aria-pressed": String(!state.hidden.has(t.name)),
+                             title: "Click to hide or show. Double-click to show only this team." },
+      el("span", { class: "rk" }, m.n ? String(t.rank[last]) : ""), swatch(t, 26),
+      el("span", t.me ? { class: "me" } : {}, t.name),
+      el("span", { class: t.me ? "val me" : "val" }, m.n ? fmt.format(t.cum[last]) : ""));
+    b.addEventListener("click", () => { state.hidden.has(t.name) ? state.hidden.delete(t.name) : state.hidden.add(t.name); saveHidden(); });
+    b.addEventListener("dblclick", () => {
+      const only = m.teams.every(o => o === t || state.hidden.has(o.name));
+      state.hidden = new Set(only ? [] : m.teams.filter(o => o !== t).map(o => o.name)); saveHidden();
+    });
+    return b;
+  }));
+
+  const svg = $("#svg"), wrap = $("#plot");
+  svg.replaceChildren();
+  hideTip();
+  if (!m.n) { svg.setAttribute("height", 0); $("#note").textContent = "No completed round yet."; $("#table").replaceChildren(); return; }
+
+  const W = Math.max(320, wrap.clientWidth), H = Math.round(Math.max(380, Math.min(640, W * 0.56)));
+  const endLabels = rankView && W >= 760;
+  const M = { l: rankView ? 36 : 58, r: endLabels ? 204 : 16, t: 26, b: 46 };
+  const iw = W - M.l - M.r, ih = H - M.t - M.b;
+  const X = i => M.l + (m.n > 1 ? (i / (m.n - 1)) * iw : iw / 2);
+  const vis = m.teams.filter(t => !state.hidden.has(t.name));
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
+
+  let Y, below = [];
+  const gGrid = S("g"), gAxis = S("g");
+  if (rankView) {
+    const T = m.teams.length;
+    Y = r => M.t + 34 + (T > 1 ? ((r - 1) / (T - 1)) * (ih - 46) : 0);   // room for the marker labels above rank 1
+    for (let r = 1; r <= T; r++) {
+      gGrid.append(S("line", { x1: M.l, x2: M.l + iw, y1: Y(r), y2: Y(r), stroke: "var(--grid)" }));
+      gAxis.append(S("text", { x: M.l - 10, y: Y(r) + 4, "text-anchor": "end" }, String(r)));
+    }
+  } else {
+    let vmax = 0, vmin = 0;
+    for (const t of vis) for (const v of t.cum) { if (v > vmax) vmax = v; if (v < vmin) vmin = v; }
+    const cutOn = state.cut && vmin < CUT;
+    const step = niceStep(Math.max(vmax - (cutOn ? CUT : vmin), 1), 6);
+    const hi = Math.max(Math.ceil(vmax / step) * step, step), lo = cutOn ? CUT : Math.floor(vmin / step) * step;
+    Y = v => M.t + ((hi - v) / (hi - lo)) * ih;
+    const ticks = [];
+    for (let v = Math.ceil(lo / step) * step; v <= hi + 1e-6; v += step) ticks.push(Math.round(v));
+    if (cutOn && ticks[0] - lo > step * 0.3) ticks.unshift(lo); else if (cutOn) ticks[0] = lo;
+    for (const v of ticks) {
+      gGrid.append(S("line", { x1: M.l, x2: M.l + iw, y1: Y(v), y2: Y(v), stroke: v === 0 ? "var(--zero)" : "var(--grid)" }));
+      gAxis.append(S("text", { x: M.l - 8, y: Y(v) + 4, "text-anchor": "end" }, axisLabel(v, step)));
+    }
+    if (cutOn) below = [...vis].filter(t => t.cum[last] < CUT).sort((a, b) => a.cum[last] - b.cum[last]);
+  }
+
+  // x axis
+  const stepX = [1, 2, 3, 5, 10, 20, 50].find(s => (iw / Math.max(m.n - 1, 1)) * s >= 26) || 50;
+  for (let i = 0; i < m.n; i += stepX) {
+    gAxis.append(S("line", { x1: X(i), x2: X(i), y1: M.t + ih, y2: M.t + ih + 5, stroke: "var(--axis)" }));
+    gAxis.append(S("text", { x: X(i), y: M.t + ih + 20, "text-anchor": "middle" }, String(m.ids[i])));
+  }
+  gAxis.append(S("line", { x1: M.l, x2: M.l + iw, y1: M.t + ih, y2: M.t + ih, stroke: "var(--axis)" }));
+  gAxis.append(S("text", { x: M.l + iw / 2, y: H - 6, "text-anchor": "middle", class: "title" }, "Round"));
+
+  // markers between rounds
+  const gMarks = S("g");
+  let prevLabel = -Infinity;
+  if (state.marks) for (const r of m.marks) {
+    const i = r - m.ids[0];
+    if (i < 0 || i > last + 0.5) continue;
+    const x = Math.min(X(i), M.l + iw);
+    gMarks.append(S("line", { x1: x, x2: x, y1: M.t - 6, y2: M.t + ih, stroke: "var(--ink)", "stroke-width": 1.5, "stroke-dasharray": "6 5" }));
+    if (x - prevLabel < m.markLabel.length * 7.5 + 14) continue;   // no room next to the previous label
+    gMarks.append(S("text", { x: x - 7, y: M.t + 14, "text-anchor": "end", class: "title" }, m.markLabel));
+    prevLabel = x;
+  }
+
+  // lines, own team on top
+  const defs = S("defs"), clip = S("clipPath", { id: "clip" });
+  clip.append(S("rect", { x: M.l - 3, y: M.t - 3, width: iw + 6, height: ih + 3 }));
+  defs.append(clip);
+  const gLines = S("g", { "clip-path": "url(#clip)", fill: "none", "stroke-linejoin": "round", "stroke-linecap": "round" });
+  const series = t => (rankView ? t.rank : t.cum);
+  for (const t of [...vis].sort((a, b) => a.me - b.me)) {
+    const pts = series(t).map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`);
+    if (m.n === 1) gLines.append(S("circle", { cx: X(0), cy: Y(series(t)[0]), r: t.me ? 5 : 4, fill: t.color }));
+    else gLines.append(S("path", { d: "M" + pts.join("L"), stroke: t.color, "stroke-width": t.me ? 4 : 2,
+                                   "stroke-dasharray": t.dashed ? DASH : "" }));
+  }
+  const gEnd = S("g");
+  if (endLabels) for (const t of vis) {
+    const name = t.name.length > 28 ? t.name.slice(0, 27) + "…" : t.name;
+    const tx = S("text", { x: M.l + iw + 10, y: Y(t.rank[last]) + 4 }, `${t.rank[last]}  ${name}`);
+    tx.style.fill = "var(--ink)"; if (t.me) tx.style.fontWeight = "700";
+    gEnd.append(tx);
+  }
+
+  const gHover = S("g", { id: "hover", "pointer-events": "none" });
+  const hit = S("rect", { x: M.l - 8, y: M.t, width: iw + 16, height: ih, fill: "transparent" });
+  svg.append(defs, gGrid, gMarks, gLines, gAxis, gEnd, gHover, hit);
+  geo = { X, Y, M, iw, ih, W, vis, series, rankView };
+  hit.addEventListener("pointermove", e => {
+    const r = svg.getBoundingClientRect(), px = (e.clientX - r.left) * (W / r.width);
+    const i = m.n > 1 ? Math.round(((px - M.l) / iw) * (m.n - 1)) : 0;
+    showHover(Math.max(0, Math.min(m.n - 1, i)));
+  });
+  hit.addEventListener("pointerleave", hideTip);
+  if (state.hover !== null && state.hover < m.n) showHover(state.hover);
+
+  // footnote and table
+  const notes = [];
+  if (state.marks && m.marks.length) notes.push(`Dashed vertical lines: "${m.markLabel}" at ` + m.marks.map(r =>
+    Number.isInteger(r) ? `round ${r}` : `rounds ${Math.floor(r)}/${Math.ceil(r)}`).join(", ") + ".");
+  if (below.length) notes.push(`Axis cut at ${fmt.format(CUT)}; below it are ` +
+    below.map(t => `${t.name} (${fmt.format(t.cum[last])})`).join(", ") + ".");
+  if (m.empty.length) notes.push(`Round${m.empty.length > 1 ? "s" : ""} ${m.empty.join(", ")} ${m.empty.length > 1 ? "have" : "has"} no transactions.`);
+  $("#note").textContent = notes.join(" ");
+
+  const tb = el("table", { class: "data" }, el("tr", {}, ...["Rank", "Team", "Total", `Round ${m.ids[last]}`, "Rank change", "Best rank"].map(h => el("th", {}, h))));
+  for (const t of m.teams) {
+    const dr = last > 0 ? t.rank[last - 1] - t.rank[last] : 0;
+    tb.append(el("tr", {}, el("td", {}, String(t.rank[last])), el("td", {}, t.name), el("td", {}, fmt.format(t.cum[last])),
+      el("td", {}, signed(t.cells[last])), el("td", {}, dr > 0 ? `▲ ${dr}` : dr < 0 ? `▼ ${-dr}` : "–"),
+      el("td", {}, String(Math.min(...t.rank)))));
+  }
+  $("#table").replaceChildren(tb);
+}
+
+function showHover(i) {
+  const m = model, g = geo, gHover = $("#hover"), tip = $("#tip");
+  if (!g || !gHover) return;
+  state.hover = i;
+  gHover.replaceChildren(S("line", { x1: g.X(i), x2: g.X(i), y1: g.M.t, y2: g.M.t + g.ih, stroke: "var(--zero)", "stroke-width": 1 }));
+  const yMax = g.M.t + g.ih;
+  for (const t of g.vis) {
+    const y = g.Y(g.series(t)[i]);
+    if (y <= yMax + 1) gHover.append(S("circle", { cx: g.X(i), cy: y, r: t.me ? 5.5 : 4.5, fill: t.color, stroke: "var(--bg)", "stroke-width": 2 }));
+  }
+  const when = m.start[m.ids[i]] ? new Date(m.start[m.ids[i]]).toLocaleString([], { weekday: "short", hour: "2-digit", minute: "2-digit" }) : "";
+  const rows = [...g.vis].sort((a, b) => a.rank[i] - b.rank[i]).map(t => el("tr", t.me ? { class: "me" } : {},
+    el("td", {}, String(t.rank[i])), el("td", {}, swatch(t, 20)), el("td", {}, t.name),
+    el("td", { class: "num" }, fmt.format(t.cum[i])), el("td", { class: "d" }, signed(t.cells[i]))));
+  tip.replaceChildren(el("h3", {}, `Round ${m.ids[i]} `, el("span", {}, when ? `· ${when} · total and this round` : "· total and this round")),
+                      el("table", {}, ...rows));
+  tip.style.display = "block";
+  const scale = $("#svg").getBoundingClientRect().width / g.W, x = g.X(i) * scale, tw = tip.offsetWidth, pw = $("#plot").clientWidth;
+  tip.style.left = Math.max(0, x + 16 + tw > pw ? x - 16 - tw : x + 16) + "px";
+  tip.style.top = g.M.t + 6 + "px";
+}
+function hideTip() {
+  state.hover = null;
+  $("#tip").style.display = "none";
+  const h = $("#hover"); if (h) h.replaceChildren();
+}
+function saveHidden() { store.set("hidden", [...state.hidden]); render(); }
+
+function tick() {
+  const dot = $("#dot"), parts = [];
+  if (!raw) { dot.className = "dot" + (lastOk ? "" : " warn"); return; }
+  const live = lastOk && !raw.error;
+  dot.className = "dot " + (live ? "ok" : "warn");
+  parts.push(live ? "Live" : lastOk ? "API unreachable, showing last data" : "Local server unreachable, showing last data");
+  if (raw.fetched_at) parts.push("updated " + new Date(raw.fetched_at * 1000).toLocaleTimeString());
+  const open = (raw.games || []).filter(g => g.status !== "completed").sort((a, b) => a.start_time.localeCompare(b.start_time))[0];
+  if (open) {
+    const s = Math.round((Date.parse(open.start_time) - Date.now()) / 1000);
+    parts.push(s > 0 ? `round ${open.id} starts in ${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}` : `round ${open.id} is running`);
+  } else if ((raw.games || []).length) parts.push("all rounds completed");
+  $("#status").textContent = parts.join(" · ");
+}
+
+async function poll() {
+  try {
+    const r = await fetch("/api/data", { cache: "no-store" });
+    if (!r.ok) throw new Error(r.status);
+    const d = await r.json();
+    lastOk = true;
+    const changed = !raw || JSON.stringify([raw.game_ids, raw.teams, raw.team, raw.marks]) !== JSON.stringify([d.game_ids, d.teams, d.team, d.marks]);
+    raw = d;
+    if (changed && d.teams.length) { model = build(d); render(); }
+    else if (!model) $("#status").textContent = d.error ? "API unreachable: " + d.error : "No data yet";
+  } catch (e) {
+    lastOk = false;
+    if (!raw) $("#status").textContent = location.protocol === "file:"
+      ? "Start it with: python3 -I research/live/lb_chart.py --open" : "Local server unreachable, retrying …";
+  }
+  tick();
+}
+
+$("#vScore").addEventListener("click", () => { state.view = "score"; store.set("view", "score"); render(); });
+$("#vRank").addEventListener("click", () => { state.view = "rank"; store.set("view", "rank"); render(); });
+$("#cut").addEventListener("change", e => { state.cut = e.target.checked; store.set("cut", state.cut); render(); });
+$("#marks").addEventListener("change", e => { state.marks = e.target.checked; store.set("marks", state.marks); render(); });
+new ResizeObserver(() => render()).observe($("#plot"));
+poll();
+setInterval(poll, POLL_MS);
+setInterval(tick, 1000);
+</script>
+</body>
+</html>
