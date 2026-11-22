@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Round dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;600;700&family=Sofia+Sans+Condensed:wght@600;700&display=swap">
+<style>
+  /* Same paper, ink and type as research/live/lb_chart.html, so the team's two pages read as one set. */
+  :root {
+    color-scheme: light;   /* always white, also when the system is in dark mode */
+    --paper: #ffffff; --ink: #18203a; --pencil: #5a6380; --faint: #8e96ae; --rule: #dde1ec; --tint: #f2f4f9;
+    --live: #1f9d62; --warn: #b7791f;
+    --blue: #2a78d6; --orange: #eb6834; --aqua: #1baf7a; --red: #e34948; --gray: #8e96ae;
+    --sans: "Sofia Sans", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    --cond: "Sofia Sans Condensed", "DIN Condensed", "Avenir Next Condensed", "Arial Narrow", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 15px/1.45 var(--sans);
+         font-variant-numeric: tabular-nums lining-nums; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 1480px; margin: 0 auto; padding: 30px 32px 48px; }
+
+  /* headline: how far the tournament is, as a sentence */
+  .top { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px 40px; flex-wrap: wrap; }
+  h1 { font: 700 clamp(30px, 3.7vw, 54px)/1.02 var(--cond); letter-spacing: -0.012em; margin: 0; text-wrap: balance; }
+  .lede { margin: 8px 0 0; color: var(--pencil); font-size: 16.5px; max-width: 70ch; }
+  .clock { text-align: right; flex: none; margin-left: auto; }
+  .clock .label { color: var(--pencil); font-size: 14.5px; }
+  .clock .time { font: 600 40px/1 var(--cond); margin-top: 2px; min-height: 40px; }
+  .live { display: flex; gap: 7px; align-items: center; justify-content: flex-end; color: var(--pencil); font-size: 13.5px; margin-top: 7px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--faint); flex: none; }
+  .dot.ok { background: var(--live); }
+  .dot.warn { background: var(--warn); }
+
+  /* the tally: one stroke per round, like a ruler along the top of the sheet */
+  .tally { display: grid; column-gap: 2px; align-items: end; margin-top: 24px; }
+  .tally i { display: block; height: 14px; background: var(--rule); }
+  .tally i.ten { height: 22px; }
+  .tally i.done { background: var(--ink); }
+  .tally i.unread { background: var(--faint); }
+  .tally i.now { background: var(--live); animation: pulse 1.6s ease-in-out infinite; }
+  .tally span { grid-row: 2; width: 0; justify-self: center; display: flex; justify-content: center; white-space: nowrap;
+                color: var(--pencil); font-size: 12.5px; padding-top: 4px; }
+  .tallynote { color: var(--pencil); font-size: 13.5px; margin: 6px 0 0; min-height: 1.45em; }
+  @keyframes pulse { 50% { opacity: .25; } }
+  @media (prefers-reduced-motion: reduce) { .tally i.now { animation: none; } }
+
+  /* one figure: what it says and its key on the left, the plot on the right */
+  .figure { display: grid; grid-template-columns: clamp(300px, 25vw, 350px) minmax(0, 1fr); gap: 14px 44px; align-items: start;
+            border-top: 2px solid var(--ink); margin-top: 34px; padding-top: 18px; }
+  h2 { font: 700 30px/1.08 var(--cond); letter-spacing: -0.008em; margin: 0; text-wrap: balance; }
+  .says { margin: 10px 0 0; font-size: 16.5px; max-width: 46ch; }
+  .how { margin: 8px 0 0; color: var(--pencil); font-size: 14.5px; max-width: 46ch; }
+
+  /* key: laid out like the line items of an invoice */
+  table.key { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14.5px; }
+  table.key th { color: var(--pencil); font-weight: 400; font-size: 12.5px; text-align: right; padding: 0 0 6px 10px;
+                 border-bottom: 3px double var(--ink); white-space: nowrap; }
+  table.key td { text-align: right; padding: 8px 0 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; white-space: nowrap; }
+  table.key th.l, table.key td.l { text-align: left; padding-left: 0; white-space: normal; }
+  table.key td.m { width: 26px; padding-left: 0; text-align: left; }
+  table.key td.m svg, table.key td.m span { display: block; margin-top: 1px; }
+  table.key td.l strong { font-weight: 600; display: block; }
+  table.key td.l small { color: var(--pencil); font-size: 13px; display: block; }
+  table.key tr.total td { border-bottom: 0; border-top: 1px solid var(--ink); font-weight: 700; }
+  table.key tr.last td { border-bottom: 0; }
+  .keynote { color: var(--pencil); font-size: 13px; margin: 10px 0 0; max-width: 46ch; }
+
+  .plot { position: relative; }
+  .plot svg { display: block; touch-action: pan-y; }
+  svg text { font-family: var(--sans); font-size: 12.5px; fill: var(--pencil); }
+  svg text.axt { font-size: 13px; }
+  svg text.lab { font-size: 11.5px; fill: var(--pencil); }
+  .tip { position: absolute; pointer-events: none; background: var(--paper); border: 1px solid var(--ink); border-radius: 3px;
+         padding: 9px 12px 8px; font-size: 13.5px; white-space: nowrap; display: none; z-index: 2; }
+  .tip h3 { margin: 0 0 6px; font: 700 17px/1.1 var(--cond); }
+  .tip h3 span { color: var(--pencil); font: 400 13px/1.1 var(--sans); margin-left: 6px; }
+  .tip table { border-collapse: collapse; }
+  .tip td { padding: 1.5px 0; color: var(--pencil); }
+  .tip td.k { display: flex; align-items: center; gap: 7px; }
+  .tip td.v { padding-left: 20px; text-align: right; color: var(--ink); }
+  .tip tr.sum td { border-top: 1px solid var(--ink); padding-top: 4px; font-weight: 700; color: var(--ink); }
+  .note { color: var(--pencil); font-size: 13.5px; margin: 10px 0 0; max-width: 78ch; }
+  details { margin-top: 10px; }
+  summary { cursor: pointer; color: var(--pencil); font-size: 14px; width: fit-content; }
+  summary:hover { color: var(--ink); }
+  .scroll { max-height: 340px; overflow: auto; margin-top: 8px; }
+  table.data { border-collapse: collapse; font-size: 14px; }
+  table.data th, table.data td { padding: 5px 22px 5px 0; text-align: right; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+  table.data th { color: var(--pencil); font-weight: 400; font-size: 12.5px; position: sticky; top: 0; background: var(--paper);
+                  border-bottom: 3px double var(--ink); }
+  table.data .txt { text-align: left; }
+  .empty { color: var(--pencil); padding: 60px 0; }
+
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  @media (max-width: 1020px) {
+    .figure { grid-template-columns: minmax(0, 1fr); }
+    .says, .how, .keynote { max-width: 70ch; }
+  }
+  @media (max-width: 640px) {
+    .page { padding: 22px 16px 36px; }
+    .clock { text-align: left; margin-left: 0; }
+    .live { justify-content: flex-start; }
+    .tally { column-gap: 1px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="top">
+    <div>
+      <h1 id="h1">Round dashboard</h1>
+      <p class="lede" id="lede">Connecting to the leaderboard.</p>
+    </div>
+    <div class="clock" aria-live="polite">
+      <div class="label" id="clockLabel">&nbsp;</div>
+      <div class="time" id="clockTime"></div>
+      <div class="live"><span class="dot" id="dot"></span><span id="status">Connecting</span></div>
+    </div>
+  </header>
+  <div class="tally" id="tally" role="img" aria-label="Rounds of the tournament"></div>
+  <p class="tallynote" id="tallynote"></p>
+
+  <section class="figure">
+    <div>
+      <h2 id="t1">Net result against context size</h2>
+      <p class="says" id="says1"></p>
+      <p class="how" id="how1"></p>
+      <table class="key" id="key1"></table>
+      <p class="keynote" id="kn1"></p>
+    </div>
+    <div>
+      <div class="plot" id="p1"><svg id="svg1" role="img" aria-labelledby="t1"></svg><div class="tip" id="tip1"></div></div>
+      <p class="note" id="n1"></p>
+      <details><summary>Table of rounds</summary><div class="scroll" id="tb1"></div></details>
+    </div>
+  </section>
+
+  <section class="figure">
+    <div>
+      <h2 id="t2">Dollars moved between teams</h2>
+      <p class="says" id="says2"></p>
+      <p class="how" id="how2"></p>
+      <table class="key" id="key2"></table>
+      <p class="keynote" id="kn2"></p>
+    </div>
+    <div>
+      <div class="plot" id="p2"><svg id="svg2" role="img" aria-labelledby="t2"></svg><div class="tip" id="tip2"></div></div>
+      <p class="note" id="n2"></p>
+      <details><summary>Table of rounds</summary><div class="scroll" id="tb2"></div></details>
+    </div>
+  </section>
+</div>
+<script>
+"use strict";
+const NS = "http://www.w3.org/2000/svg";
+const COLORS = { gray: "var(--gray)", blue: "var(--blue)", orange: "var(--orange)", aqua: "var(--aqua)", red: "var(--red)" };
+const $ = s => document.querySelector(s);
+const int = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
+const money = v => (v < 0 ? "−$" : "$") + int.format(Math.abs(v));
+const signedMoney = v => (v > 0 ? "+$" : v < 0 ? "−$" : "$") + int.format(Math.abs(v));
+const short$ = v => v >= 1e6 ? "$" + (v / 1e6).toFixed(1) + "M" : v >= 1e3 ? "$" + int.format(v / 1e3) + "k" : "$" + int.format(v);
+const pct = (v, d = 1) => (v < 0 ? "−" : "") + Math.abs(v * 100).toFixed(d) + "%";
+const signedPct = v => (v > 0 ? "+" : "") + pct(v);
+const corr = r => (r < 0 ? "−" : "+") + Math.abs(r).toFixed(2);
+let raw = null, model = null, lastOk = false, hover1 = null, hover2 = null, geo1 = null, geo2 = null;
+
+function el(tag, attrs, ...kids) {
+  const e = document.createElement(tag);
+  for (const k in attrs || {}) e.setAttribute(k, attrs[k]);
+  for (const c of kids) e.append(c);
+  return e;
+}
+function S(tag, attrs, text) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs || {}) e.setAttribute(k, attrs[k]);
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
+function niceStep(span, target) {
+  const p = Math.pow(10, Math.floor(Math.log10(span / target)));      // the 1-2-5 step whose tick count is closest to the target
+  return [1, 2, 5, 10].map(f => f * p).sort((a, b) => Math.abs(span / a - target) - Math.abs(span / b - target))[0];
+}
+function ticks(lo, hi, step) {
+  const out = [];
+  for (let v = Math.ceil(lo / step - 1e-9) * step; v <= hi + step * 1e-9; v += step) out.push(Math.abs(v) < step * 1e-9 ? 0 : v);
+  return out;
+}
+
+// One marker, centred on (x, y). Same visual weight for every shape.
+function marker(shape, x, y, color, big) {
+  const r = big ? 9 : 7, a = { fill: color, stroke: "#fff", "stroke-width": 2, "stroke-linejoin": "round" };
+  if (shape === "square") return S("rect", { x: x - r * .88, y: y - r * .88, width: r * 1.76, height: r * 1.76, rx: 1.5, ...a });
+  if (shape === "triangle") return S("path", { d: `M${x},${y - r * 1.2}L${x + r * 1.15},${y + r * .85}H${x - r * 1.15}Z`, ...a });
+  if (shape === "diamond") return S("path", { d: `M${x},${y - r * 1.3}L${x + r * 1.3},${y}L${x},${y + r * 1.3}L${x - r * 1.3},${y}Z`, ...a });
+  return S("circle", { cx: x, cy: y, r, ...a });
+}
+function swatch(shape, color) {
+  const s = S("svg", { width: 20, height: 20, viewBox: "0 0 20 20", "aria-hidden": "true" });
+  s.style.flex = "none";
+  s.append(marker(shape, 10, 10, color));
+  return s;
+}
+function box(color) {
+  const b = el("span", {});
+  b.style.cssText = `width:13px;height:13px;border-radius:2px;background:${color};flex:none;display:inline-block`;
+  return b;
+}
+
+function build(d) {
+  const ctx = d.context || {}, tokens = ctx.tokens || {}, start = {};
+  for (const g of d.games || []) start[g.id] = g.start_time;
+  const segs = (ctx.segments || []).map(s => {
+    const m = /^(.*?)\s*\((.*)\)\s*$/.exec(s.label || "");
+    return { ...s, name: m ? m[1] : s.label, why: m ? m[2] : "", color: COLORS[s.color] || COLORS.gray, shape: s.shape || "circle", pts: [] };
+  });
+  const other = { label: "Other rounds", name: "Other rounds", why: "", color: COLORS.gray, shape: "circle", pts: [] };
+  const rounds = d.game_ids.map((id, i) => {
+    const v = d.volume[i], net = d.net[i];
+    const r = { id, net, loaded: !!v, acc: v ? v.accepted : null, pen: v ? v.penalty : null, nAcc: v ? v.n_accepted : null,
+                nPen: v ? v.n_penalty : null, vol: v ? v.accepted + v.penalty : null, start: start[id],
+                ctx: tokens[id] === undefined ? null : Number(tokens[id]) };
+    r.share = r.vol > 0 && net !== null ? net / r.vol : null;
+    if (r.ctx !== null && r.share !== null) {
+      r.seg = segs.find(s => id >= s.from && id <= s.to) || other;
+      r.seg.pts.push(r);
+    }
+    return r;
+  });
+  const groups = [...segs, other].filter(s => s.pts.length);
+  for (const s of groups) {
+    const n = s.pts.length, mx = s.pts.reduce((a, p) => a + p.ctx, 0) / n, my = s.pts.reduce((a, p) => a + p.share, 0) / n;
+    s.mean = my;
+    if (!s.trend || n < 3) continue;
+    let sxx = 0, syy = 0, sxy = 0;
+    for (const p of s.pts) { sxx += (p.ctx - mx) ** 2; syy += (p.share - my) ** 2; sxy += (p.ctx - mx) * (p.share - my); }
+    if (sxx > 0 && syy > 0) s.fit = { slope: sxy / sxx, icpt: my - (sxy / sxx) * mx, r: sxy / Math.sqrt(sxx * syy),
+                                      x0: Math.min(...s.pts.map(p => p.ctx)), x1: Math.max(...s.pts.map(p => p.ctx)) };
+  }
+  return { d, rounds, groups, segs, team: d.team, short: (d.team || "Our").split(" ")[0], nTeams: d.n_teams, ctxNote: ctx.note || "", ctxError: ctx.error };
+}
+
+/* ---------- header: sentence, clock and the tally of rounds ---------- */
+function renderTop() {
+  const m = model, games = [...(m.d.games || [])].sort((a, b) => a.id - b.id), total = games.length;
+  const done = games.filter(g => g.status === "completed").length;
+  $("#h1").textContent = total ? `${done} of ${total} rounds are settled` : "No rounds yet";
+  $("#lede").textContent = `${m.team}: two views of the tournament, read live from the public leaderboard.`;
+  document.title = total ? `${done} of ${total} rounds · dashboard` : "Round dashboard";
+  const read = new Set(m.rounds.filter(r => r.loaded).map(r => r.id)), now = Date.now(), tally = $("#tally");
+  tally.style.gridTemplateColumns = `repeat(${Math.max(total, 1)}, minmax(0, 1fr))`;
+  const kids = [];
+  games.forEach((g, i) => {
+    const running = g.status !== "completed" && Date.parse(g.start_time) <= now;
+    const state = g.status === "completed" ? (read.has(g.id) ? "done" : "unread") : running ? "now" : "";
+    const t = el("i", { class: (state + (g.id % 10 === 0 ? " ten" : "")).trim(),
+      title: `Round ${g.id}: ${state === "done" ? "settled" : state === "unread" ? "settled, transactions not read yet" : running ? "running" : "not started"}` });
+    t.style.gridColumn = String(i + 1);
+    kids.push(t);
+    if (g.id % 10 === 0) { const s = el("span", {}, String(g.id)); s.style.gridColumn = String(i + 1); kids.push(s); }
+  });
+  tally.replaceChildren(...kids);
+}
+
+/* ---------- figure 1: share of volume against context size ---------- */
+function render1() {
+  const m = model, svg = $("#svg1"), wrap = $("#p1");
+  svg.replaceChildren(); hide("#tip1"); geo1 = null;
+  const pts = m.groups.flatMap(g => g.pts), withCtx = m.rounds.filter(r => r.ctx !== null);
+  const fits = m.groups.filter(g => g.fit), falling = fits.filter(g => g.fit.r <= -0.2).length;
+  $("#says1").textContent = !fits.length ? "" : falling === fits.length
+    ? (fits.length > 1 ? `In all ${fits.length} stretches the result tended to fall as the context grew.` : "The result tended to fall as the context grew.")
+    : falling ? `In ${falling} of ${fits.length} stretches the result tended to fall as the context grew.`
+    : "The result did not fall as the context grew.";
+  $("#how1").textContent = `Each point is one round: ${m.short}'s net result as a share of all dollars moved in that round, ` +
+    `against the context size the playing session had when the round started.`;
+
+  const key = $("#key1");
+  key.replaceChildren(el("tr", {}, el("th", {}), el("th", { class: "l" }, "Stretch"), el("th", {}, "Rounds"), el("th", {}, "Mean"),
+                         el("th", { title: "Correlation between context size and share" }, "Trend r")));
+  m.groups.forEach((g, i) => key.append(el("tr", i === m.groups.length - 1 ? { class: "last" } : {},
+    el("td", { class: "m" }, swatch(g.shape, g.color)),
+    el("td", { class: "l" }, el("strong", {}, g.name), ...(g.why ? [el("small", {}, g.why)] : [])),
+    el("td", {}, String(g.pts.length)), el("td", {}, signedPct(g.mean)), el("td", {}, g.fit ? corr(g.fit.r) : "–"))));
+  $("#kn1").textContent = pts.length ? "Mean is the average share per round. Trend r is the correlation between context size and share, " +
+    "from −1 to +1; the dashed lines in the plot show it." : "";
+
+  if (!pts.length) {
+    svg.setAttribute("height", 0);
+    $("#n1").textContent = m.ctxError ? m.ctxError : !withCtx.length ? "Add context sizes to context_sizes.json to see this plot." :
+      "The points appear once the transactions of these rounds are read.";
+    $("#tb1").replaceChildren();
+    return;
+  }
+  const W = Math.max(320, wrap.clientWidth), H = Math.round(Math.max(400, Math.min(600, W * 0.58)));
+  const M = { l: 66, r: 14, t: 14, b: 52 }, iw = W - M.l - M.r, ih = H - M.t - M.b;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
+  const xs = pts.map(p => p.ctx), ys = pts.map(p => p.share);
+  let x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(0, ...ys), y1 = Math.max(0, ...ys);
+  const xp = Math.max((x1 - x0) * 0.05, 1000), yp = Math.max((y1 - y0) * 0.08, 0.005);
+  x0 -= xp; x1 += xp; y0 -= yp; y1 += yp;
+  const X = v => M.l + ((v - x0) / (x1 - x0)) * iw, Y = v => M.t + ((y1 - v) / (y1 - y0)) * ih;
+  const gGrid = S("g"), gAxis = S("g");
+  const xStep = niceStep(x1 - x0, Math.max(3, Math.floor(iw / 150))), yStep = niceStep(y1 - y0, 5);
+  for (const v of ticks(x0, x1, xStep)) {
+    gGrid.append(S("line", { x1: X(v), x2: X(v), y1: M.t, y2: M.t + ih, stroke: "var(--rule)" }));
+    gAxis.append(S("text", { x: X(v), y: M.t + ih + 19, "text-anchor": "middle" }, int.format(v / 1000) + "k"));
+  }
+  for (const v of ticks(y0, y1, yStep)) {
+    gGrid.append(S("line", { x1: M.l, x2: M.l + iw, y1: Y(v), y2: Y(v), stroke: v === 0 ? "var(--ink)" : "var(--rule)" }));
+    gAxis.append(S("text", { x: M.l - 9, y: Y(v) + 4, "text-anchor": "end" }, pct(v, yStep < 0.01 ? 1 : 0)));
+  }
+  gAxis.append(S("text", { x: M.l + iw / 2, y: H - 8, "text-anchor": "middle", class: "axt" }, "Context size at the start of the round (thousand tokens)"));
+  gAxis.append(S("text", { transform: `translate(14 ${M.t + ih / 2}) rotate(-90)`, "text-anchor": "middle", class: "axt" },
+    `${m.short} net result as % of the round's total volume`));
+
+  const gTrend = S("g");
+  for (const s of m.groups) if (s.fit) gTrend.append(S("line", { x1: X(s.fit.x0), x2: X(s.fit.x1), y1: Y(s.fit.icpt + s.fit.slope * s.fit.x0),
+    y2: Y(s.fit.icpt + s.fit.slope * s.fit.x1), stroke: s.color, "stroke-width": 2, "stroke-dasharray": "6 5", "stroke-linecap": "round" }));
+
+  const gPts = S("g"), gLab = S("g");
+  for (const p of pts) { p.px = X(p.ctx); p.py = Y(p.share); }
+  for (const g of m.groups) for (const p of g.pts) gPts.append(marker(g.shape, p.px, p.py, g.color));
+
+  // Round labels: only where one fits without touching a marker or another label. Lonely points go first.
+  const taken = pts.map(p => [p.px - 9, p.py - 9, p.px + 9, p.py + 9]);
+  const hits = b => b[0] < M.l || b[2] > M.l + iw || b[1] < M.t || b[3] > M.t + ih ||
+    taken.some(t => b[0] < t[2] && b[2] > t[0] && b[1] < t[3] && b[3] > t[1]);
+  const crowd = p => pts.reduce((n, q) => n + (Math.abs(q.px - p.px) < 34 && Math.abs(q.py - p.py) < 30 ? 1 : 0), 0);
+  for (const p of [...pts].sort((a, b) => crowd(a) - crowd(b))) {
+    const w = String(p.id).length * 6.8 + 2, h = 12;
+    const spots = [[p.px - w / 2, p.py - 12 - h], [p.px - w / 2, p.py + 12], [p.px + 12, p.py - h / 2], [p.px - 12 - w, p.py - h / 2]];
+    const s = spots.find(([x, y]) => !hits([x, y, x + w, y + h]));
+    if (!s) continue;
+    taken.push([s[0], s[1], s[0] + w, s[1] + h]);
+    gLab.append(S("text", { x: s[0] + w / 2, y: s[1] + h - 2, "text-anchor": "middle", class: "lab" }, String(p.id)));
+  }
+  const gHover = S("g", { "pointer-events": "none" });
+  const hit = S("rect", { x: M.l, y: M.t, width: iw, height: ih, fill: "transparent" });
+  svg.append(gGrid, gAxis, gTrend, gPts, gLab, gHover, hit);
+  geo1 = { W, M, iw, ih, pts, gHover };
+  hit.addEventListener("pointermove", e => {
+    const r = svg.getBoundingClientRect(), px = (e.clientX - r.left) * (W / r.width), py = (e.clientY - r.top) * (W / r.width);
+    let best = null, bd = 30 * 30;
+    for (const p of pts) { const dd = (p.px - px) ** 2 + (p.py - py) ** 2; if (dd < bd) { bd = dd; best = p; } }
+    best ? show1(best) : (hover1 = null, gHover.replaceChildren(), hide("#tip1"));
+  });
+  hit.addEventListener("pointerleave", () => { hover1 = null; gHover.replaceChildren(); hide("#tip1"); });
+  if (hover1 !== null) { const p = pts.find(q => q.id === hover1); if (p) show1(p); }
+
+  const notes = [];
+  if (m.ctxNote) notes.push(m.ctxNote);
+  const noCtx = m.rounds.filter(r => r.ctx === null).map(r => r.id);
+  const noVol = withCtx.filter(r => r.loaded && !(r.vol > 0)).map(r => r.id);
+  const waiting = withCtx.filter(r => !r.loaded).length;
+  if (noCtx.length) notes.push(`Not plotted, because no context size is known: round${noCtx.length > 1 ? "s" : ""} ${spans(noCtx)}.`);
+  if (noVol.length) notes.push(`Round${noVol.length > 1 ? "s" : ""} ${spans(noVol)} moved no money, so the share is undefined.`);
+  if (waiting) notes.push(`${waiting} more round${waiting > 1 ? "s" : ""} will appear once their transactions are read.`);
+  $("#n1").textContent = notes.join(" ");
+
+  const tb = el("table", { class: "data" }, el("tr", {}, ...["Round", "Stretch", "Context (tokens)", "Net result", "Round volume", "Share"].map((h, i) =>
+    el("th", i === 1 ? { class: "txt" } : {}, h))));
+  for (const p of [...pts].sort((a, b) => a.id - b.id)) tb.append(el("tr", {}, el("td", {}, String(p.id)), el("td", { class: "txt" }, p.seg.label),
+    el("td", {}, int.format(p.ctx / 1000) + "k"), el("td", {}, signedMoney(p.net)), el("td", {}, money(p.vol)), el("td", {}, signedPct(p.share))));
+  $("#tb1").replaceChildren(tb);
+}
+function show1(p) {
+  const g = geo1; hover1 = p.id;
+  g.gHover.replaceChildren(marker(p.seg.shape, p.px, p.py, p.seg.color, true));
+  const tip = $("#tip1");
+  tip.replaceChildren(el("h3", {}, `Round ${p.id}`, el("span", {}, when(p))),
+    el("table", {},
+      row([swatch(p.seg.shape, p.seg.color), p.seg.name], ""),
+      row(["Context at round start"], int.format(p.ctx / 1000) + "k tokens"),
+      row([`${model.short} net result`], signedMoney(p.net)),
+      row(["Round volume"], money(p.vol)),
+      row(["Share of volume"], signedPct(p.share), "sum")));
+  place(tip, "#p1", "#svg1", g.W, p.px, p.py);
+}
+
+/* ---------- figure 2: dollars moved per round ---------- */
+function render2() {
+  const m = model, svg = $("#svg2"), wrap = $("#p2");
+  svg.replaceChildren(); hide("#tip2"); geo2 = null;
+  const R = m.rounds, n = R.length, loaded = R.filter(r => r.loaded);
+  const acc = loaded.reduce((a, r) => a + r.acc, 0), pen = loaded.reduce((a, r) => a + r.pen, 0), all = acc + pen;
+  const nAcc = loaded.reduce((a, r) => a + r.nAcc, 0), nPen = loaded.reduce((a, r) => a + r.nPen, 0);
+  $("#says2").textContent = all > 0 ? `${pct(pen / all, 0)} of all money moved was a penalty for rejecting a fair charge.` : "";
+  $("#how2").textContent = `Every transaction between the ${m.nTeams || ""} teams, summed per round and split by whether the insurer accepted the charge.`;
+  const key = $("#key2");
+  key.replaceChildren(el("tr", {}, el("th", {}), el("th", { class: "l" }, "Paid as"), el("th", {}, "Payments"), el("th", {}, "Amount"), el("th", {}, "Share")));
+  if (loaded.length) key.append(
+    el("tr", {}, el("td", { class: "m" }, box("var(--blue)")), el("td", { class: "l" }, el("strong", {}, "Accepted charges"), el("small", {}, "paid to the issuer")),
+      el("td", {}, int.format(nAcc)), el("td", {}, short$(acc)), el("td", {}, all ? pct(acc / all, 0) : "–")),
+    el("tr", {}, el("td", { class: "m" }, box("var(--red)")), el("td", { class: "l" }, el("strong", {}, "Penalties"), el("small", {}, "1.5× for rejecting a fair charge")),
+      el("td", {}, int.format(nPen)), el("td", {}, short$(pen)), el("td", {}, all ? pct(pen / all, 0) : "–")),
+    el("tr", { class: "total" }, el("td", { class: "m" }), el("td", { class: "l" }, `Total, ${loaded.length} rounds`),
+      el("td", {}, int.format(nAcc + nPen)), el("td", {}, short$(all)), el("td", {}, "")));
+  $("#kn2").textContent = "";
+  if (!n) { svg.setAttribute("height", 0); $("#n2").textContent = "No round is settled yet."; $("#tb2").replaceChildren(); return; }
+
+  const W = Math.max(320, wrap.clientWidth), H = Math.round(Math.max(340, Math.min(500, W * 0.46)));
+  const M = { l: 58, r: 8, t: 14, b: 50 }, iw = W - M.l - M.r, ih = H - M.t - M.b;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
+  const band = iw / n, bw = Math.max(2, Math.min(24, band - (band > 8 ? 3 : 1)));
+  const vmax = Math.max(1, ...loaded.map(r => r.vol)), step = niceStep(vmax, 6), hi = Math.ceil(vmax / step) * step;
+  const X = i => M.l + band * (i + .5), Y = v => M.t + ((hi - v) / hi) * ih, base = M.t + ih;
+  const gGrid = S("g"), gAxis = S("g"), gBars = S("g");
+  for (const v of ticks(0, hi, step)) {
+    if (v > 0) gGrid.append(S("line", { x1: M.l, x2: M.l + iw, y1: Y(v), y2: Y(v), stroke: "var(--rule)" }));
+    gAxis.append(S("text", { x: M.l - 9, y: Y(v) + 4, "text-anchor": "end" },
+      v === 0 ? "$0" : hi >= 1e6 ? "$" + +(v / 1e6).toFixed(2) + "M" : hi >= 10000 ? "$" + int.format(v / 1000) + "k" : "$" + int.format(v)));
+  }
+  const stepX = [1, 2, 3, 5, 10, 20, 50].find(s => band * s >= 24) || 50;
+  R.forEach((r, i) => {
+    if (stepX <= 3 ? i % stepX : r.id % stepX && i) return;
+    gAxis.append(S("text", { x: X(i), y: base + 19, "text-anchor": "middle" }, String(r.id)));
+  });
+  gAxis.append(S("line", { x1: M.l, x2: M.l + iw, y1: base, y2: base, stroke: "var(--ink)" }));
+  gAxis.append(S("text", { x: M.l + iw / 2, y: H - 8, "text-anchor": "middle", class: "axt" }, "Round"));
+  const top = (x, w, yT, yB) => { const q = Math.min(3, w / 2, yB - yT); return `M${x},${yB}V${yT + q}Q${x},${yT} ${x + q},${yT}H${x + w - q}Q${x + w},${yT} ${x + w},${yT + q}V${yB}Z`; };
+  R.forEach((r, i) => {
+    const x = X(i) - bw / 2;
+    if (!r.loaded) { gBars.append(S("rect", { x, y: base - 4, width: bw, height: 3, fill: "var(--faint)" })); return; }
+    const yA = Y(r.acc), yT = Y(r.vol), gap = r.acc > 0 && r.pen > 0 && base - yA > 3 && yA - yT > 3 ? 1 : 0;
+    if (r.acc > 0) gBars.append(r.pen > 0 ? S("rect", { x, y: yA + gap, width: bw, height: Math.max(base - yA - gap, .5), fill: "var(--blue)" })
+                                          : S("path", { d: top(x, bw, yA, base), fill: "var(--blue)" }));
+    if (r.pen > 0) gBars.append(S("path", { d: top(x, bw, yT, yA - gap), fill: "var(--red)" }));
+  });
+  const gHover = S("g", { "pointer-events": "none" });
+  const hit = S("rect", { x: M.l, y: M.t, width: iw, height: ih + 24, fill: "transparent" });
+  svg.append(gGrid, gHover, gBars, gAxis, hit);
+  geo2 = { W, M, ih, band, X, Y, gHover };
+  hit.addEventListener("pointermove", e => {
+    const r = svg.getBoundingClientRect(), px = (e.clientX - r.left) * (W / r.width);
+    show2(Math.max(0, Math.min(n - 1, Math.floor((px - M.l) / band))));
+  });
+  hit.addEventListener("pointerleave", () => { hover2 = null; gHover.replaceChildren(); hide("#tip2"); });
+  if (hover2 !== null && hover2 < n) show2(hover2);
+
+  const notes = [], quiet = loaded.filter(r => r.vol === 0).map(r => r.id), pending = R.filter(r => !r.loaded).map(r => r.id);
+  if (quiet.length) notes.push(`Round${quiet.length > 1 ? "s" : ""} ${spans(quiet)} moved no money.`);
+  if (pending.length) notes.push(`Round${pending.length > 1 ? "s" : ""} ${spans(pending)} ${pending.length > 1 ? "are" : "is"} still being read and shown as a grey stub.`);
+  $("#n2").textContent = notes.join(" ");
+
+  const tb = el("table", { class: "data" }, el("tr", {}, ...["Round", "Accepted", "Penalties", "Total", "Penalty share", `${m.short} net`].map(h => el("th", {}, h))));
+  for (const r of loaded) tb.append(el("tr", {}, el("td", {}, String(r.id)), el("td", {}, money(r.acc)), el("td", {}, money(r.pen)), el("td", {}, money(r.vol)),
+    el("td", {}, r.vol > 0 ? pct(r.pen / r.vol, 0) : "–"), el("td", {}, r.net === null ? "–" : signedMoney(r.net))));
+  $("#tb2").replaceChildren(tb);
+}
+function show2(i) {
+  const g = geo2, r = model.rounds[i]; hover2 = i;
+  g.gHover.replaceChildren(S("rect", { x: g.X(i) - g.band / 2, y: g.M.t, width: g.band, height: g.ih, fill: "var(--tint)" }));
+  const tip = $("#tip2");
+  tip.replaceChildren(el("h3", {}, `Round ${r.id}`, el("span", {}, when(r))),
+    r.loaded ? el("table", {},
+      row([box("var(--blue)"), `Accepted charges (${r.nAcc})`], money(r.acc)),
+      row([box("var(--red)"), `Penalties (${r.nPen})`], money(r.pen)),
+      row(["Total moved"], money(r.vol), "sum"),
+      row([`${model.short} net result`], r.net === null ? "–" : signedMoney(r.net)))
+    : el("div", {}, "Transactions not read yet."));
+  place(tip, "#p2", "#svg2", g.W, g.X(i), g.M.t + 20);
+}
+
+/* ---------- shared ---------- */
+function row(key, val, cls) { return el("tr", cls ? { class: cls } : {}, el("td", { class: "k" }, ...key), el("td", { class: "v" }, val)); }
+function when(r) { return r.start ? new Date(r.start).toLocaleString("en-GB", { weekday: "short", hour: "2-digit", minute: "2-digit" }) : ""; }
+function hide(sel) { $(sel).style.display = "none"; }
+function place(tip, wrapSel, svgSel, W, x, y) {
+  tip.style.display = "block";
+  const scale = $(svgSel).getBoundingClientRect().width / W, px = x * scale, tw = tip.offsetWidth, pw = $(wrapSel).clientWidth;
+  tip.style.left = Math.max(0, px + 16 + tw > pw ? px - 16 - tw : px + 16) + "px";
+  tip.style.top = Math.max(0, y * scale - 20) + "px";
+}
+function spans(ids) {                    // 28, 35, 37 or 93–96
+  const out = [];
+  for (let i = 0; i < ids.length; i++) {
+    let j = i;
+    while (j + 1 < ids.length && ids[j + 1] === ids[j] + 1) j++;
+    out.push(j > i + 1 ? `${ids[i]}–${ids[j]}` : j > i ? `${ids[i]}, ${ids[j]}` : String(ids[i]));
+    i = j;
+  }
+  return out.join(", ");
+}
+function render() { if (model) { renderTop(); render1(); render2(); } }
+
+let runningId = null;
+function tick() {
+  const dot = $("#dot");
+  if (!raw) { dot.className = "dot warn"; return; }
+  const live = lastOk && !raw.error;
+  dot.className = "dot " + (live ? "ok" : "warn");
+  const at = raw.fetched_at ? new Date(raw.fetched_at * 1000).toLocaleTimeString("en-GB") : "";
+  $("#status").textContent = live ? `Live, updated ${at}` : lastOk ? `Leaderboard problem: ${raw.error}` : "Local server not reachable, showing the last data";
+  const open = (raw.games || []).filter(g => g.status !== "completed").sort((a, b) => a.start_time.localeCompare(b.start_time))[0];
+  let nowId = null;
+  if (open) {
+    const s = Math.round((Date.parse(open.start_time) - Date.now()) / 1000);
+    if (s > 0) { $("#clockLabel").textContent = `Round ${open.id} starts in`; $("#clockTime").textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; }
+    else { nowId = open.id; $("#clockLabel").textContent = `Round ${open.id}`; $("#clockTime").textContent = "running"; }
+  } else if ((raw.games || []).length) { $("#clockLabel").textContent = "Tournament"; $("#clockTime").textContent = "finished"; }
+  if (nowId !== runningId) { runningId = nowId; if (model) renderTop(); }      // a round just started: move the green stroke
+  const total = raw.game_ids.length, miss = raw.missing;
+  const legend = "One stroke per round: dark is settled, green is running, light is still to come.";
+  $("#tallynote").textContent = miss
+    ? `Reading the transactions of ${miss} settled round${miss > 1 ? "s" : ""} (grey strokes), about ` +
+      `${Math.max(1, Math.round(miss * Math.max(raw.n_teams - 1, 1) * (raw.pace + .15) / 60))} min left.`
+    : legend;
+}
+
+async function poll() {
+  let next = 15000;
+  try {
+    const r = await fetch("/api/data", { cache: "no-store" });
+    if (!r.ok) throw new Error(r.status);
+    const d = await r.json();
+    lastOk = true;
+    const key = x => JSON.stringify([x.game_ids, x.net, x.volume, x.context, x.team, (x.games || []).map(g => g.status)]);
+    const changed = !raw || key(raw) !== key(d);
+    raw = d;
+    if (changed) { model = build(d); render(); }
+    if (d.missing) next = 4000;
+  } catch (e) {
+    lastOk = false;
+    if (!raw) $("#status").textContent = location.protocol === "file:"
+      ? "Start it with: python3 -I research/dash/dash.py --open" : "Local server not reachable, trying again";
+  }
+  tick();
+  setTimeout(poll, next);
+}
+
+new ResizeObserver(() => { if (model) { render1(); render2(); } }).observe($("#p1"));
+poll();
+setInterval(tick, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "note": "Context sizes are not in the API. They were read off the earlier chart image (22 Nov), to about ±1k tokens, ±3k where markers overlap.",
+  "how_to_edit": "tokens = context size in tokens at the start of each round. Replace with exact values when available; add rounds as needed. A segment is one legend group; \"trend\": true draws the fitted line and r for it. Colours: gray, blue, orange, aqua. Shapes: circle, square, triangle, diamond.",
+  "segments": [
+    {"from": 18, "to": 26, "label": "Rounds 18–26 (method still being built)", "color": "gray", "shape": "circle"},
+    {"from": 27, "to": 53, "label": "Rounds 27–53", "color": "blue", "shape": "square", "trend": true},
+    {"from": 54, "to": 69, "label": "Rounds 54–69 (after first compaction)", "color": "orange", "shape": "triangle", "trend": true},
+    {"from": 70, "to": 92, "label": "Rounds 70–92 (after second compaction)", "color": "aqua", "shape": "diamond", "trend": true}
+  ],
+  "tokens": {
+    "18": 147000, "19": 182000, "20": 197000, "21": 208000, "22": 230000, "23": 241000, "24": 260000, "25": 274000,
+    "26": 285000, "27": 296000, "29": 319000, "30": 331000, "31": 341000, "32": 356000, "33": 369000, "34": 380000,
+    "36": 397000, "38": 416000, "39": 426000, "40": 443000, "41": 453000, "42": 464000, "43": 472000, "44": 483000,
+    "45": 494000, "46": 504000, "47": 517000, "48": 529000, "49": 541000, "50": 554000, "51": 561000, "52": 573000,
+    "53": 589000, "54": 104000, "55": 117000, "56": 128000, "57": 142000, "58": 150000, "59": 171000, "60": 177000,
+    "61": 187000, "62": 197000, "63": 208000, "64": 223000, "65": 235000, "66": 241000, "67": 250000, "69": 267000,
+    "70": 116000, "71": 127000, "72": 134000, "73": 146000, "74": 150000, "75": 159000, "76": 172000, "77": 182000,
+    "78": 191000, "79": 203000, "80": 215000, "81": 221000, "82": 235000, "84": 246000, "85": 255000, "86": 265000,
+    "87": 272000, "88": 283000, "89": 299000, "90": 305000, "91": 318000, "92": 326000
+  }
+}
