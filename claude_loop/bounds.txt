@@ -1,0 +1,110 @@
+=== game 1
+  1 t in [  780.69,  900.00)  a's=[0, 0, 0, 0, 0, 0, 118, 450, 781, 900, 2215, 2593]  :: Surge-damaged home electronics (speaker system | 2 | pcs and TV set)
+  2 t in [    0.00,    5.58)  a's=[0, 0, 0, 0, 0, 0, 0, 6, 148, 177, 250, 385]  :: Diagnostic surge-failure report and technician call-out | 3 | pcs
+=== game 2
+  1 t in [  808.45,     inf)  a's=[0, 0, 0, 0, 443, 535, 572, 621, 622, 663, 808]  :: Laptop screen crack repair | 1 | pcs
+  2 t in [  342.00,     inf)  a's=[0, 0, 0, 0, 221, 243, 259, 264, 266, 322, 342]  :: Lower-right corner and housing repair | 1 | pcs
+  3 t in [    0.00,     inf)  a's=[0, 0, 0, 0, 0, 0]  :: Polish of pre-existing lid scuff (surface only, does not | 1 | pcs affect operation)
+  4 t in [   59.80,   83.60)  a's=[0, 0, 0, 0, 54, 57, 58, 60, 84, 86, 110]  :: Diagnostic inspection | 1 | pcs
+=== game 3
+  1 t in [    0.00,     inf)  a's=[0, 0, 0, 0, 0, 0, 0]  :: Hole drilling | 1 | pcs
+  2 t in [    0.00,     inf)  a's=[0, 0, 0, 0, 0, 0, 0]  :: Installation of the new glass into the frame | 1 | pcs
+  3 t in [    0.00,     inf)  a's=[0, 0, 0, 0, 0, 0, 0]  :: Made-to-measure replacement glass pane | 1 | pcs
+  4 t in [  328.51,     inf)  a's=[0, 0, 0, 0, 0, 0, 171, 177, 182, 246, 256, 329]  :: Repair of dented and gouged solid-wood door frame | 1 | flat rate
+  5 t in [  157.25,     inf)  a's=[0, 0, 0, 0, 0, 0, 104, 131, 134, 152, 157]  :: Repair and refinish of scratched and chipped wooden | 1 | flat rate shelf
+  6 t in [    0.00,   28.32)  a's=[0, 0, 0, 0, 0, 28, 43, 45, 52, 55, 56]  :: Vehicle costs | 1 | pcs
+=== game 4
+  1 t in [    0.00,  119.55)  a's=[0, 0, 0, 0, 0, 120, 146, 187, 217, 238, 239]  :: Recover stolen bicycle from secured location, incl. | 3 | pcs locksmith call-out and cutting of seized lock
+  2 t in [  227.62,  253.47)  a's=[0, 0, 0, 0, 0, 171, 195, 220, 228, 253, 320]  :: Repair theft damage to bicycle (frame and brakes) | 2 | pcs
+  3 t in [  129.41,     inf)  a's=[0, 0, 0, 0, 0, 41, 41, 59, 77, 85, 97, 129]  :: Labour and sundries | 1 | flat rate
+=== game 5
+  1 t in [ 1165.87,     inf)  a's=[0, 0, 0, 24, 330, 892, 927, 945, 1020, 1036, 1166]  :: Laptop damage payment — cracked screen and lower- | 1 | pcs right-corner impact damage, thrown against car doo
+=== game 6
+  1 t in [  743.99,     inf)  a's=[0, 240, 310, 329, 376, 449, 457, 462, 468, 520, 526, 744]  :: Laptop accidental damage repair (cracked screen and | 1 | pcs lower-right corner), settled with supplier
+=== game 7
+  1 t in [  448.96,  457.95)  a's=[0, 449, 458, 485, 502, 526, 627, 680, 715, 732, 778, 1113]  :: Internal frost-burst fitting repair including thermal- | 1 | flat rate imaging leak detection
+  2 t in [    0.00,     inf)  a's=[0, 0, 0, 0, 0]  :: Exterior facade frost damage repair (re-plaster and | 1 | flat rate repaint)
+=== game 8
+  1 t in [    0.00,   74.59)  a's=[68, 75, 79, 85, 93, 110, 111, 125, 135, 162, 181]  :: Disposal of shed roof timber removed from the | 1 | pcs damaged garden building
+  2 t in [   29.80,   34.36)  a's=[19, 26, 26, 30, 34, 35, 37, 41, 47, 53, 62, 68]  :: Disposal of the broken glass pane from the damaged | 1 | pcs shed
+  3 t in [   40.98,   67.83)  a's=[41, 68, 74, 80, 81, 89, 98, 195, 196, 203, 217, 278]  :: Disposal of green waste from the storm-felled tree | 1 | pcs (branches and foliage)
+  4 t in [    0.00,   50.95)  a's=[51, 60, 61, 68, 86, 98, 103, 114, 122, 128, 129, 175]  :: Disposal of the tree root ball (single mass under one | 1 | pcs cubic metre)
+  5 t in [    0.00,     inf)  a's=[0, 0, 0, 0]  :: Disposal of sieved topsoil from the churned-up ground | 1 | pcs
+  6 t in [    0.00,     inf)  a's=[0, 0, 0, 0]  :: Disposal of paving grit displaced around the shed | 1 | pcs
+  7 t in [    0.00,     inf)  a's=[0, 0, 0, 0]  :: Disposal of excavated soil from the churned-up ground | 1 | pcs
+=== game 9
+  1 t in [    0.00,  335.99)  a's=[68, 336, 398, 574, 649, 686, 761, 766, 848, 850, 857, 997]  :: Speaker system | 1 | pcs
+  2 t in [    0.00,    5.52)  a's=[0, 0, 0, 0, 0, 6]  :: Shipping | 1 | pcs
+  3 t in [    0.00,    8.90)  a's=[0, 0, 0, 0, 0, 9]  :: Installation | 1 | pcs
+  4 t in [  517.14,  615.52)  a's=[68, 516, 517, 616, 797, 808, 850, 851, 964, 974, 1119, 1144]  :: TV set | 1 | pcs
+  5 t in [    0.00,   12.34)  a's=[0, 0, 0, 0, 0, 0, 12]  :: Property and liability damage to electronics | 1 | pcs
+  6 t in [    0.00,    7.04)  a's=[0, 0, 0, 0, 0, 0, 7]  :: Property and liability damage to electronics - service | 1 | pcs order
+  7 t in [    0.00,    6.29)  a's=[0, 0, 0, 0, 0, 6]  :: Vehicle costs | 1 | pcs
+=== game 10
+  1 t in [  156.57,  217.90)  a's=[0, 125, 157, 218, 236, 271, 305, 442, 495, 543]  :: Disposal of storm debris from the damaged shed and | 4 | pcs the felled tree (roof timber, broken glass pane, 
+  2 t in [    0.00,   89.79)  a's=[0, 0, 0, 90, 111, 146, 193, 219]  :: Disposal of ground material from the churned-up area | 3 | pcs (excavated soil, sieved topsoil and displaced p
+=== game 11
+  1 t in [    0.00,   67.83)  a's=[0, 0, 68, 113, 116, 121, 123, 136, 143, 170, 185]  :: Made-to-measure replacement glass pane | 1 | pcs
+  2 t in [    0.00,   18.85)  a's=[0, 0, 19, 21, 22, 25, 26, 26, 26]  :: Hole drilling | 1 | pcs
+  3 t in [    0.00,   40.98)  a's=[0, 0, 41]  :: Installation of the new glass into the frame | 1 | pcs
+  4 t in [    0.00,   17.84)  a's=[0, 0, 18, 19, 21, 24, 26, 26, 27, 28]  :: Disposal of broken glass | 1 | pcs
+  5 t in [  234.47,     inf)  a's=[0, 68, 114, 140, 143, 148, 187, 193, 204, 204, 234]  :: Repair of dented solid-wood side table (knocked over | 1 | flat rate in the same fall)
+  6 t in [    0.00,     inf)  a's=[0, 0, 0]  :: Touch-up of pre-existing scratches on a second cabinet | 1 | flat rate (present before the incident)
+  7 t in [    0.00,   20.10)  a's=[0, 20, 21, 31, 31, 35, 38, 48, 50]  :: Vehicle costs | 1 | pcs
+  8 t in [    0.00,     inf)  a's=[0, 0]  :: Vehicle costs – return visit | 1 | pcs
+  9 t in [    0.00,    5.45)  a's=[0, 0, 0, 5]  :: Administrative flat rate | 1 | flat rate
+=== game 12
+  1 t in [  423.26,  514.08)  a's=[68, 317, 360, 361, 364, 387, 399, 423, 514, 552, 557, 629]  :: Floor cleaning, washing machine connection check, | 1 | flat rate and removal and replacement of water-damaged
+  2 t in [  605.20,  680.00)  a's=[68, 353, 420, 445, 478, 485, 509, 514, 540, 605, 680]  :: Moisture measurement and drying of the utility room | 1 | flat rate and hallway floor, incl. drying unit and s
+  3 t in [    0.00,   57.73)  a's=[0, 0, 58, 68, 73, 86, 96, 123, 136, 144]  :: Assessment and drying of a small framed decorative | 1 | pcs print from the hallway
+=== game 13
+  1 t in [   84.39,   89.96)  a's=[52, 60, 68, 68, 84, 90, 102, 113, 114, 117, 166]  :: Disposal of shed roof timber and the broken glass | 2 | pcs pane from the damaged garden building
+  2 t in [    0.00,   75.32)  a's=[0, 0, 75, 111, 129, 232]  :: Combined storm-clearance load: felled-tree green | 3 | pcs waste, the tree root mass (measured at over one cub
+  3 t in [    0.00,    9.89)  a's=[0, 0, 10, 20, 26, 38, 41, 45, 58, 64, 68]  :: Disposal of displaced paving grit | 1 | pcs
+  4 t in [    0.00,   20.26)  a's=[0, 0, 20, 30, 40, 43, 45, 48, 64, 71, 71]  :: Disposal of sieved topsoil from the churned-up ground | 1 | pcs
+=== game 14
+  1 t in [   64.44,     inf)  a's=[0, 11, 11, 17, 21, 22, 25, 26, 29, 30, 45, 64]  :: Hole drilling | 1 | pcs
+  2 t in [   23.08,   26.19)  a's=[0, 23, 26, 39, 44, 64, 64, 67, 70, 75, 87]  :: Installation of the new glass into the frame | 1 | pcs
+  3 t in [   42.22,   64.44)  a's=[0, 39, 42, 64, 65, 71, 94, 95, 101, 107, 129]  :: Made-to-measure replacement glass pane | 1 | pcs
+  4 t in [   12.89,   16.06)  a's=[0, 3, 13, 16, 22, 25, 32, 38, 38, 45, 50]  :: Vehicle costs | 1 | pcs
+=== game 15
+  1 t in [  389.00,  525.00)  a's=[71, 200, 247, 248, 256, 262, 311, 362, 389, 525, 573]  :: Speaker system (surge damaged) | 1 | pcs
+  2 t in [    0.00,    4.35)  a's=[0, 0, 4, 5, 6, 9, 18, 21, 26, 38, 48]  :: Shipping | 1 | pcs
+  3 t in [    0.00,    6.36)  a's=[0, 0, 6, 8, 9, 31, 58, 64, 67, 82]  :: Installation | 1 | hrs
+  4 t in [  586.29,  601.94)  a's=[399, 433, 468, 492, 506, 509, 517, 575, 586, 602, 638]  :: TV set | 1 | pcs
+  5 t in [    0.00,    8.70)  a's=[0, 0, 0, 9, 9, 10, 71, 71]  :: Property and liability damage to electronics | 1 | pcs
+  6 t in [    0.00,    5.22)  a's=[0, 0, 0, 5, 6, 7, 20, 30, 34, 53, 54]  :: Property and liability damage to electronics - service | 1 | pcs order
+  7 t in [    0.00,    4.35)  a's=[0, 0, 4, 6, 9, 14, 14, 23, 48, 49, 57]  :: Vehicle costs | 1 | pcs
+=== game 16
+  1 t in [   47.85,   55.25)  a's=[30, 34, 35, 38, 41, 44, 48, 55, 58, 58, 80]  :: Filling valve (internal frost-burst fitting) | 1 | pcs
+  2 t in [   26.83,   32.66)  a's=[13, 14, 15, 15, 16, 17, 17, 22, 26, 27, 33]  :: Connection hose | 1 | pcs
+  3 t in [  274.18,     inf)  a's=[75, 117, 166, 199, 200, 209, 210, 225, 233, 235, 255, 274]  :: Senior installer hours | 3 | hrs
+  4 t in [    0.00,   10.54)  a's=[11, 11, 12, 13, 13, 14, 16, 18, 19, 19, 26]  :: Auxiliary and cleaning material | 1 | flat rate
+  5 t in [   60.42,     inf)  a's=[6, 8, 13, 13, 26, 26, 28, 29, 33, 55, 59, 60]  :: Vehicle costs | 1 | flat rate
+  6 t in [    0.00,   56.55)  a's=[57, 98, 110, 121, 128, 128, 137, 166, 238, 414, 447]  :: Thermal imaging camera (leak detection) | 1 | flat rate
+  7 t in [    0.00,   17.24)  a's=[0, 0, 17, 72, 80]  :: Facade water and frost damage | 1 | pcs
+  8 t in [    0.00,   12.19)  a's=[0, 0, 12, 48, 48, 53, 54, 55]  :: Loose plaster | 1 | pcs
+  9 t in [    0.00,   17.24)  a's=[0, 0, 17, 52, 53, 64, 64, 82]  :: Base plaster | 1 | pcs
+ 10 t in [    0.00,    9.95)  a's=[0, 0, 10, 22, 37, 55, 67, 75, 86]  :: Additional work | 1 | pcs
+ 11 t in [    0.00,    9.95)  a's=[0, 0, 10, 43, 46, 47]  :: Newly plastered substrate | 1 | pcs
+ 12 t in [    0.00,   15.74)  a's=[0, 0, 16, 59, 68, 68]  :: Facade paint (4 coats) | 1 | pcs
+ 13 t in [    0.00,   10.08)  a's=[0, 0, 10, 30, 42, 55]  :: Drying | 1 | pcs
+ 14 t in [    0.00,    7.71)  a's=[0, 0, 8, 17, 26, 32, 38]  :: Priming | 1 | pcs
+ 15 t in [    0.00,   16.51)  a's=[0, 0, 17, 58, 109, 244, 262, 265, 283, 295]  :: Painter hours | 5 | hrs
+ 16 t in [    0.00,    8.90)  a's=[0, 0, 9, 12, 27, 30, 32, 38, 43, 52]  :: Flat rate | 1 | pcs
+=== game 17
+  1 t in [  517.65,  536.54)  a's=[95, 260, 267, 280, 287, 382, 468, 518, 537, 641]  :: TV set (surge damaged) | 1 | pcs
+  2 t in [  253.21,  315.35)  a's=[103, 174, 177, 180, 219, 253, 315, 382, 389, 392, 430]  :: Speaker system (surge damaged) | 1 | pcs
+  3 t in [  466.69,     inf)  a's=[87, 140, 161, 182, 186, 192, 209, 283, 298, 465, 467]  :: AV receiver / amplifier (surge damaged) | 1 | pcs
+  4 t in [   27.78,   33.00)  a's=[8, 9, 10, 11, 11, 13, 19, 28, 33, 36, 42]  :: Melted mains plug and power lead (physically surge- | 1 | flat rate damaged)
+  5 t in [    0.00,   16.91)  a's=[0, 0, 17, 27, 30, 39, 46, 57, 72, 86, 114]  :: HDMI cables and remote controls | 3 | pcs
+  6 t in [    0.00,   14.25)  a's=[0, 0, 14, 24, 26, 30, 39, 42, 45]  :: Wall-mount bracket | 1 | pcs
+  7 t in [    0.00,   19.28)  a's=[0, 0, 19, 20, 22, 30, 30, 50]  :: DVD player (was already failing before the storm, age- | 1 | pcs related)
+  8 t in [    0.00,   24.66)  a's=[0, 0, 25, 37]  :: Router (no diagnostic report provided) | 1 | pcs
+  9 t in [    0.00,   12.15)  a's=[0, 0, 0, 12, 18, 19, 22, 27, 27, 38, 42]  :: Shipping | 1 | pcs
+ 10 t in [    0.00,   36.61)  a's=[0, 0, 0, 37]  :: Installation | 1 | pcs
+ 11 t in [    0.00,   56.40)  a's=[0, 0, 56, 64, 119, 122, 131, 147, 155]  :: Diagnostic inspection and surge-failure report for | 2 | pcs damaged electronics
+ 12 t in [    0.00,   13.92)  a's=[0, 0, 14, 17, 38, 39, 40, 44, 47]  :: Vehicle costs – return visit | 1 | flat rate
+ 13 t in [    0.00,   33.09)  a's=[0, 0, 33, 64]  :: Wiring safety check of property distribution board | 1 | pcs
+ 14 t in [    0.00,    7.04)  a's=[0, 0, 0, 7, 15, 17, 24, 26, 27, 29, 41]  :: Administrative and claim-processing fee | 1 | flat rate
+ 15 t in [    0.00,   13.39)  a's=[0, 0, 13, 20, 32, 32, 38, 39]  :: Vehicle costs | 1 | pcs

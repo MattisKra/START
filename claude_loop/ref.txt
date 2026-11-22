@@ -1,0 +1,1261 @@
+=== game 1 fam 7a98cf
+g1 #1 t=781-900 :: Surge-damaged home electronics (speaker system | 2 | pcs and TV set)
+g1 #2 t=ZERO(<6) :: Diagnostic surge-failure report and technician call-out | 3 | pcs
+=== game 2 fam d95e00
+g2 #1 t=>=808 :: Laptop screen crack repair | 1 | pcs
+g2 #2 t=>=342 :: Lower-right corner and housing repair | 1 | pcs
+g2 #3 t=ZERO :: Polish of pre-existing lid scuff (surface only, does not | 1 | pcs affect operation)
+g2 #4 t=60-84 :: Diagnostic inspection | 1 | pcs
+=== game 3 fam 0a6425
+g3 #1 t=ZERO :: Hole drilling | 1 | pcs
+g3 #2 t=ZERO :: Installation of the new glass into the frame | 1 | pcs
+g3 #3 t=ZERO :: Made-to-measure replacement glass pane | 1 | pcs
+g3 #4 t=>=329 :: Repair of dented and gouged solid-wood door frame | 1 | flat rate
+g3 #5 t=>=157 :: Repair and refinish of scratched and chipped wooden | 1 | flat rate shelf
+g3 #6 t=ZERO(<28) :: Vehicle costs | 1 | pcs
+=== game 4 fam 32b2ab
+g4 #1 t=ZERO(<120) :: Recover stolen bicycle from secured location, incl. | 3 | pcs locksmith call-out and cutting of
+g4 #2 t=228-253 :: Repair theft damage to bicycle (frame and brakes) | 2 | pcs
+g4 #3 t=>=129 :: Labour and sundries | 1 | flat rate
+=== game 5 fam aebe9b
+g5 #1 t=>=1166 :: Laptop damage payment — cracked screen and lower- | 1 | pcs right-corner impact damage, thrown 
+=== game 6 fam d95e00
+g6 #1 t=>=744 :: Laptop accidental damage repair (cracked screen and | 1 | pcs lower-right corner), settled with
+=== game 7 fam 77f645
+g7 #1 t=449-458 :: Internal frost-burst fitting repair including thermal- | 1 | flat rate imaging leak detection
+g7 #2 t=ZERO :: Exterior facade frost damage repair (re-plaster and | 1 | flat rate repaint)
+=== game 8 fam ee179e
+g8 #1 t=ZERO(<75) :: Disposal of shed roof timber removed from the | 1 | pcs damaged garden building
+g8 #2 t=30-34 :: Disposal of the broken glass pane from the damaged | 1 | pcs shed
+g8 #3 t=41-68 :: Disposal of green waste from the storm-felled tree | 1 | pcs (branches and foliage)
+g8 #4 t=ZERO(<51) :: Disposal of the tree root ball (single mass under one | 1 | pcs cubic metre)
+g8 #5 t=ZERO :: Disposal of sieved topsoil from the churned-up ground | 1 | pcs
+g8 #6 t=ZERO :: Disposal of paving grit displaced around the shed | 1 | pcs
+g8 #7 t=ZERO :: Disposal of excavated soil from the churned-up ground | 1 | pcs
+=== game 9 fam 7a98cf
+g9 #1 t=ZERO(<336) :: Speaker system | 1 | pcs
+g9 #2 t=ZERO(<6) :: Shipping | 1 | pcs
+g9 #3 t=ZERO(<9) :: Installation | 1 | pcs
+g9 #4 t=517-616 :: TV set | 1 | pcs
+g9 #5 t=ZERO(<12) :: Property and liability damage to electronics | 1 | pcs
+g9 #6 t=ZERO(<7) :: Property and liability damage to electronics - service | 1 | pcs order
+g9 #7 t=ZERO(<6) :: Vehicle costs | 1 | pcs
+=== game 10 fam ee179e
+g10 #1 t=157-218 :: Disposal of storm debris from the damaged shed and | 4 | pcs the felled tree (roof timber, brok
+g10 #2 t=ZERO(<90) :: Disposal of ground material from the churned-up area | 3 | pcs (excavated soil, sieved topsoil 
+=== game 11 fam 0a6425
+g11 #1 t=ZERO(<68) :: Made-to-measure replacement glass pane | 1 | pcs
+g11 #2 t=ZERO(<19) :: Hole drilling | 1 | pcs
+g11 #3 t=ZERO(<41) :: Installation of the new glass into the frame | 1 | pcs
+g11 #4 t=ZERO(<18) :: Disposal of broken glass | 1 | pcs
+g11 #5 t=>=234 :: Repair of dented solid-wood side table (knocked over | 1 | flat rate in the same fall)
+g11 #6 t=ZERO :: Touch-up of pre-existing scratches on a second cabinet | 1 | flat rate (present before the inci
+g11 #7 t=ZERO(<20) :: Vehicle costs | 1 | pcs
+g11 #8 t=ZERO :: Vehicle costs – return visit | 1 | pcs
+g11 #9 t=ZERO(<5) :: Administrative flat rate | 1 | flat rate
+=== game 12 fam dbf165
+g12 #1 t=423-514 :: Floor cleaning, washing machine connection check, | 1 | flat rate and removal and replacement o
+g12 #2 t=605-680 :: Moisture measurement and drying of the utility room | 1 | flat rate and hallway floor, incl. dr
+g12 #3 t=ZERO(<58) :: Assessment and drying of a small framed decorative | 1 | pcs print from the hallway
+=== game 13 fam ee179e
+g13 #1 t=84-90 :: Disposal of shed roof timber and the broken glass | 2 | pcs pane from the damaged garden buildi
+g13 #2 t=ZERO(<75) :: Combined storm-clearance load: felled-tree green | 3 | pcs waste, the tree root mass (measured 
+g13 #3 t=ZERO(<10) :: Disposal of displaced paving grit | 1 | pcs
+g13 #4 t=ZERO(<20) :: Disposal of sieved topsoil from the churned-up ground | 1 | pcs
+=== game 14 fam 0a6425
+g14 #1 t=>=64 :: Hole drilling | 1 | pcs
+g14 #2 t=23-26 :: Installation of the new glass into the frame | 1 | pcs
+g14 #3 t=42-64 :: Made-to-measure replacement glass pane | 1 | pcs
+g14 #4 t=13-16 :: Vehicle costs | 1 | pcs
+=== game 15 fam 7a98cf
+g15 #1 t=389-525 :: Speaker system (surge damaged) | 1 | pcs
+g15 #2 t=ZERO(<4) :: Shipping | 1 | pcs
+g15 #3 t=ZERO(<6) :: Installation | 1 | hrs
+g15 #4 t=586-602 :: TV set | 1 | pcs
+g15 #5 t=ZERO(<9) :: Property and liability damage to electronics | 1 | pcs
+g15 #6 t=ZERO(<5) :: Property and liability damage to electronics - service | 1 | pcs order
+g15 #7 t=ZERO(<4) :: Vehicle costs | 1 | pcs
+=== game 16 fam 0ba1b7
+g16 #1 t=48-55 :: Filling valve (internal frost-burst fitting) | 1 | pcs
+g16 #2 t=27-33 :: Connection hose | 1 | pcs
+g16 #3 t=>=274 :: Senior installer hours | 3 | hrs
+g16 #4 t=ZERO(<11) :: Auxiliary and cleaning material | 1 | flat rate
+g16 #5 t=>=60 :: Vehicle costs | 1 | flat rate
+g16 #6 t=ZERO(<57) :: Thermal imaging camera (leak detection) | 1 | flat rate
+g16 #7 t=ZERO(<17) :: Facade water and frost damage | 1 | pcs
+g16 #8 t=ZERO(<12) :: Loose plaster | 1 | pcs
+g16 #9 t=ZERO(<17) :: Base plaster | 1 | pcs
+g16 #10 t=ZERO(<10) :: Additional work | 1 | pcs
+g16 #11 t=ZERO(<10) :: Newly plastered substrate | 1 | pcs
+g16 #12 t=ZERO(<16) :: Facade paint (4 coats) | 1 | pcs
+g16 #13 t=ZERO(<10) :: Drying | 1 | pcs
+g16 #14 t=ZERO(<8) :: Priming | 1 | pcs
+g16 #15 t=ZERO(<17) :: Painter hours | 5 | hrs
+g16 #16 t=ZERO(<9) :: Flat rate | 1 | pcs
+=== game 17 fam 7a98cf
+g17 #1 t=518-537 :: TV set (surge damaged) | 1 | pcs
+g17 #2 t=253-315 :: Speaker system (surge damaged) | 1 | pcs
+g17 #3 t=>=467 :: AV receiver / amplifier (surge damaged) | 1 | pcs
+g17 #4 t=28-33 :: Melted mains plug and power lead (physically surge- | 1 | flat rate damaged)
+g17 #5 t=ZERO(<17) :: HDMI cables and remote controls | 3 | pcs
+g17 #6 t=ZERO(<14) :: Wall-mount bracket | 1 | pcs
+g17 #7 t=ZERO(<19) :: DVD player (was already failing before the storm, age- | 1 | pcs related)
+g17 #8 t=ZERO(<25) :: Router (no diagnostic report provided) | 1 | pcs
+g17 #9 t=ZERO(<12) :: Shipping | 1 | pcs
+g17 #10 t=ZERO(<37) :: Installation | 1 | pcs
+g17 #11 t=ZERO(<56) :: Diagnostic inspection and surge-failure report for | 2 | pcs damaged electronics
+g17 #12 t=ZERO(<14) :: Vehicle costs – return visit | 1 | flat rate
+g17 #13 t=ZERO(<33) :: Wiring safety check of property distribution board | 1 | pcs
+g17 #14 t=ZERO(<7) :: Administrative and claim-processing fee | 1 | flat rate
+g17 #15 t=ZERO(<13) :: Vehicle costs | 1 | pcs
+=== game 18 fam ad9850
+g18 #1 t=>=221 :: Copper pipe repair – fittings, pipe section and | 1 | flat rate consumables
+g18 #2 t=966-1100 :: Labour – service technician and helper | 1 | flat rate
+g18 #3 t=>=107 :: Pipe re-insulation (rock wool) | 6 | pcs
+g18 #4 t=>=68 :: Vehicle costs | 1 | pcs
+g18 #5 t=>=57 :: Construction waste disposal | 1 | pcs
+g18 #6 t=ZERO :: Processing flat fee | 1 | pcs
+g18 #7 t=ZERO(<60) :: Tile cleaning, disinfection and coating | 5 | hrs
+=== game 19 fam 7a98cf
+g19 #1 t=252-310 :: Speaker system (surge damaged) | 1 | pcs
+g19 #2 t=>=456 :: Premium replacement TV set (larger, higher-end than | 1 | pcs the damaged one)
+g19 #3 t=ZERO(<9) :: HDMI cables and connectors | 2 | pcs
+g19 #4 t=ZERO(<13) :: Wall-mount bracket | 1 | pcs
+g19 #5 t=ZERO(<9) :: Remote control | 1 | pcs
+g19 #6 t=ZERO :: Games console (switched off and unplugged at the | 1 | pcs time)
+g19 #7 t=ZERO :: Shipping | 1 | pcs
+g19 #8 t=ZERO :: Installation | 1 | pcs
+g19 #9 t=ZERO(<44) :: Diagnostic inspection and surge-failure report for | 2 | pcs damaged electronics
+g19 #10 t=ZERO(<26) :: Wiring safety check of property distribution board | 1 | pcs
+g19 #11 t=ZERO(<6) :: Vehicle costs | 1 | pcs
+=== game 20 fam cdaddc
+g20 #1 t=>=481 :: Damage assessment and inspection | 1 | flat rate
+g20 #2 t=>=707 :: Indoor leak detection incl. measurement technician | 1 | flat rate and vehicle
+g20 #3 t=ZERO(<150) :: Floor covering removal incl. linoleum and skirting, | 1 | flat rate surface preparation and con
+g20 #4 t=ZERO(<7) :: Catering for work crew | 3 | pcs
+g20 #5 t=ZERO(<200) :: Technical drying (large-area, cavity and borehole) incl. | 1 | flat rate labour, dust protectio
+g20 #6 t=ZERO :: Electricity for drying equipment (separately metered) | 2,412.1 | kWh
+=== game 21 fam a7ab07
+g21 #1 t=>=229 :: Leak detection call-out | 1 | pcs
+g21 #2 t=>=449 :: Electro-acoustic pinpointing of the leak beneath the | 1 | pcs kitchen sink
+g21 #3 t=153-178 :: Moisture measurement of the kitchen floor and wall | 1 | pcs base
+g21 #4 t=622-680 :: Service technician hours | 14 | hrs
+g21 #5 t=>=76 :: Vehicle costs | 1 | pcs
+g21 #6 t=117-158 :: Freeing the affected pipe run beneath the kitchen sink | 1 | pcs
+g21 #7 t=>=136 :: Removal and disposal of damaged insulation | 2 | pcs
+g21 #8 t=157-220 :: Repair of the confirmed leak and replacement copper | 1 | flat rate pipe section with standard 
+g21 #9 t=ZERO :: Room drying line item for the roof space (Dachstuhl) | 1 | pcs
+g21 #10 t=20-65 :: Condensation dryer (kitchen) | 1 | pcs
+g21 #11 t=20-148 :: Room drying of the kitchen floor and wall base | 1 | pcs
+g21 #12 t=49-66 :: Transition pieces and standard insulation for the | 1 | flat rate repaired section
+g21 #13 t=78-85 :: Final site cleaning of the covered work area | 1 | pcs
+g21 #14 t=>=76 :: Vehicle costs | 1 | pcs
+g21 #15 t=55-60 :: Removal of the water-damaged wooden kitchen table | 1 | pcs
+g21 #16 t=>=95 :: Transport and disposal of the damaged table | 2 | pcs
+g21 #17 t=524-527 :: Supply of replacement kitchen table, comparable | 1 | pcs specification to the original
+g21 #18 t=59-60 :: Delivery of the replacement table | 1 | pcs
+g21 #19 t=>=119 :: Assembly and cleaning of the installation area | 1 | flat rate
+g21 #20 t=>=76 :: Vehicle costs | 1 | pcs
+g21 #21 t=ZERO(<13) :: Vehicle costs – return visit | 1 | pcs
+g21 #22 t=ZERO :: Inspection of further furniture items stored in the | 1 | pcs garden for moisture
+=== game 22 fam d95e00
+g22 #1 t=ZERO(<26) :: Diagnostic inspection of the cracked laptop | 1 | pcs
+g22 #2 t=ZERO(<313) :: Laptop screen and lower-right corner repair | 1 | pcs
+=== game 23 fam b49338
+g23 #1 t=ZERO :: Bicycle frame replacement | 1 | pcs
+g23 #2 t=ZERO :: Bicycle brake replacement | 1 | pcs
+g23 #3 t=ZERO :: Shipping | 1 | flat rate
+g23 #4 t=ZERO :: Vehicle costs | 1 | pcs
+g23 #5 t=ZERO :: Assembly costs | 1 | flat rate
+g23 #6 t=ZERO :: Miscellaneous items | 1 | pcs
+g23 #7 t=ZERO :: Apprentice hours | 1 | hrs
+g23 #8 t=ZERO :: Skilled worker hours | 3 | hrs
+g23 #9 t=34-45 :: Vehicle costs | 1 | pcs
+g23 #10 t=>=100 :: Assembly costs | 1 | pcs
+g23 #11 t=ZERO(<9) :: Miscellaneous items | 1 | pcs
+g23 #12 t=35-36 :: Apprentice hours | 1 | hrs
+g23 #13 t=ZERO(<45) :: Skilled worker hours | 1 | hrs
+=== game 24 fam 32b2ab
+g24 #1 t=142-349 :: Bicycle frame replacement | 1 | pcs
+g24 #2 t=130-148 :: Bicycle brake replacement | 1 | pcs
+g24 #3 t=24-27 :: Shipping | 1 | pcs
+g24 #4 t=ZERO(<27) :: Vehicle costs | 1 | pcs
+g24 #5 t=106-209 :: Assembly costs | 1 | pcs
+g24 #6 t=ZERO(<8) :: Miscellaneous items | 1 | pcs
+g24 #7 t=ZERO(<18) :: Apprentice hours | 1 | hrs
+g24 #8 t=ZERO(<42) :: Skilled worker hours | 1 | hrs
+g24 #9 t=ZERO(<30) :: Vehicle costs | 1 | pcs
+g24 #10 t=>=97 :: Assembly costs | 1 | pcs
+g24 #11 t=ZERO(<5) :: Miscellaneous items | 1 | pcs
+g24 #12 t=ZERO(<18) :: Apprentice hours | 1 | hrs
+g24 #13 t=35-42 :: Skilled worker hours | 1 | hrs
+=== game 25 fam 77f645
+g25 #1 t=51-54 :: Filling valve (internal frost-burst fitting) | 1 | pcs
+g25 #2 t=26-28 :: Connection hose | 1 | pcs
+g25 #3 t=>=279 :: Senior installer hours | 3 | hrs
+g25 #4 t=ZERO(<8) :: Auxiliary and cleaning material | 1 | pcs
+g25 #5 t=38-44 :: Vehicle costs | 1 | pcs
+g25 #6 t=ZERO(<28) :: Thermal imaging camera (leak detection) | 1 | pcs
+g25 #7 t=ZERO :: Facade frost damage from outdoor freeze-thaw | 1 | pcs
+g25 #8 t=ZERO :: Loose plaster removal | 1 | pcs
+g25 #9 t=ZERO :: Base plaster | 1 | pcs
+g25 #10 t=ZERO :: Premium insulated render system (upgrade on former | 1 | pcs plain plaster)
+g25 #11 t=ZERO :: Newly plastered substrate | 1 | pcs
+g25 #12 t=ZERO :: Facade paint (4 coats) | 1 | pcs
+g25 #13 t=ZERO :: Repaint of undamaged elevations | 1 | flat rate
+g25 #14 t=ZERO :: Priming | 1 | pcs
+g25 #15 t=ZERO :: Painter hours | 5 | hrs
+g25 #16 t=ZERO :: Flat rate | 1 | pcs
+=== game 26 fam 32b2ab
+g26 #1 t=ZERO :: Upgrade to premium carbon frame (elective, bicycle | 1 | pcs recovered undamaged)
+g26 #2 t=ZERO :: Brake replacement as part of routine service | 1 | pcs
+g26 #3 t=ZERO :: Full drivetrain service and tune-up | 1 | pcs
+g26 #4 t=ZERO :: Shipping | 1 | pcs
+g26 #5 t=ZERO :: Vehicle costs | 1 | pcs
+g26 #6 t=ZERO :: Assembly costs | 1 | pcs
+g26 #7 t=ZERO :: Apprentice hours | 1 | hrs
+g26 #8 t=ZERO :: Skilled worker hours | 1 | hrs
+g26 #9 t=ZERO(<35) :: Locksmith call-out to recovery site | 1 | pcs
+g26 #10 t=>=99 :: Cut and remove seized lock to release bicycle | 2 | pcs
+g26 #11 t=35-40 :: Skilled worker hours | 1 | hrs
+=== game 27 fam 7a23f1
+g27 #1 t=>=1400 :: Leak detection and moisture measurement for the | 1 | flat rate kitchen sink supply leak, incl.
+g27 #2 t=>=494 :: Freeing, repair and re-insulation of the leaking kitchen | 1 | flat rate sink supply pipe, incl
+g27 #3 t=>=74 :: Vehicle costs | 1 | pcs
+g27 #4 t=120-174 :: Drying of the kitchen floor and wall base, incl. | 1 | flat rate condensation dryer
+=== game 28 fam c9e804
+g28 #1 t=ZERO(<74) :: Kitchen air conditioning unit - replacement including | 3 | pcs installation and delivery
+=== game 29 fam e3fca6
+g29 #1 t=>=1532 :: Replacement of stolen household contents (clothing, | 1 | pcs personal effects and everyday jew
+g29 #2 t=250-338 :: Emergency repair and re-securing of the forced entry | 1 | pcs door
+=== game 30 fam e4d4db
+g30 #1 t=ZERO :: Electrician labour checking and rewiring the flooded | 12 | hrs basement circuits
+g30 #2 t=ZERO :: Vehicle costs | 1 | pcs
+g30 #3 t=ZERO :: Procurement of a motor pump | 1 | pcs
+g30 #4 t=ZERO :: Submersible pump | 1 | pcs
+g30 #5 t=ZERO :: Water extraction from the flooded basement | 1 | pcs
+g30 #6 t=ZERO :: Small electrical materials for the rewiring | 1 | pcs
+g30 #7 t=ZERO(<2000) :: Renew boiler system including flue gas system and | 1 | flat rate storage tank
+g30 #8 t=ZERO(<300) :: Adjust supply pipework to fit the replacement boiler | 1 | flat rate
+g30 #9 t=ZERO(<150) :: Dispose of the old boiler system | 1 | –
+g30 #10 t=ZERO :: Vehicle costs | 1 | pcs
+=== game 31 fam 3750c1
+g31 #1 t=ZERO :: Translation from Spanish to English | 68 | lines
+g31 #2 t=ZERO :: Material costs | 1 | pcs
+g31 #3 t=2900-3110 :: Compensation for robbery damage | 1 | pcs
+g31 #4 t=ZERO :: Shipping | 1 | pcs
+=== game 32 fam 77f645
+g32 #1 t=>=50 :: Filling valve (internal frost-burst fitting) | 1 | pcs
+g32 #2 t=25-27 :: Connection hose | 1 | pcs
+g32 #3 t=>=288 :: Senior installer hours | 3 | hrs
+g32 #4 t=ZERO(<4) :: Auxiliary and cleaning material | 1 | pcs
+g32 #5 t=37-41 :: Vehicle costs | 1 | pcs
+g32 #6 t=15-20 :: Thermal imaging camera (leak detection) | 1 | pcs
+g32 #7 t=ZERO(<10) :: Vehicle costs – return visit | 1 | pcs
+g32 #8 t=>=314 :: Facade frost damage - remove loose and spalled | 2 | pcs plaster
+g32 #9 t=35-41 :: Base plaster | 1 | pcs
+g32 #10 t=25-37 :: Newly plastered substrate | 1 | pcs
+g32 #11 t=>=108 :: Priming | 1 | pcs
+g32 #12 t=>=233 :: Drying | 1 | pcs
+g32 #13 t=41-81 :: Facade paint (4 coats) | 1 | pcs
+g32 #14 t=262-281 :: Painter hours | 5 | hrs
+g32 #15 t=510-694 :: Scaffolding hire | 1 | pcs
+g32 #16 t=ZERO(<37) :: Repaint of undamaged rear elevation (no frost loss | 1 | flat rate there)
+g32 #17 t=52-61 :: Waste disposal of removed plaster | 1 | pcs
+g32 #18 t=ZERO(<9) :: Administrative flat rate | 1 | pcs
+g32 #19 t=ZERO(<6) :: Catering for work crew | 3 | pcs
+=== game 33 fam d95e00
+g33 #1 t=1220-1472 :: Laptop replacement - equivalent to the damaged | 1 | pcs model (repair uneconomic per supplier 
+g33 #2 t=ZERO :: Higher-spec upgrade difference (better model than the | 1 | flat rate one damaged)
+g33 #3 t=176-180 :: Tablet screen repair (struck in the same bag) | 1 | pcs
+g33 #4 t=>=126 :: Diagnostic inspection of both devices | 1 | pcs
+g33 #5 t=ZERO :: New laptop carry bag (not damaged in the incident) | 1 | pcs
+g33 #6 t=ZERO :: Extended warranty on the replacement laptop | 1 | flat rate
+g33 #7 t=ZERO :: Data recovery from the damaged laptop drive | 1 | flat rate
+g33 #8 t=ZERO :: Administration fee | 1 | flat rate
+=== game 34 fam e93f03
+g34 #1 t=>=511 :: Damage assessment and inspection | 1 | flat rate
+g34 #2 t=>=520 :: Indoor leak detection | 1 | flat rate
+g34 #3 t=>=241 :: Measurement technician | 2.5 | hrs
+g34 #4 t=>=83 :: Vehicle costs | 1 | hrs
+g34 #5 t=294-298 :: Repair of the copper joints verified as actively leaking | 1 | flat rate (seal/renew failed sec
+g34 #6 t=ZERO(<40) :: Precautionary replacement of the remaining original | 1 | flat rate copper supply run across th
+g34 #7 t=ZERO :: Upgrade surcharge – premium multilayer composite | 1 | flat rate piping in lieu of standard cop
+g34 #8 t=>=76 :: Vehicle costs | 1 | flat rate
+=== game 35 fam 559a27
+g35 #1 t=ZERO(<11) :: Clothing and jewellery stolen from the car | 1 | pcs
+g35 #2 t=ZERO(<7) :: Vehicle costs | 1 | pcs
+=== game 36 fam dbf165
+g36 #1 t=>=99 :: Cleaning of affected floor areas in the utility room | 1 | pcs
+g36 #2 t=101-118 :: Cleaning of affected floor areas in the adjoining | 1 | pcs hallway
+g36 #3 t=>=132 :: Inspection of the washing machine and supply/drain | 1 | pcs connection to confirm no further l
+g36 #4 t=71-81 :: Removal and disposal of water-damaged skirting | 1 | pcs boards
+g36 #5 t=120-148 :: Replace skirting boards | 1 | pcs
+g36 #6 t=ZERO :: Cleaning and repainting of the upstairs bedroom not | 1 | pcs reached by the water
+g36 #7 t=110-140 :: Moisture measurement of the utility room and hallway | 1 | pcs floor
+g36 #8 t=229-252 :: Drying of the affected floor area | 1 | pcs
+g36 #9 t=58-84 :: Drying unit rental | 1 | pcs
+g36 #10 t=198-230 :: Skilled worker hours | 4 | hrs
+g36 #11 t=ZERO :: Moisture measurement and drying of the basement | 1 | pcs storage room
+g36 #12 t=ZERO(<33) :: Transport of the high-value painting to the specialist | 1 | pcs restorer
+g36 #13 t=ZERO(<53) :: Professional assessment of the high-value painting | 1 | pcs
+g36 #14 t=ZERO(<69) :: Conservatory drying and stabilisation of the painting | 1 | pcs
+g36 #15 t=1107-1864 :: Full restoration of the painting | 1 | pcs
+g36 #16 t=ZERO :: Restoration of a second painting stored in the | 1 | pcs basement, unaffected by the utility-ro
+g36 #17 t=ZERO(<15) :: Administrative and claim-processing fee | 1 | flat rate
+=== game 37 fam 559a27
+g37 #1 t=ZERO :: Clothing and jewellery stolen from the car | 1 | pcs
+g37 #2 t=ZERO :: Vehicle costs | 1 | pcs
+=== game 38 fam c9e804
+g38 #1 t=1352-1445 :: Air conditioning unit - living room (surge damaged, | 1 | pcs replaced like-for-like)
+g38 #2 t=ZERO(<20) :: Air conditioning unit - kitchen (wall-mounted a couple | 1 | pcs of metres from the hob)
+g38 #3 t=468-488 :: Installation - living-room unit | 1 | pcs
+g38 #4 t=ZERO(<10) :: Installation - kitchen unit | 1 | pcs
+g38 #5 t=54-67 :: Floor console (equivalent stand for the living-room | 1 | pcs unit)
+g38 #6 t=40-43 :: Freight shipping | 1 | pcs
+=== game 39 fam 105276
+g39 #1 t=>=416 :: Painting the disturbed wall area and closing the wall | 1 | pcs opening
+g39 #2 t=>=65 :: Vehicle costs | 1 | flat rate
+g39 #3 t=>=24 :: Sealing material | 1 | pcs
+g39 #4 t=>=42 :: Stainless steel pipe | 1 | m
+g39 #5 t=>=22 :: Rock wool pipe insulation | 1 | m
+g39 #6 t=>=76 :: Installer hours | 1 | hrs
+g39 #7 t=ZERO :: Measuring device | 1 | pcs
+g39 #8 t=>=732 :: Service technician hours | 9 | hrs
+g39 #9 t=ZERO(<7) :: Vehicle costs | 1 | pcs
+g39 #10 t=>=403 :: Construction dryer flat-rate charge | 1 | flat rate
+g39 #11 t=ZERO :: Short saw blade | 1 | pcs
+g39 #12 t=>=51 :: Gunmetal | 2 | pcs
+g39 #13 t=>=31 :: Stainless steel pipe | 1 | m
+g39 #14 t=>=20 :: Pipe insulation shell, 100 cm long | 1 | m
+g39 #15 t=>=732 :: Service technician hours | 9 | hrs
+=== game 40 fam ad9850
+g40 #1 t=>=38 :: Profipress elbow 90° copper 15mm | 4 | pcs
+g40 #2 t=>=95 :: Profipress elbow 90° copper 28mm | 5 | pcs
+g40 #3 t=>=19 :: Profipress elbow 45° copper 28mm | 1 | pcs
+g40 #4 t=7-10 :: Grub screw | 8 | pcs
+g40 #5 t=>=23 :: Two-screw pipe clamp 25 mm | 4 | pcs
+g40 #6 t=>=90 :: Copper pipe 15x1 | 6.4 | m
+g40 #7 t=>=593 :: Service technician hours | 6.75 | hrs
+g40 #8 t=>=387 :: Helper hours | 5.75 | hrs
+g40 #9 t=>=116 :: Rock wool pipe insulation | 6 | pcs
+g40 #10 t=>=18 :: Binding wire | 2 | kg
+g40 #11 t=>=33 :: Small parts and consumables | 1 | pcs
+g40 #12 t=>=71 :: Vehicle costs | 1 | pcs
+g40 #13 t=58-61 :: Construction waste disposal | 1 | pcs
+g40 #14 t=ZERO :: Repainting of basement hallway (outside boiler room) | 12 | m²
+g40 #15 t=ZERO :: Laminate flooring replacement – adjacent storage | 15 | m² room (undamaged by leak)
+g40 #16 t=ZERO :: Outdoor garden tap service | 1 | flat rate
+g40 #17 t=ZERO :: Processing flat fee | 1 | pcs
+=== game 41 fam 32b2ab
+g41 #1 t=122-162 :: Bicycle frame replacement | 1 | pcs
+g41 #2 t=65-101 :: Bicycle brake replacement | 1 | pcs
+g41 #3 t=ZERO(<3) :: Replacement AirTag tracker | 1 | pcs
+g41 #4 t=ZERO :: Service second household bicycle (not stolen) | 1 | flat rate
+g41 #5 t=ZERO :: New helmet and lights | 2 | pcs
+g41 #6 t=12-20 :: Shipping | 1 | pcs
+g41 #7 t=9-15 :: Vehicle costs | 1 | pcs
+g41 #8 t=63-78 :: Assembly costs | 1 | pcs
+g41 #9 t=ZERO(<3) :: Miscellaneous items | 1 | pcs
+g41 #10 t=2-7 :: Apprentice hours | 1 | hrs
+g41 #11 t=18-28 :: Skilled worker hours | 1 | hrs
+g41 #12 t=13-21 :: Locksmith call-out to recovery site | 1 | pcs
+g41 #13 t=50-84 :: Cut and remove seized lock to release bicycle | 2 | pcs
+g41 #14 t=ZERO(<3) :: Vehicle costs – return visit | 1 | pcs
+g41 #15 t=58-91 :: Impound release / storage fee paid to recover bicycle | 1 | –
+g41 #16 t=ZERO :: Administrative and claim-processing fee | 1 | flat rate
+g41 #17 t=6-8 :: Apprentice hours | 1 | hrs
+g41 #18 t=18-28 :: Skilled worker hours | 1 | hrs
+=== game 42 fam c9e804
+g42 #1 t=1340-1536 :: Air conditioning unit - living room (higher-output | 1 | pcs replacement, larger cooling capaci
+g42 #2 t=460-505 :: Installation | 1 | pcs
+g42 #3 t=ZERO :: Decorative floor console (chosen for room appearance, | 1 | pcs not required by the new unit)
+g42 #4 t=42-51 :: Freight shipping | 1 | pcs
+g42 #5 t=ZERO :: Express delivery surcharge | 1 | flat rate
+g42 #6 t=ZERO :: Contractor administration fee | 1 | flat rate
+=== game 43 fam ad9850
+g43 #1 t=>=160 :: Premium chrome-plated designer copper pipe 15mm | 6.4 | m (upgrade from plain copper)
+g43 #2 t=39-45 :: Premium chrome-plated Profipress elbow 90° 15mm | 4 | pcs
+g43 #3 t=103-138 :: Premium chrome-plated Profipress elbow 90° 28mm | 5 | pcs
+g43 #4 t=21-26 :: Premium chrome-plated Profipress elbow 45° 28mm | 1 | pcs
+g43 #5 t=>=9 :: Grub screw | 8 | pcs
+g43 #6 t=19-19 :: Two-screw pipe clamp 10 mm | 4 | pcs
+g43 #7 t=>=23 :: Two-screw pipe clamp 25 mm | 4 | pcs
+g43 #8 t=>=629 :: Service technician hours | 6.75 | hrs
+g43 #9 t=>=381 :: Helper hours | 5.75 | hrs
+g43 #10 t=>=116 :: High-performance aluminium-clad Armaflex insulation | 6 | pcs shell (upgrade from rock wool)
+g43 #11 t=>=28 :: Binding wire | 2 | kg
+g43 #12 t=ZERO(<2) :: Smart leak-detection sensor with app connectivity | 1 | pcs (new addition)
+g43 #13 t=ZERO(<2) :: Thermostatic mixing valve (new addition) | 1 | pcs
+g43 #14 t=>=45 :: Small parts and consumables | 1 | pcs
+g43 #15 t=>=82 :: Vehicle costs | 1 | pcs
+g43 #16 t=>=58 :: Construction waste disposal | 1 | pcs
+g43 #17 t=ZERO(<2) :: Processing flat fee | 1 | pcs
+=== game 44 fam f6fea8
+g44 #1 t=>=41 :: Profipress elbow 90° copper 15mm model 01 | 4 | pcs
+g44 #2 t=>=39 :: Profipress elbow 90° copper 15mm model 02 | 4 | pcs
+g44 #3 t=ZERO(<31) :: Profipress elbow 90° copper 28mm model 01 | 5 | pcs
+g44 #4 t=ZERO(<31) :: Profipress elbow 45° copper 28mm model 02 | 5 | pcs
+g44 #5 t=ZERO(<6) :: Profipress elbow 45° copper 28mm model 03 | 1 | pcs
+g44 #6 t=>=9 :: Grub screw | 8 | pcs
+g44 #7 t=18-19 :: Two-screw pipe clamp 10 mm | 4 | pcs
+g44 #8 t=ZERO(<2) :: Two-screw pipe clamp 15 mm | 4 | pcs
+g44 #9 t=>=619 :: Service technician hours | 6.75 | hrs
+g44 #10 t=354-365 :: Helper hours | 5.75 | hrs
+g44 #11 t=>=211 :: Copper pipe 15x1 | 6.4 | m
+g44 #12 t=>=81 :: Vehicle costs | 1 | pcs
+g44 #13 t=>=45 :: Small parts and consumables | 1 | flat rate
+g44 #14 t=ZERO(<5) :: Processing flat fee | 1 | pcs
+g44 #15 t=>=114 :: Rock wool pipe insulation | 6 | m
+g44 #16 t=51-57 :: Rock wool mat | 6 | pcs
+g44 #17 t=>=27 :: Binding wire | 2 | pcs
+g44 #18 t=ZERO(<281) :: Service technician hours | 7 | hrs
+g44 #19 t=ZERO(<9) :: Vehicle costs | 1 | pcs
+g44 #20 t=>=14 :: Hygiene set incl. gloves | 1 | pcs
+g44 #21 t=>=57 :: Construction waste disposal | 1 | flat rate
+g44 #22 t=ZERO(<44) :: Tile cleaning, disinfection and coating | 5 | hrs
+=== game 45 fam 6b529f
+g45 #1 t=ZERO :: Translation from Spanish to English | 2 | hrs
+g45 #2 t=ZERO :: Material costs | 1 | pcs
+g45 #3 t=2375-2553 :: Compensation for stolen watch (premium replacement | 1 | pcs model, upgrade on the one taken)
+g45 #4 t=475-517 :: Compensation for cash taken in robbery | 1 | pcs
+g45 #5 t=ZERO :: Replacement of designer sunglasses (mislaid | 1 | pcs separately, not taken in robbery)
+g45 #6 t=ZERO :: Shipping | 1 | pcs
+=== game 46 fam 032711
+g46 #1 t=ZERO(<100) :: Wall tile covering | 3 | m²
+g46 #2 t=18-19 :: Hole drilling | 1 | pcs
+g46 #3 t=>=155 :: Wall tiles 60x30 | 3 | m²
+g46 #4 t=>=35 :: Wall levelling material | 1 | m²
+g46 #5 t=ZERO(<5) :: Wall tiles 1000x5000 | 5 | pcs
+g46 #6 t=>=43 :: Silicone joints | 3.6 | linear m
+g46 #7 t=ZERO(<5) :: Premium silicone sealant | 12 | m
+g46 #8 t=82-84 :: Vehicle costs | 1 | pcs
+g46 #9 t=>=1260 :: Skilled worker hours | 14 | hrs
+g46 #10 t=>=39 :: Clean wall tile covering | 1 | flat rate
+g46 #11 t=44-55 :: Remove drywall | 1 | flat rate
+g46 #12 t=44-48 :: Removal and disposal of damaged insulation | 1 | pcs
+g46 #13 t=79-91 :: Remove damp plaster in basement rooms | 3 | m²
+g46 #14 t=ZERO(<2) :: Remove damp plaster in attic | 1 | pcs
+g46 #15 t=>=16 :: Wall rosette | 1 | pcs
+g46 #16 t=84-95 :: Disassembly and assembly service | 1 | pcs
+g46 #17 t=>=287 :: Construction dryer | 7 | days
+g46 #18 t=>=36 :: Material surcharge | 1 | pcs
+g46 #19 t=>=26 :: Rock wool pipe insulation | 1 | m
+g46 #20 t=58-61 :: Construction waste disposal | 1 | flat rate
+=== game 47 fam 77f645
+g47 #1 t=51-57 :: Filling valve (internal frost-burst fitting) | 1 | pcs
+g47 #2 t=>=26 :: Connection hose | 1 | pcs
+g47 #3 t=291-344 :: Senior installer hours | 3 | hrs
+g47 #4 t=ZERO(<3) :: Auxiliary and cleaning material | 1 | pcs
+g47 #5 t=37-45 :: Vehicle costs | 1 | pcs
+g47 #6 t=15-20 :: Thermal imaging camera (leak detection) | 1 | pcs
+g47 #7 t=384-405 :: Facade damage where the wall froze from the internal | 1 | pcs water escape
+g47 #8 t=32-52 :: Loose plaster | 1 | pcs
+g47 #9 t=34-47 :: Base plaster | 1 | pcs
+g47 #10 t=>=137 :: Additional work | 1 | pcs
+g47 #11 t=25-41 :: Newly plastered substrate | 1 | pcs
+g47 #12 t=58-70 :: Facade paint (4 coats) | 1 | pcs
+g47 #13 t=>=255 :: Drying | 1 | pcs
+g47 #14 t=>=128 :: Priming | 1 | pcs
+g47 #15 t=258-266 :: Painter hours | 5 | hrs
+g47 #16 t=>=207 :: Flat rate | 1 | pcs
+=== game 48 fam 63344e
+g48 #1 t=>=535 :: Leak tracing and locating the defect | 1 | pcs
+g48 #2 t=>=1038 :: Technical room drying of the affected basement area | 1 | flat rate including dryer units and r
+g48 #3 t=869-1000 :: Confirmed pipe repair including copper fittings, | 1 | flat rate transition piece and skilled l
+g48 #4 t=>=147 :: Vehicle costs | 2 | pcs
+g48 #5 t=589-1980 :: Reinstatement of the affected tiled surfaces including | 1 | flat rate standard material and sk
+g48 #6 t=>=80 :: Vehicle costs | 1 | pcs
+=== game 49 fam 5db81c
+g49 #1 t=ZERO(<31) :: Air conditioning unit (kitchen) | 1 | pcs
+g49 #2 t=ZERO(<382) :: Installation | 1 | pcs
+g49 #3 t=ZERO(<48) :: Floor console | 1 | pcs
+g49 #4 t=ZERO(<34) :: Freight shipping | 1 | pcs
+=== game 50 fam f02988
+g50 #1 t=101-154 :: Disassembly and assembly service | 1 | pcs
+g50 #2 t=>=280 :: Construction dryer | 7 | days
+g50 #3 t=ZERO(<5) :: Material surcharge | 1 | pcs
+g50 #4 t=>=36 :: Rock wool pipe insulation | 1 | pcs
+g50 #5 t=57-64 :: Construction waste disposal | 1 | flat rate
+g50 #6 t=>=113 :: Wall levelling material | 1 | pcs
+g50 #7 t=>=189 :: Rough renovation | 2.78 | m²
+g50 #8 t=>=141 :: Mounting / service opening | 1 | pcs
+g50 #9 t=>=433 :: Large-format wall tiles 90 x 90 cm | 5 | pcs
+g50 #10 t=ZERO :: Designer wall tiles 130 x 130 cm | 5 | pcs
+g50 #11 t=48-56 :: Silicone joints | 3.6 | linear m
+g50 #12 t=>=81 :: Vehicle costs | 1 | pcs
+g50 #13 t=>=1250 :: Skilled worker hours | 14 | hrs
+g50 #14 t=69-77 :: Remove drywall and insulation wool in basement | 1 | flat rate
+g50 #15 t=79-91 :: Remove damp plaster in basement rooms | 1 | pcs
+g50 #16 t=ZERO :: Remove damp plaster in attic | 1 | pcs
+g50 #17 t=ZERO(<40) :: Construction waste disposal | 1 | flat rate
+=== game 51 fam 105276
+g51 #1 t=112-162 :: Pipe repair – replacement pipe section (standard | 1 | flat rate spec), sealing material and st
+g51 #2 t=855-945 :: Installation and service-technician labour hours | 1 | flat rate
+g51 #3 t=73-98 :: Vehicle costs | 1 | flat rate
+g51 #4 t=>=580 :: Construction dryer flat-rate charge | 1 | flat rate
+g51 #5 t=>=633 :: Painting the disturbed wall area and closing the wall | 1 | pcs opening
+=== game 52 fam 694e25
+g52 #1 t=187-242 :: Clean / dry conservatory rug | 1 | pcs
+g52 #2 t=314-381 :: Inspect plant-room electrical systems | 1 | pcs
+g52 #3 t=ZERO :: Preventive replacement of plant-room electrical | 1 | flat rate components (no confirmed water 
+g52 #4 t=ZERO(<338) :: Upgrade to high-quality natural stone floor (upgrade | 12 | m² from pre-loss ceramic tiling)
+g52 #5 t=ZERO(<80) :: Inspect pool technology | 1 | pcs
+g52 #6 t=603-743 :: Restore wall surfaces | 10 | m²
+g52 #7 t=196-201 :: Final site cleaning | 1 | pcs
+g52 #8 t=>=80 :: Vehicle costs | 1 | pcs
+g52 #9 t=>=520 :: Leak detection pool pipeline | 1 | pcs
+g52 #10 t=ZERO(<144) :: Repair pool supply pipe connection | 1 | pcs
+g52 #11 t=ZERO :: Skilled worker hours | 5 | hrs
+g52 #12 t=ZERO :: Material for pool pipe repair | 1 | pcs
+g52 #13 t=>=223 :: Moisture measurement | 1 | pcs
+g52 #14 t=261-344 :: Vacuum water | 1 | pcs
+g52 #15 t=525-593 :: Room drying (pool/conservatory) | 1 | pcs
+g52 #16 t=110-150 :: Condensation dryer | 2 | pcs
+g52 #17 t=61-78 :: Drying fan | 3 | pcs
+g52 #18 t=>=405 :: Supply and install premium hardwood skirting boards | 15 | m (upgrade from pre-loss softwood)
+=== game 53 fam 279656
+g53 #1 t=101-127 :: Cleaning of affected floor areas in the utility room and | 1 | pcs adjoining hallway
+g53 #2 t=134-150 :: Inspection of the washing machine and supply/drain | 1 | pcs connection to confirm no further l
+g53 #3 t=70-96 :: Removal and disposal of water-damaged skirting | 1 | pcs boards
+g53 #4 t=123-245 :: Replace skirting boards | 1 | pcs
+g53 #5 t=112-120 :: Moisture measurement of the utility room and hallway | 1 | pcs floor
+g53 #6 t=233-266 :: Drying of the affected floor area | 1 | pcs
+g53 #7 t=58-60 :: Drying unit rental | 1 | pcs
+g53 #8 t=211-251 :: Skilled worker hours | 4 | hrs
+g53 #9 t=156-223 :: Transport of the high-value painting to the specialist | 1 | pcs restorer
+g53 #10 t=>=382 :: Professional assessment of the high-value painting | 1 | pcs
+g53 #11 t=>=883 :: Conservatory drying and stabilisation of the painting | 1 | pcs
+g53 #12 t=ZERO(<281) :: Full restoration of the painting | 1 | pcs
+g53 #13 t=187-257 :: Return transport and rehanging of the restored | 1 | flat rate painting
+=== game 54 fam 032711
+g54 #1 t=428-450 :: Disassembly/reassembly, construction dryer for the | 1 | flat rate drying period and standard p
+g54 #2 t=57-63 :: Construction waste disposal | 1 | flat rate
+g54 #3 t=>=440 :: Wall preparation, rough repair and mounting opening | 1 | flat rate in the affected basement ar
+g54 #4 t=279-357 :: Standard wall tiling incl. standard silicone sealant | 1 | flat rate
+g54 #5 t=>=1330 :: Vehicle costs and skilled worker hours | 1 | flat rate
+=== game 55 fam 105276
+g55 #1 t=>=81 :: Vehicle costs | 1 | flat rate
+g55 #2 t=24-24 :: Sealing material | 1 | pcs
+g55 #3 t=>=54 :: Stainless steel pipe | 1 | m
+g55 #4 t=>=33 :: Rock wool pipe insulation | 1 | m
+g55 #5 t=86-135 :: Installation | 1 | hrs
+g55 #6 t=>=765 :: Service technician hours | 9 | labor units
+g55 #7 t=>=600 :: Construction dryer flat-rate charge | 1 | flat rate
+g55 #8 t=>=650 :: Painting the disturbed wall area and closing the wall | 1 | pcs opening
+g55 #9 t=ZERO :: Full repaint of the entire wall on which the opening | 8 | m² was located
+g55 #10 t=ZERO :: Repaint of the remaining bathroom walls and ceiling to | 1 | flat rate match
+=== game 56 fam ad9850
+g56 #1 t=>=41 :: Profipress elbow 90° copper 15mm | 4 | pcs
+g56 #2 t=>=102 :: Profipress elbow 90° copper 28mm | 5 | pcs
+g56 #3 t=>=21 :: Profipress elbow 45° copper 28mm | 1 | pcs
+g56 #4 t=>=9 :: Grub screw | 8 | pcs
+g56 #5 t=>=19 :: Two-screw pipe clamp 10 mm | 4 | pcs
+g56 #6 t=23-24 :: Two-screw pipe clamp 25 mm | 4 | pcs
+g56 #7 t=>=211 :: Copper pipe 15x1 | 6.4 | m
+g56 #8 t=629-640 :: Service technician hours | 6.75 | hrs
+g56 #9 t=>=386 :: Helper hours | 5.75 | hrs
+g56 #10 t=>=120 :: Rock wool pipe insulation | 6 | pcs
+g56 #11 t=77-97 :: Rock wool mat | 6 | pcs
+g56 #12 t=>=28 :: Binding wire | 2 | kg
+g56 #13 t=>=46 :: Small parts and consumables | 1 | pcs
+g56 #14 t=>=82 :: Vehicle costs | 1 | pcs
+g56 #15 t=ZERO :: Vehicle costs – return visit | 1 | pcs
+g56 #16 t=>=58 :: Construction waste disposal | 1 | pcs
+g56 #17 t=ZERO :: Catering for work crew | 1 | pcs
+g56 #18 t=ZERO(<1) :: Processing flat fee | 1 | pcs
+g56 #19 t=>=319 :: Removal of water-damaged floor tiles around leak | 8 | m²
+g56 #20 t=>=877 :: Supply and lay replacement floor tiles (water-damaged | 8 | m² area)
+g56 #21 t=92-96 :: Tile adhesive and grout | 1 | flat rate
+g56 #22 t=>=530 :: Installation hours – tiler | 6 | hrs
+g56 #23 t=ZERO :: Cleaning, disinfection and re-coating of surrounding | 5 | hrs undamaged tiles
+g56 #24 t=ZERO(<28) :: Construction waste disposal | 1 | pcs
+g56 #25 t=>=82 :: Vehicle costs | 1 | pcs
+=== game 57 fam 4fa911
+g57 #1 t=2970-3748 :: Compensation for items taken in robbery (watch and | 1 | pcs cash)
+g57 #2 t=ZERO :: Translation and handling of police report for the claim | 1 | flat rate
+=== game 58 fam ee179e
+g58 #1 t=786-850 :: Repair of the storm-damaged shed roof section | 1 | flat rate (timber and covering, restored to
+g58 #2 t=ZERO :: Full repaint of the entire shed, including the | 32 | m² undamaged walls
+g58 #3 t=ZERO :: Ultraviolet-resistant protective exterior coating | 32 | m²
+g58 #4 t=ZERO :: Renewal of all shed trim, including undamaged trim | 1 | flat rate
+g58 #5 t=>=1197 :: Skilled carpentry labour for the roof repair | 1 | pcs
+g58 #6 t=ZERO :: Contractor hand tools and reusable equipment | 1 | flat rate
+g58 #7 t=>=82 :: Vehicle costs | 1 | pcs
+g58 #8 t=ZERO :: Vehicle costs – return visit | 1 | pcs
+g58 #9 t=ZERO :: Catering for work crew | 1 | pcs
+g58 #10 t=863-957 :: Cutting and removal of the storm-felled tree from the | 1 | flat rate shed roof
+g58 #11 t=576-600 :: Lifting and earth-moving machinery hire | 1 | flat rate
+g58 #12 t=>=82 :: Vehicle costs | 1 | pcs
+g58 #13 t=88-108 :: Disposal of shed roof timber and the broken glass | 2 | pcs pane (building debris)
+g58 #14 t=94-114 :: Disposal of felled-tree green waste and root ball | 2 | pcs (single mass under one cubic metre)
+g58 #15 t=19-96 :: Disposal and reinstatement of excavated soil and | 2 | pcs displaced paving around the shed
+g58 #16 t=ZERO :: Transport charge for the tree waste (already billed by | 1 | pcs the tree service)
+=== game 59 fam dbf165
+g59 #1 t=>=199 :: Moisture measurement | 1 | flat rate
+g59 #2 t=229-247 :: Drying of the affected floor area | 1 | flat rate
+g59 #3 t=>=399 :: Flat-rate drying of the entire room | 1 | hrs
+g59 #4 t=>=301 :: Skilled worker hours | 4 | hrs
+g59 #5 t=104-108 :: Cleaning of affected floor areas | 1 | flat rate
+g59 #6 t=>=142 :: Inspection of the washing machine and supply/drain | 1 | pcs connection to confirm no further l
+g59 #7 t=79-93 :: Removal and disposal of water-damaged skirting | 10 | m boards
+g59 #8 t=300-514 :: Replace skirting boards | 10 | m
+g59 #9 t=ZERO(<30) :: Transport of the high-value painting to the specialist | 1 | pcs restorer
+g59 #10 t=ZERO(<32) :: Professional assessment of the high-value painting | 1 | pcs
+g59 #11 t=ZERO(<65) :: Conservatory drying and stabilisation of the painting | 1 | pcs
+g59 #12 t=>=1130 :: Full restoration of the painting | 1 | pcs
+=== game 60 fam c9e804
+g60 #1 t=>=1981 :: Air conditioning unit - kitchen (wall-fixed near the hob, | 1 | pcs surge damaged)
+g60 #2 t=>=1423 :: Air conditioning unit - hallway (wall-fixed, surge | 1 | pcs damaged)
+g60 #3 t=ZERO :: Split unit - study (ships with handheld wireless | 1 | pcs remote, movable)
+g60 #4 t=468-722 :: Installation - kitchen unit | 1 | pcs
+g60 #5 t=460-595 :: Installation - hallway unit | 1 | pcs
+g60 #6 t=ZERO :: Installation - study split unit | 1 | pcs
+g60 #7 t=>=80 :: Standard freight - replacement equipment pallet (over | 1 | pcs 80 kg)
+g60 #8 t=ZERO :: Express delivery surcharge | 1 | flat rate
+g60 #9 t=ZERO :: Vehicle costs – return visit | 1 | pcs
+g60 #10 t=ZERO :: Contractor administration fee | 1 | flat rate
+g60 #11 t=ZERO :: Disposal of old unrelated boiler | 1 | pcs
+=== game 61 fam 8baba0
+g61 #1 t=>=336 :: Disassembly and disposal of damaged floor tiles in | 6 | m² bathroom
+g61 #2 t=>=939 :: New installation of floor tiles in bathroom incl. material | 6 | m²
+g61 #3 t=ZERO :: Cleaning of entire apartment | 1 | flat rate
+g61 #4 t=>=788 :: Paint lower wall after water damage incl. surface | 20 | m² preparation
+g61 #5 t=ZERO(<181) :: Full ceiling paint living room | 15 | m²
+g61 #6 t=ZERO :: Wallpapering work hallway | 8 | m²
+g61 #7 t=>=535 :: Remove water-damaged laminate in living room | 18 | m²
+g61 #8 t=>=1305 :: Supply & install laminate incl. impact sound insulation | 18 | m²
+g61 #9 t=>=839 :: Replace skirting boards | 25 | linear m
+=== game 62 fam 1aabe2
+g62 #1 t=>=680 :: Leak detection call-out and electro-acoustic | 1 | pcs pinpointing of the leak beneath the kitc
+g62 #2 t=>=152 :: Moisture measurement of the kitchen floor and wall | 1 | pcs base
+g62 #3 t=621-732 :: Service technician hours | 14 | hrs
+g62 #4 t=>=80 :: Vehicle costs | 1 | pcs
+g62 #5 t=122-126 :: Freeing the affected pipe run beneath the kitchen sink | 1 | pcs
+g62 #6 t=>=153 :: Removal and disposal of damaged pipe insulation | 2 | pcs
+g62 #7 t=140-159 :: Repair of the confirmed leak on the copper supply pipe | 1 | pcs
+g62 #8 t=76-104 :: Replacement copper pipe section and transition fittings | 1 | flat rate
+g62 #9 t=>=80 :: Vehicle costs | 1 | pcs
+g62 #10 t=54-101 :: Condensation dryer for the kitchen, rental for the | 1 | pcs drying period
+g62 #11 t=91-117 :: Room drying of the kitchen floor and wall base | 1 | pcs
+g62 #12 t=>=80 :: Vehicle costs | 1 | pcs
+g62 #13 t=>=154 :: Removal, transport and disposal of the water-damaged | 3 | pcs wooden kitchen table
+g62 #14 t=>=323 :: Supply of replacement table - premium solid-oak | 1 | pcs designer model, higher specification 
+g62 #15 t=150-151 :: Delivery and assembly of the replacement table | 1 | flat rate
+g62 #16 t=35-48 :: Cleaning of the installation area | 1 | pcs
+g62 #17 t=>=80 :: Vehicle costs | 1 | pcs
+=== game 63 fam 694e25
+g63 #1 t=218-244 :: Clean / dry carpet | 1 | pcs
+g63 #2 t=>=321 :: Inspect electrical systems | 1 | pcs
+g63 #3 t=>=388 :: Inspect pool technology | 1 | pcs
+g63 #4 t=ZERO :: Upgrade to high-quality natural stone floor | 12 | m²
+g63 #5 t=250-269 :: Pool filter system maintenance | 1 | pcs
+g63 #6 t=623-744 :: Restore wall surfaces | 10 | m²
+g63 #7 t=>=195 :: Final site cleaning | 1 | pcs
+g63 #8 t=80-86 :: Vehicle costs | 1 | pcs
+g63 #9 t=519-540 :: Leak detection pool pipeline | 1 | pcs
+g63 #10 t=325-346 :: Repair pool supply pipe connection | 1 | pcs
+g63 #11 t=358-363 :: Skilled worker hours | 5 | hrs
+g63 #12 t=>=126 :: Material for pool pipe repair | 1 | pcs
+g63 #13 t=230-256 :: Moisture measurement | 1 | pcs
+g63 #14 t=>=287 :: Vacuum water | 1 | pcs
+g63 #15 t=>=524 :: Room drying (pool/conservatory) | 1 | pcs
+g63 #16 t=116-146 :: Condensation dryer | 2 | pcs
+g63 #17 t=62-102 :: Drying fan | 3 | pcs
+g63 #18 t=>=680 :: Replace skirting boards | 15 | m
+=== game 64 fam 5b93be
+g64 #1 t=639-765 :: Replacement of stolen everyday clothing and personal | 1 | pcs effects (like-for-like)
+g64 #2 t=289-310 :: Replacement of a winter coat that had been worn only | 1 | pcs twice before the theft
+g64 #3 t=154-178 :: Premium designer jacket to replace a stolen mid-range | 1 | pcs one (upgrade on the original)
+g64 #4 t=522-937 :: Stolen jewellery - several unscheduled everyday | 1 | pcs pieces
+g64 #5 t=6500-6962 :: Stolen jewellery - one high-value ring listed on the | 1 | pcs scheduled-articles endorsement
+g64 #6 t=ZERO :: Claimed antique brooch with no receipt, photograph or | 1 | pcs valuation
+g64 #7 t=ZERO :: Personal mileage to and from the police station to | 1 | flat rate report the theft
+g64 #8 t=ZERO :: Time spent compiling and reporting the claim | 1 | flat rate
+g64 #9 t=163-211 :: Emergency boarding of the forced entry door on the | 1 | flat rate night of the break-in
+g64 #10 t=136-159 :: Replacement lock and cylinder for the forced door | 1 | flat rate
+g64 #11 t=ZERO :: Cleaning of muddy footprints tracked through the | 1 | – hallway by the intruders
+=== game 65 fam 1aabe2
+g65 #1 t=>=700 :: Leak detection call-out and pinpointing of the sink | 1 | pcs supply leak
+g65 #2 t=155-162 :: Moisture measurement of the kitchen floor and wall | 1 | pcs base
+g65 #3 t=640-835 :: Service technician hours | 14 | hrs
+g65 #4 t=>=80 :: Vehicle costs | 1 | pcs
+g65 #5 t=121-125 :: Freeing the affected pipe run beneath the kitchen sink | 1 | pcs
+g65 #6 t=>=153 :: Removal and disposal of damaged insulation | 2 | pcs
+g65 #7 t=140-193 :: Repair of the confirmed leak | 1 | pcs
+g65 #8 t=>=115 :: Replacement copper pipe section and standard | 1 | flat rate insulation
+g65 #9 t=ZERO :: Room drying line item for the roof space (Dachstuhl) | 1 | pcs
+g65 #10 t=54-64 :: Condensation dryer (kitchen) | 1 | pcs
+g65 #11 t=92-94 :: Room drying of the kitchen floor and wall base | 1 | pcs
+g65 #12 t=ZERO :: Drying fan (roof space) | 2 | pcs
+g65 #13 t=78-80 :: Final site cleaning of the covered work area | 1 | pcs
+g65 #14 t=81-85 :: Vehicle costs | 1 | pcs
+g65 #15 t=ZERO :: Cleaning of entire apartment | 1 | pcs
+g65 #16 t=>=156 :: Removal, transport and disposal of the water-damaged | 3 | pcs wooden kitchen table
+g65 #17 t=149-161 :: Delivery and assembly of the replacement table | 1 | flat rate
+g65 #18 t=ZERO :: Inspection of further furniture items stored in the | 1 | pcs garden for moisture
+=== game 66 fam 0c98ab
+g66 #1 t=>=515 :: Leak detection pool pipeline | 1 | flat rate
+g66 #2 t=ZERO :: Repair pool supply pipe connection | 1 | flat rate
+g66 #3 t=ZERO(<285) :: Skilled worker hours | 5 | hrs
+g66 #4 t=ZERO :: Material for pool pipe repair | 1 | flat rate
+g66 #5 t=>=233 :: Moisture measurement | 1 | flat rate
+g66 #6 t=285-298 :: Vacuum water | 1 | flat rate
+g66 #7 t=>=545 :: Room drying (pool/conservatory) | 1 | flat rate
+g66 #8 t=58-93 :: Condensation dryer | 1 | days
+g66 #9 t=70-91 :: Drying fan | 3 | days
+g66 #10 t=>=670 :: Replace skirting boards | 15 | m
+g66 #11 t=>=229 :: Clean / dry conservatory rug | 1 | flat rate
+g66 #12 t=>=318 :: Inspect electrical systems | 1 | flat rate
+g66 #13 t=ZERO :: Inspect pool technology | 1 | flat rate
+g66 #14 t=ZERO :: Upgrade to high-quality natural stone floor | 12 | m²
+g66 #15 t=ZERO :: Pool filter system maintenance | 1 | flat rate
+g66 #16 t=618-629 :: Restore wall surfaces | 10 | m²
+g66 #17 t=>=194 :: Final site cleaning | 1 | flat rate
+g66 #18 t=>=83 :: Vehicle costs | 1 | flat rate
+=== game 67 fam 032711
+g67 #1 t=102-116 :: Disassembly and assembly service | 1 | pcs
+g67 #2 t=>=290 :: Construction dryer | 7 | days
+g67 #3 t=>=37 :: Rock wool pipe insulation | 1 | pcs
+g67 #4 t=>=58 :: Construction waste disposal | 1 | flat rate
+g67 #5 t=>=115 :: Wall levelling material | 1 | pcs
+g67 #6 t=>=192 :: Rough renovation | 2.78 | m²
+g67 #7 t=140-143 :: Mounting / service opening | 1 | pcs
+g67 #8 t=148-300 :: Premium large-format designer wall tiles 120 x 120 | 5 | pcs cm (upgraded from the original sta
+g67 #9 t=11-19 :: Premium grout | 1 | pcs
+g67 #10 t=51-135 :: Premium silicone sealant | 12 | m
+g67 #11 t=>=82 :: Vehicle costs | 1 | pcs
+g67 #12 t=>=1265 :: Skilled worker hours | 14 | hrs
+=== game 68 fam 8c2ab7
+g68 #1 t=ZERO(<12) :: Hole drilling | 1 | pcs
+g68 #2 t=ZERO(<20) :: Installation of the new glass into the frame | 1 | pcs
+g68 #3 t=ZERO(<38) :: Made-to-measure replacement glass pane | 1 | pcs
+g68 #4 t=ZERO(<12) :: Vehicle costs | 1 | pcs
+=== game 69 fam 4fa911
+g69 #1 t=2475-2557 :: Compensation for stolen watch | 1 | pcs
+g69 #2 t=2500-2911 :: Compensation for stolen diamond ring | 1 | pcs
+g69 #3 t=ZERO :: Compensation for stolen gold necklace | 1 | pcs
+g69 #4 t=495-552 :: Compensation for cash taken in robbery | 1 | pcs
+g69 #5 t=442-595 :: Compensation for stolen mobile phone | 1 | pcs
+g69 #6 t=ZERO :: Replacement travel and extra hotel nights after the | 1 | pcs incident
+g69 #7 t=ZERO(<8) :: Shipping | 1 | pcs
+g69 #8 t=ZERO :: Translation from Spanish to English | 2 | hrs
+g69 #9 t=ZERO :: Notary certification of translated documents | 1 | flat rate
+g69 #10 t=ZERO :: Material costs | 1 | pcs
+g69 #11 t=ZERO :: Administrative and claim-processing fee | 1 | flat rate
+=== game 70 fam 8baba0
+g70 #1 t=>=2675 :: Remove & reinstall water-damaged laminate incl. | 1 | flat rate impact sound insulation and ski
+g70 #2 t=1034-1109 :: Remove & reinstall bathroom floor tiles incl. material | 1 | flat rate and disposal
+g70 #3 t=618-686 :: Prepare & repaint water-damaged lower living-room | 20 | m² wall
+=== game 71 fam 0cac01
+g71 #1 t=>=83 :: Vehicle costs | 1 | flat rate
+g71 #2 t=24-41 :: Sealing material | 1 | pcs
+g71 #3 t=>=60 :: Premium large-diameter stainless steel pipe (upgraded | 1 | m from the original narrower-bore i
+g71 #4 t=>=119 :: Designer gunmetal fittings (higher specification than | 2 | pcs the original)
+g71 #5 t=>=32 :: Premium aluminium-clad insulation (upgraded from | 1 | m standard rock wool)
+g71 #6 t=>=410 :: Installation | 1 | m
+g71 #7 t=837-1089 :: Service technician hours | 9 | labor units
+g71 #8 t=>=594 :: Construction dryer flat-rate charge | 1 | flat rate
+g71 #9 t=>=644 :: Painting the disturbed wall area and closing the wall | 1 | pcs opening
+=== game 72 fam 105276
+g72 #1 t=>=81 :: Vehicle costs | 1 | flat rate
+g72 #2 t=24-25 :: Sealing material | 1 | pcs
+g72 #3 t=>=54 :: Stainless steel pipe | 1 | m
+g72 #4 t=>=36 :: Rock wool pipe insulation | 1 | m
+g72 #5 t=89-94 :: Installation | 1 | hrs
+g72 #6 t=ZERO :: Measuring device | 1 | pcs
+g72 #7 t=>=837 :: Service technician hours | 9 | labor units
+g72 #8 t=ZERO(<14) :: Vehicle costs | 1 | pcs
+g72 #9 t=>=600 :: Construction dryer flat-rate charge | 1 | flat rate
+g72 #10 t=ZERO(<5) :: Short saw blade | 1 | pcs
+g72 #11 t=>=82 :: Gunmetal | 2 | pcs
+g72 #12 t=>=837 :: Service technician hours | 9 | labor units
+g72 #13 t=>=650 :: Painting the disturbed wall area and closing the wall | 1 | pcs opening
+g72 #14 t=276-378 :: Re-tiling of the disturbed wall section around the | 1 | flat rate opening
+g72 #15 t=ZERO :: Re-tiling of the entire bathroom to match | 14 | m²
+g72 #16 t=ZERO(<71) :: Construction dryer flat-rate charge | 1 | flat rate
+g72 #17 t=>=81 :: Vehicle costs | 1 | pcs
+=== game 73 fam e3fca6
+g73 #1 t=2388-4000 :: Stolen jewellery - several unscheduled pieces | 1 | pcs
+g73 #2 t=607-651 :: Stolen clothing and personal effects (everyday wear) | 1 | pcs
+g73 #3 t=287-324 :: Emergency boarding and lock replacement for the | 1 | flat rate forced front door
+=== game 74 fam 90eda5
+g74 #1 t=8884-10413 :: Renew boiler system including flue gas system and | 1 | flat rate storage tank
+g74 #2 t=ZERO(<256) :: Adjust supply pipework to fit the replacement boiler | 1 | flat rate
+g74 #3 t=>=698 :: Dispose of the old boiler system | 1 | –
+g74 #4 t=>=81 :: Vehicle costs | 1 | pcs
+g74 #5 t=900-940 :: Electrician labour checking and rewiring the flooded | 12 | hrs basement circuits
+g74 #6 t=41-110 :: Small electrical materials for the rewiring | 1 | pcs
+g74 #7 t=ZERO(<300) :: Water extraction from the flooded plant room | 1 | pcs
+g74 #8 t=ZERO :: Procurement of a motor pump | 1 | pcs
+g74 #9 t=ZERO :: Submersible pump | 1 | pcs
+g74 #10 t=ZERO :: Vehicle costs | 1 | pcs
+=== game 75 fam fd3021
+g75 #1 t=ZERO(<51) :: Remove and transport rug | 1 | pcs
+g75 #2 t=ZERO(<80) :: High-quality LED lighting above billiard table | 1 | pcs
+g75 #3 t=ZERO(<60) :: Specialist rug cleaning | 1 | pcs
+g75 #4 t=>=108 :: Electrical inspection of robot vacuum cleaner | 1 | pcs
+g75 #5 t=ZERO :: Replacement robot vacuum cleaner (total loss) | 1 | pcs
+g75 #6 t=ZERO(<53) :: Disassemble billiard table | 1 | pcs
+g75 #7 t=ZERO(<58) :: Inspect billiard table for moisture damage | 1 | pcs
+g75 #8 t=495-519 :: Replace damaged billiard cloth | 1 | pcs
+g75 #9 t=ZERO(<49) :: Replace old cue sets | 1 | pcs
+g75 #10 t=ZERO(<53) :: Align and reassemble billiard table | 1 | pcs
+g75 #11 t=563-685 :: Restore plasterboard ceiling | 8 | m²
+g75 #12 t=345-400 :: Fill ceiling and wall surfaces | 15 | m²
+g75 #13 t=>=195 :: Final site cleaning | 1 | pcs
+g75 #14 t=70-72 :: Drying fan | 3 | pcs
+g75 #15 t=183-197 :: Control measurement during drying | 2 | pcs
+g75 #16 t=124-135 :: Final measurement | 1 | pcs
+g75 #17 t=150-196 :: Remove floor covering in guest WC | 5 | m²
+g75 #18 t=120-128 :: Remove skirting boards | 12 | m
+g75 #19 t=>=559 :: Insulation layer drying | 1 | pcs
+g75 #20 t=117-125 :: Condensation dryer | 2 | pcs
+g75 #21 t=100-135 :: Side channel compressor | 1 | pcs
+g75 #22 t=193-240 :: Remove damaged parquet in drip zone below stairwell | 6 | m² (migration path)
+g75 #23 t=654-780 :: Renew parquet floor in drip zone below stairwell | 6 | m² (migration path)
+g75 #24 t=ZERO :: Remove and renew additional parquet area spread by | 1 | flat rate robot vacuum
+g75 #25 t=>=516 :: Supply and install new skirting boards | 12 | m
+g75 #26 t=>=364 :: Open water-damaged ceiling surface | 8 | m²
+g75 #27 t=>=411 :: Leak detection / cause investigation | 1 | pcs
+g75 #28 t=>=230 :: Moisture measurement of multiple rooms | 1 | pcs
+g75 #29 t=>=123 :: Inspect and disassemble toilet cistern | 1 | pcs
+g75 #30 t=>=109 :: Replace fill valve in toilet cistern | 1 | pcs
+g75 #31 t=241-283 :: Skilled worker hours | 3 | hrs
+g75 #32 t=>=81 :: Vehicle costs | 1 | pcs
+=== game 76 fam 91dab5
+g76 #1 t=>=683 :: Skilled worker hours | 8 | hrs
+g76 #2 t=>=118 :: Material for the work | 1 | pcs
+g76 #3 t=>=81 :: Vehicle costs | 1 | pcs
+g76 #4 t=>=609 :: Indoor leak detection | 1 | pcs
+g76 #5 t=425-482 :: Room drying 30 m² | 1 | pcs
+g76 #6 t=>=408 :: Room dryer unit | 1 | pcs
+g76 #7 t=>=198 :: Wet insulation wool from basement | 1 | pcs
+g76 #8 t=>=105 :: Profipress elbow 90° copper 28mm model 01 | 5 | pcs
+g76 #9 t=>=66 :: Transition piece 15x19mm | 3 | pcs
+g76 #10 t=234-243 :: Helper hours | 5 | hrs
+g76 #11 t=448-468 :: Service technician hours | 5.5 | hrs
+g76 #12 t=163-400 :: Vehicle costs | 2 | pcs
+g76 #13 t=>=1217 :: Skilled worker hours | 14 | –
+g76 #14 t=>=92 :: Material costs | 1 | pcs
+g76 #15 t=>=81 :: Vehicle costs | 1 | pcs
+=== game 77 fam 5170b6
+g77 #1 t=103-106 :: Cleaning of affected floor areas in the utility room and | 1 | pcs adjoining hallway
+g77 #2 t=>=136 :: Inspection of the washing machine and supply/drain | 1 | pcs connection to confirm no further l
+g77 #3 t=71-74 :: Removal and disposal of water-damaged skirting | 1 | pcs boards
+g77 #4 t=123-132 :: Replace skirting boards | 1 | pcs
+g77 #5 t=>=117 :: Moisture measurement of the utility room and hallway | 1 | pcs floor
+g77 #6 t=>=232 :: Drying of the affected floor area | 1 | pcs
+g77 #7 t=58-62 :: Drying unit rental | 1 | pcs
+g77 #8 t=211-244 :: Skilled worker hours | 4 | hrs
+g77 #9 t=156-162 :: Transport of the high-value painting to the specialist | 1 | pcs restorer
+g77 #10 t=>=399 :: Professional assessment of the high-value painting | 1 | pcs
+g77 #11 t=880-1075 :: Conservatory drying and stabilisation of the painting | 1 | pcs
+g77 #12 t=>=2319 :: Full restoration of the painting | 1 | pcs
+=== game 78 fam e93f03
+g78 #1 t=>=599 :: Damage assessment and inspection | 1 | flat rate
+g78 #2 t=>=522 :: Indoor leak detection | 1 | flat rate
+g78 #3 t=>=270 :: Measurement technician | 2.5 | hrs
+g78 #4 t=>=83 :: Vehicle costs | 1 | hrs
+g78 #5 t=>=122 :: Fleece covering | 25 | m²
+g78 #6 t=>=1812 :: Floor covering removal – removal of linoleum incl. | 82.8 | m² skirting and transport to the co
+g78 #7 t=575-595 :: Preparation of floor surfaces for further processing | 82.8 | m²
+g78 #8 t=57-59 :: Construction waste disposal | 1 | pcs
+g78 #9 t=>=161 :: Staff costs | 2 | hrs
+g78 #10 t=>=167 :: Dust protection incl. material and labor | 10 | m²
+g78 #11 t=ZERO :: Kitchen disinfection | 25 | m²
+g78 #12 t=>=2597 :: Large-area drying (from 50 m²) | 121.9 | m²
+g78 #13 t=258-296 :: Cavity drying | 1 | pcs
+g78 #14 t=>=335 :: Skilled worker hours | 4 | hrs
+g78 #15 t=>=83 :: Vehicle costs | 1 | –
+g78 #16 t=ZERO :: Vehicle costs – return visit | 1 | –
+g78 #17 t=ZERO(<40) :: Construction waste disposal | 1 | pcs
+=== game 79 fam 1aabe2
+g79 #1 t=297-468 :: Indoor leak detection | 1 | flat rate
+g79 #2 t=>=218 :: Moisture measurement | 1 | flat rate
+g79 #3 t=>=567 :: Skilled worker hours | 6 | hrs
+g79 #4 t=280-283 :: Helper hours | 6 | hrs
+g79 #5 t=>=81 :: Vehicle costs | 1 | pcs
+g79 #6 t=>=400 :: Small parts and consumables | 1 | pcs
+g79 #7 t=177-200 :: Expose pipeline | 1 | pcs
+g79 #8 t=>=68 :: Removal and disposal of damaged insulation | 0.75 | hrs
+g79 #9 t=>=498 :: Removal and disposal of damaged insulation | 6 | hrs
+g79 #10 t=ZERO :: Room drying up to 25 m² (roof space) | 1 | pcs
+g79 #11 t=54-70 :: Condensation dryer | 1 | pcs
+g79 #12 t=ZERO :: Drying fan (roof space) | 2 | pcs
+g79 #13 t=333-374 :: Room drying up to 50 m² (kitchen) | 1 | pcs
+g79 #14 t=44-49 :: Pipe repair, copper pipe 22–28 mm | 1 | m
+g79 #15 t=>=84 :: Transition piece, copper 22/28 mm | 2 | pcs
+g79 #16 t=>=146 :: Copper pipe 28 mm | 3 | m
+g79 #17 t=>=72 :: Pipe insulation 28 mm | 3 | m
+g79 #18 t=360-400 :: Service technician hours | 4 | hrs
+g79 #19 t=>=497 :: Restore pipe insulation (installer) | 6 | hrs
+g79 #20 t=>=124 :: Final measurement | 1 | flat rate
+g79 #21 t=>=196 :: Final site cleaning | 1 | flat rate
+g79 #22 t=130-135 :: Removal of the water-damaged wooden kitchen table | 1 | flat rate
+g79 #23 t=>=57 :: Transport of the damaged table | 1 | flat rate
+g79 #24 t=47-48 :: Disposal of the damaged table | 1 | flat rate
+g79 #25 t=329-399 :: Supply of replacement kitchen table, comparable | 1 | pcs specification to the original
+g79 #26 t=57-59 :: Delivery of the replacement table | 1 | flat rate
+g79 #27 t=135-149 :: Assembly of the new table | 2 | hrs
+g79 #28 t=>=57 :: Cleaning of the installation area | 1 | flat rate
+g79 #29 t=ZERO :: Inspection of further furniture items stored in the | 1 | flat rate garden for moisture
+=== game 80 fam 8baba0
+g80 #1 t=>=539 :: Remove water-damaged laminate in living room | 18 | m²
+g80 #2 t=>=1450 :: Supply & install premium oak laminate incl. impact | 18 | m² sound insulation, living room
+g80 #3 t=>=835 :: Supply and install skirting boards (premium solid oak, | 25 | linear m upgrade)
+g80 #4 t=>=335 :: Disassembly and disposal of damaged floor tiles in | 6 | m² bathroom
+g80 #5 t=935-1020 :: Supply & install premium large-format Italian porcelain | 6 | m² tiles in bathroom incl. materi
+g80 #6 t=ZERO :: Cleaning of entire apartment | 1 | flat rate
+g80 #7 t=>=785 :: Paint lower wall after water damage incl. surface | 20 | m² preparation
+g80 #8 t=ZERO :: Full ceiling paint living room | 15 | m²
+g80 #9 t=ZERO :: Wallpapering work hallway | 8 | m²
+=== game 81 fam 63344e
+g81 #1 t=>=609 :: Indoor leak detection | 1 | pcs
+g81 #2 t=>=754 :: Skilled worker hours | 8 | hrs
+g81 #3 t=>=118 :: Material for the work | 1 | pcs
+g81 #4 t=>=81 :: Vehicle costs | 1 | pcs
+g81 #5 t=>=466 :: Room drying 30 m² | 1 | flat rate
+g81 #6 t=>=405 :: Room dryer unit | 1 | flat rate
+g81 #7 t=19-23 :: Removal and disposal of damaged insulation | 1 | m²
+g81 #8 t=>=195 :: Wet insulation wool from basement | 1 | pcs
+g81 #9 t=323-393 :: Room drying 50 m² | 1 | pcs
+g81 #10 t=ZERO(<24) :: Room dryer unit | 1 | pcs
+g81 #11 t=ZERO(<22) :: Drying fan | 1 | pcs
+g81 #13 t=50-67 :: Profipress elbow 90° copper 15mm model 01 | 5 | pcs
+g81 #14 t=50-57 :: Profipress elbow 90° copper 15mm model 02 | 5 | pcs
+g81 #15 t=ZERO(<12) :: Profipress elbow 45° copper 28mm model 03 | 1 | pcs
+g81 #16 t=>=30 :: Hose | 3 | m
+g81 #17 t=234-281 :: Helper hours | 5 | hrs
+g81 #18 t=>=162 :: Vehicle costs | 2 | pcs
+g81 #19 t=>=73 :: Transition piece 16x15mm | 3 | pcs
+g81 #20 t=447-518 :: Service technician hours | 5.5 | hrs
+g81 #21 t=>=1215 :: Skilled worker hours | 14 | hrs
+g81 #22 t=>=95 :: Material costs | 1 | pcs
+g81 #23 t=>=81 :: Vehicle costs | 1 | pcs
+=== game 82 fam fd3021
+g82 #1 t=>=640 :: Leak detection and moisture survey across affected | 2 | pcs rooms
+g82 #2 t=2250-2807 :: Strip-out and drying of guest WC, stairwell, living | 1 | flat rate room and hobby room
+g82 #3 t=>=1710 :: Reinstate parquet, skirting and floor coverings on the | 1 | flat rate water's path
+g82 #4 t=905-998 :: Restore and refinish plasterboard ceilings and wall | 1 | flat rate surfaces
+g82 #5 t=>=550 :: Open cistern and replace fill valve, incl. labour and | 1 | flat rate travel
+g82 #6 t=>=195 :: Final site cleaning | 1 | pcs
+g82 #7 t=ZERO(<100) :: Billiard table inspection, disassembly, realignment and | 3 | pcs reassembly
+g82 #8 t=>=495 :: Replace billiard cloth, cue sets and overhead lighting | 3 | pcs fixture
+g82 #9 t=>=258 :: Specialist cleaning and removal of water-damaged rug | 2 | pcs
+g82 #10 t=>=108 :: Electrical inspection of robot vacuum cleaner | 1 | pcs
+g82 #11 t=ZERO(<173) :: Replacement robot vacuum cleaner (total loss) | 1 | pcs
+=== game 83 fam 0a6425
+g83 #1 t=ZERO :: Cabinet door glass pane replacement (made to | 4 | pcs measure and fitted)
+=== game 84 fam 694e25
+g84 #1 t=>=745 :: Leak detection and moisture survey, pool room to | 2 | pcs plant room
+g84 #2 t=ZERO :: Locate and repair separated pool supply connection | 1 | flat rate (pool technology)
+g84 #3 t=985-1048 :: Vacuum standing water and technical drying of pool | 7 | pcs room, conservatory and plant room
+g84 #4 t=992-2179 :: Reinstate flooring, wall surfaces and skirting on the | 1 | flat rate water's path
+g84 #5 t=>=196 :: Final site cleaning | 1 | pcs
+g84 #6 t=>=218 :: Clean / dry conservatory rug | 1 | pcs
+g84 #7 t=341-385 :: Inspect plant-room electrical systems and pool | 2 | pcs technology
+g84 #8 t=ZERO(<154) :: Upgrade to high-quality natural stone floor | 12 | m²
+g84 #9 t=>=80 :: Vehicle costs | 1 | pcs
+=== game 85 fam deb93e
+g85 #1 t=>=8835 :: Renew boiler system including flue gas system and | 1 | flat rate storage tank
+g85 #2 t=116-191 :: Adjust supply pipework to fit the replacement boiler | 1 | flat rate
+g85 #3 t=>=725 :: Dispose of the old boiler system | 1 | flat rate
+g85 #4 t=>=81 :: Vehicle costs | 1 | flat rate
+g85 #5 t=453-500 :: Installer hours | 6 | hrs
+g85 #6 t=28-44 :: Vehicle costs | 1 | flat rate
+g85 #7 t=>=1202 :: Procurement of a heat pump | 1 | flat rate
+g85 #8 t=ZERO :: Submersible pump | 1 | pcs
+g85 #9 t=>=280 :: Vacuum water | 1 | flat rate
+g85 #10 t=40-48 :: Small electrical materials for the rewiring | 1 | flat rate
+=== game 86 fam 11a607
+g86 #1 t=ZERO(<54) :: Disassembly and assembly service | 1 | pcs
+g86 #2 t=ZERO(<68) :: Construction dryer | 7 | days
+g86 #3 t=ZERO(<13) :: Rock wool pipe insulation | 1 | pcs
+g86 #4 t=ZERO(<38) :: Construction waste disposal | 1 | flat rate
+g86 #5 t=ZERO(<68) :: Wall tile covering | 2.78 | m²
+g86 #6 t=ZERO(<27) :: Wall levelling material | 1 | pcs
+g86 #7 t=ZERO(<106) :: Rough renovation | 2.78 | m²
+g86 #8 t=ZERO(<24) :: Silicone joints | 3.6 | linear m
+g86 #9 t=ZERO :: Vehicle costs | 1 | pcs
+g86 #10 t=ZERO(<857) :: Skilled worker hours | 14 | hrs
+=== game 87 fam 694e25
+g87 #1 t=>=224 :: Clean / dry conservatory rug | 1 | pcs
+g87 #2 t=>=321 :: Inspect plant-room electrical systems | 1 | pcs
+g87 #3 t=>=574 :: Replace plant-room electrical components confirmed | 1 | flat rate water-affected (electrician'
+g87 #4 t=ZERO :: Preventive replacement of adjacent electrical | 1 | flat rate components (no confirmed water co
+g87 #5 t=ZERO(<52) :: Inspect pool technology | 1 | pcs
+g87 #6 t=ZERO(<60) :: Pool filter system maintenance | 1 | pcs
+g87 #7 t=ZERO :: Upgrade to high-quality natural stone floor | 12 | m²
+g87 #8 t=>=623 :: Restore wall surfaces | 10 | m²
+g87 #9 t=>=196 :: Final site cleaning | 1 | pcs
+g87 #10 t=>=80 :: Vehicle costs | 1 | pcs
+g87 #11 t=ZERO :: Catering for work crew | 3 | pcs
+g87 #12 t=>=520 :: Leak detection pool pipeline | 1 | pcs
+g87 #13 t=ZERO(<128) :: Repair pool supply pipe connection | 1 | pcs
+g87 #14 t=ZERO(<150) :: Skilled worker hours | 5 | hrs
+g87 #15 t=ZERO(<55) :: Material for pool pipe repair | 1 | pcs
+g87 #16 t=>=230 :: Moisture measurement | 1 | pcs
+g87 #17 t=ZERO(<25) :: Vehicle costs – return visit | 1 | pcs
+g87 #18 t=52-54 :: Construction waste disposal | 1 | pcs
+g87 #19 t=>=287 :: Vacuum water | 1 | pcs
+g87 #20 t=>=524 :: Room drying (pool/conservatory) | 1 | pcs
+g87 #21 t=>=117 :: Condensation dryer | 2 | pcs
+g87 #22 t=70-72 :: Drying fan | 3 | pcs
+g87 #23 t=>=680 :: Replace skirting boards | 15 | m
+g87 #24 t=ZERO :: Replace inflatable pool float (drifted and damaged) | 1 | pcs
+g87 #25 t=ZERO :: Replace and refill knocked-over plant pots | 4 | pcs
+g87 #26 t=ZERO :: Repaint garage (adjacent, not water-affected) | 1 | flat rate
+g87 #27 t=ZERO(<27) :: Construction waste disposal | 1 | pcs
+=== game 88 fam fd3021
+g88 #1 t=57-60 :: Remove and transport rug | 1 | pcs
+g88 #2 t=ZERO(<40) :: Premium smart LED lighting system above billiard | 1 | pcs table (upgrade from standard fixture
+g88 #3 t=>=198 :: Specialist rug cleaning | 1 | pcs
+g88 #4 t=>=116 :: Electrical inspection of robot vacuum cleaner | 1 | pcs
+g88 #5 t=ZERO(<40) :: Replacement robot vacuum cleaner (total loss) | 1 | pcs
+g88 #6 t=ZERO(<44) :: Disassemble billiard table | 1 | pcs
+g88 #7 t=ZERO(<37) :: Inspect billiard table for moisture damage | 1 | pcs
+g88 #8 t=>=495 :: Replace billiard cloth with premium tournament-grade | 1 | pcs wool cloth (upgrade)
+g88 #9 t=ZERO(<40) :: Replace old cue sets with premium hand-crafted cues | 1 | pcs (upgrade)
+g88 #10 t=ZERO(<45) :: Align and reassemble billiard table | 1 | pcs
+g88 #11 t=572-608 :: Restore plasterboard ceiling | 8 | m²
+g88 #12 t=352-378 :: Fill ceiling and wall surfaces | 15 | m²
+g88 #13 t=196-210 :: Final site cleaning | 1 | pcs
+g88 #14 t=>=70 :: Drying fan | 3 | pcs
+g88 #15 t=>=183 :: Control measurement during drying | 2 | pcs
+g88 #16 t=124-125 :: Final measurement | 1 | pcs
+g88 #17 t=>=158 :: Remove floor covering in guest WC | 5 | m²
+g88 #18 t=>=125 :: Remove skirting boards | 12 | m
+g88 #19 t=>=559 :: Insulation layer drying | 1 | pcs
+g88 #20 t=>=117 :: Condensation dryer | 2 | pcs
+g88 #21 t=105-108 :: Side channel compressor | 1 | pcs
+g88 #22 t=>=580 :: Remove damaged parquet | 18 | m²
+g88 #23 t=>=1950 :: Supply and install premium solid oak parquet (upgrade | 18 | m² from pre-loss standard oak herr
+g88 #24 t=>=640 :: Supply and install skirting boards (premium solid oak, | 15 | m upgrade)
+g88 #25 t=>=364 :: Open water-damaged ceiling surface | 8 | m²
+g88 #26 t=>=411 :: Leak detection / cause investigation | 1 | pcs
+g88 #27 t=>=230 :: Moisture measurement of multiple rooms | 1 | pcs
+g88 #28 t=>=123 :: Inspect and disassemble toilet cistern | 1 | pcs
+g88 #29 t=>=109 :: Replace fill valve in toilet cistern | 1 | pcs
+g88 #30 t=>=242 :: Skilled worker hours | 3 | hrs
+g88 #31 t=>=81 :: Vehicle costs | 1 | pcs
+=== game 89 fam 28d9ee
+g89 #1 t=>=609 :: Indoor leak detection | 1 | pcs
+g89 #2 t=>=754 :: Skilled worker hours | 8 | hrs
+g89 #3 t=ZERO(<45) :: Leak tracing and locating the defect | 1 | pcs
+g89 #4 t=>=118 :: Material for the work | 1 | pcs
+g89 #5 t=>=82 :: Vehicle costs | 1 | pcs
+g89 #6 t=>=461 :: Room drying 30 m² | 1 | pcs
+g89 #7 t=>=408 :: Room dryer unit | 1 | pcs
+g89 #8 t=>=347 :: Room drying 50 m² | 1 | pcs
+g89 #9 t=>=408 :: Room dryer unit | 1 | pcs
+g89 #10 t=ZERO(<20) :: Drying fan | 1 | pcs
+g89 #11 t=197-400 :: Wet insulation wool from basement | 1 | pcs
+g89 #12 t=>=104 :: Profipress elbow 90° copper 28mm model 01 | 5 | pcs
+g89 #13 t=>=100 :: Profipress elbow 45° copper 28mm model 02 | 5 | pcs
+g89 #14 t=>=70 :: Transition piece 15x19mm | 3 | pcs
+g89 #15 t=669-820 :: Skilled worker hours | 10.5 | hrs
+g89 #16 t=>=164 :: Vehicle costs | 2 | pcs
+g89 #17 t=ZERO(<60) :: Vehicle costs | 2 | pcs
+g89 #18 t=>=1215 :: Skilled worker hours | 14 | –
+g89 #19 t=>=93 :: Material costs | 1 | pcs
+g89 #20 t=>=82 :: Vehicle costs | 1 | pcs
+=== game 90 fam b4ee56
+g90 #1 t=>=612 :: Damage assessment and inspection | 1 | flat rate
+g90 #2 t=>=522 :: Indoor leak detection | 1 | flat rate
+g90 #3 t=243-252 :: Measurement technician | 2.5 | hrs
+g90 #4 t=>=83 :: Vehicle costs | 1 | hrs
+g90 #5 t=110-116 :: Fleece covering | 25 | m²
+g90 #6 t=>=500 :: Removal of floor covering | 6 | hrs
+g90 #7 t=>=142 :: Material surcharge | 1 | pcs
+g90 #8 t=1631-1718 :: Floor covering removal – removal of linoleum incl. | 82.8 | m² skirting and transport to the co
+g90 #9 t=>=596 :: Preparation of floor surfaces for further processing | 82.8 | m²
+g90 #10 t=ZERO :: Catering for work crew | 3 | pcs
+g90 #11 t=57-67 :: Construction waste disposal | 1 | pcs
+g90 #12 t=141-145 :: Staff costs | 2 | hrs
+g90 #13 t=>=167 :: Dust protection incl. material and labor | 10 | m²
+g90 #14 t=181-192 :: Kitchen disinfection | 25 | m²
+g90 #15 t=>=1125 :: Special drying borehole | 11 | pcs
+g90 #16 t=>=2598 :: Large-area drying (from 50 m²) | 121.9 | m²
+g90 #17 t=>=552 :: Cavity drying | 1 | pcs
+g90 #18 t=360-400 :: Skilled worker hours | 4 | hrs
+g90 #19 t=>=81 :: Material surcharge | 1 | pcs
+g90 #20 t=ZERO(<1) :: Electricity costs | 2,412.1 | kWh
+=== game 91 fam e88973
+g91 #1 t=>=1290 :: Skilled worker hours | 16 | hrs
+g91 #2 t=ZERO :: Ultraviolet-resistant protective exterior coating | 15 | linear m
+g91 #3 t=ZERO :: Painter's kit | 1 | pcs
+g91 #4 t=84-109 :: Painter hours | 1 | hrs
+g91 #5 t=57-74 :: Vehicle costs | 1 | pcs
+g91 #6 t=ZERO :: Painting of the garden shed | 26 | hrs
+g91 #7 t=>=684 :: Paints | 26 | l
+g91 #8 t=ZERO :: Catering for work crew | 1 | pcs
+g91 #9 t=>=585 :: Disposal of green waste | 15 | m³
+g91 #10 t=>=4403 :: Skilled worker hours | 58 | hrs
+g91 #11 t=ZERO :: Machine use charge | 20 | hrs
+g91 #12 t=52-54 :: Disposal of sieved topsoil from the churned-up ground | 1.25 | m²
+g91 #13 t=ZERO(<26) :: Disposal of old timber | 0.1 | t
+g91 #14 t=ZERO :: Disposal of paving grit | 0.4 | t
+g91 #15 t=ZERO :: Disposal of green waste | 2 | m³
+g91 #16 t=ZERO :: Disposal of tree roots | 2.5 | m³
+g91 #17 t=ZERO :: Disposal of excavated soil | 1.5 | t
+g91 #18 t=30-33 :: Glass pane | 1 | pcs
+=== game 92 fam 8baba0
+g92 #1 t=525-529 :: Remove water-damaged laminate in living room | 18 | m²
+g92 #2 t=>=1440 :: Supply & install laminate incl. impact sound insulation | 18 | m²
+g92 #3 t=>=839 :: Replace skirting boards | 25 | linear m
+g92 #4 t=ZERO :: Administrative and claim-processing fee | 1 | flat rate
+g92 #5 t=>=335 :: Disassembly and disposal of damaged floor tiles in | 6 | m² bathroom
+g92 #6 t=>=940 :: New installation of floor tiles in bathroom incl. material | 6 | m²
+g92 #7 t=618-709 :: Paint lower wall after water damage incl. surface | 20 | m² preparation
+g92 #8 t=>=450 :: Full ceiling paint living room (documented moisture | 15 | m² staining)
+=== game 93 fam fd3021
+g93 #1 t=57-60 :: Remove and transport rug | 1 | pcs
+g93 #2 t=ZERO(<30) :: High-quality LED lighting above billiard table | 1 | pcs
+g93 #3 t=>=200 :: Specialist rug cleaning | 1 | pcs
+g93 #4 t=114-400 :: Electrical inspection of robot vacuum cleaner | 1 | pcs
+g93 #5 t=ZERO(<40) :: Replacement robot vacuum cleaner (total loss) | 1 | pcs
+g93 #6 t=ZERO(<30) :: Disassemble billiard table | 1 | pcs
+g93 #7 t=ZERO(<30) :: Inspect billiard table for moisture damage | 1 | pcs
+g93 #8 t=>=495 :: Replace damaged billiard cloth | 1 | pcs
+g93 #9 t=ZERO(<30) :: Recushion billiard table rails | 1 | flat rate
+g93 #10 t=ZERO(<30) :: Replace old cue sets | 1 | pcs
+g93 #11 t=ZERO(<30) :: Align and reassemble billiard table | 1 | pcs
+g93 #12 t=ZERO :: Administrative and claim-processing fee | 1 | flat rate
+g93 #13 t=>=570 :: Restore plasterboard ceiling | 8 | m²
+g93 #14 t=350-374 :: Fill ceiling and wall surfaces | 15 | m²
+g93 #15 t=ZERO :: Repaint and re-carpet master bedroom (adjacent, | 1 | flat rate unaffected room)
+g93 #16 t=>=195 :: Final site cleaning | 1 | pcs
+g93 #17 t=56-60 :: Construction waste disposal | 1 | pcs
+g93 #18 t=70-154 :: Drying fan | 3 | pcs
+g93 #19 t=>=184 :: Control measurement during drying | 2 | pcs
+g93 #20 t=>=124 :: Final measurement | 1 | pcs
+g93 #21 t=ZERO(<50) :: Electricity for drying equipment (separately metered) | 450 | kWh
+g93 #22 t=>=74 :: Vehicle costs – return visit | 1 | flat rate
+g93 #23 t=>=157 :: Remove floor covering in guest WC | 5 | m²
+g93 #24 t=>=124 :: Remove skirting boards | 12 | m
+g93 #25 t=>=572 :: Insulation layer drying | 1 | pcs
+g93 #26 t=117-257 :: Condensation dryer | 2 | pcs
+g93 #27 t=104-129 :: Side channel compressor | 1 | pcs
+g93 #28 t=578-720 :: Remove damaged parquet | 18 | m²
+g93 #29 t=>=1945 :: Renew parquet floor | 18 | m²
+g93 #30 t=>=638 :: Supply and install new skirting boards | 15 | m
+g93 #31 t=363-400 :: Open water-damaged ceiling surface | 8 | m²
+g93 #32 t=ZERO(<40) :: Construction waste disposal | 1 | pcs
+g93 #33 t=>=410 :: Leak detection / cause investigation | 1 | pcs
+g93 #34 t=>=229 :: Moisture measurement of multiple rooms | 1 | pcs
+g93 #35 t=>=122 :: Inspect and disassemble toilet cistern | 1 | pcs
+g93 #36 t=>=108 :: Replace fill valve in toilet cistern | 1 | pcs
+g93 #37 t=>=248 :: Skilled worker hours | 3 | hrs
+g93 #38 t=>=81 :: Vehicle costs | 1 | pcs
+g93 #39 t=ZERO(<10) :: Catering for work crew | 3 | pcs
+=== game 94 fam 63344e
+g94 #1 t=>=609 :: Indoor leak detection | 1 | pcs
+g94 #2 t=>=461 :: Room drying 30 m² (basement) | 1 | pcs
+g94 #3 t=>=472 :: Room dryer unit | 1 | pcs
+g94 #4 t=>=208 :: Wet insulation wool from basement | 1 | pcs
+g94 #5 t=353-400 :: Room drying 50 m² in the adjoining ground-floor room | 1 | pcs above the leak
+g94 #6 t=>=456 :: Room dryer unit | 1 | pcs
+g94 #7 t=ZERO(<15) :: Drying fan | 1 | pcs
+g94 #8 t=ZERO :: Room drying in a first-floor bedroom | 1 | pcs
+g94 #9 t=>=111 :: Profipress elbow 90° copper 28mm model 01 | 5 | pcs
+g94 #10 t=>=111 :: Profipress elbow 45° copper 28mm model 02 | 5 | pcs
+g94 #11 t=>=77 :: Transition piece 15x19mm | 3 | pcs
+g94 #12 t=687-813 :: Skilled worker hours | 10.5 | hrs
+g94 #13 t=>=165 :: Vehicle costs | 2 | pcs
+g94 #14 t=>=1213 :: Skilled worker hours | 14 | –
+g94 #15 t=>=488 :: Premium large-format designer floor tiles (upgrade | 5 | pcs from the plain pre-loss basement t
+g94 #16 t=>=98 :: Standard tiling material | 1 | pcs
+g94 #17 t=82-90 :: Vehicle costs | 1 | pcs
+=== game 95 fam 90eda5
+g95 #1 t=>=10023 :: Renew boiler system including flue gas system and | 1 | flat rate storage tank
+g95 #2 t=162-256 :: Adjust supply pipework to fit the replacement boiler | 1 | flat rate
+g95 #3 t=>=749 :: Dispose of the old boiler system | 1 | –
+g95 #4 t=>=81 :: Vehicle costs | 1 | pcs
+g95 #5 t=ZERO :: Project coordination and administration flat fee | 1 | flat rate
+g95 #6 t=>=895 :: Electrician labour checking and rewiring the flooded | 12 | hrs basement circuits
+g95 #7 t=41-63 :: Small electrical materials for the rewiring | 1 | pcs
+g95 #8 t=287-323 :: Water extraction from the flooded plant room | 1 | pcs
+g95 #9 t=ZERO :: Procurement of a submersible pump | 2 | pcs
+g95 #10 t=ZERO :: Vehicle costs | 1 | pcs
+g95 #11 t=ZERO :: Vehicle costs – return visit | 1 | pcs
+g95 #12 t=ZERO :: Cosmetic cleaning and repainting of the dry basement | 1 | flat rate stairwell walls
+g95 #13 t=472-600 :: Hotel accommodation for the tenants while the plant | 1 | – room was unusable
+=== game 96 fam aebb72
+g96 #1 t=510-600 :: Leak detection & pinpointing of pipe defect beneath | 1 | flat rate built-in bathtub
+g96 #2 t=ZERO(<19) :: Moisture measurement with thermal imaging camera | 1 | flat rate
+g96 #3 t=>=81 :: Vehicle costs | 1 | flat rate
+g96 #4 t=>=641 :: Setup & rental of condensation dryers, bathroom & | 1 | flat rate living room
+g96 #5 t=ZERO :: Electricity for drying equipment (separately metered) | 1 | flat rate
+g96 #6 t=>=522 :: Remove water-damaged laminate in living room | 18 | m²
+g96 #7 t=>=1430 :: Supply & install laminate incl. impact sound insulation | 18 | m²
+g96 #8 t=>=831 :: Replace skirting boards | 25 | linear m
+g96 #9 t=57-62 :: Construction waste disposal | 1 | flat rate
+g96 #10 t=ZERO :: Catering for work crew | 1 | flat rate
+g96 #11 t=627-637 :: Paint lower wall after water damage incl. surface | 20 | m² preparation
+g96 #12 t=ZERO(<30) :: Construction waste disposal | 1 | flat rate
+g96 #13 t=>=81 :: Vehicle costs | 1 | flat rate
+g96 #14 t=ZERO(<20) :: Vehicle costs – return visit | 1 | flat rate
+=== game 97 fam aae48a
+g97 #1 t=>=456 :: Leak detection / cause investigation | 1 | flat rate
+g97 #2 t=>=240 :: Moisture measurement of multiple rooms | 1 | flat rate
+g97 #3 t=>=124 :: Inspect and disassemble toilet cistern | 1 | flat rate
+g97 #4 t=>=109 :: Replace fill valve in toilet cistern | 1 | pcs
+g97 #5 t=>=264 :: Skilled worker hours | 3 | hrs
+g97 #6 t=>=81 :: Vehicle costs | 1 | flat rate
+g97 #7 t=>=159 :: Remove floor covering in guest WC | 5 | m²
+g97 #8 t=>=124 :: Remove skirting boards | 12 | m
+g97 #9 t=>=570 :: Insulation layer drying | 1 | pcs
+g97 #10 t=>=117 :: Condensation dryer | 2 | pcs
+g97 #11 t=104-134 :: Side channel compressor | 1 | pcs
+g97 #12 t=70-77 :: Drying fan | 3 | pcs
+g97 #13 t=>=187 :: Control measurement during drying | 2 | pcs
+g97 #14 t=124-400 :: Final measurement | 1 | pcs
+g97 #15 t=>=578 :: Remove damaged parquet | 18 | m²
+g97 #16 t=1945-2047 :: Renew parquet floor | 18 | m²
+g97 #17 t=>=638 :: Supply and install new skirting boards | 15 | m
+g97 #18 t=>=364 :: Open water-damaged ceiling surface | 8 | m²
+g97 #19 t=>=570 :: Restore plasterboard ceiling | 8 | m²
+g97 #20 t=>=350 :: Fill ceiling and wall surfaces | 15 | m²
+g97 #21 t=>=195 :: Final site cleaning | 1 | flat rate
+g97 #22 t=>=56 :: Remove and transport rug | 1 | flat rate
+g97 #23 t=ZERO(<5) :: High-quality LED lighting above billiard table | 1 | pcs
+g97 #24 t=>=197 :: Specialist rug cleaning | 1 | flat rate
+g97 #25 t=ZERO(<60) :: Electrical inspection of robot vacuum cleaner | 1 | pcs
+g97 #26 t=ZERO :: Replacement robot vacuum cleaner (total loss) | 1 | pcs
+g97 #27 t=ZERO(<8) :: Disassemble billiard table | 1 | pcs
+g97 #28 t=ZERO(<3) :: Inspect billiard table for moisture damage | 1 | pcs
+g97 #29 t=>=494 :: Replace damaged billiard cloth | 1 | pcs
+g97 #30 t=ZERO(<5) :: Align and reassemble billiard table | 1 | pcs
+g97 #31 t=ZERO :: Replace old cue sets | 1 | pcs
+=== game 98 fam 66e129
+g98 #1 t=ZERO(<11) :: Translation from Spanish to English | 2 | hrs
+g98 #2 t=ZERO(<5) :: Material costs | 1 | pcs
+g98 #3 t=>=18350 :: Compensation for robbery damage | 1 | pcs
+g98 #4 t=ZERO(<6) :: Shipping | 1 | pcs
+=== game 99 fam 90eda5
+g99 #1 t=285-299 :: Water extraction from the flooded plant room | 1 | pcs
+g99 #2 t=>=9950 :: Renew the water-damaged boiler, flue and storage | 1 | flat rate tank and adjust the supply pip
+g99 #3 t=>=745 :: Dispose of the old boiler system | 1 | –
+g99 #4 t=81-400 :: Vehicle costs | 1 | pcs
+=== game 100 fam e93f03
+g100 #1 t=>=620 :: Damage assessment and inspection | 1 | flat rate
+g100 #2 t=>=524 :: Indoor leak detection | 1 | flat rate
+g100 #3 t=242-268 :: Measurement technician | 2.5 | hrs
+g100 #4 t=83-400 :: Vehicle costs | 1 | flat rate
+g100 #5 t=>=110 :: Fleece covering | 25 | m²
+g100 #6 t=ZERO(<251) :: Disassembly of floor covering, skilled worker hourly | 6 | hrs rate
+g100 #7 t=141-400 :: Material surcharge | 1 | flat rate
+g100 #8 t=>=1688 :: Floor covering removal – removal of linoleum incl. | 82.8 | m² skirting and transport to the co
+g100 #9 t=>=580 :: Preparation of floor surfaces for further processing | 82.8 | m²
+g100 #10 t=ZERO(<10) :: Catering for work crew | 3 | pcs
+g100 #11 t=57-71 :: Construction waste disposal | 1 | flat rate
+g100 #12 t=141-145 :: Staff costs | 2 | hrs
+g100 #13 t=166-400 :: Dust protection incl. material and labor | 10 | m²
+g100 #14 t=>=180 :: Kitchen disinfection | 25 | m²
+g100 #15 t=>=1120 :: Special drying borehole (alternative to tile removal) | 11 | pcs
+g100 #16 t=>=2596 :: Large-area drying (from 50 m²) | 121.9 | m²
+g100 #17 t=>=516 :: Cavity drying | 1 | flat rate
+g100 #18 t=>=379 :: Skilled worker hours | 4 | hrs
+g100 #19 t=81-400 :: Material surcharge | 1 | flat rate
+g100 #20 t=ZERO(<50) :: Electricity costs | 2,412.1 | kWh
