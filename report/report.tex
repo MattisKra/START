@@ -1,0 +1,77 @@
+% Claim to Fame write-up (max. 1 page). Build: cd report && latexmk -pdf report.tex
+% Numbers come from numbers.tex (python3 -I fetch.py), figures from plots.py. Lines marked CHECK need a team confirmation.
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=1.5cm,top=1.1cm,bottom=1.1cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,graphicx,amsmath,enumitem,titlesec,xcolor}
+\usepackage[hidelinks]{hyperref}
+\input{numbers.tex}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{5pt}{1pt}
+\setlist{nosep,leftmargin=1.2em,topsep=1pt}
+\newcommand{\euro}{\,\texteuro}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries Read, decide, look back: a claims agent that reviews itself}\\[3pt]
+  Kiebler Software Solutions \quad·\quad Tim Kiebler, Leo Driesch, Mattis Krauch, Sebastian Böhler % CHECK: names
+\end{center}
+
+\colorbox{black!6}{\parbox{\dimexpr\textwidth-2\fboxsep}{\centering\small
+  \textbf{Rank \Rank\ of \NTeams} after \NGames\ games \quad·\quad \textbf{+\Total\euro} total net payoff
+  \quad·\quad \Lead\euro\ ahead of the second-placed team}}
+
+\vspace{4pt}
+\noindent\includegraphics[width=\textwidth]{figures/fig1_combined.pdf}\\[1pt]
+{\small\textbf{Figure 1.} Left: our net payoff per game vs.\ the median of the other 11 teams (axis cut at 105k). Games 1--\PreLast\
+(grey): models estimate, Python prices; from game \FableFrom: the Fable agent. Right: both periods compared. Cases grow over time, so the fair comparison is the bottom right panel.}
+
+\section{Method and uncertainty}
+Our bot is \textbf{Claude Fable 5.2 in the Claude Code harness}, run as a \textbf{self-learning, persistent agent}:
+one long-running session on a \texttt{/loop} plays every round and \textbf{keeps its context across games}
+(1M-token window, \textbf{compacted} into a summary regularly at about 300--400k tokens), so it improves by
+\textbf{in-context learning}. On top, it keeps a \textbf{memory system of files it writes itself}, including
+\textbf{its own scripts to track prices, scores} and past decisions, which it uses as tools to verify quickly.
+% CHECK: push these files to the repo and name 1-2 of them
+For every invoice line, the agent uses its experience from earlier games and its world knowledge to decide
+\textbf{first whether the line is covered and related}, \textbf{then estimates the hidden fair value $t$}, and from
+that \textbf{chooses $a$ (our charge) and $b$ (the highest charge we accept) dynamically}. Uncertainty is weighed against the asymmetric payoff: wrongly rejecting a fair charge costs \textbf{1.5$\times$} it,
+so the agent rejects only when confident, and charges slightly below its estimate of $t$. Python only checks the format and submits; \textbf{it does not change the numbers}.
+
+\textbf{System 1, then System 2.} The agent first gives an \textbf{intuitive estimate} and submits it within seconds,
+then \textbf{improves it by reasoning} (policy clauses, quantities, prices) and overwrites the first answer before the
+60\,s deadline. After weak rounds it compares the settlement with its own reasoning and writes what to change into its memory.
+
+\section{Evidence for our choices}
+\begin{itemize}
+  \item \textbf{Back-testing on all known cases}: approaches were run on every finished case and compared with the
+        ranges for $t$ that the public results reveal. % CHECK: what exactly was back-tested, and by whom
+  \item \textbf{Score from the challenge}: Figure~1. Example, game 98: the policy listed the stolen watch on a valuables
+        schedule; 8 of 11 teams rejected our fair 18,350\euro\ charge and paid 1.5$\times$. That line earned us 275k\euro.
+  \item \textbf{Interaction with other agents}: each settlement shows how the other teams' agents charged and which
+        charges they accepted; the agent uses this as feedback. % CHECK: meaning of this point
+  \item \textbf{Several approaches run simultaneously}: the old ensemble kept deciding in parallel, without submitting.
+  \item \textbf{Ablations}: [TODO]. % NEED ABLATION: e.g. System 1 only vs. System 1+2, with vs. without self-review
+\end{itemize}
+
+\section{Resourcefulness}
+Early on we used \textbf{token-heavy ensembles} (up to 20 model calls per round) to find good models. The ensemble
+benefit turned out to be small, so we moved to a \textbf{single agent: cheaper, and better in live play}. Multi-agent
+setups showed no advantage. The agent uses about \textbf{[TODO]} tokens per round (the 8-model ensemble: 150k input
+tokens, \$0.86).
+
+\section{Reliability and automation}
+The agent \textbf{runs fully autonomously} and has \textbf{never missed a submission}; every submission came within
+\textbf{[TODO]\,s} of the 60\,s. % CHECK: confirm, fill in X
+
+\section{Clarity and honesty}
+The agent first has to build context, so it played \textbf{the first few rounds with reduced ability}.
+\PostLosses\ of \PostGames\ games since the switch still lost money. We cannot fully separate the agent's effect from
+the changing case mix, and an agent's decisions are harder to audit than a formula.
+
+\end{document}
