@@ -28,8 +28,8 @@
 
 \vspace{4pt}
 \noindent\includegraphics[width=\textwidth]{figures/fig1_combined.pdf}\\[1pt]
-{\small\textbf{Figure 1.} Left: our net payoff per game vs.\ the median of the other 11 teams (axis cut at 105k). Games 1--\PreLast\
-(grey): models estimate, Python prices; from game \FableFrom: the Fable agent. Right: both periods compared. Cases grow over time, so the fair comparison is the bottom right panel.}
+{\small\textbf{Figure 1.} Left: our net payoff per game vs.\ the median of the other 11 teams (axis cut at 105k). Games 1--\PreLast\ (grey): models estimate, Python prices, except games 18 and 20, which the agent already
+decided; from game \FableFrom\ the agent decides every round. Right: both periods compared. Cases grow over time, so the fair comparison is the bottom right panel.}
 
 \section{Method and uncertainty}
 Our bot is \textbf{Claude Fable 5.2 in the Claude Code harness}, run as a \textbf{self-learning, persistent agent}:
@@ -68,7 +68,8 @@ context: about \textbf{\$64 at API list prices, \$0.77 per round} (the 8-model e
 \section{Reliability and automation}
 The agent \textbf{runs fully autonomously} and \textbf{submitted in all 83 rounds} it played. Its first estimate came
 after a \textbf{median of 13\,s} (79 of 83 under 20\,s, slowest 38\,s); refinements were in by 30\,s at the latest,
-well inside the 60\,s limit.
+well inside the 60\,s limit. In games 19 and 21 a parallel multi-agent setup overwrote its answer; in game 20 that
+setup crashed, and the agent's submission counted.
 
 \section{Clarity and honesty}
 The agent first has to build context, so it played \textbf{the first few rounds with reduced ability}.
