@@ -1,0 +1,86 @@
+Invoice
+INVOICE NO.
+2026-0226
+DATE
+11 Apr 2026
+DUE
+25 Apr 2026
+TRADE
+Heating
+FROM
+Toasty Toes Heating Ltd
+19 Radiator Row
+90402 Warmingham
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Renew boiler system including flue gas system and
+storage tank
+1 flat rate
+2 Adjust supply pipework to fit the replacement boiler 1 flat rate
+3 Dispose of the old boiler system 1 –
+4 Vehicle costs 1 pcs
+5 Project coordination and administration flat fee 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0227
+DATE
+11 Apr 2026
+DUE
+25 Apr 2026
+TRADE
+Electrical
+FROM
+Sparky McShockface Electrical Ltd
+50 Ohm Street
+70565 Voltaville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+6 Electrician labour checking and rewiring the flooded
+basement circuits
+12 hrs
+7 Small electrical materials for the rewiring 1 pcs
+8 Water extraction from the flooded plant room 1 pcs
+9 Procurement of a submersible pump 2 pcs
+10 Vehicle costs 1 pcs
+11 Vehicle costs – return visit 1 pcs
+12 Cosmetic cleaning and repainting of the dry basement
+stairwell walls
+1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0228
+DATE
+11 Apr 2026
+DUE
+25 Apr 2026
+TRADE
+Accommodation
+FROM
+Comfy Pillow Emergency Lodgings Ltd
+12 Cozy Cot Lane
+10115 Snoozeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+13 Hotel accommodation for the tenants while the plant
+room was unusable
+1 –
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

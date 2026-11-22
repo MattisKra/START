@@ -1,0 +1,107 @@
+Invoice
+INVOICE NO.
+2026-0058
+DATE
+29 Jan 2026
+DUE
+12 Feb 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Leak detection & pinpointing of pipe defect beneath
+built-in bathtub
+1 flat rate
+2 Moisture measurement with thermal imaging camera 1 flat rate
+3 Vehicle costs 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0059
+DATE
+29 Jan 2026
+DUE
+12 Feb 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+4 Setup & rental of condensation dryers, bathroom &
+living room
+1 flat rate
+5 Electricity for drying equipment (separately metered) 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0060
+DATE
+29 Jan 2026
+DUE
+12 Feb 2026
+TRADE
+Flooring
+FROM
+Underfoot & Overcharge Flooring Ltd
+16 Laminate Lane
+04109 Parquetville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+6 Remove water-damaged laminate in living room 18 m²
+7 Supply & install laminate incl. impact sound insulation 18 m²
+8 Replace skirting boards 25 linear m
+9 Construction waste disposal 1 flat rate
+10 Catering for work crew 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0061
+DATE
+29 Jan 2026
+DUE
+12 Feb 2026
+TRADE
+Painting
+FROM
+Two Coats Minimum Painters Ltd
+27 Roller Road
+10999 Hueton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+11 Paint lower wall after water damage incl. surface
+preparation
+20 m²
+12 Construction waste disposal 1 flat rate
+13 Vehicle costs 1 flat rate
+14 Vehicle costs – return visit 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
