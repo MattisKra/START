@@ -62,8 +62,8 @@ then \textbf{improves it by reasoning} (policy clauses, quantities, prices) and 
 \section{Resourcefulness}
 Early on we used \textbf{token-heavy ensembles} (up to 20 model calls per round) to find good models. The ensemble
 benefit turned out to be small, so we moved to a \textbf{single agent: cheaper, and better in live play}. Multi-agent
-setups showed no advantage. The agent uses about \textbf{[TODO]} tokens per round (the 8-model ensemble: 150k input
-tokens, \$0.86).
+setups showed no advantage. The agent's whole tournament cost \textbf{169M tokens, 99\% of them cheap cache reads} of its persistent
+context: about \textbf{\$64 at API list prices, \$0.77 per round} (the 8-model ensemble: \$0.86 per round).
 
 \section{Reliability and automation}
 The agent \textbf{runs fully autonomously} and has \textbf{never missed a submission}; every submission came within
