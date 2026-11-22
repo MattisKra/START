@@ -1,0 +1,140 @@
+Invoice
+INVOICE NO.
+2026-0025
+DATE
+14 Jan 2026
+DUE
+28 Jan 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Leak detection / cause investigation 1 flat rate
+2 Moisture measurement of multiple rooms 1 flat rate
+3 Inspect and disassemble toilet cistern 1 flat rate
+4 Replace fill valve in toilet cistern 1 pcs
+5 Skilled worker hours 3 hrs
+6 Vehicle costs 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0026
+DATE
+14 Jan 2026
+DUE
+28 Jan 2026
+TRADE
+Flooring
+FROM
+Underfoot & Overcharge Flooring Ltd
+16 Laminate Lane
+04109 Parquetville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+7 Remove floor covering in guest WC 5 m²
+8 Remove skirting boards 12 m
+9 Insulation layer drying 1 pcs
+10 Condensation dryer 2 pcs
+11 Side channel compressor 1 pcs
+15 Remove damaged parquet 18 m²
+16 Renew parquet floor 18 m²
+17 Supply and install new skirting boards 15 m
+18 Open water-damaged ceiling surface 8 m²
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0027
+DATE
+14 Jan 2026
+DUE
+28 Jan 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+12 Drying fan 3 pcs
+13 Control measurement during drying 2 pcs
+14 Final measurement 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0028
+DATE
+14 Jan 2026
+DUE
+28 Jan 2026
+TRADE
+Dismantling
+FROM
+Smash & Grab Demolition Ltd
+9 Rubble Rise
+40210 Crushington
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+19 Restore plasterboard ceiling 8 m²
+20 Fill ceiling and wall surfaces 15 m²
+21 Final site cleaning 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0029
+DATE
+14 Jan 2026
+DUE
+28 Jan 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+22 Remove and transport rug 1 flat rate
+23 High-quality LED lighting above billiard table 1 pcs
+24 Specialist rug cleaning 1 flat rate
+25 Electrical inspection of robot vacuum cleaner 1 pcs
+26 Replacement robot vacuum cleaner (total loss) 1 pcs
+27 Disassemble billiard table 1 pcs
+28 Inspect billiard table for moisture damage 1 pcs
+29 Replace damaged billiard cloth 1 pcs
+30 Align and reassemble billiard table 1 pcs
+31 Replace old cue sets 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
