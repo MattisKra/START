@@ -1,0 +1,24 @@
+source,item,unit,price_gross_eur,region,date,url,note,tag
+awm_muenchen,Gartenabfaelle WSH+ (max 3 m3),EUR/1000 kg,81.12,Muenchen,2026,https://www.awm-muenchen.de/fileadmin/Dateien_pdfs/WSH_Preisliste.pdf,"as published, list undated (retrieved 2026); WSH+ only",green_waste
+awm_muenchen,Gartenabfaelle WSH+ unter 200 kg,pauschal,15.0,Muenchen,2026,https://www.awm-muenchen.de/fileadmin/Dateien_pdfs/WSH_Preisliste.pdf,as published,green_waste
+awm_muenchen,Gartenabfaelle WSH (max 1 m3),m3,0.0,Muenchen,2026,https://www.awm-muenchen.de/fileadmin/Dateien_pdfs/WSH_Preisliste.pdf,kostenlos,green_waste
+awm_muenchen,Sperrmuell und Holz WSH+ (unbegrenzt),EUR/1000 kg,177.06,Muenchen,2026,https://www.awm-muenchen.de/fileadmin/Dateien_pdfs/WSH_Preisliste.pdf,"as published; combined line Sperrmuell und Holz, no Altholz A1-A4 split",timber
+awm_muenchen,Sperrmuell und Holz WSH+ unter 200 kg,pauschal,26.0,Muenchen,2026,https://www.awm-muenchen.de/fileadmin/Dateien_pdfs/WSH_Preisliste.pdf,as published,timber
+awm_muenchen,Sperrmuell und Holz WSH (bis 2 m3),m3,0.0,Muenchen,2026,https://www.awm-muenchen.de/fileadmin/Dateien_pdfs/WSH_Preisliste.pdf,kostenlos,timber
+awm_muenchen,"Bauschutt WSH+ (max 1 m3) pro Eimer ca. 10 kg, bis max 10 Eimer",Eimer,2.46,Muenchen,2026,https://www.awm-muenchen.de/fileadmin/Dateien_pdfs/WSH_Preisliste.pdf,"as published; AWM press release 2026-08-18 says household Bauschutt only at WSH+ and chargeable from mid-Sept 2026, new rates not in it",soil_rubble
+awm_muenchen,Bauschutt WSH+ ab 100 kg (mehr als 10 Eimer) bis 200 kg,pauschal,36.87,Muenchen,2026,https://www.awm-muenchen.de/fileadmin/Dateien_pdfs/WSH_Preisliste.pdf,as published,soil_rubble
+awm_muenchen,Bauschutt WSH+ ueber 200 kg,EUR/1000 kg,245.82,Muenchen,2026,https://www.awm-muenchen.de/fileadmin/Dateien_pdfs/WSH_Preisliste.pdf,"as published, anteilig zum Tonnenpreis",soil_rubble
+awm_muenchen,Sperrmuellabholung Anfahrtspauschale,pauschal,50.0,Muenchen,2026,https://www.awm-muenchen.de/abfall-entsorgen/services/sperrmuellabholung,as published,sperrmuell_pickup
+awm_muenchen,Sperrmuellabholung pro angefangenem m3,m3,20.0,Muenchen,2026,https://www.awm-muenchen.de/abfall-entsorgen/services/sperrmuellabholung,as published,sperrmuell_pickup
+awm_muenchen,Sperrmuellabholung Terminabholung (Wunschleistung) zusaetzlich,pauschal,55.0,Muenchen,2026,https://www.awm-muenchen.de/abfall-entsorgen/services/sperrmuellabholung,as published,sperrmuell_pickup
+awm_muenchen,Container Gartenabfall Entsorgung,EUR/1000 kg,81.12,Muenchen,2026,https://www.awm-muenchen.de/abfall-entsorgen/services/containerdienst,keine MwSt laut Seite,green_waste_container
+awm_muenchen,Container Gartenabfall Transportpauschale,Abfuhr,226.53,Muenchen,2026,https://www.awm-muenchen.de/abfall-entsorgen/services/containerdienst,as published,green_waste_container
+awm_muenchen,Container Sperrmuell Entsorgung,EUR/1000 kg,177.06,Muenchen,2026,https://www.awm-muenchen.de/abfall-entsorgen/services/containerdienst,"zzgl. MwSt laut Seite, plus Transport und Miete; gross not computed",sperrmuell_container
+awm_muenchen,Containermiete Absetzmulde 10 m3,Tag,1.8,Muenchen,2026,https://www.awm-muenchen.de/abfall-entsorgen/services/containerdienst,as published,container_rent
+awm_muenchen,Containermiete Abrollcontainer 25-30 m3,Tag,2.55,Muenchen,2026,https://www.awm-muenchen.de/abfall-entsorgen/services/containerdienst,as published,container_rent
+srh_hamburg,Gartenabfall/Laub Gewerbe,m3,33.0,Hamburg,2026-01-01,https://files.stadtreinigung.hamburg/SRH251008_Preisliste_Recyclinghoefe_2026.pdf,"net 27,73; gross as published; private households free in haushaltsueblicher Menge",green_waste
+srh_hamburg,Altholz Kat. I-III Gewerbe,m3,52.0,Hamburg,2026-01-01,https://files.stadtreinigung.hamburg/SRH251008_Preisliste_Recyclinghoefe_2026.pdf,"net 43,70; private households free",timber
+srh_hamburg,Altholz Kat. IV Gewerbe,m3,52.0,Hamburg,2026-01-01,https://files.stadtreinigung.hamburg/SRH251008_Preisliste_Recyclinghoefe_2026.pdf,"net 43,70; private households free",timber
+srh_hamburg,Bauschutt privat,angefangene 100 l (max 500 l),18.0,Hamburg,2026-01-01,https://files.stadtreinigung.hamburg/SRH251008_Preisliste_Recyclinghoefe_2026.pdf,inkl. MwSt as published,soil_rubble
+srh_hamburg,Bauschutt Gewerbe,angefangene 100 l (max 500 l),21.0,Hamburg,2026-01-01,https://files.stadtreinigung.hamburg/SRH251008_Preisliste_Recyclinghoefe_2026.pdf,"net 17,65; gross as published",soil_rubble
+srh_hamburg,lose sperrige Abfaelle Gewerbe,m3,52.0,Hamburg,2026-01-01,https://files.stadtreinigung.hamburg/SRH251008_Preisliste_Recyclinghoefe_2026.pdf,"net 43,70; gross as published",sperrmuell

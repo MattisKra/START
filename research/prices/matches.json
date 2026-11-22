@@ -1,0 +1,699 @@
+{
+ "assume": {
+  "hours": {
+   "c03_l4": 3.0,
+   "c03_l5": 2.0,
+   "c04_l3": 1.0,
+   "c07_l1": 4.0,
+   "c11_l5": 2.0
+  },
+  "green_waste_m3": 4.0,
+  "green_waste_t": 0.8,
+  "root_ball_m3": 1.0,
+  "root_ball_t": 0.8,
+  "glass_m3": 0.05,
+  "glass_t": 0.02
+ },
+ "matches": [
+  {
+   "line": "c02_l1",
+   "source": "apple_ssr",
+   "family": "apple",
+   "p": 749.84,
+   "parts": [
+    {
+     "tag": "laptop_display",
+     "n": 12,
+     "stat": "median",
+     "value": 749.84,
+     "qty": 1.0,
+     "p25": 749.84,
+     "p75": 900.01,
+     "example": {
+      "item": "MacBook Pro 14\" 2021 (M1 Pro/Max) Display",
+      "unit": "pcs",
+      "price_gross_eur": "749.84",
+      "url": "https://selfservicerepair.eu/de-DE/macbook-pro-14-2021/display"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c02_l2",
+   "source": "apple_ssr",
+   "family": "apple",
+   "p": 344.4,
+   "parts": [
+    {
+     "tag": "laptop_housing",
+     "n": 16,
+     "stat": "median",
+     "value": 344.4,
+     "qty": 1.0,
+     "p25": 89.14,
+     "p75": 599.66,
+     "example": {
+      "item": "MacBook Pro 14\" 2021 (M1 Pro/Max) Top Case mit Batterie und Tastatur",
+      "unit": "pcs",
+      "price_gross_eur": "599.66",
+      "url": "https://selfservicerepair.eu/de-DE/macbook-pro-14-2021/top-case-with-battery-and-keyboard"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c05_l1",
+   "source": "apple_ssr",
+   "family": "apple",
+   "p": 1029.17,
+   "parts": [
+    {
+     "tag": "laptop_display",
+     "n": 15,
+     "stat": "median",
+     "value": 749.84,
+     "qty": 1.0,
+     "p25": 749.84,
+     "p75": 900.01,
+     "example": {
+      "item": "MacBook Pro 14\" 2021 (M1 Pro/Max) Display",
+      "unit": "pcs",
+      "price_gross_eur": "749.84",
+      "url": "https://selfservicerepair.eu/de-DE/macbook-pro-14-2021/display"
+     },
+     "regional": false
+    },
+    {
+     "tag": "laptop_housing",
+     "n": 20,
+     "stat": "median",
+     "value": 279.33,
+     "qty": 1.0,
+     "p25": 89.14,
+     "p75": 599.66,
+     "example": {
+      "item": "MacBook Pro 14\" 2021 (M1 Pro/Max) Top Case mit Batterie und Tastatur",
+      "unit": "pcs",
+      "price_gross_eur": "599.66",
+      "url": "https://selfservicerepair.eu/de-DE/macbook-pro-14-2021/top-case-with-battery-and-keyboard"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c06_l1",
+   "source": "apple_ssr",
+   "family": "apple",
+   "p": 1029.17,
+   "parts": [
+    {
+     "tag": "laptop_display",
+     "n": 15,
+     "stat": "median",
+     "value": 749.84,
+     "qty": 1.0,
+     "p25": 749.84,
+     "p75": 900.01,
+     "example": {
+      "item": "MacBook Pro 14\" 2021 (M1 Pro/Max) Display",
+      "unit": "pcs",
+      "price_gross_eur": "749.84",
+      "url": "https://selfservicerepair.eu/de-DE/macbook-pro-14-2021/display"
+     },
+     "regional": false
+    },
+    {
+     "tag": "laptop_housing",
+     "n": 20,
+     "stat": "median",
+     "value": 279.33,
+     "qty": 1.0,
+     "p25": 89.14,
+     "p75": 599.66,
+     "example": {
+      "item": "MacBook Pro 14\" 2021 (M1 Pro/Max) Top Case mit Batterie und Tastatur",
+      "unit": "pcs",
+      "price_gross_eur": "599.66",
+      "url": "https://selfservicerepair.eu/de-DE/macbook-pro-14-2021/top-case-with-battery-and-keyboard"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c08_l3",
+   "source": "awm_muenchen",
+   "family": "waste",
+   "p": 64.9,
+   "parts": [
+    {
+     "tag": "green_waste",
+     "n": 1,
+     "stat": "median",
+     "value": 64.9,
+     "qty": 1.0,
+     "p25": 64.9,
+     "p75": 64.9,
+     "example": {
+      "item": "Gartenabfaelle WSH+ (max 3 m3)",
+      "unit": "EUR/1000 kg",
+      "price_gross_eur": "81.12",
+      "url": "https://www.awm-muenchen.de/fileadmin/Dateien_pdfs/WSH_Preisliste.pdf"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c03_l4",
+   "source": "clean_invoice",
+   "family": "rates",
+   "p": 270.74,
+   "parts": [
+    {
+     "tag": "rate_carpenter",
+     "n": 2,
+     "stat": "median",
+     "value": 74.38,
+     "qty": 3.0,
+     "p25": 59.5,
+     "p75": 89.25,
+     "example": {
+      "item": "Tischler (min)",
+      "unit": "h",
+      "price_gross_eur": "59.50",
+      "url": "https://www.clean-invoice.com/kostenindex"
+     },
+     "regional": false
+    },
+    {
+     "tag": "rate_carpenter",
+     "n": 2,
+     "stat": "median",
+     "value": 47.6,
+     "qty": 1.0,
+     "p25": 35.7,
+     "p75": 59.5,
+     "example": {
+      "item": "Anfahrtspauschale Tischler/Schreiner Nahbereich (min)",
+      "unit": "Anfahrt",
+      "price_gross_eur": "35.70",
+      "url": "https://www.clean-invoice.com/lexikon/anfahrtspauschale"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c03_l5",
+   "source": "clean_invoice",
+   "family": "rates",
+   "p": 196.36,
+   "parts": [
+    {
+     "tag": "rate_carpenter",
+     "n": 2,
+     "stat": "median",
+     "value": 74.38,
+     "qty": 2.0,
+     "p25": 59.5,
+     "p75": 89.25,
+     "example": {
+      "item": "Tischler (min)",
+      "unit": "h",
+      "price_gross_eur": "59.50",
+      "url": "https://www.clean-invoice.com/kostenindex"
+     },
+     "regional": false
+    },
+    {
+     "tag": "rate_carpenter",
+     "n": 2,
+     "stat": "median",
+     "value": 47.6,
+     "qty": 1.0,
+     "p25": 35.7,
+     "p75": 59.5,
+     "example": {
+      "item": "Anfahrtspauschale Tischler/Schreiner Nahbereich (min)",
+      "unit": "Anfahrt",
+      "price_gross_eur": "35.70",
+      "url": "https://www.clean-invoice.com/lexikon/anfahrtspauschale"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c07_l1",
+   "source": "clean_invoice",
+   "family": "rates",
+   "p": 404.6,
+   "parts": [
+    {
+     "tag": "rate_plumber",
+     "n": 2,
+     "stat": "median",
+     "value": 89.25,
+     "qty": 4.0,
+     "p25": 71.4,
+     "p75": 107.1,
+     "example": {
+      "item": "Heizung/Sanitaer (min)",
+      "unit": "h",
+      "price_gross_eur": "71.40",
+      "url": "https://www.clean-invoice.com/kostenindex"
+     },
+     "regional": false
+    },
+    {
+     "tag": "rate_plumber",
+     "n": 2,
+     "stat": "median",
+     "value": 47.6,
+     "qty": 1.0,
+     "p25": 35.7,
+     "p75": 59.5,
+     "example": {
+      "item": "Anfahrtspauschale Installateur/Sanitaer Nahbereich (min)",
+      "unit": "Anfahrt",
+      "price_gross_eur": "35.70",
+      "url": "https://www.clean-invoice.com/lexikon/anfahrtspauschale"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c11_l5",
+   "source": "clean_invoice",
+   "family": "rates",
+   "p": 196.36,
+   "parts": [
+    {
+     "tag": "rate_carpenter",
+     "n": 2,
+     "stat": "median",
+     "value": 74.38,
+     "qty": 2.0,
+     "p25": 59.5,
+     "p75": 89.25,
+     "example": {
+      "item": "Tischler (min)",
+      "unit": "h",
+      "price_gross_eur": "59.50",
+      "url": "https://www.clean-invoice.com/kostenindex"
+     },
+     "regional": false
+    },
+    {
+     "tag": "rate_carpenter",
+     "n": 2,
+     "stat": "median",
+     "value": 47.6,
+     "qty": 1.0,
+     "p25": 35.7,
+     "p75": 59.5,
+     "example": {
+      "item": "Anfahrtspauschale Tischler/Schreiner Nahbereich (min)",
+      "unit": "Anfahrt",
+      "price_gross_eur": "35.70",
+      "url": "https://www.clean-invoice.com/lexikon/anfahrtspauschale"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c08_l3",
+   "source": "srh_hamburg",
+   "family": "waste",
+   "p": 132.0,
+   "parts": [
+    {
+     "tag": "green_waste",
+     "n": 1,
+     "stat": "median",
+     "value": 132.0,
+     "qty": 1.0,
+     "p25": 132.0,
+     "p75": 132.0,
+     "example": {
+      "item": "Gartenabfall/Laub Gewerbe",
+      "unit": "m3",
+      "price_gross_eur": "33.00",
+      "url": "https://files.stadtreinigung.hamburg/SRH251008_Preisliste_Recyclinghoefe_2026.pdf"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c03_l4",
+   "source": "taifun_preisatlas",
+   "family": "rates",
+   "p": 225.48,
+   "parts": [
+    {
+     "tag": "rate_carpenter",
+     "n": 2,
+     "stat": "median",
+     "value": 75.16,
+     "qty": 3.0,
+     "p25": 72.15,
+     "p75": 78.16,
+     "example": {
+      "item": "Tischler & Schreiner Meister/Techniker",
+      "unit": "h",
+      "price_gross_eur": "78.16",
+      "url": "https://taifun-software.de/app/uploads/2025/10/Preisatlas_2024_TAIFUN-komprimiert.pdf"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c03_l5",
+   "source": "taifun_preisatlas",
+   "family": "rates",
+   "p": 150.32,
+   "parts": [
+    {
+     "tag": "rate_carpenter",
+     "n": 2,
+     "stat": "median",
+     "value": 75.16,
+     "qty": 2.0,
+     "p25": 72.15,
+     "p75": 78.16,
+     "example": {
+      "item": "Tischler & Schreiner Meister/Techniker",
+      "unit": "h",
+      "price_gross_eur": "78.16",
+      "url": "https://taifun-software.de/app/uploads/2025/10/Preisatlas_2024_TAIFUN-komprimiert.pdf"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c04_l3",
+   "source": "taifun_preisatlas",
+   "family": "rates",
+   "p": 75.82,
+   "parts": [
+    {
+     "tag": "rate_all_trades",
+     "n": 2,
+     "stat": "median",
+     "value": 75.82,
+     "qty": 1.0,
+     "p25": 70.72,
+     "p75": 80.92,
+     "example": {
+      "item": "Handwerk Durchschnitt Meister/Techniker Bayern",
+      "unit": "h",
+      "price_gross_eur": "80.92",
+      "url": "https://taifun-software.de/app/uploads/2025/10/Preisatlas_2024_TAIFUN-komprimiert.pdf"
+     },
+     "regional": true
+    }
+   ]
+  },
+  {
+   "line": "c07_l1",
+   "source": "taifun_preisatlas",
+   "family": "rates",
+   "p": 311.4,
+   "parts": [
+    {
+     "tag": "rate_plumber",
+     "n": 2,
+     "stat": "median",
+     "value": 77.85,
+     "qty": 4.0,
+     "p25": 72.35,
+     "p75": 83.35,
+     "example": {
+      "item": "SHK Meister/Techniker",
+      "unit": "h",
+      "price_gross_eur": "83.35",
+      "url": "https://taifun-software.de/app/uploads/2025/10/Preisatlas_2024_TAIFUN-komprimiert.pdf"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c11_l5",
+   "source": "taifun_preisatlas",
+   "family": "rates",
+   "p": 150.32,
+   "parts": [
+    {
+     "tag": "rate_carpenter",
+     "n": 2,
+     "stat": "median",
+     "value": 75.16,
+     "qty": 2.0,
+     "p25": 72.15,
+     "p75": 78.16,
+     "example": {
+      "item": "Tischler & Schreiner Meister/Techniker",
+      "unit": "h",
+      "price_gross_eur": "78.16",
+      "url": "https://taifun-software.de/app/uploads/2025/10/Preisatlas_2024_TAIFUN-komprimiert.pdf"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c01_l1",
+   "source": "wdc",
+   "family": "wdc",
+   "p": 634.18,
+   "parts": [
+    {
+     "tag": "tv",
+     "n": 1465,
+     "stat": "median",
+     "value": 489.0,
+     "qty": 1.0,
+     "p25": 258.56,
+     "p75": 769.9,
+     "example": {
+      "item": "43E6NT, LED-Fernseher",
+      "unit": "pcs",
+      "price_gross_eur": "299.00",
+      "url": "https://www.alternate.de/Hisense/43E6NT-LED-Fernseher/html/product/100051960"
+     },
+     "regional": false
+    },
+    {
+     "tag": "speaker",
+     "n": 1182,
+     "stat": "median",
+     "value": 145.18,
+     "qty": 1.0,
+     "p25": 51.12,
+     "p75": 556.92,
+     "example": {
+      "item": "P17, Lautsprecher",
+      "unit": "pcs",
+      "price_gross_eur": "129.99",
+      "url": "https://www.alternate.de/Edifier/P17-Lautsprecher/html/product/1600825"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c02_l1",
+   "source": "wdc",
+   "family": "wdc",
+   "p": 39.45,
+   "parts": [
+    {
+     "tag": "laptop_display",
+     "n": 4,
+     "stat": "median",
+     "value": 39.45,
+     "qty": 1.0,
+     "p25": 21.73,
+     "p75": 45.2,
+     "example": {
+      "item": "Touchbar LCD Screen Bezel Panel Leiste strip für Apple Macbook Pro 15&quot; A1707 2016 2017 A1990",
+      "unit": "pcs",
+      "price_gross_eur": "46.95",
+      "url": "https://www.kaufland.de/touchpads/"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c04_l2",
+   "source": "wdc",
+   "family": "wdc",
+   "p": 538.94,
+   "parts": [
+    {
+     "tag": "bike_frame",
+     "n": 80,
+     "stat": "median",
+     "value": 319.94,
+     "qty": 1.0,
+     "p25": 34.95,
+     "p75": 899.0,
+     "example": {
+      "item": "Radon Slush 26 Dirt Rahmenset",
+      "unit": "pcs",
+      "price_gross_eur": "199.99",
+      "url": "https://www.bike-discount.de/de/radon-slush-26-dirt-rahmenset-1"
+     },
+     "regional": false
+    },
+    {
+     "tag": "bike_brake",
+     "n": 314,
+     "stat": "median",
+     "value": 219.0,
+     "qty": 1.0,
+     "p25": 48.32,
+     "p75": 369.0,
+     "example": {
+      "item": "Trekkingrad L200 Scheibenbremse Kettenschaltung",
+      "unit": "pcs",
+      "price_gross_eur": "799.00",
+      "url": "https://www.conrad-fahrrad.de/produkte/trekkingrad-l200-scheibenbremse-kettenschaltung/"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c05_l1",
+   "source": "wdc",
+   "family": "wdc",
+   "p": 39.45,
+   "parts": [
+    {
+     "tag": "laptop_display",
+     "n": 4,
+     "stat": "median",
+     "value": 39.45,
+     "qty": 1.0,
+     "p25": 21.73,
+     "p75": 45.2,
+     "example": {
+      "item": "Touchbar LCD Screen Bezel Panel Leiste strip für Apple Macbook Pro 15&quot; A1707 2016 2017 A1990",
+      "unit": "pcs",
+      "price_gross_eur": "46.95",
+      "url": "https://www.kaufland.de/touchpads/"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c06_l1",
+   "source": "wdc",
+   "family": "wdc",
+   "p": 39.45,
+   "parts": [
+    {
+     "tag": "laptop_display",
+     "n": 4,
+     "stat": "median",
+     "value": 39.45,
+     "qty": 1.0,
+     "p25": 21.73,
+     "p75": 45.2,
+     "example": {
+      "item": "Touchbar LCD Screen Bezel Panel Leiste strip für Apple Macbook Pro 15&quot; A1707 2016 2017 A1990",
+      "unit": "pcs",
+      "price_gross_eur": "46.95",
+      "url": "https://www.kaufland.de/touchpads/"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c09_l1",
+   "source": "wdc",
+   "family": "wdc",
+   "p": 145.18,
+   "parts": [
+    {
+     "tag": "speaker",
+     "n": 1182,
+     "stat": "median",
+     "value": 145.18,
+     "qty": 1.0,
+     "p25": 51.12,
+     "p75": 556.92,
+     "example": {
+      "item": "P17, Lautsprecher",
+      "unit": "pcs",
+      "price_gross_eur": "129.99",
+      "url": "https://www.alternate.de/Edifier/P17-Lautsprecher/html/product/1600825"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c09_l4",
+   "source": "wdc",
+   "family": "wdc",
+   "p": 489.0,
+   "parts": [
+    {
+     "tag": "tv",
+     "n": 1465,
+     "stat": "median",
+     "value": 489.0,
+     "qty": 1.0,
+     "p25": 258.56,
+     "p75": 769.9,
+     "example": {
+      "item": "43E6NT, LED-Fernseher",
+      "unit": "pcs",
+      "price_gross_eur": "299.00",
+      "url": "https://www.alternate.de/Hisense/43E6NT-LED-Fernseher/html/product/100051960"
+     },
+     "regional": false
+    }
+   ]
+  },
+  {
+   "line": "c11_l5",
+   "source": "wdc",
+   "family": "wdc",
+   "p": 69.95,
+   "parts": [
+    {
+     "tag": "side_table",
+     "n": 255,
+     "stat": "median",
+     "value": 69.95,
+     "qty": 1.0,
+     "p25": 41.95,
+     "p75": 139.95,
+     "example": {
+      "item": "Beistelltisch Eichenscheibe",
+      "unit": "pcs",
+      "price_gross_eur": "220.00",
+      "url": "https://www.schraederei.de/online-shop/beistelltische/beistelltisch-eichenscheibe/"
+     },
+     "regional": false
+    }
+   ]
+  }
+ ]
+}

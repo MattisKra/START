@@ -5,3 +5,10 @@ runs/
 cases/
 *.zip
 .DS_Store
+
+# downloaded price sources (untrusted, large)
+research/prices/raw/
+
+# local price database and its test report (rebuilt by research/prices/pricedb.py build; the report holds leaderboard brackets)
+research/prices/pricedb.sqlite
+research/prices/db_report.md

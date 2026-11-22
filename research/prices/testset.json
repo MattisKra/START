@@ -1,0 +1,21 @@
+{
+  "_doc": "Old invoice lines whose hidden fair value t is a market price, with the known t bound. lo: t >= lo, hi: t < hi. Policyholder is always Munich 80331. Bounds from past-cases/case_*/results.json, games 1-3 tightened with all-team brackets (research/03-leaderboard-findings.md, past-cases/README.md). Case 1 line 1 is paid at 50 % (clause), so the bracket [780.69, 900) is doubled to the full value.",
+  "lines": [
+    {"id": "c01_l1", "case": 1, "line": 1, "kind": "goods", "text": "Surge-damaged home electronics (speaker system and TV set)", "qty": "2 pcs", "lo": 1561.38, "hi": 1800.0, "why": "all-team bracket [780.69, 900) x2 (50 % clause)"},
+    {"id": "c02_l1", "case": 2, "line": 1, "kind": "repair_part", "text": "Laptop screen crack repair (14-inch aluminium notebook, bought new last spring for EUR 1,5xx)", "qty": "1 pcs", "lo": 808.45, "hi": null, "why": "highest fair charge, all teams"},
+    {"id": "c02_l2", "case": 2, "line": 2, "kind": "repair_part", "text": "Lower-right corner and housing repair (14-inch aluminium notebook)", "qty": "1 pcs", "lo": 342.0, "hi": null, "why": "highest fair charge, all teams"},
+    {"id": "c03_l4", "case": 3, "line": 4, "kind": "trade", "text": "Repair of dented and gouged solid-wood door frame (display cabinet)", "qty": "1 flat rate", "lo": 329.0, "hi": null, "why": "highest fair charge, all teams"},
+    {"id": "c03_l5", "case": 3, "line": 5, "kind": "trade", "text": "Repair and refinish of scratched and chipped wooden shelf", "qty": "1 flat rate", "lo": 157.0, "hi": null, "why": "highest fair charge, all teams"},
+    {"id": "c04_l2", "case": 4, "line": 2, "kind": "repair_part", "text": "Repair theft damage to bicycle (frame and brakes)", "qty": "2 pcs", "lo": 220.21, "hi": null, "why": "our charge a was fair"},
+    {"id": "c04_l3", "case": 4, "line": 3, "kind": "trade", "text": "Labour and sundries (bicycle service)", "qty": "1 flat rate", "lo": 97.10, "hi": null, "why": "wrongly rejected charge"},
+    {"id": "c05_l1", "case": 5, "line": 1, "kind": "repair_part", "text": "Laptop damage payment - cracked screen and lower-right-corner impact damage (brand-new Mac, EUR 1400)", "qty": "1 pcs", "lo": 926.85, "hi": null, "why": "our charge a was fair"},
+    {"id": "c06_l1", "case": 6, "line": 1, "kind": "repair_part", "text": "Laptop accidental damage repair (cracked screen and lower-right corner)", "qty": "1 pcs", "lo": 743.99, "hi": null, "why": "wrongly rejected charge"},
+    {"id": "c07_l1", "case": 7, "line": 1, "kind": "trade", "text": "Internal frost-burst fitting repair including thermal-imaging leak detection", "qty": "1 flat rate", "lo": null, "hi": 731.68, "why": "our charge a was inflated"},
+    {"id": "c08_l2", "case": 8, "line": 2, "kind": "disposal", "text": "Disposal of the broken glass pane from the damaged shed", "qty": "1 pcs", "lo": null, "hi": 37.49, "why": "lowest inflated charge"},
+    {"id": "c08_l3", "case": 8, "line": 3, "kind": "disposal", "text": "Disposal of green waste from the storm-felled tree (branches and foliage)", "qty": "1 pcs", "lo": null, "hi": 278.46, "why": "lowest inflated charge"},
+    {"id": "c08_l4", "case": 8, "line": 4, "kind": "disposal", "text": "Disposal of the tree root ball (single mass under one cubic metre)", "qty": "1 pcs", "lo": null, "hi": 128.52, "why": "lowest inflated charge"},
+    {"id": "c09_l1", "case": 9, "line": 1, "kind": "goods", "text": "Speaker system (surge-damaged, replacement)", "qty": "1 pcs", "lo": null, "hi": 856.8, "why": "lowest inflated charge"},
+    {"id": "c09_l4", "case": 9, "line": 4, "kind": "goods", "text": "TV set (surge-damaged, replacement)", "qty": "1 pcs", "lo": null, "hi": 963.9, "why": "lowest inflated charge"},
+    {"id": "c11_l5", "case": 11, "line": 5, "kind": "trade", "text": "Repair of dented solid-wood side table", "qty": "1 flat rate", "lo": 192.78, "hi": null, "why": "our charge a was fair"}
+  ]
+}
