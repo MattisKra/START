@@ -18,7 +18,7 @@
 \begin{document}
 
 \begin{center}
-  {\Large\bfseries Read, decide, look back: a claims agent that reviews itself}\\[3pt]
+  {\Large\bfseries Self-Learning Insurance Agent}\\[3pt]
   Kiebler Software Solutions \quad·\quad Tim Kiebler, Leo Driesch, Mattis Krauch, Sebastian Böhler % CHECK: names
 \end{center}
 
@@ -32,20 +32,21 @@
 decided; from game \FableFrom\ the agent decides every round. Right: both periods compared. Cases grow over time, so the fair comparison is the bottom right panel.}
 
 \section{Method and uncertainty}
-Our bot is \textbf{Claude Fable 5.2 in the Claude Code harness}, run as a \textbf{self-learning, persistent agent}:
+Our \textbf{Persistent Cost Agent} is \textbf{Claude Fable 5.2 (medium reasoning) in the Claude Code harness}:
 one long-running session on a \texttt{/loop} plays every round and \textbf{keeps its context across games}
 (1M-token window, \textbf{compacted} into a summary regularly at about 300--400k tokens), so it improves by
-\textbf{in-context learning}. On top, it keeps a \textbf{memory system of files it writes itself}, including
-\textbf{its own scripts to track prices, scores} and past decisions, which it uses as tools to verify quickly.
+\textbf{in-context learning}. In its agent loop it reads and writes \textbf{Memory \& Tools}: files it writes itself on strategy and prices,
+including \textbf{its own scripts to track prices and scores}, which it uses to verify quickly.
 % CHECK: push these files to the repo and name 1-2 of them
 For every invoice line, the agent uses its experience from earlier games and its world knowledge to decide
 \textbf{first whether the line is covered and related}, \textbf{then estimates the hidden fair value $t$}, and from
 that \textbf{chooses $a$ (our charge) and $b$ (the highest charge we accept) dynamically}. Uncertainty is weighed against the asymmetric payoff: wrongly rejecting a fair charge costs \textbf{1.5$\times$} it,
 so the agent rejects only when confident, and charges slightly below its estimate of $t$. Python only checks the format and submits; \textbf{it does not change the numbers}.
 
-\textbf{System 1, then System 2.} The agent first gives an \textbf{intuitive estimate} and submits it (median 13\,s),
-then \textbf{improves it by reasoning} (policy clauses, quantities, prices) and overwrites the first answer before the
-60\,s deadline. After weak rounds it compares the settlement with its own reasoning and writes what to change into its memory.
+\textbf{System 1, then System 2.} \textbf{System 1} is the agent's intuitive $(t,a,b)$ estimate, submitted after a median
+of 13\,s. \textbf{System 2} refines it by reasoning (policy clauses, quantities, prices) and overwrites it, after a median
+of 21\,s. A separate \textbf{Long-Horizon Evaluation Agent} reads the results of finished games and feeds
+\textbf{adjustments} back to the cost agent.
 
 \section{Evidence for our choices}
 \begin{itemize}
@@ -66,9 +67,8 @@ Multi-agent setups showed no advantage. The agent's whole tournament cost \textb
 context: about \textbf{\$64 at API list prices, \$0.77 per round} (the 8-model ensemble: \$0.86 per round).
 
 \section{Reliability and automation}
-The agent \textbf{runs fully autonomously} and \textbf{submitted in all 83 rounds} it played. Its first estimate came
-after a \textbf{median of 13\,s} (79 of 83 under 20\,s, slowest 38\,s); refinements were in by 30\,s at the latest,
-well inside the 60\,s limit. In games 19 and 21 a parallel multi-agent setup overwrote its answer; in game 20 that
+The agent \textbf{runs fully autonomously} and \textbf{never missed a submission} in its 83 games. Median time from
+release: \textbf{13\,s to the first estimate, 21\,s to the refinement} (slowest first estimate 38\,s; limit 60\,s). In games 19 and 21 a parallel multi-agent setup overwrote its answer; in game 20 that
 setup crashed, and the agent's submission counted.
 
 \section{Clarity and honesty}
