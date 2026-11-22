@@ -102,14 +102,15 @@ def estimate(case: Case, effort: str = config.EFFORT, model: str | None = None, 
         extra = {"tools": [{"type": "web_search"}], "tool_choice": "auto", "max_tool_calls": 2}
     if web or selective:
         extra["include"] = ["web_search_call.action.sources"]
-    resp = _client().responses.parse(
+    from . import oai
+    resp = oai.call(lambda client: client.responses.parse(
         model=model,
         instructions=INSTRUCTIONS,
         **extra,
         input=build_input(case, web, references, selective=selective),
         reasoning={"effort": effort},
         text_format=CaseEstimate,
-    )
+    ), timeout=config.LLM_TIMEOUT_S)
     parsed = resp.output_parsed
     if parsed is None:
         raise RuntimeError(f"model returned no parsed output (status={resp.status})")

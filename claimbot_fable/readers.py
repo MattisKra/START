@@ -56,9 +56,11 @@ def _openai(case: Case, spec: Spec, fast: bool, instructions: str | None = None,
     if spec.image:
         for mime, raw in case.image_blobs:
             content.append({"type": "input_image", "image_url": f"data:{mime};base64,{base64.b64encode(raw).decode()}", "detail": "high"})
-    resp = OpenAI(api_key=config.OPENAI_KEY, timeout=config.LLM_TIMEOUT_S, max_retries=1).responses.parse(
+    from claimbot import oai
+    resp = oai.call(lambda client: client.responses.parse(
         model=spec.model, instructions=(instructions or INSTRUCTIONS) + (FAST_NOTE if fast else ""), input=[{"role": "user", "content": content}],
-        reasoning={"effort": spec.effort}, text_format=schema, **({"max_output_tokens": max_tokens} if max_tokens else {}))
+        reasoning={"effort": spec.effort}, text_format=schema, **({"max_output_tokens": max_tokens} if max_tokens else {})),
+        timeout=config.LLM_TIMEOUT_S)
     if resp.output_parsed is None:
         raise RuntimeError(f"{spec.name} returned no parsed output (status={resp.status})")
     return resp.output_parsed, _meta(spec, t0, resp.usage.model_dump() if resp.usage else None, resp.id)

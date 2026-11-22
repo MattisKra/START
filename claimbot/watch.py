@@ -53,7 +53,9 @@ def _wait_for_key(api: GameAPI, game_id: int, start: datetime) -> str | None:
 def watch() -> None:
     api = GameAPI()
     done: set[int] = set()
-    if config.USE_ENSEMBLE:
+    if config.os.getenv("CLAIMS_ENGINE") == "multiagent":
+        print(f"{_ts()} watching for games (multi-agent estimator, claimbot_multiagent.live)")
+    elif config.USE_ENSEMBLE:
         from .ensemble import members
         print(f"{_ts()} watching for games (ensemble: {', '.join(m.name for m in members())})")
     else:
@@ -114,7 +116,14 @@ def watch() -> None:
             print(f"{_ts()} game {gid}: NO KEY after 30 s, skipping")
             continue
         try:
-            if config.USE_ENSEMBLE:
+            if config.os.getenv("CLAIMS_ENGINE") == "multiagent":
+                from claimbot_multiagent.live import play_round as play_multiagent
+                try:
+                    play_multiagent(str(gid), zip_path, key=key)
+                except Exception:  # noqa: BLE001 - e.g. an invoice its parser cannot read: play the round with the ensemble
+                    print(f"{_ts()} game {gid}: multi-agent round failed, playing it with the ensemble\n{traceback.format_exc()}")
+                    play_round_ensemble(str(gid), zip_path, key=key)
+            elif config.USE_ENSEMBLE:
                 play_round_ensemble(str(gid), zip_path, key=key)
             else:
                 play_round(str(gid), zip_path, key=key)

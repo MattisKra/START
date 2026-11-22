@@ -148,9 +148,8 @@ _LINE = re.compile(rf"^\s*(\d{{1,2}})\s{{2,}}(\S.*?)\s{{2,}}{QUANTITY}\s+\S")
 
 
 def _embed(texts: list[str], timeout: float) -> list[list[float]]:
-    from openai import OpenAI
-    client = OpenAI(api_key=config.OPENAI_KEY, timeout=timeout, max_retries=0)
-    resp = client.embeddings.create(model=EMBED_MODEL, input=texts)
+    from . import oai
+    resp = oai.call(lambda client: client.embeddings.create(model=EMBED_MODEL, input=texts), timeout=timeout, max_retries=0)
     return [d.embedding for d in resp.data]
 
 
