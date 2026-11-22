@@ -1,0 +1,737 @@
+===============================================================================
+RESIDENTIAL DWELLING INSURANCE
+GENERAL POLICY CONDITIONS - PROPERTY DAMAGE COVER
+===============================================================================
+
+These conditions apply together with the General Contract Provisions and with
+the Schedule, both of which form part of this contract. Sums insured, limits,
+deductibles, periods and percentages shown in square brackets are those stated
+in the Schedule.
+
+
+-------------------------------------------------------------------------------
+PART 1 - PURPOSE AND KEY CONCEPTS
+-------------------------------------------------------------------------------
+
+1.1 What this insurance does
+
+Combined residential buildings insurance protects the policyholder against the
+financial consequences of physical damage to their building. The perils that can
+be insured are the ones bundled together in these conditions - fire, escape of
+water, storm and hail, and further natural hazards among them. Which of the
+insurable perils are actually covered is agreed between insurer and policyholder
+and recorded in the schedule.
+
+Where insured property is destroyed or damaged by a peril that is insured, the
+insurer indemnifies the cost of putting it back in the same kind and quality. The
+technical plant that serves the building, and the electrical installation
+belonging to it, share in that cover. A range of consequential expenses triggered
+by such a loss event - the removal of what the event destroyed, the measures
+taken to limit the damage, and the accommodation of the persons who occupy the
+dwellings among them - is also carried.
+
+The cover is a cover against causes, not against outlay. Every benefit under this
+contract presupposes that damage to insured property was caused by an insured
+peril and that this has been established.
+
+1.2 How the wording is to be read
+
+Personal designations are to be understood as gender-neutral throughout; no
+parallel male and female forms are used.
+
+1.3 Explanation of recurring terms (not legally binding)
+
+Policyholder - the insurer's contracting party and the purchaser of the cover.
+
+Occupants - the persons who live in the dwellings of the insured building,
+whether as the policyholder itself or as its tenants.
+
+Insured event - an event by which insured property was destroyed or damaged and
+which falls within a peril insured under Part 2.
+
+Established cause - the attribution of the damage to a peril insured under Part
+2, made by the loss investigation and resting on the identification of the
+installation, the defect or the occurrence from which the damage proceeded. A
+record that states only that water was present in a part of the building, that a
+room or a storey stood under water, or that a part of the building was inundated,
+does not establish a cause: it describes a condition and leaves open what brought
+that condition about.
+
+Affected part - a room, a surface, a building component, an installation or an
+item in which physical damage caused by the insured event has been established by
+the loss investigation. The affected parts, taken together, delimit what the
+insurer indemnifies.
+
+Repair cost - outlay that serves to put an affected part back into the condition
+it was in immediately before the insured event, or to put a destroyed
+installation back into service. Outlay that serves another purpose -
+preservation, upkeep, appearance, protection against future influences, or the
+running of a contractor's business - is not a repair cost, whatever heading it is
+invoiced under.
+
+Plant of the building - the installations that are permanently connected to the
+building, serve its supply, its heating, its ventilation, its water or its power,
+and remain in place once the work is finished. Heat generators, storage vessels,
+exhaust and flue routes, permanently installed pumps, control equipment and the
+electrical installation are plant of the building. Plant of the building is
+insured property; it is replaced, not hired.
+
+Working equipment - the devices, appliances, machines, pumps and comparable items
+that are brought to the insured site in order to carry out an operation and taken
+away again once the operation is finished. Working equipment does not become part
+of the building and is not insured property, whether it is described as hired,
+deployed, supplied or procured.
+
+Measure - an operation billed by reference to what it achieves rather than by
+reference to the items used to achieve it. The removal of standing water is an
+example.
+
+Journey charge - a charge for attending the insured site, however described,
+including travel, vehicle, company vehicle, call-out, attendance, mileage and
+re-attendance charges.
+
+Combined position - a single line of an invoice that covers more than one
+operation, more than one installation or more than one part of the insured
+property, and that does not state separately what falls to each.
+
+Exclusion - a peril, a type of damage, an item of property or a type of outlay
+for which no cover exists.
+
+Duties - the things the policyholder must do or refrain from doing before, during
+and after an insured event.
+
+
+-------------------------------------------------------------------------------
+PART 2 - INSURED PERILS
+-------------------------------------------------------------------------------
+
+2.1 The perils that can be covered
+
+The insurer indemnifies insured property that is destroyed or damaged by, or lost
+as a consequence of, the following events:
+
+  (a) FIRE GROUP - fire; lightning strike; overvoltage caused by lightning;
+      explosion; deflagration; implosion; impact or crash of an aircraft, its
+      parts or its cargo; impact of a vehicle; scorching; smoke and soot.
+
+  (b) ESCAPE OF WATER.
+
+  (c) NATURAL HAZARDS, in two tiers:
+        (c1) storm and hail;
+        (c2) the further natural hazards - flood, backing-up of water,
+             earthquake, ground subsidence, landslip, snow load, avalanche and
+             volcanic eruption.
+
+2.2 How the groups combine
+
+Each of the three groups (a), (b) and (c1) can be taken separately. The further
+natural hazards under (c2) can only be taken in combination with one or more of
+the perils in (a), (b) or (c1); they are not available on a standalone basis.
+Where a group is not recorded in the schedule, damage falling within it is not
+covered.
+
+2.4 Escape of water defined
+
+2.4.2 Escape of water damage
+Escaping water means water that has emerged contrary to its intended purpose
+from:
+  (a) pipes of the water supply, whether supply or drainage lines, or hoses
+      connected to them;
+  (b) other installations connected to those pipes or hoses, or the
+      water-carrying parts of such installations;
+  (c) heating or air-conditioning systems;
+  (d) water-based extinguishing or sprinkler systems;
+  (e) water beds or aquaria.
+
+Operating fluids from heating or air-conditioning systems, and steam, also count
+as escaping water. Fluids intended for the generation of energy do not.
+
+2.4.3 What the peril requires
+This peril presupposes that the water proceeded from one of the sources in 2.4.2
+and that this has been established as a cause within the meaning of 1.3. The
+presence of water in a room, a basement, a plant room or another part of the
+building is the condition that the peril produces; it is not itself the peril,
+and it does not by itself bring the damage within this cover.
+
+2.4.5 Plant and the electrical installation
+Damage to the plant of the building within the meaning of 1.3 is covered where
+that damage was caused by the insured event. This extends to the whole of an
+installation where its parts form one functional unit and the unit cannot be
+brought back into service by replacing a single part.
+
+The same applies to the electrical installation of the building - circuits,
+cabling, distribution boards, terminals, protective and switching devices -
+insofar as it was exposed to the escaped water, and to the labour of establishing
+which of its parts were affected.
+
+2.5 Natural hazards defined
+Storm, hail and the further natural hazards - flood, backing-up of water,
+earthquake, ground subsidence, landslip, snow load, avalanche and volcanic
+eruption - are each defined as customarily in these conditions. Flood means the
+inundation of the ground and soil of the insured site, or of parts of the
+building, with substantial quantities of surface water. Backing-up is present
+where water enters the building from the building's own drainage pipes or from
+installations connected to them, caused by the overflow of surface waters or by
+precipitation.
+
+
+-------------------------------------------------------------------------------
+PART 3 - EXCLUSIONS
+-------------------------------------------------------------------------------
+
+3.1 General exclusions
+
+3.1.1 War
+Damage caused by war, warlike events, civil war, revolution, rebellion or
+insurrection is not covered. This applies irrespective of any contributing
+causes.
+
+3.1.2 Civil commotion
+Damage caused by internal civil unrest is not covered. This applies irrespective
+of any contributing causes.
+
+3.1.3 Nuclear energy
+Damage caused by nuclear energy, nuclear radiation or radioactive substances is
+not covered. This applies irrespective of any contributing causes.
+
+3.3 Exclusions within the escape of water peril
+
+Damage caused by the following is not covered, irrespective of any contributing
+causes except where such causes are named below:
+  (a) splash water or cleaning water;
+  (b) dry rot and house-rot fungi of every kind;
+  (c) groundwater, standing or flowing surface water, flood, precipitation, or a
+      backing-up of water brought about by any of these causes;
+  (d) earthquake, snow load, avalanche, volcanic eruption;
+  (e) ground subsidence or landslip - unless escaping water within the meaning of
+      2.4.2 caused the subsidence or the landslip;
+  (f) the perils of the fire group;
+  (g) storm, hail.
+
+Damage to buildings or parts of buildings that are not ready for occupation is
+not covered.
+
+3.6 Where no insured cause is established
+
+Where the loss investigation does not establish a cause within the meaning of
+1.3, no indemnity arises. This applies to the whole of the claim and not merely
+to individual positions.
+
+In that case the following are not indemnified, whatever they consist of and
+however they are described or invoiced: the repair, renewal or replacement of any
+installation, component or surface; the labour of any trade; the materials
+supplied; the measures taken, including those taken to remove water or to limit
+further damage; the clearance and disposal of anything removed; every journey
+charge; and every head of cost under Part 5, including the accommodation of
+occupants and the loss of rent or rental value.
+
+The costs under Part 5 and the ancillary charges under Part 7 are accessory to an
+indemnifiable damage to insured property. They have no existence independent of
+it, and the fact that work was genuinely carried out, was reasonable, or was
+urgent does not create a benefit where the cause of the damage is not one that
+this contract covers.
+
+3.7 Work beyond the affected parts, and outlay that is not a repair cost
+
+Work carried out beyond those parts of the insured property that were themselves
+affected by the insured event is not covered. Outlay that does not constitute a
+repair cost is not indemnified. The delimitation in each case is governed by
+7.1.5 to 7.1.10.
+
+
+-------------------------------------------------------------------------------
+PART 4 - INSURED PROPERTY, INSURED LOCATION, DEDUCTIBLES
+-------------------------------------------------------------------------------
+
+4.1 What is insured
+
+Insured property comprises:
+  (a) the buildings identified in the schedule;
+  (b) their building components;
+  (c) their building accessories;
+  (d) terraces on the insured site that directly adjoin the building;
+  (e) further site installations.
+
+4.2 The categories defined
+
+4.2.1 Building and dwelling
+Buildings are structures connected to the ground. They must be capable of
+affording protection against external influences and, for the purposes of these
+conditions, must be intended for predominantly residential use.
+
+4.2.2 Building components
+Building components are items incorporated into a building that have lost their
+independence through their firm connection with it. The plant of the building
+within the meaning of 1.3 counts as a building component, together with the
+pipework, cabling, connection and discharge elements by which it is joined to the
+building, and the housings, mountings and bases on which it stands.
+
+4.2.3 Building accessories
+Building accessories are movable items located inside the building or attached to
+its exterior that serve the upkeep of the insured building or its predominant
+intended purpose.
+
+4.3 Property not insured
+
+Not insured:
+  (a) photovoltaic installations and their components;
+  (b) all items subsequently incorporated into the building by a tenant or by a
+      condominium owner where that person both procured or took the items over at
+      their own expense and bears the risk for them;
+  (c) electronically stored data and programs;
+  (d) working equipment within the meaning of 1.3, irrespective of who brings it
+      to the insured site, of how it is charged, and of whether it is hired or
+      purchased for the occasion. Its treatment is governed by 5.2.2 and
+      7.1.8(b).
+
+4.5 The insured location
+
+The insured location is the insured site: the land parcel on which the insured
+building stands, together with the building and its ancillary and technical
+rooms.
+
+4.7 Deductibles
+
+A deductible is the share of the indemnity, or the amount, that the policyholder
+bears itself per insured event. The deductible stated in the schedule is deducted
+once from the indemnity for the insured event, irrespective of how many trades,
+invoices or heads of claim are involved.
+
+
+-------------------------------------------------------------------------------
+PART 5 - INSURED COSTS, LOSS OF RENT AND RENTAL VALUE
+-------------------------------------------------------------------------------
+
+5.1 Which costs are covered
+
+Where a cause within the meaning of 1.3 has been established, the insurer
+reimburses the following costs, insofar as they were necessary as a consequence
+of the insured event and were actually incurred:
+  (a) debris removal, dismantling and disposal costs;
+  (b) costs of emergency and loss-mitigation measures;
+  (c) costs of accommodating the occupants;
+  (d) costs of moving and protecting property;
+  (e) costs of lost water, gas and heating oil, and of electricity lost from
+      storage installations;
+  (f) costs of returning early from a holiday.
+
+Reimbursement of each of these heads is limited to the amount agreed for it.
+
+5.2 The cost heads defined
+
+5.2.1 Debris removal, dismantling and disposal
+Costs incurred in clearing away and demolishing insured property. This includes
+the expense of removing the remains of that property, transporting them to the
+nearest disposal site, depositing them and destroying them.
+
+Plant and installations that the insured event has rendered unusable fall under
+this head, together with the work of disconnecting and taking them out. It is
+immaterial whether the material to be removed arose from the damage itself or
+from the repair work carried out because of it.
+
+5.2.2 Emergency and loss-mitigation measures
+Costs of the measures reasonably taken to stop the ingress or spread of water, to
+remove standing water from rooms, voids and shafts, and to prevent further
+damage. Such a measure is indemnified as a measure within the meaning of 1.3,
+that is, by reference to what it achieves.
+
+The charge for a measure is taken to cover everything deployed in order to
+achieve it, including the labour and the working equipment used. Working
+equipment is therefore not separately indemnified alongside the charge for the
+measure it served, and this holds however the equipment is described, whether it
+is charged as a hire, a deployment, a supply or a procurement, whether one item
+or several are charged, and whether the contractor already owned it or obtained
+it for the occasion.
+
+5.2.3 Accommodation of the occupants
+Costs of accommodation in a hotel or similar, excluding incidentals such as
+breakfast, for the occupants within the meaning of 1.3. The insurer reimburses
+these costs for the policyholder itself and, where the insured building is let,
+for its tenants; it is immaterial that the tenants are not parties to this
+contract, and the policyholder may claim the benefit on their behalf.
+
+The precondition is that the dwelling concerned cannot reasonably be used. That
+condition is met not only where the rooms themselves are damaged, but also where
+a supply, an installation or a technical room serving the dwelling has been put
+out of service by the insured event, so that heating, hot water, water or power
+is unavailable and confining themselves to the remaining usable rooms cannot
+reasonably be expected of the occupants.
+
+Costs are reimbursed up to the point at which the dwelling can be used again,
+subject to the daily amount and the maximum number of days stated in the
+schedule, and only to the extent that indemnity cannot be claimed under another
+insurance contract.
+
+5.2.4 Moving and protecting property
+Costs incurred in moving, altering or protecting other property, reimbursable
+where those measures serve to reinstate or replace insured property.
+
+5.3 Loss of rent and rental value
+
+The insurer reimburses loss of rent where tenants of residential premises have
+lawfully stopped paying rent in whole or in part on account of an insured event,
+and the locally customary rental value of residential premises occupied by the
+policyholder itself where, on account of the insured event, the policyholder
+cannot reasonably be expected to use at least parts of the dwelling.
+
+5.4 The period for loss of rent and rental value
+
+Loss of rent or rental value is reimbursed for the period during which the rooms
+are unusable, but for no longer than [number] months from the occurrence of the
+insured event, and only to the extent that the policyholder has not culpably
+delayed the resumption of use.
+
+
+-------------------------------------------------------------------------------
+PART 6 - BASIS OF COVER AND PREMIUM
+-------------------------------------------------------------------------------
+
+6.1 Insurable value
+
+The insurable value forms the basis for calculating the indemnity. The insurable
+value determined for the building applies equally to building accessories,
+terraces and further site installations.
+
+6.2 Index-linked reinstatement value with enhancement
+
+What is insured is the locally customary new-build value of the insured property
+identified in the schedule, taken at the time of the insured event, together with
+the additional costs arising from public-law restrictions on reinstatement and
+the price increases arising between the occurrence of the insured event and
+reinstatement initiated without delay.
+
+6.3 Index-linked current value with enhancement where reinstatement is omitted or
+    delayed
+
+For property that is not reinstated, or is reinstated late, only the index-linked
+current value with enhancement is insured - the enhanced new-build value at the
+time of the insured event, less depreciation for age and for the degree of wear.
+
+6.5 How the premium is calculated
+
+The bases for calculating the premium are the area, the building type, the
+construction and the fit-out, the use, other agreed features material to the
+premium calculation, and the adjustment factor.
+
+6.6 Adjustment of cover and premium
+
+Where cover is adjusted in line with the development of building costs, the
+premium changes accordingly, by way of the adjustment factor taking effect from
+1 January of each year.
+
+
+-------------------------------------------------------------------------------
+PART 7 - CALCULATION AND PAYMENT OF THE INDEMNITY
+-------------------------------------------------------------------------------
+
+7.1 Basis of calculation
+
+7.1.1 Where a cause within the meaning of 1.3 has been established, the insurer
+reimburses:
+  (a) for destroyed buildings - the locally customary reinstatement costs, taken
+      at the time of the insured event;
+  (b) for damaged buildings and other damaged property - the necessary repair
+      costs at the time of the insured event, capped at the insurable value at
+      that time;
+  (c) for destroyed or lost plant of the building and other property - the
+      procurement price for property of the same kind and quality in new
+      condition, taken at the time of the insured event, together with the cost
+      of installing it and putting it into service.
+
+7.1.5 Extent of the repair
+Indemnity is confined to those parts of the insured property that were themselves
+affected by the insured event. The affected parts are the rooms, surfaces,
+building components, installations and items in which physical damage caused by
+the event is established by the loss investigation - by inspection, by
+photographic record, or by technical measurement taken at or shortly after the
+time of the loss.
+
+Work carried out in a room, on a surface, on a building component, on an
+installation or on an item that was not itself affected is not covered. This
+applies even where the work is carried out
+  (a) so that treated and untreated parts correspond in appearance, colour,
+      pattern, format or material;
+  (b) for reasons of convenience, or because treating a whole room, surface or
+      installation is more economical than treating the affected part of it;
+  (c) at the same time as covered work, in the course of it, or as part of the
+      same overall project; or
+  (d) by the same contractor as the covered work, and invoiced together with it.
+
+Where the parts of one installation form a functional unit within the meaning of
+2.4.5, that unit is the affected part, and the elements that have to be renewed
+with it are not treated as unaffected parts.
+
+7.1.6 Continuous surfaces
+Where only part of a single continuous surface was affected, indemnity extends to
+the treatment of the adjoining unaffected sections of that same surface only
+where a replacement material corresponding to the original is no longer
+obtainable and a visible discontinuity would otherwise remain.
+
+7.1.7 Preparatory and ancillary work
+The necessary repair costs under 7.1.1(b) and the replacement costs under
+7.1.1(c) include:
+  (a) disconnecting, dismantling, taking out and disposing of the affected
+      installations, components and finishes;
+  (b) the drying, dehumidification and moisture-removal measures necessary before
+      the repair can be carried out, and the necessary preparation of the
+      substrate or supporting structure;
+  (c) materials of a type, quality, grade and specification corresponding to
+      those in place immediately before the insured event, including the small
+      materials, conductors, terminals, fixings, protective devices and
+      comparable consumable items actually built into the covered work, whether
+      itemised individually or billed as a materials position;
+  (d) where an affected installation cannot economically be repaired and is
+      replaced, the work of adapting the immediately adjoining supply, connection
+      and discharge elements so far as the dimensions, positions or connection
+      points of the replacement require it, together with the work of connecting
+      it and putting it into service. Such adaptation is part of putting the
+      installation back into service and is not an improvement under 7.1.9;
+  (e) the investigatory labour reasonably needed to establish which parts of an
+      installation were affected, including the testing of circuits and
+      components before they are put back into service;
+  (f) the labour of the workers of each trade necessarily deployed on the covered
+      work, at the ordinary rate of that trade for the category of worker
+      actually deployed, whether billed as one position or as several positions
+      covering distinct operations;
+  (g) one journey charge within the meaning of 1.3 per insured event. The
+      attendance of the trades at the insured site is treated as one head of
+      cost, however many trades attend and however many invoices are rendered:
+      the first journey charge raised in respect of the insured event is
+      indemnified, and every further journey charge is governed by 7.1.8(d).
+
+7.1.8 Outlay that is not a repair cost
+The following do not constitute repair costs and are not indemnified, however
+they may be described or invoiced:
+
+  (a) measures directed at the general condition, cleanliness, tidiness, upkeep,
+      appearance, preservation, modernisation or improvement of the insured
+      property, as distinct from making good the damage caused by the insured
+      event. The cleaning, redecoration or re-coating of a surface that was not
+      itself affected belongs to this heading, and so does any treatment or
+      product whose purpose is to protect against future influences;
+
+  (b) outlay belonging to a contractor's own business operation rather than to
+      the repair - its own tools and consumable small equipment, its own
+      diagnostic and measuring devices, the provisioning of its own personnel,
+      the provision, running, maintenance and availability of its own vehicles
+      and plant, and general administrative, handling, processing, coordination
+      or project management charges levied in addition to itemised labour and
+      materials, whether expressed as a flat fee, a lump sum or a percentage.
+      Working equipment within the meaning of 1.3 belongs to this heading and is
+      not separately indemnified; it is covered by the charge for the measure or
+      the operation in which it was used, in accordance with 5.2.2. The plant of
+      the building within the meaning of 1.3 does not belong to this heading and
+      is indemnified as insured property under 7.1.1(c);
+
+  (c) the same item of cost where it is invoiced more than once in respect of the
+      same insured event, whether by one contractor or across several trades;
+      only the first such charge is indemnified;
+
+  (d) every journey charge beyond the first raised in respect of the insured
+      event, whether it appears on the same invoice, on a further invoice of the
+      same trade, or on the invoice of another trade, and whether it is described
+      as a first attendance, a second attendance, a return visit, a follow-up or
+      otherwise. A further attendance is not indemnified even where the work done
+      on it is itself indemnifiable, and an attendance that the policyholder did
+      not request is not indemnified in any event.
+
+7.1.9 No improvement on the pre-loss standard
+Reinstatement proceeds on the basis of the type, quality, grade and specification
+in place immediately before the insured event. Where a higher specification, a
+larger format, a superior material or a premium range is chosen instead,
+indemnity is limited to the cost of an equivalent standard-grade replacement
+corresponding to what was in place before the loss; the difference is borne by
+the policyholder.
+
+A replacement installation that differs in construction or technology from the
+destroyed one is not an improvement within the meaning of this provision where it
+performs the same function to the same extent and corresponds to what is
+customarily supplied for that function at the time of the reinstatement.
+
+7.1.10 Combined positions
+A combined position within the meaning of 1.3 is indemnified where every
+operation, every installation and every part of the insured property that it
+covers is itself indemnifiable under these conditions. Where an installation is
+renewed as a functional unit under 2.4.5, a position covering that unit together
+with the connection work belonging to it is one such position and is indemnified
+as a whole.
+
+Where any element of a combined position is not indemnifiable, the position is
+not indemnified as it stands. The policyholder may submit the position re-stated
+by the contractor in separate lines, each showing the operation or the
+installation concerned together with its quantity and its price; the separate
+lines are then assessed individually and those that are indemnifiable are
+indemnified.
+
+7.4 Costs
+
+Insured costs under Part 5 are reimbursed where it is demonstrated that they were
+actually incurred. The indemnity limits agreed for each head are applied. Part 5
+is subject throughout to 3.6.
+
+7.7 Value added tax
+
+Value added tax is reimbursed only if and to the extent that it was actually
+incurred on the occasion of the reinstatement or replacement. It is not
+reimbursed where the policyholder is entitled to recover input tax.
+
+7.8 Deductible
+
+Deductibles are deducted from the indemnity in the amount agreed.
+
+7.9 When the indemnity falls due
+
+The indemnity falls due once the insurer has conclusively determined the claim as
+to its basis and its amount. One month after notifying the loss, the policyholder
+may claim as an interim payment the amount that is, on the prevailing assessment,
+payable as a minimum.
+
+7.13 Deferral of payment
+
+The insurer may defer payment for as long as there is doubt as to the
+policyholder's entitlement to receive payment, official or criminal proceedings
+arising out of this insured event are still pending, or a legally required
+involvement of a secured lender has not taken place.
+
+
+-------------------------------------------------------------------------------
+PART 8 - EXPERT DETERMINATION PROCEDURE
+-------------------------------------------------------------------------------
+
+8.1 Determining the amount of the loss
+After an insured event has occurred, the policyholder may require that the amount
+of the loss be determined in an expert determination procedure. Insurer and
+policyholder may also agree on such a procedure jointly.
+
+8.2 Further determinations
+Policyholder and insurer may agree to extend the procedure to further
+determinations relating to the insured event, including the cause of the damage.
+Absent such an agreement, the procedure determines the amount of the loss and
+does not determine whether a cause within the meaning of 1.3 has been
+established.
+
+8.3 Procedure before the determination
+Each party is to nominate one expert in text form - by email, fax or letter, for
+example. Before beginning their determinations, the two experts nominate in text
+form a third expert as umpire. Where the experts cannot agree on the umpire, it
+is appointed by the court with local jurisdiction for the loss location, on the
+application of either party.
+
+8.4 Content of the determination
+The experts' findings must state a schedule of the destroyed and the damaged
+insured property together with the corresponding insurable values at the time of
+the insured event, the extent of any installation that has to be renewed as a
+functional unit, the reinstatement and replacement costs, the residual values,
+and the insured costs and the insured loss of rent or rental value.
+
+8.5 Procedure after the determination
+Each expert transmits its findings to both parties simultaneously. Where the two
+sets of findings diverge, the umpire decides the points that remain in dispute,
+within the limits set by the experts' findings. The findings of the experts, or
+of the umpire, are binding on the contracting parties. They are not binding where
+it is demonstrated that they manifestly deviate substantially from the true state
+of affairs.
+
+8.6 Costs
+Unless something else has been agreed, each party bears the costs of its own
+expert. The costs of the umpire are borne by the two parties in equal shares.
+
+8.7 Duties remain unaffected
+The expert determination procedure does not affect the policyholder's duties.
+
+
+-------------------------------------------------------------------------------
+PART 9 - POLICYHOLDER DUTIES AND INCREASE IN RISK
+-------------------------------------------------------------------------------
+
+9.1 Contractually agreed safety requirements before an insured event
+
+9.1.1 Insured property must be kept in proper condition at all times. This
+applies in particular to water-carrying installations and equipment. Defects or
+damage to such property must be remedied without delay.
+
+9.1.2 Buildings or parts of buildings that are not in use must be inspected
+sufficiently frequently at every time of year, and the water-carrying
+installations there shut off, drained and kept drained.
+
+9.1.3 During the cold season all buildings and parts of buildings must be heated,
+and this must be checked sufficiently frequently.
+
+9.1.4 In rooms at risk of backing-up, backflow prevention devices must be kept
+operational, and the drainage lines on the insured site kept clear.
+
+9.2 Duties after an insured event
+
+The policyholder must avert and mitigate the loss so far as it reasonably can,
+and must in particular take the measures needed to stop the escape of water and
+to remove standing water without delay.
+
+Before the affected parts are altered or the water removed, the policyholder must
+so far as reasonably possible secure and preserve what shows where the water came
+from, and must notify the insurer so that the cause can be established within the
+meaning of 1.3. Where that is not done, the policyholder bears the consequences
+of the cause remaining unestablished, subject to 3.6.
+
+Attendances at the insured site are to be arranged so far as possible so that the
+work is carried out on one occasion; the consequences of further attendances are
+governed by 7.1.7(g) and 7.1.8(d).
+
+9.3 Consequences of a breach of duty
+
+Where the policyholder breaches one of the duties in 9.1 or 9.2, the following
+applies, subject to the conditions set out in the general contract provisions:
+the insurer is entitled to terminate the contract. It may also be wholly or
+partly released from liability.
+
+9.4 Circumstances constituting an increase in risk
+
+An increase in risk subject to notification under the general contract provisions
+may exist in particular where a circumstance changes about which the insurer
+asked before the contract was concluded; where the building or the predominant
+part of it is no longer in use; where construction work renders it predominantly
+unusable; or where a commercial operation is taken up or changed within the
+building.
+
+
+-------------------------------------------------------------------------------
+PART 10 - CANCELLATION, SECURED LENDERS, TRANSFER OF OWNERSHIP
+-------------------------------------------------------------------------------
+
+10.1 Cancellation where a security right has been registered
+
+Where a secured lender has registered its charge over the property, cancellation
+of the insurance relationship by the policyholder in respect of the fire peril
+group is effective only where the policyholder demonstrated, at least one month
+before expiry of the insurance contract, that the property was no longer
+encumbered with the charge, or that the secured lender consented to the
+cancellation. This does not apply to a cancellation following a disposal of the
+property, or to a cancellation in the insured event.
+
+10.2 Legal position following a transfer of ownership
+
+Where the policyholder disposes of the insured property, the acquirer steps into
+its place in the insurance contract at the date of registration in the land
+register, and from that time takes over the rights and obligations of the
+policyholder. Seller and acquirer are jointly and severally liable for the
+premium for the insurance period in which the transfer of ownership occurs. The
+insurer need only recognise the acquirer's entry once it becomes aware of it.
+
+10.3 Rights of cancellation on a transfer of ownership
+
+The insurer is entitled to cancel the contract as against the acquirer on one
+month's notice, that right lapsing if it is not exercised within one month of the
+insurer becoming aware of the disposal. The acquirer is entitled to cancel with
+immediate effect or with effect from the end of the current insurance period, in
+text form, that right lapsing one month after the acquisition. In either case the
+seller alone remains liable for payment of the premium.
+
+10.4 Duties of notification
+
+The disposal must be notified to the insurer without delay, in text form, by the
+seller or by the acquirer. Where that notification has been omitted, the insurer
+is not obliged to pay in the insured event on the conditions set out in the
+general contract provisions.
+
+===============================================================================
+END OF DOCUMENT
+===============================================================================

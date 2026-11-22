@@ -1,0 +1,27 @@
+Invoice
+INVOICE NO.
+2026-0225
+DATE
+10 Apr 2026
+DUE
+24 Apr 2026
+TRADE
+Heating
+FROM
+Toasty Toes Heating Ltd
+19 Radiator Row
+90402 Warmingham
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Water extraction from the flooded plant room 1 pcs
+2 Renew the water-damaged boiler, flue and storage
+tank and adjust the supply pipework
+1 flat rate
+3 Dispose of the old boiler system 1 –
+4 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
