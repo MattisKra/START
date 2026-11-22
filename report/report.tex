@@ -56,7 +56,6 @@ then \textbf{improves it by reasoning} (policy clauses, quantities, prices) and 
   \item \textbf{Interaction with other agents}: each settlement shows how the other teams' agents charged and which
         charges they accepted; the agent uses this as feedback. % CHECK: meaning of this point
   \item \textbf{Several approaches run simultaneously}: the old ensemble kept deciding in parallel, without submitting.
-  \item \textbf{Ablations}: [TODO]. % NEED ABLATION: e.g. System 1 only vs. System 1+2, with vs. without self-review
 \end{itemize}
 
 \section{Resourcefulness}
@@ -74,6 +73,7 @@ well inside the 60\,s limit.
 \section{Clarity and honesty}
 The agent first has to build context, so it played \textbf{the first few rounds with reduced ability}.
 \PostLosses\ of \PostGames\ games since the switch still lost money. We cannot fully separate the agent's effect from
-the changing case mix, and an agent's decisions are harder to audit than a formula.
+the changing case mix, and an agent's decisions are harder to audit than a formula. We did not run ablations of System 1/2 or of the memory,
+so their individual contributions are not measured.
 
 \end{document}
