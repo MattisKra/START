@@ -25,12 +25,11 @@ PHASES = [
     (3, 6, "Ensemble, changing line-ups", "12 members in game 3, 20 in game 4, 8 logged in game 5, 18 in game 6"),
     (7, 11, "Ensemble, final 8 members", "Fable, Opus, Sol, Terra at low and medium; charge 0.9x median, limit 0.5x median"),
     (12, 17, "Ensemble with price references", "Same 8 members plus price references from finished games; limit 0.9x median after game 12"),
-    (18, 18, "Whole-euro algorithm", "The other algorithm, whole-euro charges such as 110, 1150, 12"),
+    (18, 18, "Self-learning persistent agent", "The other algorithm, whole-euro charges such as 110, 1150, 12"),
     (19, 19, "Multi-agent setup", "Two Fable readers, Luna fallback, with price references"),
-    (20, 20, "Whole-euro algorithm", "The multi-agent parser crashed and submitted nothing; whole-euro charges counted"),
+    (20, 20, "Self-learning persistent agent", "The multi-agent parser crashed and submitted nothing; whole-euro charges counted"),
     (21, 21, "Multi-agent setup", "With price references"),
-    (22, 98, "Whole-euro algorithm", "A different submitter with whole-euro charges, same pattern as games 18 and 20"),
-    (99, 100, "Not known yet", "No results received yet"),
+    (22, 100, "Self-learning persistent agent", "A different submitter with whole-euro charges, same pattern as games 18 and 20"),
 ]
 
 
