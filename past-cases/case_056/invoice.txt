@@ -1,0 +1,72 @@
+Invoice
+INVOICE NO.
+2026-0065
+DATE
+2 Feb 2026
+DUE
+16 Feb 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Profipress elbow 90° copper 15mm 4 pcs
+2 Profipress elbow 90° copper 28mm 5 pcs
+3 Profipress elbow 45° copper 28mm 1 pcs
+4 Grub screw 8 pcs
+5 Two-screw pipe clamp 10 mm 4 pcs
+6 Two-screw pipe clamp 25 mm 4 pcs
+7 Copper pipe 15x1 6.4 m
+8 Service technician hours 6.75 hrs
+9 Helper hours 5.75 hrs
+10 Rock wool pipe insulation 6 pcs
+11 Rock wool mat 6 pcs
+12 Binding wire 2 kg
+13 Small parts and consumables 1 pcs
+14 Vehicle costs 1 pcs
+15 Vehicle costs – return visit 1 pcs
+16 Construction waste disposal 1 pcs
+17 Catering for work crew 1 pcs
+18 Processing flat fee 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0066
+DATE
+2 Feb 2026
+DUE
+16 Feb 2026
+TRADE
+Tiling
+FROM
+Grout Expectations Tiling Ltd
+8 Mosaic Mews
+60594 Tilebury
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+19 Removal of water-damaged floor tiles around leak 8 m²
+20 Supply and lay replacement floor tiles (water-damaged
+area)
+8 m²
+21 Tile adhesive and grout 1 flat rate
+22 Installation hours – tiler 6 hrs
+23 Cleaning, disinfection and re-coating of surrounding
+undamaged tiles
+5 hrs
+24 Construction waste disposal 1 pcs
+25 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

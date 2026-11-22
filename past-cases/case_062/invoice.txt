@@ -1,0 +1,114 @@
+Invoice
+INVOICE NO.
+2026-0117
+DATE
+19 Feb 2026
+DUE
+5 Mar 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Leak detection call-out and electro-acoustic
+pinpointing of the leak beneath the kitchen sink
+1 pcs
+2 Moisture measurement of the kitchen floor and wall
+base
+1 pcs
+3 Service technician hours 14 hrs
+4 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0118
+DATE
+19 Feb 2026
+DUE
+5 Mar 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+5 Freeing the affected pipe run beneath the kitchen sink 1 pcs
+6 Removal and disposal of damaged pipe insulation 2 pcs
+7 Repair of the confirmed leak on the copper supply pipe 1 pcs
+8 Replacement copper pipe section and transition fittings 1 flat rate
+9 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0119
+DATE
+19 Feb 2026
+DUE
+5 Mar 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+10 Condensation dryer for the kitchen, rental for the
+drying period
+1 pcs
+11 Room drying of the kitchen floor and wall base 1 pcs
+12 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0120
+DATE
+19 Feb 2026
+DUE
+5 Mar 2026
+TRADE
+Carpentry
+FROM
+Splinter & Sons Fine Woodworks Ltd
+11 Sawdust Street
+33098 Planktown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+13 Removal, transport and disposal of the water-damaged
+wooden kitchen table
+3 pcs
+14 Supply of replacement table - premium solid-oak
+designer model, higher specification than the original
+1 pcs
+15 Delivery and assembly of the replacement table 1 flat rate
+16 Cleaning of the installation area 1 pcs
+17 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

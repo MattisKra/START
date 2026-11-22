@@ -1,0 +1,83 @@
+Invoice
+INVOICE NO.
+2026-0164
+DATE
+4 Mar 2026
+DUE
+18 Mar 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Clean / dry carpet 1 pcs
+2 Inspect electrical systems 1 pcs
+3 Inspect pool technology 1 pcs
+4 Upgrade to high-quality natural stone floor 12 m²
+5 Pool filter system maintenance 1 pcs
+6 Restore wall surfaces 10 m²
+7 Final site cleaning 1 pcs
+8 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0165
+DATE
+4 Mar 2026
+DUE
+18 Mar 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+9 Leak detection pool pipeline 1 pcs
+10 Repair pool supply pipe connection 1 pcs
+11 Skilled worker hours 5 hrs
+12 Material for pool pipe repair 1 pcs
+13 Moisture measurement 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0166
+DATE
+4 Mar 2026
+DUE
+18 Mar 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+14 Vacuum water 1 pcs
+15 Room drying (pool/conservatory) 1 pcs
+16 Condensation dryer 2 pcs
+17 Drying fan 3 pcs
+18 Replace skirting boards 15 m
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

@@ -1,0 +1,96 @@
+Invoice
+INVOICE NO.
+2026-0169
+DATE
+6 Mar 2026
+DUE
+20 Mar 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Clean / dry conservatory rug 1 pcs
+2 Inspect plant-room electrical systems 1 pcs
+3 Replace plant-room electrical components confirmed
+water-affected (electrician's report)
+1 flat rate
+4 Preventive replacement of adjacent electrical
+components (no confirmed water contact)
+1 flat rate
+5 Inspect pool technology 1 pcs
+6 Pool filter system maintenance 1 pcs
+7 Upgrade to high-quality natural stone floor 12 m²
+8 Restore wall surfaces 10 m²
+9 Final site cleaning 1 pcs
+10 Vehicle costs 1 pcs
+11 Catering for work crew 3 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0170
+DATE
+6 Mar 2026
+DUE
+20 Mar 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+12 Leak detection pool pipeline 1 pcs
+13 Repair pool supply pipe connection 1 pcs
+14 Skilled worker hours 5 hrs
+15 Material for pool pipe repair 1 pcs
+16 Moisture measurement 1 pcs
+17 Vehicle costs – return visit 1 pcs
+18 Construction waste disposal 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0171
+DATE
+6 Mar 2026
+DUE
+20 Mar 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+19 Vacuum water 1 pcs
+20 Room drying (pool/conservatory) 1 pcs
+21 Condensation dryer 2 pcs
+22 Drying fan 3 pcs
+23 Replace skirting boards 15 m
+24 Replace inflatable pool float (drifted and damaged) 1 pcs
+25 Replace and refill knocked-over plant pots 4 pcs
+26 Repaint garage (adjacent, not water-affected) 1 flat rate
+27 Construction waste disposal 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

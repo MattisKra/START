@@ -1,0 +1,89 @@
+Invoice
+INVOICE NO.
+2026-0161
+DATE
+3 Mar 2026
+DUE
+17 Mar 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Clean / dry conservatory rug 1 pcs
+2 Inspect plant-room electrical systems 1 pcs
+3 Preventive replacement of plant-room electrical
+components (no confirmed water contact)
+1 flat rate
+4 Upgrade to high-quality natural stone floor (upgrade
+from pre-loss ceramic tiling)
+12 m²
+5 Inspect pool technology 1 pcs
+6 Restore wall surfaces 10 m²
+7 Final site cleaning 1 pcs
+8 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0162
+DATE
+3 Mar 2026
+DUE
+17 Mar 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+9 Leak detection pool pipeline 1 pcs
+10 Repair pool supply pipe connection 1 pcs
+11 Skilled worker hours 5 hrs
+12 Material for pool pipe repair 1 pcs
+13 Moisture measurement 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0163
+DATE
+3 Mar 2026
+DUE
+17 Mar 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+14 Vacuum water 1 pcs
+15 Room drying (pool/conservatory) 1 pcs
+16 Condensation dryer 2 pcs
+17 Drying fan 3 pcs
+18 Supply and install premium hardwood skirting boards
+(upgrade from pre-loss softwood)
+15 m
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

@@ -1,0 +1,99 @@
+Invoice
+INVOICE NO.
+2026-0109
+DATE
+17 Feb 2026
+DUE
+3 Mar 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Leak tracing and locating the defect 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0110
+DATE
+17 Feb 2026
+DUE
+3 Mar 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+2 Technical room drying of the affected basement area
+including dryer units and removal of wet insulation
+1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0111
+DATE
+17 Feb 2026
+DUE
+3 Mar 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+3 Confirmed pipe repair including copper fittings,
+transition piece and skilled labour
+1 flat rate
+4 Vehicle costs 2 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0112
+DATE
+17 Feb 2026
+DUE
+3 Mar 2026
+TRADE
+Tiling
+FROM
+Grout Expectations Tiling Ltd
+8 Mosaic Mews
+60594 Tilebury
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+5 Reinstatement of the affected tiled surfaces including
+standard material and skilled labour
+1 flat rate
+6 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

@@ -1,0 +1,73 @@
+Invoice
+INVOICE NO.
+2026-0232
+DATE
+15 Apr 2026
+DUE
+29 Apr 2026
+TRADE
+Compensation
+Payment
+FROM
+Golden Handshake Payouts Ltd
+88 Cheque Chase Road
+20095 Refundton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Replacement of stolen everyday clothing and personal
+effects (like-for-like)
+1 pcs
+2 Replacement of a winter coat that had been worn only
+twice before the theft
+1 pcs
+3 Premium designer jacket to replace a stolen mid-range
+one (upgrade on the original)
+1 pcs
+4 Stolen jewellery - several unscheduled everyday
+pieces
+1 pcs
+5 Stolen jewellery - one high-value ring listed on the
+scheduled-articles endorsement
+1 pcs
+6 Claimed antique brooch with no receipt, photograph or
+valuation
+1 pcs
+7 Personal mileage to and from the police station to
+report the theft
+1 flat rate
+8 Time spent compiling and reporting the claim 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0233
+DATE
+15 Apr 2026
+DUE
+29 Apr 2026
+TRADE
+Locksmith
+FROM
+Picky Fingers Locksmiths Ltd
+6 Deadbolt Drive
+80336 Keyhole City
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+9 Emergency boarding of the forced entry door on the
+night of the break-in
+1 flat rate
+10 Replacement lock and cylinder for the forced door 1 flat rate
+11 Cleaning of muddy footprints tracked through the
+hallway by the intruders
+1 –
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

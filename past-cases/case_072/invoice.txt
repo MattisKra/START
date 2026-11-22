@@ -1,0 +1,86 @@
+Invoice
+INVOICE NO.
+2026-0088
+DATE
+10 Feb 2026
+DUE
+24 Feb 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Vehicle costs 1 flat rate
+2 Sealing material 1 pcs
+3 Stainless steel pipe 1 m
+4 Rock wool pipe insulation 1 m
+5 Installation 1 hrs
+6 Measuring device 1 pcs
+7 Service technician hours 9 labor units
+8 Vehicle costs 1 pcs
+9 Construction dryer flat-rate charge 1 flat rate
+10 Short saw blade 1 pcs
+11 Gunmetal 2 pcs
+12 Service technician hours 9 labor units
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0089
+DATE
+10 Feb 2026
+DUE
+24 Feb 2026
+TRADE
+Painting
+FROM
+Two Coats Minimum Painters Ltd
+27 Roller Road
+10999 Hueton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+13 Painting the disturbed wall area and closing the wall
+opening
+1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0090
+DATE
+10 Feb 2026
+DUE
+24 Feb 2026
+TRADE
+Tiling
+FROM
+Grout Expectations Tiling Ltd
+8 Mosaic Mews
+60594 Tilebury
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+14 Re-tiling of the disturbed wall section around the
+opening
+1 flat rate
+15 Re-tiling of the entire bathroom to match 14 m²
+16 Construction dryer flat-rate charge 1 flat rate
+17 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

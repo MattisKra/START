@@ -1,0 +1,153 @@
+{
+  "game": 48,
+  "team": "Kiebler Software Solutions",
+  "net": -1327.42,
+  "income": 27451.0,
+  "costs": 28778.42,
+  "lines": {
+    "1": {
+      "charge": {
+        "a": 480.0,
+        "n": 11,
+        "accepted": 3,
+        "penalty_paid_to_us": 8,
+        "rejected_as_fraud": 0,
+        "income": 7200.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 8
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 3,
+        "accepted_positive": 8,
+        "accepted_paid": 3541.85,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 0,
+        "b_lower": 534.75,
+        "b_upper": null
+      }
+    },
+    "2": {
+      "charge": {
+        "a": 700.0,
+        "n": 11,
+        "accepted": 4,
+        "penalty_paid_to_us": 7,
+        "rejected_as_fraud": 0,
+        "income": 10150.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 7
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 3,
+        "accepted_positive": 6,
+        "accepted_paid": 3655.2,
+        "wrongly_rejected": 2,
+        "penalty_cost": 3075.47,
+        "penalty_excess_vs_accepting": 1025.15,
+        "rightly_rejected": 0,
+        "b_lower": 976.5,
+        "b_upper": 1012.34
+      }
+    },
+    "3": {
+      "charge": {
+        "a": 1000.0,
+        "n": 11,
+        "accepted": 3,
+        "penalty_paid_to_us": 0,
+        "rejected_as_fraud": 8,
+        "income": 3000.0,
+        "verdict": "INFLATED: t < a (rejected for 0)",
+        "silent_reviewers": 0
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 3,
+        "accepted_positive": 8,
+        "accepted_paid": 7035.79,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 0,
+        "b_lower": 1093.52,
+        "b_upper": null
+      }
+    },
+    "4": {
+      "charge": {
+        "a": 78.0,
+        "n": 11,
+        "accepted": 6,
+        "penalty_paid_to_us": 5,
+        "rejected_as_fraud": 0,
+        "income": 1053.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 5
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 3,
+        "accepted_positive": 7,
+        "accepted_paid": 763.34,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 1,
+        "b_lower": 147.32,
+        "b_upper": null
+      }
+    },
+    "5": {
+      "charge": {
+        "a": 2400.0,
+        "n": 11,
+        "accepted": 2,
+        "penalty_paid_to_us": 0,
+        "rejected_as_fraud": 9,
+        "income": 4800.0,
+        "verdict": "INFLATED: t < a (rejected for 0)",
+        "silent_reviewers": 0
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 3,
+        "accepted_positive": 8,
+        "accepted_paid": 10281.14,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 0,
+        "b_lower": 2511.0,
+        "b_upper": null
+      }
+    },
+    "6": {
+      "charge": {
+        "a": 78.0,
+        "n": 11,
+        "accepted": 1,
+        "penalty_paid_to_us": 10,
+        "rejected_as_fraud": 0,
+        "income": 1248.0,
+        "verdict": "fair: t >= a (rejection paid 1.5x)",
+        "silent_reviewers": 10
+      },
+      "review": {
+        "incoming": 11,
+        "zero_charges": 3,
+        "accepted_positive": 7,
+        "accepted_paid": 425.63,
+        "wrongly_rejected": 0,
+        "penalty_cost": 0,
+        "penalty_excess_vs_accepting": 0.0,
+        "rightly_rejected": 1,
+        "b_lower": 79.63,
+        "b_upper": null
+      }
+    }
+  }
+}

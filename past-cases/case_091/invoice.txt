@@ -1,0 +1,61 @@
+Invoice
+INVOICE NO.
+2026-0045
+DATE
+24 Jan 2026
+DUE
+7 Feb 2026
+TRADE
+Garden Service
+FROM
+Weeds Be Gone Garden Care Ltd
+42 Petunia Path
+28195 Mowerton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Skilled worker hours 16 hrs
+2 Ultraviolet-resistant protective exterior coating 15 linear m
+3 Painter's kit 1 pcs
+4 Painter hours 1 hrs
+5 Vehicle costs 1 pcs
+6 Painting of the garden shed 26 hrs
+7 Paints 26 l
+8 Catering for work crew 1 pcs
+9 Disposal of green waste 15 m³
+10 Skilled worker hours 58 hrs
+11 Machine use charge 20 hrs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0046
+DATE
+24 Jan 2026
+DUE
+7 Feb 2026
+TRADE
+Recycling Service
+FROM
+Trash to Treasure Recycling Ltd
+3 Landfill Loop
+34117 Binbrook
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+12 Disposal of sieved topsoil from the churned-up ground 1.25 m²
+13 Disposal of old timber 0.1 t
+14 Disposal of paving grit 0.4 t
+15 Disposal of green waste 2 m³
+16 Disposal of tree roots 2.5 m³
+17 Disposal of excavated soil 1.5 t
+18 Glass pane 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

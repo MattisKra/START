@@ -1,0 +1,52 @@
+Invoice
+INVOICE NO.
+2026-0095
+DATE
+13 Feb 2026
+DUE
+27 Feb 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Disassembly/reassembly, construction dryer for the
+drying period and standard pipe insulation
+1 flat rate
+2 Construction waste disposal 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0096
+DATE
+13 Feb 2026
+DUE
+27 Feb 2026
+TRADE
+Tiling
+FROM
+Grout Expectations Tiling Ltd
+8 Mosaic Mews
+60594 Tilebury
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+3 Wall preparation, rough repair and mounting opening
+in the affected basement area
+1 flat rate
+4 Standard wall tiling incl. standard silicone sealant 1 flat rate
+5 Vehicle costs and skilled worker hours 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

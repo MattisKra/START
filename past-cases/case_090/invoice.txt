@@ -1,0 +1,109 @@
+Invoice
+INVOICE NO.
+2026-0067
+DATE
+3 Feb 2026
+DUE
+17 Feb 2026
+TRADE
+Damage Assessment
+FROM
+Sherlock Damages Inspection Ltd
+221 Magnifier Mews
+80333 Cluesbury
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Damage assessment and inspection 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0068
+DATE
+3 Feb 2026
+DUE
+17 Feb 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+2 Indoor leak detection 1 flat rate
+3 Measurement technician 2.5 hrs
+4 Vehicle costs 1 hrs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0069
+DATE
+3 Feb 2026
+DUE
+17 Feb 2026
+TRADE
+Dismantling
+FROM
+Smash & Grab Demolition Ltd
+9 Rubble Rise
+40210 Crushington
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+5 Fleece covering 25 m²
+6 Removal of floor covering 6 hrs
+7 Material surcharge 1 pcs
+8 Floor covering removal – removal of linoleum incl.
+skirting and transport to the container
+82.8 m²
+9 Preparation of floor surfaces for further processing 82.8 m²
+10 Catering for work crew 3 pcs
+11 Construction waste disposal 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0070
+DATE
+3 Feb 2026
+DUE
+17 Feb 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+12 Staff costs 2 hrs
+13 Dust protection incl. material and labor 10 m²
+14 Kitchen disinfection 25 m²
+15 Special drying borehole 11 pcs
+16 Large-area drying (from 50 m²) 121.9 m²
+17 Cavity drying 1 pcs
+18 Skilled worker hours 4 hrs
+19 Material surcharge 1 pcs
+20 Electricity costs 2,412.1 kWh
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

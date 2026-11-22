@@ -1,0 +1,150 @@
+Invoice
+INVOICE NO.
+2026-0144
+DATE
+27 Feb 2026
+DUE
+13 Mar 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Remove and transport rug 1 pcs
+2 Premium smart LED lighting system above billiard
+table (upgrade from standard fixture)
+1 pcs
+3 Specialist rug cleaning 1 pcs
+4 Electrical inspection of robot vacuum cleaner 1 pcs
+5 Replacement robot vacuum cleaner (total loss) 1 pcs
+6 Disassemble billiard table 1 pcs
+7 Inspect billiard table for moisture damage 1 pcs
+8 Replace billiard cloth with premium tournament-grade
+wool cloth (upgrade)
+1 pcs
+9 Replace old cue sets with premium hand-crafted cues
+(upgrade)
+1 pcs
+10 Align and reassemble billiard table 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0145
+DATE
+27 Feb 2026
+DUE
+13 Mar 2026
+TRADE
+Dismantling
+FROM
+Smash & Grab Demolition Ltd
+9 Rubble Rise
+40210 Crushington
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+11 Restore plasterboard ceiling 8 m²
+12 Fill ceiling and wall surfaces 15 m²
+13 Final site cleaning 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0146
+DATE
+27 Feb 2026
+DUE
+13 Mar 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+14 Drying fan 3 pcs
+15 Control measurement during drying 2 pcs
+16 Final measurement 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0147
+DATE
+27 Feb 2026
+DUE
+13 Mar 2026
+TRADE
+Flooring
+FROM
+Underfoot & Overcharge Flooring Ltd
+16 Laminate Lane
+04109 Parquetville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+17 Remove floor covering in guest WC 5 m²
+18 Remove skirting boards 12 m
+19 Insulation layer drying 1 pcs
+20 Condensation dryer 2 pcs
+21 Side channel compressor 1 pcs
+22 Remove damaged parquet 18 m²
+23 Supply and install premium solid oak parquet (upgrade
+from pre-loss standard oak herringbone)
+18 m²
+24 Supply and install skirting boards (premium solid oak,
+upgrade)
+15 m
+25 Open water-damaged ceiling surface 8 m²
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0148
+DATE
+27 Feb 2026
+DUE
+13 Mar 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+26 Leak detection / cause investigation 1 pcs
+27 Moisture measurement of multiple rooms 1 pcs
+28 Inspect and disassemble toilet cistern 1 pcs
+29 Replace fill valve in toilet cistern 1 pcs
+30 Skilled worker hours 3 hrs
+31 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

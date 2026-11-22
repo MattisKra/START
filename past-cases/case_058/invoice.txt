@@ -1,0 +1,96 @@
+Invoice
+INVOICE NO.
+2026-0218
+DATE
+7 Apr 2026
+DUE
+21 Apr 2026
+TRADE
+Carpentry
+FROM
+Splinter & Sons Fine Woodworks Ltd
+11 Sawdust Street
+33098 Planktown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Repair of the storm-damaged shed roof section
+(timber and covering, restored to the pre-loss
+standard)
+1 flat rate
+2 Full repaint of the entire shed, including the
+undamaged walls
+32 m²
+3 Ultraviolet-resistant protective exterior coating 32 m²
+4 Renewal of all shed trim, including undamaged trim 1 flat rate
+5 Skilled carpentry labour for the roof repair 1 pcs
+6 Contractor hand tools and reusable equipment 1 flat rate
+7 Vehicle costs 1 pcs
+8 Vehicle costs – return visit 1 pcs
+9 Catering for work crew 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0219
+DATE
+7 Apr 2026
+DUE
+21 Apr 2026
+TRADE
+Tree Service
+FROM
+Timber Timmy Tree Care Ltd
+17 Stump Street
+79098 Barksdale
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+10 Cutting and removal of the storm-felled tree from the
+shed roof
+1 flat rate
+11 Lifting and earth-moving machinery hire 1 flat rate
+12 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0220
+DATE
+7 Apr 2026
+DUE
+21 Apr 2026
+TRADE
+Recycling Service
+FROM
+Trash to Treasure Recycling Ltd
+3 Landfill Loop
+34117 Binbrook
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+13 Disposal of shed roof timber and the broken glass
+pane (building debris)
+2 pcs
+14 Disposal of felled-tree green waste and root ball
+(single mass under one cubic metre)
+2 pcs
+15 Disposal and reinstatement of excavated soil and
+displaced paving around the shed
+2 pcs
+16 Transport charge for the tree waste (already billed by
+the tree service)
+1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

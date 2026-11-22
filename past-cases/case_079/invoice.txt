@@ -1,0 +1,120 @@
+Invoice
+INVOICE NO.
+2026-0018
+DATE
+12 Jan 2026
+DUE
+26 Jan 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Indoor leak detection 1 flat rate
+2 Moisture measurement 1 flat rate
+3 Skilled worker hours 6 hrs
+4 Helper hours 6 hrs
+5 Vehicle costs 1 pcs
+6 Small parts and consumables 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0019
+DATE
+12 Jan 2026
+DUE
+26 Jan 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+7 Expose pipeline 1 pcs
+8 Removal and disposal of damaged insulation 0.75 hrs
+9 Removal and disposal of damaged insulation 6 hrs
+10 Room drying up to 25 m² (roof space) 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0020
+DATE
+12 Jan 2026
+DUE
+26 Jan 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+11 Condensation dryer 1 pcs
+12 Drying fan (roof space) 2 pcs
+13 Room drying up to 50 m² (kitchen) 1 pcs
+14 Pipe repair, copper pipe 22–28 mm 1 m
+15 Transition piece, copper 22/28 mm 2 pcs
+16 Copper pipe 28 mm 3 m
+17 Pipe insulation 28 mm 3 m
+18 Service technician hours 4 hrs
+19 Restore pipe insulation (installer) 6 hrs
+20 Final measurement 1 flat rate
+21 Final site cleaning 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0021
+DATE
+12 Jan 2026
+DUE
+26 Jan 2026
+TRADE
+Carpentry
+FROM
+Splinter & Sons Fine Woodworks Ltd
+11 Sawdust Street
+33098 Planktown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+22 Removal of the water-damaged wooden kitchen table 1 flat rate
+23 Transport of the damaged table 1 flat rate
+24 Disposal of the damaged table 1 flat rate
+25 Supply of replacement kitchen table, comparable
+specification to the original
+1 pcs
+26 Delivery of the replacement table 1 flat rate
+27 Assembly of the new table 2 hrs
+28 Cleaning of the installation area 1 flat rate
+29 Inspection of further furniture items stored in the
+garden for moisture
+1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

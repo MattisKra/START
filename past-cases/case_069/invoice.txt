@@ -1,0 +1,57 @@
+Invoice
+INVOICE NO.
+2026-0184
+DATE
+14 Mar 2026
+DUE
+28 Mar 2026
+TRADE
+Compensation
+Payment
+FROM
+Golden Handshake Payouts Ltd
+88 Cheque Chase Road
+20095 Refundton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Compensation for stolen watch 1 pcs
+2 Compensation for stolen diamond ring 1 pcs
+3 Compensation for stolen gold necklace 1 pcs
+4 Compensation for cash taken in robbery 1 pcs
+5 Compensation for stolen mobile phone 1 pcs
+6 Replacement travel and extra hotel nights after the
+incident
+1 pcs
+7 Shipping 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0185
+DATE
+14 Mar 2026
+DUE
+28 Mar 2026
+TRADE
+Translation Services
+FROM
+Lost in Translation Language Ltd
+13 Babel Boulevard
+10119 Wordsworth
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+8 Translation from Spanish to English 2 hrs
+9 Notary certification of translated documents 1 flat rate
+10 Material costs 1 pcs
+11 Administrative and claim-processing fee 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

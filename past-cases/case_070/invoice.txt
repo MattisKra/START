@@ -1,0 +1,75 @@
+Invoice
+INVOICE NO.
+2026-0055
+DATE
+28 Jan 2026
+DUE
+11 Feb 2026
+TRADE
+Flooring
+FROM
+Underfoot & Overcharge Flooring Ltd
+16 Laminate Lane
+04109 Parquetville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Remove & reinstall water-damaged laminate incl.
+impact sound insulation and skirting boards, living
+room
+1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0056
+DATE
+28 Jan 2026
+DUE
+11 Feb 2026
+TRADE
+Tiling
+FROM
+Grout Expectations Tiling Ltd
+8 Mosaic Mews
+60594 Tilebury
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+2 Remove & reinstall bathroom floor tiles incl. material
+and disposal
+1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0057
+DATE
+28 Jan 2026
+DUE
+11 Feb 2026
+TRADE
+Painting
+FROM
+Two Coats Minimum Painters Ltd
+27 Roller Road
+10999 Hueton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+3 Prepare & repaint water-damaged lower living-room
+wall
+20 m²
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

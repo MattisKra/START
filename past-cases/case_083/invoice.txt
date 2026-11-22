@@ -1,0 +1,24 @@
+Invoice
+INVOICE NO.
+2026-0203
+DATE
+25 Mar 2026
+DUE
+8 Apr 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Cabinet door glass pane replacement (made to
+measure and fitted)
+4 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

@@ -1,0 +1,57 @@
+Invoice
+INVOICE NO.
+2026-0223
+DATE
+9 Apr 2026
+DUE
+23 Apr 2026
+TRADE
+Heating
+FROM
+Toasty Toes Heating Ltd
+19 Radiator Row
+90402 Warmingham
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Renew boiler system including flue gas system and
+storage tank
+1 flat rate
+2 Adjust supply pipework to fit the replacement boiler 1 flat rate
+3 Dispose of the old boiler system 1 –
+4 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0224
+DATE
+9 Apr 2026
+DUE
+23 Apr 2026
+TRADE
+Electrical
+FROM
+Sparky McShockface Electrical Ltd
+50 Ohm Street
+70565 Voltaville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+5 Electrician labour checking and rewiring the flooded
+basement circuits
+12 hrs
+6 Small electrical materials for the rewiring 1 pcs
+7 Water extraction from the flooded plant room 1 pcs
+8 Procurement of a motor pump 1 pcs
+9 Submersible pump 1 pcs
+10 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

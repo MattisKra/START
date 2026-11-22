@@ -1,0 +1,115 @@
+Invoice
+INVOICE NO.
+2026-0121
+DATE
+20 Feb 2026
+DUE
+6 Mar 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Leak detection call-out and pinpointing of the sink
+supply leak
+1 pcs
+2 Moisture measurement of the kitchen floor and wall
+base
+1 pcs
+3 Service technician hours 14 hrs
+4 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0122
+DATE
+20 Feb 2026
+DUE
+6 Mar 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+5 Freeing the affected pipe run beneath the kitchen sink 1 pcs
+6 Removal and disposal of damaged insulation 2 pcs
+7 Repair of the confirmed leak 1 pcs
+8 Replacement copper pipe section and standard
+insulation
+1 flat rate
+9 Room drying line item for the roof space (Dachstuhl) 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0123
+DATE
+20 Feb 2026
+DUE
+6 Mar 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+10 Condensation dryer (kitchen) 1 pcs
+11 Room drying of the kitchen floor and wall base 1 pcs
+12 Drying fan (roof space) 2 pcs
+13 Final site cleaning of the covered work area 1 pcs
+14 Vehicle costs 1 pcs
+15 Cleaning of entire apartment 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0124
+DATE
+20 Feb 2026
+DUE
+6 Mar 2026
+TRADE
+Carpentry
+FROM
+Splinter & Sons Fine Woodworks Ltd
+11 Sawdust Street
+33098 Planktown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+16 Removal, transport and disposal of the water-damaged
+wooden kitchen table
+3 pcs
+17 Delivery and assembly of the replacement table 1 flat rate
+18 Inspection of further furniture items stored in the
+garden for moisture
+1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

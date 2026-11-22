@@ -1,0 +1,69 @@
+Invoice
+INVOICE NO.
+2026-0154
+DATE
+1 Mar 2026
+DUE
+15 Mar 2026
+TRADE
+Water Damage
+Restoration
+FROM
+Noah's Ark Restoration Ltd
+40 Floodgate Avenue
+20359 Deluge City
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Leak detection and moisture survey across affected
+rooms
+2 pcs
+2 Strip-out and drying of guest WC, stairwell, living
+room and hobby room
+1 flat rate
+3 Reinstate parquet, skirting and floor coverings on the
+water's path
+1 flat rate
+4 Restore and refinish plasterboard ceilings and wall
+surfaces
+1 flat rate
+5 Open cistern and replace fill valve, incl. labour and
+travel
+1 flat rate
+6 Final site cleaning 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0155
+DATE
+1 Mar 2026
+DUE
+15 Mar 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+7 Billiard table inspection, disassembly, realignment and
+reassembly
+3 pcs
+8 Replace billiard cloth, cue sets and overhead lighting
+fixture
+3 pcs
+9 Specialist cleaning and removal of water-damaged rug 2 pcs
+10 Electrical inspection of robot vacuum cleaner 1 pcs
+11 Replacement robot vacuum cleaner (total loss) 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

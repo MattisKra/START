@@ -1,0 +1,131 @@
+Invoice
+INVOICE NO.
+2026-0013
+DATE
+11 Jan 2026
+DUE
+25 Jan 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Indoor leak detection 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0014
+DATE
+11 Jan 2026
+DUE
+25 Jan 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+2 Skilled worker hours 8 hrs
+3 Material for the work 1 pcs
+4 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0015
+DATE
+11 Jan 2026
+DUE
+25 Jan 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+5 Room drying 30 m² 1 flat rate
+6 Room dryer unit 1 flat rate
+7 Removal and disposal of damaged insulation 1 m²
+8 Wet insulation wool from basement 1 pcs
+9 Room drying 50 m² 1 pcs
+10 Room dryer unit 1 pcs
+11 Drying fan 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0016
+DATE
+11 Jan 2026
+DUE
+25 Jan 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+13 Profipress elbow 90° copper 15mm model 01 5 pcs
+14 Profipress elbow 90° copper 15mm model 02 5 pcs
+15 Profipress elbow 45° copper 28mm model 03 1 pcs
+16 Hose 3 m
+17 Helper hours 5 hrs
+18 Vehicle costs 2 pcs
+19 Transition piece 16x15mm 3 pcs
+20 Service technician hours 5.5 hrs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0017
+DATE
+11 Jan 2026
+DUE
+25 Jan 2026
+TRADE
+Tiling
+FROM
+Grout Expectations Tiling Ltd
+8 Mosaic Mews
+60594 Tilebury
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+21 Skilled worker hours 14 hrs
+22 Material costs 1 pcs
+23 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

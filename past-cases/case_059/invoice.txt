@@ -1,0 +1,83 @@
+Invoice
+INVOICE NO.
+2026-0022
+DATE
+13 Jan 2026
+DUE
+27 Jan 2026
+TRADE
+Leak Detection
+FROM
+Drippy Dave Leak Hunters Ltd
+4 Trickle Terrace
+12345 Puddleton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Moisture measurement 1 flat rate
+2 Drying of the affected floor area 1 flat rate
+3 Flat-rate drying of the entire room 1 hrs
+4 Skilled worker hours 4 hrs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0023
+DATE
+13 Jan 2026
+DUE
+27 Jan 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+5 Cleaning of affected floor areas 1 flat rate
+6 Inspection of the washing machine and supply/drain
+connection to confirm no further leakage
+1 pcs
+7 Removal and disposal of water-damaged skirting
+boards
+10 m
+8 Replace skirting boards 10 m
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0024
+DATE
+13 Jan 2026
+DUE
+27 Jan 2026
+TRADE
+Painting
+FROM
+Two Coats Minimum Painters Ltd
+27 Roller Road
+10999 Hueton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+9 Transport of the high-value painting to the specialist
+restorer
+1 pcs
+10 Professional assessment of the high-value painting 1 pcs
+11 Conservatory drying and stabilisation of the painting 1 pcs
+12 Full restoration of the painting 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

@@ -1,0 +1,63 @@
+Invoice
+INVOICE NO.
+2026-0167
+DATE
+5 Mar 2026
+DUE
+19 Mar 2026
+TRADE
+Water Damage
+Restoration
+FROM
+Noah's Ark Restoration Ltd
+40 Floodgate Avenue
+20359 Deluge City
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Leak detection and moisture survey, pool room to
+plant room
+2 pcs
+2 Locate and repair separated pool supply connection
+(pool technology)
+1 flat rate
+3 Vacuum standing water and technical drying of pool
+room, conservatory and plant room
+7 pcs
+4 Reinstate flooring, wall surfaces and skirting on the
+water's path
+1 flat rate
+5 Final site cleaning 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0168
+DATE
+5 Mar 2026
+DUE
+19 Mar 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+6 Clean / dry conservatory rug 1 pcs
+7 Inspect plant-room electrical systems and pool
+technology
+2 pcs
+8 Upgrade to high-quality natural stone floor 12 m²
+9 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

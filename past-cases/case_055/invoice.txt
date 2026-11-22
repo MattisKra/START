@@ -1,0 +1,59 @@
+Invoice
+INVOICE NO.
+2026-0082
+DATE
+7 Feb 2026
+DUE
+21 Feb 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Vehicle costs 1 flat rate
+2 Sealing material 1 pcs
+3 Stainless steel pipe 1 m
+4 Rock wool pipe insulation 1 m
+5 Installation 1 hrs
+6 Service technician hours 9 labor units
+7 Construction dryer flat-rate charge 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0083
+DATE
+7 Feb 2026
+DUE
+21 Feb 2026
+TRADE
+Painting
+FROM
+Two Coats Minimum Painters Ltd
+27 Roller Road
+10999 Hueton
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+8 Painting the disturbed wall area and closing the wall
+opening
+1 pcs
+9 Full repaint of the entire wall on which the opening
+was located
+8 m²
+10 Repaint of the remaining bathroom walls and ceiling to
+match
+1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

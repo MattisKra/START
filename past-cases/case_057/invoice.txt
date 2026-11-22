@@ -1,0 +1,25 @@
+Invoice
+INVOICE NO.
+2026-0183
+DATE
+13 Mar 2026
+DUE
+27 Mar 2026
+TRADE
+Claims Settlement
+FROM
+Fine Print Claims Settlers Ltd
+1 Loophole Court
+60311 Clausebury
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Compensation for items taken in robbery (watch and
+cash)
+1 pcs
+2 Translation and handling of police report for the claim 1 flat rate
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1

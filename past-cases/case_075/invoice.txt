@@ -1,0 +1,147 @@
+Invoice
+INVOICE NO.
+2026-0149
+DATE
+28 Feb 2026
+DUE
+14 Mar 2026
+TRADE
+Building Services
+FROM
+Handy Hans All-Trades Ltd
+23 Fixit Boulevard
+70173 Wrenchford
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+1 Remove and transport rug 1 pcs
+2 High-quality LED lighting above billiard table 1 pcs
+3 Specialist rug cleaning 1 pcs
+4 Electrical inspection of robot vacuum cleaner 1 pcs
+5 Replacement robot vacuum cleaner (total loss) 1 pcs
+6 Disassemble billiard table 1 pcs
+7 Inspect billiard table for moisture damage 1 pcs
+8 Replace damaged billiard cloth 1 pcs
+9 Replace old cue sets 1 pcs
+10 Align and reassemble billiard table 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0150
+DATE
+28 Feb 2026
+DUE
+14 Mar 2026
+TRADE
+Dismantling
+FROM
+Smash & Grab Demolition Ltd
+9 Rubble Rise
+40210 Crushington
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+11 Restore plasterboard ceiling 8 m²
+12 Fill ceiling and wall surfaces 15 m²
+13 Final site cleaning 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0151
+DATE
+28 Feb 2026
+DUE
+14 Mar 2026
+TRADE
+Drying Technology
+FROM
+Blow-Dry Bros Drying Tech Ltd
+3 Dehumidifier Drive
+45127 Damptown
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+14 Drying fan 3 pcs
+15 Control measurement during drying 2 pcs
+16 Final measurement 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0152
+DATE
+28 Feb 2026
+DUE
+14 Mar 2026
+TRADE
+Flooring
+FROM
+Underfoot & Overcharge Flooring Ltd
+16 Laminate Lane
+04109 Parquetville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+17 Remove floor covering in guest WC 5 m²
+18 Remove skirting boards 12 m
+19 Insulation layer drying 1 pcs
+20 Condensation dryer 2 pcs
+21 Side channel compressor 1 pcs
+22 Remove damaged parquet in drip zone below stairwell
+(migration path)
+6 m²
+23 Renew parquet floor in drip zone below stairwell
+(migration path)
+6 m²
+24 Remove and renew additional parquet area spread by
+robot vacuum
+1 flat rate
+25 Supply and install new skirting boards 12 m
+26 Open water-damaged ceiling surface 8 m²
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
+
+Invoice
+INVOICE NO.
+2026-0153
+DATE
+28 Feb 2026
+DUE
+14 Mar 2026
+TRADE
+Plumbing
+FROM
+Soggy Bottom Plumbing Ltd
+7 U-Bend Boulevard
+23456 Pipeville
+TO
+European Hackathon
+Main Street 1
+80331 Munich
+ITEMS
+POS. DESCRIPTION AMOUNT UNIT TOTAL
+27 Leak detection / cause investigation 1 pcs
+28 Moisture measurement of multiple rooms 1 pcs
+29 Inspect and disassemble toilet cistern 1 pcs
+30 Replace fill valve in toilet cistern 1 pcs
+31 Skilled worker hours 3 hrs
+32 Vehicle costs 1 pcs
+INVOICE
+Created on 21 Aug 2026 Page 1 / 1
