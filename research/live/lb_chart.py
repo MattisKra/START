@@ -18,6 +18,21 @@ BASE = "https://c2f.public.quantco.cloud/leaderboard/api"
 PAGE = Path(__file__).with_name("lb_chart.html")
 _last = [0.0]
 
+# Which of OUR approaches counted in which rounds: (first round, last round, approach, detail).
+# The page shows this as colour bands. Colours follow the approach in order of first appearance.
+PHASES = [
+    (1, 2, "Single agent", "Luna, low and medium effort raced"),
+    (3, 6, "Ensemble, changing line-ups", "12 members in game 3, 20 in game 4, 8 logged in game 5, 18 in game 6"),
+    (7, 11, "Ensemble, final 8 members", "Fable, Opus, Sol, Terra at low and medium; charge 0.9x median, limit 0.5x median"),
+    (12, 17, "Ensemble with price references", "Same 8 members plus price references from finished games; limit 0.9x median after game 12"),
+    (18, 18, "Whole-euro algorithm", "The other algorithm, whole-euro charges such as 110, 1150, 12"),
+    (19, 19, "Multi-agent setup", "Two Fable readers, Luna fallback, with price references"),
+    (20, 20, "Whole-euro algorithm", "The multi-agent parser crashed and submitted nothing; whole-euro charges counted"),
+    (21, 21, "Multi-agent setup", "With price references"),
+    (22, 98, "Whole-euro algorithm", "A different submitter with whole-euro charges, same pattern as games 18 and 20"),
+    (99, 100, "Not known yet", "No results received yet"),
+]
+
 
 def get(ep, **q):
     wait = 1.05 - (time.monotonic() - _last[0])
@@ -101,7 +116,8 @@ def main():
     ap.add_argument("--open", action="store_true", help="open the page in the browser")
     a = ap.parse_args()
     marks = [float(x) for x in a.marks.split(",") if x.strip()]
-    feed = Feed(max(a.ttl, 5), {"team": a.team, "marks": marks, "mark_label": a.mark_label})
+    phases = [{"from": f, "to": t, "name": n, "note": d} for f, t, n, d in PHASES]
+    feed = Feed(max(a.ttl, 5), {"team": a.team, "marks": marks, "mark_label": a.mark_label, "phases": phases})
     srv = ThreadingHTTPServer(("127.0.0.1", a.port), handler(feed))
     url = f"http://127.0.0.1:{a.port}/"
     print(f"live chart on {url}  (Ctrl+C stops it)", flush=True)
