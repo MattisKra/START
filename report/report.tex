@@ -60,9 +60,10 @@ then \textbf{improves it by reasoning} (policy clauses, quantities, prices) and 
 \end{itemize}
 
 \section{Resourcefulness}
-Early on we used \textbf{token-heavy ensembles} (up to 20 model calls per round) to find good models. The ensemble
-benefit turned out to be small, so we moved to a \textbf{single agent: cheaper, and better in live play}. Multi-agent
-setups showed no advantage. The agent's whole tournament cost \textbf{169M tokens, 99\% of them cheap cache reads} of its persistent
+Early on we used \textbf{token-heavy ensembles} (up to 20 model calls per round) to find good models. That was
+expensive: it \textbf{burned through the OpenAI credits we were given} and would not have lasted 100 rounds. Its
+benefit over a single model was also small, so we moved to a \textbf{single agent}, which did better in live play.
+Multi-agent setups showed no advantage. The agent's whole tournament cost \textbf{169M tokens, 99\% of them cheap cache reads} of its persistent
 context: about \textbf{\$64 at API list prices, \$0.77 per round} (the 8-model ensemble: \$0.86 per round).
 
 \section{Reliability and automation}
